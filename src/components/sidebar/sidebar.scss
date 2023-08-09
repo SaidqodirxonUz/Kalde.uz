@@ -1,0 +1,31 @@
+.sidebar {
+  width: 84px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+  top: 0;
+  left: 0;
+  .img_side {
+    padding: 1rem;
+  }
+  .social_links {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    margin: auto;
+  }
+  .email {
+    p {
+      writing-mode: vertical-lr;
+    }
+    // HiMail {
+    //   font-size: 2em;
+    // }
+  }
+  //   gap: 16px;
+}

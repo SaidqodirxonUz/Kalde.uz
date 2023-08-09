@@ -1,0 +1,23 @@
+.sidebar {
+  width: 84px;
+  height: 100vh;
+}
+
+.showcase {
+  width: 100vw;
+  height: 100vh;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
