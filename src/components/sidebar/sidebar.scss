@@ -1,11 +1,12 @@
 .sidebar {
+  all: unset;
   width: 84px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: static;
+  position: absolute;
   top: 0;
   left: 0;
   .img_side {

@@ -5,3 +5,25 @@
   justify-content: center;
   align-items: center;
 }
+.divider {
+  width: 2px;
+  height: 34px;
+  margin: 1rem;
+  //   transform: rotate(90deg);
+  flex-shrink: 0;
+  color: transparent;
+  //   font-size: 0px;
+  //   transform: skew();
+  background: linear-gradient(
+    rgba(239, 127, 26, 0.22),
+    rgba(239, 127, 26, 1),
+    rgba(239, 127, 26, 0.22)
+  );
+  //   color: yellow;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  //   text-shadow: 0, 0, 0 1px #d8b00e;
+  //   transform: scaleY(2);
+}

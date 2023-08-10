@@ -1,0 +1,18 @@
+.line {
+  width: 200px;
+  height: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto;
+  border-radius: 20px;
+  background: linear-gradient(
+    270deg,
+    rgba(239, 127, 26, 0) 0%,
+    rgba(239, 127, 26, 0.41) 26.96%,
+    rgba(239, 127, 26, 0.71) 49.18%,
+    rgba(239, 127, 26, 0.6) 68.63%,
+    rgba(239, 127, 26, 0) 100%
+  );
+}

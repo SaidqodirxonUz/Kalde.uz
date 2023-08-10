@@ -14,19 +14,19 @@ import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg
 import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
 
 let cardinfo = [
-  { title: "qwertyuitre efgbhvcsfghre 34rt5yhfe egfdvevrevef", image: school },
-  { title: "Магазину", image: verify },
-  { title: "qwerty", image: doc },
-  { title: "qwerty", image: document },
-  { title: "qwerty", image: paper },
-  { title: "qwerty", image: operator },
-  { title: "qwerty", image: maintaince },
-  { title: "qwerty", image: rise },
+  { title: "qwer 34rt5yhfe egfdvev revef fffadsad", image: school },
+  { title: "Магазину qwerty qwerty qwerty", image: verify },
+  { title: "qwerty qwerty qwerty qwerty", image: doc },
+  { title: "qwerty qwerty qwerty qwerty", image: document },
+  { title: "qwerty qwerty qwerty qwerty", image: paper },
+  { title: "qwerty qwerty qwerty qwerty", image: operator },
+  { title: "qwerty qwerty qwerty qwerty", image: maintaince },
+  { title: "qwerty qwerty qwerty qwerty", image: rise },
 ];
 
 const Advantages = () => {
   return (
-    <div className="cerds_container">
+    <div className="cards_container">
       <Typography
         variant="h2"
         component="h3"
@@ -51,7 +51,7 @@ const Advantages = () => {
           <Card
             className="cards"
             style={{
-              width: "300px",
+              maxWidth: "300px",
               height: "180px",
               padding: "25px",
               borderRadius: "0.5em !important",
@@ -66,7 +66,12 @@ const Advantages = () => {
               }
             />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
+              <Typography
+                style={{ color: "#000 !important" }}
+                variant="h6"
+                component="p"
+                color="black"
+              >
                 {info.title}
               </Typography>
             </CardContent>

@@ -8,12 +8,12 @@
   flex-wrap: wrap !important;
   padding: 2rem 0;
   .card {
-    width: 300px;
-    height: 180px;
+    max-width: 300px;
+    height: auto;
     border-radius: 0.5em !important;
   }
 }
-.cerds_container {
+.cards_container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
