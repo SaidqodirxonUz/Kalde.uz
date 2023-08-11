@@ -12,7 +12,9 @@
   display: flex;
   flex-wrap: nowrap;
 }
-
+.flex-container::-webkit-scrollbar {
+  display: none;
+}
 .card {
   flex: 1 0 500px;
   height: 150px;

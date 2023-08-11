@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   // flex-wrap: wrap;
   //   background-color: rgba(148, 152, 173, 1);
   //   border-bottom-left-radius: 50px;
@@ -21,7 +21,7 @@
     flex-direction: column;
     // justify-content: center;
     align-items: baseline;
-    width: 50%;
+    width: 40%;
     gap: 1.5rem;
     // margin-left: 11%;
     margin: 0 5%;

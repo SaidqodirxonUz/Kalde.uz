@@ -7,6 +7,7 @@ import Sidebar from "../../components/sidebar/sidebar";
 import AboutUs from "../../components/about_us/about_us";
 import Partners from "../../components/partners/partners";
 import Blog from "../../components/blog/blog";
+import Footer from "../../components/footer/footer";
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <Products />
         <Partners />
         <Blog />
+        <Footer />
       </div>
     </div>
   );
