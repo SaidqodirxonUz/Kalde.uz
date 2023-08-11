@@ -2,11 +2,10 @@ import { Typography } from "@mui/material";
 import hero from "../../assets/hero.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./hero.scss";
-import Sidebar from "../../components/sidebar/sidebar";
+// import Sidebar from "../../components/sidebar/sidebar";
 const Hero = () => {
   return (
     <>
-      <Sidebar className="sidebar" />
       <div className="hero">
         <div className="texts">
           <Typography

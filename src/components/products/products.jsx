@@ -15,7 +15,7 @@ let cardinfo = [
 
 const Products = () => {
   return (
-    <div className="products_container">
+    <div className="products_container" style={{ padding: "10rem 0 10rem 0" }}>
       <div
         style={{
           display: "flex",

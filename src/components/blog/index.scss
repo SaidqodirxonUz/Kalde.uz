@@ -1,0 +1,21 @@
+.outer {
+  padding: 10px;
+  overflow-y: hidden;
+  width: 80vw;
+  height: 25rem;
+  overflow-x: hidden; /* Yangi qo'shildi */
+}
+.flex-container {
+  overflow-x: auto;
+  height: calc(100% + 17px);
+  padding-bottom: 17px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card {
+  flex: 1 0 500px;
+  height: 150px;
+  display: inline-block;
+  margin: 5px;
+}

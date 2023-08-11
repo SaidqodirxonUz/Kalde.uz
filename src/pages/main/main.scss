@@ -1,10 +1,11 @@
 .sidebar {
   width: 84px;
   height: 100vh;
+  background-color: white !important;
 }
 
 .showcase {
-  width: 98.8vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,14 @@
   margin-bottom: 5rem;
 
   .hero {
-    margin-top: 8rem;
+    margin-top: 10rem;
+    border-radius: 0rem 0rem 0rem 2.25rem;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      ),
+      #9498ad;
   }
   // flex-wrap: wrap;
 }
