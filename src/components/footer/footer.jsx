@@ -76,10 +76,10 @@ const Footer = () => {
           <p>Полезные страницы</p>
           <ul>
             {pages.map((page, index) => (
-              <li key={index}>
+              <li style={{ color: "#fff !important" }} key={index}>
                 <p
                   style={{ textAlign: "center" }}
-                  className="pages text-neutral-950 active:text-yellow-300"
+                  className="pages text-white active:text-yellow-300"
                 >
                   {page}
                 </p>
@@ -87,40 +87,44 @@ const Footer = () => {
             ))}
           </ul>
         </Box>
-        <Box className="contact_us">
+        <Box className="contact_us text-white">
           <p>Связаться с нами</p>
           <ul>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-neutral-950 active:text-yellow-300"
+                className="pages text-white active:text-yellow-300"
               >
-                <BsTelephoneFill /> +998 93 908 70 85
+                <BsTelephoneFill className="icons text-xl text-orange-500" />{" "}
+                +998 93 908 70 85
               </p>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-neutral-950 active:text-yellow-300"
+                className="pages text-white active:text-yellow-300"
               >
-                <BsTelephoneFill /> +998 93 908 70 85
+                <BsTelephoneFill className="icons text-xl text-orange-500" />{" "}
+                +998 93 908 70 85
               </p>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-neutral-950 active:text-yellow-300"
+                className="pages text-white active:text-yellow-300"
               >
-                <MdEmail /> info@kalde.uz
+                <MdEmail className="icons text-xl text-orange-500" />{" "}
+                info@kalde.uz
               </p>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-neutral-950 active:text-yellow-300"
+                className="pages text-white active:text-yellow-300"
               >
-                <MdLocationOn /> г. Ташкент, Олмазор тумани, ул. Широк, 2
-                (Ориентир - строительный рынок Чукурсай)
+                <MdLocationOn className="icons text-xl text-orange-500" /> г.
+                Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный
+                рынок Чукурсай)
               </p>
             </li>
           </ul>

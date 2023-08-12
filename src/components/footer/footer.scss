@@ -1,8 +1,7 @@
 .f_container {
-  background-color: #0e0e0e;
   width: 100%;
-  color: #fff;
   .footer {
+    background-color: #0e0e0e;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +19,26 @@
       }
     }
     .usefull_pages {
-      color: #fff;
+      color: #fff !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        &:hover,
+        &.active {
+          font-weight: bold;
+          transition: all ease-in-out 200ms;
+        }
+      }
     }
+    // .contact_us {
+    //   .icon {
+    //     color: ;
+    //   }
+    // }
   }
+}
+ul {
+  color: azure;
 }
