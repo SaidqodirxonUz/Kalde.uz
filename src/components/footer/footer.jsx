@@ -12,12 +12,12 @@ import "./footer.scss";
 
 const Footer = () => {
   const pages = [
-    "Главная",
-    "O нас",
-    "Преимущества",
-    "Каталог",
-    "Новости",
-    "Контакт",
+    { name: "Главная", url: "/" },
+    { name: "O нас", url: "/about-us" },
+    { name: "Преимущества", url: "/advantages" },
+    { name: "Каталог", url: "/catalog" },
+    { name: "Новости", url: "/news" },
+    { name: "Контакт", url: "/contact" },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="footer">
         <Box className="footer_inc">
           <img src={footer_img} alt="logo" />
-          <p style={{ maxWidth: "300px" }}>
+          <p className="text-white py-4 max-w-sm w-72">
             KALDE, для систем отопления и водоснабжения, высококачественные
             полипропиленовые трубы и фитинги!
           </p>
@@ -73,45 +73,46 @@ const Footer = () => {
           </div>
         </Box>
         <Box className="usefull_pages">
-          <p>Полезные страницы</p>
+          <p className="footer-sections">Полезные страницы</p>
           <ul>
             {pages.map((page, index) => (
               <li style={{ color: "#fff !important" }} key={index}>
-                <p
+                <a
+                  href={page.url}
                   style={{ textAlign: "center" }}
                   className="pages text-white active:text-yellow-300"
                 >
-                  {page}
-                </p>
+                  {page.name}
+                </a>
               </li>
             ))}
           </ul>
         </Box>
         <Box className="contact_us text-white">
-          <p>Связаться с нами</p>
+          <p className="footer-sections">Связаться с нами</p>
           <ul>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-white active:text-yellow-300"
+                className=" text-white active:text-orange-500 items"
               >
-                <BsTelephoneFill className="icons text-xl text-orange-500" />{" "}
+                <BsTelephoneFill className="icons text-xl text-orange-500" />
                 +998 93 908 70 85
               </p>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-white active:text-yellow-300"
+                className="pages text-white active:text-orange-500 items"
               >
-                <BsTelephoneFill className="icons text-xl text-orange-500" />{" "}
+                <BsTelephoneFill className="icons text-xl text-orange-500" />
                 +998 93 908 70 85
               </p>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-white active:text-yellow-300"
+                className="pages text-white active:text-orange-500 items"
               >
                 <MdEmail className="icons text-xl text-orange-500" />{" "}
                 info@kalde.uz
@@ -120,9 +121,9 @@ const Footer = () => {
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-white active:text-yellow-300"
+                className="pages text-white active:text-orange-500 flex flex-row items-center justify-center"
               >
-                <MdLocationOn className="icons text-xl text-orange-500" /> г.
+                <MdLocationOn className="icons text-5xl text-orange-500" /> г.
                 Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный
                 рынок Чукурсай)
               </p>

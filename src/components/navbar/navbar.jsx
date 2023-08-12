@@ -5,7 +5,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BiSolidPhoneCall } from "react-icons/bi";
@@ -16,12 +15,12 @@ import MenuItem from "@mui/material/MenuItem";
 import { FormControl, NativeSelect } from "@mui/material";
 
 const pages = [
-  "Главная",
-  "O нас",
-  "Преимущества",
-  "Каталог",
-  "Новости",
-  "Контакт",
+  { name: "Главная", url: "/" },
+  { name: "O нас", url: "/about-us" },
+  { name: "Преимущества", url: "/advantages" },
+  { name: "Каталог", url: "/catalog" },
+  { name: "Новости", url: "/news" },
+  { name: "Контакт", url: "/contact" },
 ];
 
 function Navbar() {
@@ -41,6 +40,7 @@ function Navbar() {
       style={{
         background: "rgba(255, 255, 255, 0.80)",
         backdropFilter: "blur(5px)",
+        boxShadow: "none",
         borderRadius: "50px",
         padding: "20px 40px",
         margin: "20px 40px",
@@ -90,26 +90,36 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography
-                    textAlign="center"
+                  <a
+                    href={page.url}
+                    style={{ textAlign: "center" }}
                     className="pages text-neutral-950 active:text-yellow-300"
                   >
-                    {page}
-                  </Typography>
+                    {page.name}
+                  </a>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{ display: { xs: "none", md: "flex" } }}
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "2rem",
+            }}
+          >
             {pages.map((page) => (
-              <Button
-                className="text-neutral-950 active:text-yellow-300"
+              <a
+                href={page.url}
+                className="text-neutral-950 active:text-orange-500 links"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#000", display: "block" }}
+                // sx={{ my: 2, color: "#000", display: "block" }}
               >
-                {page}
-              </Button>
+                {page.name}
+              </a>
             ))}
             <p className="divider">|</p>
             <Box>

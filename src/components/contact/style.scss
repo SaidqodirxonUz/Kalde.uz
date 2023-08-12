@@ -1,0 +1,14 @@
+.form_data {
+  background-image: url("../../assets/contact_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  display: flex;
+  width: 70%;
+  height: auto;
+  padding: 89px 149px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
