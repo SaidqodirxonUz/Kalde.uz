@@ -43,7 +43,7 @@ function Navbar() {
         boxShadow: "none",
         borderRadius: "50px",
         padding: "20px 40px",
-        margin: "20px 40px",
+        margin: "20px auto",
         width: "90vw",
         height: "93px",
       }}
@@ -59,7 +59,15 @@ function Navbar() {
         >
           <img src={logo} alt="Kalde" />
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              margin: "0",
+              justifyContent: "flex-end",
+            }}
+            // style={}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"

@@ -1,16 +1,11 @@
 .form_data {
-  // background-image: url("../../assets/contact_bg.png");
   background-position: center;
   background-size: cover;
   object-fit: cover;
-  // background-color: black;
   display: flex;
   width: 60%;
-  height: 100%;
-  max-height: 80vh;
-  // padding: 89px 149px;
+  max-height: 90vh;
   justify-content: center;
-  // align-items: center;
   gap: 2rem;
   flex-shrink: 0;
   background: linear-gradient(
@@ -24,37 +19,29 @@
 .forma {
   min-width: 35vw;
 }
-// .send_btn {
-//   // width: 100%;
-// }
+
 .info {
-  transform: translateX(200px);
+  display: flex;
+  transform: translateX(10vw);
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 *:focus {
   outline: none;
 }
 
-// body {
-//   background-color: #efefef;
-//   padding: 70px;
-//   font-family: "Open Sans", "Arial", snas-serif;
-// }
-
 .input-group {
-  // display: block;
   width: 500px;
   max-width: 100%;
   height: 70px;
   border: 0;
-  // background-color: #575757;
   border-radius: 8px;
   border: 1px solid #575757;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(2px);
   border-radius: 8px;
-  // border-bottom-right-radius: 41px;
-  // border-top-left-radius: 41px;
-  // border-top-right-radius: 0;
+
   box-shadow: 0 17px 40px 0 rgba(75, 128, 182, 0.07);
   margin-bottom: 22px;
   position: relative;
@@ -64,10 +51,6 @@
     box-shadow 0.1s ease-in-out;
   backdrop-filter: blur(2px);
 }
-
-// .input-group:hover {
-//   box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.077);
-// }
 
 .input-group input {
   position: absolute;
@@ -139,7 +122,7 @@
   opacity: 0.7;
 }
 .textarea-group {
-  width: 500px;
+  width: 100%;
   max-width: 100%;
   height: 140px;
   border: 0;
@@ -159,19 +142,9 @@
   textarea {
     resize: none;
     padding: 2rem !important;
-    // margin-top: 10px;
-    // margin-left: 50px;
     width: 100%;
-    // height: 100px;
     border: 0px solid rgba(255, 255, 255, 0);
-    // -moz-border-bottom-colors: none;
-    // -moz-border-left-colors: none;
-    // -moz-border-right-colors: none;
-    // -moz-border-top-colors: none;
     background-color: rgba(255, 255, 255, 0);
-
-    // background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
-    // border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
     border-image: none;
     border-radius: 6px 6px 6px 6px;
     border-style: none solid solid none;
@@ -186,7 +159,6 @@
   }
 
   textarea:focus {
-    // background: none repeat scroll 0 0 #ffffff;
     outline-width: 0;
     z-index: 1;
   }
@@ -198,8 +170,7 @@
   box-shadow: none;
   background-color: rgba(255, 255, 255, 0);
   top: 0;
-  // height: 10px;
-  width: 500px;
+  width: 100%;
   padding: 0 53px;
   box-sizing: border-box;
   z-index: 3;

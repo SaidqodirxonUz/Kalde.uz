@@ -88,8 +88,8 @@ const Footer = () => {
             ))}
           </ul>
         </Box>
-        <Box className="contact_us text-white">
-          <p className="footer-sections">Связаться с нами</p>
+        <Box className="contact_us text-white ">
+          <p className="footer-sections pb-12">Связаться с нами</p>
           <ul>
             <li>
               <p

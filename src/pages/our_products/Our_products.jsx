@@ -46,7 +46,7 @@ const Our_products = () => {
             >
               <List
                 sx={{
-                  width: "110%",
+                  width: { xs: "110%", sm: "100%" },
                   maxWidth: 360,
                   bgcolor: "background.paper",
                 }}

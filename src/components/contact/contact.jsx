@@ -12,7 +12,7 @@ const Contact = () => {
         <div
           className="info w-full"
           style={{
-            display: "flex",
+            // display: "flex",
             justifyContent: " center",
             alignItems: "flex-start",
             flexDirection: "column",
@@ -89,7 +89,7 @@ const Contact = () => {
             </article>
           </div>
         </div>
-        <div className="form_data flex flex-col text-white justify-center align-middle items-center m-auto py-10">
+        <div className="form_data flex flex-col text-white justify-center align-middle items-center m-auto py-24">
           <Typography
             variant="h4"
             component="h2"
