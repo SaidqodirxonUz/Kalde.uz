@@ -2,8 +2,6 @@
   width: 84px;
   height: 100vh;
   background-color: white !important;
-  
-  
 }
 
 .showcase {
@@ -16,17 +14,16 @@
   margin-bottom: 5rem;
 
   border-radius: 0rem 0rem 0rem 2.25rem;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 255, 255, 0.9) 100%
-    ),
-    #9498ad;
+  background-color: #fff !important;
 
   .hero {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    // background: #000;
+  }
+  .adventages {
     margin-top: 5rem;
   }
-  // flex-wrap: wrap;
 }
 
 .container {
