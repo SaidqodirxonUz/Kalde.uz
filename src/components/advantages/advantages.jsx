@@ -12,6 +12,7 @@ import paper from "../../assets/library_books_FILL0_wght400_GRAD0_opsz24 1.svg";
 import operator from "../../assets/support_agent_FILL0_wght400_GRAD0_opsz48 1.svg";
 import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg";
 import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
+import { FiArrowUpRight } from "react-icons/fi";
 
 let cardinfo = [
   { title: "qwer 34rt5yhfe egfdvev revef fffadsad", image: school },
@@ -23,29 +24,60 @@ let cardinfo = [
   { title: "qwerty qwerty qwerty qwerty", image: maintaince },
   { title: "qwerty qwerty qwerty qwerty", image: rise },
 ];
+// Наши преимущества
 
 const Advantages = () => {
   return (
     <div className="cards_container">
-      <Typography
-        variant="h2"
-        component="h3"
+      <div
         style={{
-          textAlign: "center",
-          fontSize: "48px",
-          fontStyle: "normal",
-          fontWeight: 400,
-          fontFamily: "Okta Neue",
-          lineHeight: "normal",
-          background:
-            "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+          alignSelf: "stretch",
+          maxWidth: "1280px",
+          margin: "0 auto",
         }}
       >
-        Наши преимущества
-      </Typography>
+        <Typography
+          variant="h2"
+          component="h3"
+          style={{
+            fontFamily: "Okta Neue",
+            fontSize: "36px",
+            fontStyle: "normal",
+            fontWeight: 400,
+            lineHeight: "normal",
+            background:
+              "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Наши преимущества
+        </Typography>
+        <a
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: "2rem 0",
+            width: "180px",
+            height: "30px",
+            padding: "20px 24px",
+            color: "rgba(239, 127, 26, 1)",
+            border: "1px solid rgba(239, 127, 26, 1)",
+            borderRadius: "100px",
+          }}
+          className="more"
+          href="#"
+        >
+          Все продукты <FiArrowUpRight />
+        </a>
+      </div>
       <Box className="infos">
         {cardinfo.map((info) => (
           <Card

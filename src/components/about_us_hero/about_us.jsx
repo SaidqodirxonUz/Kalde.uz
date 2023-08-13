@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import AboutUsHeroImg from "../../assets/about_us_hero.png";
 import { FiArrowUpRight } from "react-icons/fi";
-import playSvg from "../../assets/play.svg";
+
 import "./about_us.scss";
 
 // import Sidebar from "../../components/sidebar/sidebar";
@@ -69,25 +69,6 @@ const AboutUsHero = () => {
               href="#"
             >
               Узнать больше <FiArrowUpRight />
-            </a>
-            <a
-              style={{
-                display: "flex",
-                width: "2.8rem",
-                height: "2.8rem",
-                margin: "2rem 1rem",
-                justifyContent: "center",
-                alignItems: "center",
-
-                borderRadius: "100%",
-                border: "1px solid var(--orange, #EF7F1A)",
-                background:
-                  "var(--orange, linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), #EF7F1A)",
-              }}
-              className="more"
-              href="#"
-            >
-              <img src={playSvg} alt={playSvg} />
             </a>
           </div>
         </div>

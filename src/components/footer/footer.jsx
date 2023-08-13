@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="f_container">
+    <div className="f_container ">
       <div className="footer">
         <Box className="footer_inc">
           <img src={footer_img} alt="logo" />

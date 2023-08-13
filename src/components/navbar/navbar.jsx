@@ -11,14 +11,7 @@ import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TemporaryDrawer from "../drawer/drewer";
 
-const pages = [
-  { name: "Главная", url: "/" },
-  { name: "O нас", url: "/about-us" },
-  { name: "Преимущества", url: "/advantages" },
-  { name: "Каталог", url: "/catalog" },
-  { name: "Новости", url: "/news" },
-  { name: "Контакт", url: "/contact" },
-];
+
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -26,6 +19,14 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+  const pages = [
+    { name: t("navbar_main_link"), url: "/" },
+    { name: t("navbar_about_link"), url: "/about-us" },
+    { name: t("navbar_adventages_link"), url: "/advantages" },
+    { name: t("navbar_catalog_link"), url: "/catalog" },
+    { name: t("navbar_news_link"), url: "/news" },
+    { name: t("navbar_contact_link"), url: "/contact" },
+  ];
 
   const items = [
     {
@@ -76,9 +77,10 @@ const Navbar = () => {
             <TemporaryDrawer />
             {/* <AiOutlineMenu /> */}
           </Box>
+
           <Box
-            sx={{ display: { xs: "none", md: "flex" } }}
-            style={{
+            sx={{
+              display: { xs: "none", md: "flex" },
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
@@ -97,6 +99,7 @@ const Navbar = () => {
               </a>
             ))}
             <p className="divider">|</p>
+
             <Box>
               <Button
                 sx={{
@@ -113,28 +116,34 @@ const Navbar = () => {
                   href="tel:+998939087085"
                 >
                   +998 (93) 908-7085
-                  <hr />
-                  {t("website_title")}
                 </a>
               </Button>
+              <hr />
             </Box>
 
             <Box className="select">
               <FaGlobe className="text-3xl text-orange-500" />
-              <FormControl
-                sx={{ display: "flex", justifyItems: "center", margin: "auto" }}
-              >
+
+              <FormControl>
                 <NativeSelect
-                  className="text-neutral-950 active:text-yellow-300"
-                  defaultValue={i18n.language}
-                  inputProps={{
-                    name: "lang",
-                    id: "uncontrolled-native",
-                  }}
+                  value={i18n.language}
                   onChange={handleLanguageChange}
+                  inputProps={{
+                    name: "language",
+                    id: "language",
+                  }}
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "50px",
+                      background: "white",
+                      border: "none",
+                      padding: "0.5rem 1.5rem",
+                      boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.08)",
+                    },
+                  }}
                 >
-                  {items.map((item) => (
-                    <option key={item.value} value={item.value}>
+                  {items.map((item, index) => (
+                    <option value={item.value} key={index}>
                       {item.label}
                     </option>
                   ))}

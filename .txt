@@ -26,9 +26,12 @@ Dealers
 -id
 -name
 -adress
--phone_numbers
+-phone_numbers #min2
 -image         #min 1
 -location      #google_location
+-work-at
+-orientr
+-email
 
 ###
 
