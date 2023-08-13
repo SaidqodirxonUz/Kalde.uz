@@ -1,19 +1,15 @@
 import logo from "../../assets/navbar_img.png";
 import "./navbar.scss";
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem"; // Add this import
-import { AiOutlineMenu } from "react-icons/ai";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaGlobe } from "react-icons/fa";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import TemporaryDrawer from "../drawer/drewer";
 
 const pages = [
   { name: "Главная", url: "/" },
@@ -26,15 +22,6 @@ const pages = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
@@ -72,6 +59,7 @@ const Navbar = () => {
             height: "53px",
             display: "flex",
             justifyContent: "space-between",
+            gap: "2rem",
           }}
         >
           <img src={logo} alt="Kalde" />
@@ -85,46 +73,8 @@ const Navbar = () => {
             }}
             // style={}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="white"
-            >
-              <AiOutlineMenu />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <a
-                    href={page.url}
-                    style={{ textAlign: "center" }}
-                    className="pages text-neutral-950 active:text-yellow-300"
-                  >
-                    {page.name}
-                  </a>
-                </MenuItem>
-              ))}
-            </Menu>
+            <TemporaryDrawer />
+            {/* <AiOutlineMenu /> */}
           </Box>
           <Box
             sx={{ display: { xs: "none", md: "flex" } }}
@@ -140,7 +90,7 @@ const Navbar = () => {
                 href={page.url}
                 className="text-neutral-950 active:text-orange-500 links"
                 key={page}
-                onClick={handleCloseNavMenu}
+                // onClick={handleCloseNavMenu}
                 // sx={{ my: 2, color: "#000", display: "block" }}
               >
                 {page.name}

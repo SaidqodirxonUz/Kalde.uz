@@ -39,7 +39,7 @@ const Our_products = () => {
       <div className="our_products my-28">
         {/* <!-- Hero Area Start --> */}
         <section id="hero-area" className="py-10 px-10">
-          <div className="divide flex flex-row justify-between ">
+          <div className="divide flex lg:flex-row flex-col justify-between ">
             <Box
               className="categories"
               // sx={{ display: "flex", justifyContent: "flex-start" }}

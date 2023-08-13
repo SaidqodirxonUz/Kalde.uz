@@ -125,10 +125,10 @@ const Contact = () => {
             <div className="textarea-group">
               <textarea
                 placeholder="Введите сообщение"
-                rows="4"
+                rows="3"
                 name="comment[text]"
                 id="comment_text"
-                cols="40"
+                cols="10"
                 className="ui-autocomplete-input"
                 // autocomplete="off"
                 // role="textbox"

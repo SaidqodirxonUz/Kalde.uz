@@ -34,9 +34,10 @@ const Footer = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "left",
-              gap: "3rem",
+              gap: "2rem",
               alignItems: "center",
               padding: "2rem 0",
+              color: "white",
             }}
             className="s_links"
           >
