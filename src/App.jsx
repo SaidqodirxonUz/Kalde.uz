@@ -1,15 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-// import Button from "@mui/material/Button";
-// import Sidebar from "./components/sidebar/sidebar";
 import Main from "./pages/main/main";
+import About from "./pages/about_us/About";
+import Our_products from "./pages/our_products/Our_products";
 
 function App() {
   return (
     <>
-      {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/catalog" element={<Our_products />} />
       </Routes>
     </>
   );

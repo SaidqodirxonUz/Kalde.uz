@@ -14,22 +14,14 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
-const pages = [
-  { name: "Главная", url: "/" },
-  { name: "O нас", url: "/about-us" },
-  { name: "Преимущества", url: "/advantages" },
-  { name: "Каталог", url: "/catalog" },
-  { name: "Новости", url: "/news" },
-  { name: "Контакт", url: "/contact" },
-];
+import i18n from "../../i18n/i18n";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleOpenNavMenu = (e) => {
+    setAnchorElNav(e.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -39,6 +31,14 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+  const pages = [
+    { name: t("navbar_main_link"), url: "/" },
+    { name: t("navbar_about_link"), url: "/about-us" },
+    { name: t("navbar_adventages_link"), url: "/advantages" },
+    { name: t("navbar_catalog_link"), url: "/catalog" },
+    { name: t("navbar_news_link"), url: "/news" },
+    { name: t("navbar_contact_link"), url: "/contact" },
+  ];
 
   const items = [
     {
@@ -106,11 +106,10 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.url} onClick={handleCloseNavMenu}>
                   <a
                     href={page.url}
-                    style={{ textAlign: "center" }}
-                    className="pages text-neutral-950 active:text-yellow-300"
+                    className="text-neutral-950 active:text-orange-500 links"
                   >
                     {page.name}
                   </a>
@@ -118,31 +117,32 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
+
           <Box
-            sx={{ display: { xs: "none", md: "flex" } }}
-            style={{
+            sx={{
+              display: { xs: "none", md: "flex" },
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
               gap: "2rem",
             }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <a
                 href={page.url}
                 className="text-neutral-950 active:text-orange-500 links"
-                key={page}
+                key={index}
                 onClick={handleCloseNavMenu}
-                // sx={{ my: 2, color: "#000", display: "block" }}
               >
                 {page.name}
               </a>
             ))}
             <p className="divider">|</p>
+
             <Box>
               <Button
                 sx={{
-                  my: 2,
+                  my: 1,
                   color: "#000",
                   display: "flex",
                   justifyContent: "center",
@@ -155,28 +155,34 @@ const Navbar = () => {
                   href="tel:+998939087085"
                 >
                   +998 (93) 908-7085
-                  <hr />
-                  {t("website_title")}
                 </a>
               </Button>
+              <hr />
             </Box>
 
             <Box className="select">
               <FaGlobe className="text-3xl text-orange-500" />
-              <FormControl
-                sx={{ display: "flex", justifyItems: "center", margin: "auto" }}
-              >
+
+              <FormControl>
                 <NativeSelect
-                  className="text-neutral-950 active:text-yellow-300"
-                  defaultValue={i18n.language}
-                  inputProps={{
-                    name: "lang",
-                    id: "uncontrolled-native",
-                  }}
+                  value={i18n.language}
                   onChange={handleLanguageChange}
+                  inputProps={{
+                    name: "language",
+                    id: "language",
+                  }}
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "50px",
+                      background: "white",
+                      border: "none",
+                      padding: "0.5rem 1.5rem",
+                      boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.08)",
+                    },
+                  }}
                 >
-                  {items.map((item) => (
-                    <option key={item.value} value={item.value}>
+                  {items.map((item, index) => (
+                    <option value={item.value} key={index}>
                       {item.label}
                     </option>
                   ))}
