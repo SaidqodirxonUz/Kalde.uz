@@ -147,9 +147,9 @@ const Our_products = () => {
         </section>
         <section className="contact-form">
           {/* <div class="container"> */}
-          <Contact />
         </section>
       </div>
+      <Contact />
       <Footer />
     </>
   );
