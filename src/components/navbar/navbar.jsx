@@ -6,13 +6,14 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem"; // Add this import
 import { AiOutlineMenu } from "react-icons/ai";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaGlobe } from "react-icons/fa";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import { FormControl, NativeSelect } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const pages = [
   { name: "Главная", url: "/" },
@@ -23,7 +24,8 @@ const pages = [
   { name: "Контакт", url: "/contact" },
 ];
 
-function Navbar() {
+const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -33,6 +35,21 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
+  const items = [
+    {
+      value: "ru",
+      label: "Рус",
+    },
+    {
+      value: "uz",
+      label: "Uz",
+    },
+  ];
 
   return (
     <AppBar
@@ -138,6 +155,8 @@ function Navbar() {
                   href="tel:+998939087085"
                 >
                   +998 (93) 908-7085
+                  <hr />
+                  {t("website_title")}
                 </a>
               </Button>
             </Box>
@@ -147,31 +166,20 @@ function Navbar() {
               <FormControl
                 sx={{ display: "flex", justifyItems: "center", margin: "auto" }}
               >
-                {/* <InputLabel variant="standart" htmlFor="uncontrolled-native">
-              
-            </InputLabel> */}
-
                 <NativeSelect
                   className="text-neutral-950 active:text-yellow-300"
-                  defaultValue="ru"
+                  defaultValue={i18n.language}
                   inputProps={{
                     name: "lang",
                     id: "uncontrolled-native",
                   }}
+                  onChange={handleLanguageChange}
                 >
-                  <option
-                    className="text-neutral-950 active:text-yellow-300"
-                    value="ru"
-                  >
-                    Ру
-                  </option>
-                  <option
-                    className="text-neutral-950 active:text-yellow-300"
-                    value="uz"
-                  >
-                    Uz
-                  </option>
-                  {/* <option value="">Thirty</option> */}
+                  {items.map((item) => (
+                    <option key={item.value} value={item.value}>
+                      {item.label}
+                    </option>
+                  ))}
                 </NativeSelect>
               </FormControl>
             </Box>
@@ -180,5 +188,6 @@ function Navbar() {
       </Container>
     </AppBar>
   );
-}
+};
+
 export default Navbar;
