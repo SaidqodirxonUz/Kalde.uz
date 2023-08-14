@@ -9,10 +9,11 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n/i18n";
 import TemporaryDrawer from "../drawer/drewer";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
