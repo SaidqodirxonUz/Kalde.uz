@@ -1,3 +1,9 @@
+.appbar {
+  width: 90vw !important;
+  @media (max-width: 1200px) {
+    width: 100% !important;
+  }
+}
 .select {
   width: 100px;
   display: flex;

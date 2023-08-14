@@ -8,7 +8,10 @@
   flex-wrap: wrap !important;
   // padding: 2rem 0;
 
-  padding: 10rem 0 10rem 0;
+  padding: 10rem 0;
+  @media (max-width: 1200px) {
+    padding: 1rem 0;
+  }
 
   .card {
     max-width: 300px;

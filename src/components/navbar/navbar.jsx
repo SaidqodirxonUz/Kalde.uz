@@ -11,8 +11,6 @@ import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import TemporaryDrawer from "../drawer/drewer";
 
-
-
 const Navbar = () => {
   const { t, i18n } = useTranslation();
 
@@ -20,12 +18,12 @@ const Navbar = () => {
     i18n.changeLanguage(e.target.value);
   };
   const pages = [
-    { name: t("navbar_main_link"), url: "/" },
-    { name: t("navbar_about_link"), url: "/about-us" },
-    { name: t("navbar_adventages_link"), url: "/advantages" },
-    { name: t("navbar_catalog_link"), url: "/catalog" },
-    { name: t("navbar_news_link"), url: "/news" },
-    { name: t("navbar_contact_link"), url: "/contact" },
+    { name: t("Bosh sahifa"), url: "/" },
+    { name: t("Biz haqimizda"), url: "/about-us" },
+    { name: t("Afzalliklarimiz"), url: "/advantages" },
+    { name: t("Katalog"), url: "/catalog" },
+    { name: t("Yangiliklar"), url: "/news" },
+    { name: t("Kantakt"), url: "/contact" },
   ];
 
   const items = [
@@ -49,9 +47,10 @@ const Navbar = () => {
         borderRadius: "50px",
         padding: "20px 40px",
         margin: "20px auto",
-        width: "90vw",
+        // width: "90vw",
         height: "93px",
       }}
+      className="appbar"
     >
       <Container maxWidth="xl">
         <Toolbar

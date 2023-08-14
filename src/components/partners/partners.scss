@@ -40,7 +40,9 @@ $animationSpeed: 10s;
 
   &::before,
   &::after {
-    @include white-gradient;
+    @media (min-width: 1200px) {
+      @include white-gradient;
+    }
     content: "";
     height: 10rem;
     position: absolute;

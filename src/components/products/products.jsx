@@ -15,22 +15,27 @@ let cardinfo = [
 
 const Products = () => {
   return (
-    <div className="products_container" style={{ padding: "10rem 0 10rem 0" }}>
+    <div
+      className="products_container w-full bg-stone-100 py-14 lg:py-22 lg:mb-10"
+      // style={{ padding: "10rem 0 10rem 0" }}
+    >
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
-          alignSelf: "stretch",
           maxWidth: "1280px",
           margin: "0 auto",
+          padding: "1rem 0",
         }}
       >
         <Typography
           variant="h2"
           component="h3"
           style={{
+            // textAlign: "center",
+            // margin: "0 auto",
             fontFamily: "Okta Neue",
             fontSize: "36px",
             fontStyle: "normal",
@@ -42,12 +47,14 @@ const Products = () => {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
+          className="mx-auto lg:mx-0"
         >
           Наши продукты
         </Typography>
         <a
+          // className="btn"
           style={{
-            display: "flex",
+            // display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
@@ -59,7 +66,7 @@ const Products = () => {
             border: "1px solid rgba(239, 127, 26, 1)",
             borderRadius: "100px",
           }}
-          className="more"
+          className="more hidden lg:flex"
           href="#"
         >
           Все продукты <FiArrowUpRight />
@@ -72,6 +79,7 @@ const Products = () => {
           justifyContent: "space-between",
           alignItems: "center",
           maxWidth: "1280px",
+          // width: "100%",
           flexWrap: "wrap",
           margin: "0 auto",
           gap: "2rem",
@@ -86,6 +94,7 @@ const Products = () => {
               background: "#fff",
               border: "1px solid #ccc",
               borderRadius: "30px",
+              margin: "0 auto",
             }}
             key={crypto.randomUUID()}
           >
@@ -120,6 +129,26 @@ const Products = () => {
           </div>
         ))}
       </div>
+      <a
+        // className="btn"
+        style={{
+          // display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          // margin: "2rem 0",
+          width: "180px",
+          height: "30px",
+          padding: "20px 24px",
+          color: "rgba(239, 127, 26, 1)",
+          border: "1px solid rgba(239, 127, 26, 1)",
+          borderRadius: "100px",
+        }}
+        className="more flex lg:hidden justify-center mx-auto my-10"
+        href="#"
+      >
+        Все продукты <FiArrowUpRight />
+      </a>
     </div>
   );
 };

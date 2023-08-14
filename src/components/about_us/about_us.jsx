@@ -51,7 +51,10 @@ const AboutUs = () => {
             купить более чем в 20 специализированных магазинах!
           </Typography>
 
-          <div style={{ display: "flex", columnGap: "1rem" }}>
+          <div
+            className="flex flex-col md:flex-row md:gap-10 "
+            // style={{ display: "flex" }}
+          >
             <a
               style={{
                 display: "flex",
@@ -81,14 +84,14 @@ const AboutUs = () => {
                 width: "180px",
                 height: "30px",
                 padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
+                // color: "rgba(239, 127, 26, 1)",
                 border: "1px solid rgba(239, 127, 26, 1)",
                 borderRadius: "100px",
               }}
-              className="more"
+              className="more bg-orange-500 text-white md:bg-white md:text-orange-500"
               href="#"
             >
-              Узнать больше <FiArrowUpRight />
+              Свяжитесь с нами <FiArrowUpRight />
             </a>
           </div>
         </div>

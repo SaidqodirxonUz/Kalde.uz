@@ -29,3 +29,19 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column-reverse !important;
+    padding: 0 !important;
+    .img {
+      width: 90% !important;
+      display: block;
+      img {
+        border-radius: 20px;
+      }
+    }
+    .texts {
+      width: 90% !important;
+    }
+  }
+}

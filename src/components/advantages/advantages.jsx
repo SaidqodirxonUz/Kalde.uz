@@ -12,7 +12,7 @@ import paper from "../../assets/library_books_FILL0_wght400_GRAD0_opsz24 1.svg";
 import operator from "../../assets/support_agent_FILL0_wght400_GRAD0_opsz48 1.svg";
 import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg";
 import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
-import { FiArrowUpRight } from "react-icons/fi";
+// import { FiArrowUpRight } from "react-icons/fi";
 
 let cardinfo = [
   { title: "qwer 34rt5yhfe egfdvev revef fffadsad", image: school },
@@ -28,16 +28,14 @@ let cardinfo = [
 
 const Advantages = () => {
   return (
-    <div className="cards_container">
+    <div className="cards_container mx-auto w-11/12">
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
-          alignSelf: "stretch",
-          maxWidth: "1280px",
-          margin: "0 auto",
+          // alignSelf: "stretch",
         }}
       >
         <Typography
@@ -58,7 +56,7 @@ const Advantages = () => {
         >
           Наши преимущества
         </Typography>
-        <a
+        {/* <a
           style={{
             display: "flex",
             flexDirection: "row",
@@ -76,7 +74,7 @@ const Advantages = () => {
           href="#"
         >
           Все продукты <FiArrowUpRight />
-        </a>
+        </a> */}
       </div>
       <Box className="infos">
         {cardinfo.map((info) => (
