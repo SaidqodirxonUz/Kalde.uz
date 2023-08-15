@@ -127,7 +127,7 @@ class Blog extends React.Component {
                   </Card>
                 </div>
                 <div className="card">
-                  <Card sx={{ maxWidth: 345 }}>
+                  <Card sx={{ maxWidth: 345, padding: "1rem" }}>
                     <CardActionArea>
                       <CardMedia
                         component="img"
@@ -135,26 +135,28 @@ class Blog extends React.Component {
                         image={blogImg}
                         alt="green iguana"
                       />
+                      <div className="flex flex-row justify-start items-center px-6">
+                        <TbCalendarEvent />
+                        <CardHeader
+                          className=""
+                          subheader={new Date().toLocaleDateString()}
+                        ></CardHeader>
+                      </div>
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Lizard
+                        <Typography gutterBottom variant="h6" component="p">
+                          Название новости находится в этом разделе
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Lizards are a widespread group of squamate reptiles,
-                          with over 6,000 species, ranging across all continents
-                          except Antarctica
+                          Появится краткий текст о новостях. Текст будет
+                          состоять примерно из 4 строк. И этот текст может
+                          состоять почти из 100 букв. опять не знаю
                         </Typography>
                       </CardContent>
                     </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Share
-                      </Button>
-                    </CardActions>
                   </Card>
                 </div>
                 <div className="card">
-                  <Card sx={{ maxWidth: 345 }}>
+                  <Card sx={{ maxWidth: 345, padding: "1rem" }}>
                     <CardActionArea>
                       <CardMedia
                         component="img"
@@ -162,22 +164,24 @@ class Blog extends React.Component {
                         image={blogImg}
                         alt="green iguana"
                       />
+                      <div className="flex flex-row justify-start items-center px-6">
+                        <TbCalendarEvent />
+                        <CardHeader
+                          className=""
+                          subheader={new Date().toLocaleDateString()}
+                        ></CardHeader>
+                      </div>
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          Lizard
+                        <Typography gutterBottom variant="h6" component="p">
+                          Название новости находится в этом разделе
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Lizards are a widespread group of squamate reptiles,
-                          with over 6,000 species, ranging across all continents
-                          except Antarctica
+                          Появится краткий текст о новостях. Текст будет
+                          состоять примерно из 4 строк. И этот текст может
+                          состоять почти из 100 букв. опять не знаю
                         </Typography>
                       </CardContent>
                     </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary">
-                        Share
-                      </Button>
-                    </CardActions>
                   </Card>
                 </div>
                 <div className="card">
