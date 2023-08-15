@@ -12,8 +12,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/catalog" element={<Our_products />} />
-        <Route path="/about-us" element={<About />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/product" element={<Product_info />} />
       </Routes>

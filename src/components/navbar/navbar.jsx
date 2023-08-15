@@ -9,21 +9,22 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n/i18n";
 import TemporaryDrawer from "../drawer/drewer";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
   const pages = [
-    { name: t("Bosh sahifa"), url: "/" },
-    { name: t("Biz haqimizda"), url: "/about-us" },
-    { name: t("Afzalliklarimiz"), url: "/advantages" },
-    { name: t("Katalog"), url: "/catalog" },
-    { name: t("Yangiliklar"), url: "/news" },
-    { name: t("Kantakt"), url: "/contact" },
+    { name: t("navbar_main_link"), url: "/" },
+    { name: t("navbar_about_link"), url: "/about-us" },
+    { name: t("navbar_adventages_link"), url: "/advantages" },
+    { name: t("navbar_catalog_link"), url: "/catalog" },
+    { name: t("navbar_news_link"), url: "/news" },
+    { name: t("navbar_contact_link"), url: "/contact" },
   ];
 
   const items = [
