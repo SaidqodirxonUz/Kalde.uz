@@ -8,9 +8,9 @@ import { FaGlobe } from "react-icons/fa";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
+import TemporaryDrawer from "../drawer/drewer";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
-import TemporaryDrawer from "../drawer/drewer";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -118,7 +118,7 @@ const Navbar = () => {
                   +998 (93) 908-7085
                 </a>
               </Button>
-              <hr />
+            
             </Box>
 
             <Box className="select">

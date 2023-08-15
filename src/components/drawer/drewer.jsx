@@ -13,6 +13,10 @@ import {
   TbBrandInstagram,
   TbBrandTelegram,
 } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n/i18n";
+
+// const Navbar = () => {
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -21,6 +25,19 @@ export default function TemporaryDrawer() {
     bottom: false,
     right: false,
   });
+  const { t } = useTranslation();
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+  const pages = [
+    { name: t("navbar_main_link"), url: "/" },
+    { name: t("navbar_about_link"), url: "/about-us" },
+    { name: t("navbar_adventages_link"), url: "/advantages" },
+    { name: t("navbar_catalog_link"), url: "/catalog" },
+    { name: t("navbar_news_link"), url: "/news" },
+    { name: t("navbar_contact_link"), url: "/contact" },
+  ];
   const items = [
     {
       value: "ru",
@@ -32,14 +49,14 @@ export default function TemporaryDrawer() {
     },
   ];
 
-  const pages = [
-    { name: "Главная", url: "/" },
-    { name: "O нас", url: "/about-us" },
-    { name: "Преимущества", url: "/advantages" },
-    { name: "Каталог", url: "/catalog" },
-    { name: "Новости", url: "/news" },
-    { name: "Контакт", url: "/contact" },
-  ];
+  // const pages = [
+  //   { name: "Главная", url: "/" },
+  //   { name: "O нас", url: "/about-us" },
+  //   { name: "Преимущества", url: "/advantages" },
+  //   { name: "Каталог", url: "/catalog" },
+  //   { name: "Новости", url: "/news" },
+  //   { name: "Контакт", url: "/contact" },
+  // ];
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -63,7 +80,7 @@ export default function TemporaryDrawer() {
         justifyContent: "space-between",
       }}
       role="menubar"
-      onClick={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div>
@@ -75,9 +92,9 @@ export default function TemporaryDrawer() {
               disablePadding
               className="px-6 active:text-orange-500 active:border-b-2 active:border-solid active:border-orange-500"
             >
-              {/* <ListItemButton> */}
-              <ListItemText primary={el.name} />
-              {/* </ListItemButton> */}
+              <a href={el.url}>
+                <ListItemText primary={el.name} />
+              </a>
             </ListItem>
           ))}
           <div className="flex flex-row justify-evenly h-10 items-center">
@@ -85,6 +102,12 @@ export default function TemporaryDrawer() {
               <FaGlobe className="" style={{ fontSize: "20px" }} />
               <ListItem className="px-6 bg-black active:bg-zinc-500 active:text-white  h-full">
                 <select
+                  value={i18n.language}
+                  onChange={handleLanguageChange}
+                  // inputProps={{
+                  name="language"
+                  id="language"
+                  // }}
                   style={{
                     // margin: "50px",
                     width: "100%",

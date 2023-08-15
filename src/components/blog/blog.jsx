@@ -114,7 +114,12 @@ class Blog extends React.Component {
                         ></CardHeader>
                       </div>
                       <CardContent>
-                        <Typography gutterBottom variant="h6" component="p">
+                        <Typography
+                          gutterBottom
+                          className="card_title"
+                          variant="h6"
+                          component="p"
+                        >
                           Название новости находится в этом разделе
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -143,7 +148,12 @@ class Blog extends React.Component {
                         ></CardHeader>
                       </div>
                       <CardContent>
-                        <Typography gutterBottom variant="h6" component="p">
+                        <Typography
+                          gutterBottom
+                          className="card_title"
+                          variant="h6"
+                          component="p"
+                        >
                           Название новости находится в этом разделе
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -172,7 +182,12 @@ class Blog extends React.Component {
                         ></CardHeader>
                       </div>
                       <CardContent>
-                        <Typography gutterBottom variant="h6" component="p">
+                        <Typography
+                          gutterBottom
+                          className="card_title"
+                          variant="h6"
+                          component="p"
+                        >
                           Название новости находится в этом разделе
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -194,7 +209,12 @@ class Blog extends React.Component {
                         alt="green iguana"
                       />
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography
+                          gutterBottom
+                          className="card_title"
+                          variant="h5"
+                          component="div"
+                        >
                           Lizard
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -221,7 +241,12 @@ class Blog extends React.Component {
                         alt="green iguana"
                       />
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography
+                          gutterBottom
+                          className="card_title"
+                          variant="h5"
+                          component="div"
+                        >
                           Lizard
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
