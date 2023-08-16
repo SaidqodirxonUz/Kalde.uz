@@ -1,0 +1,35 @@
+.advantage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  // flex-wrap: wrap;
+  //   background-color: rgba(148, 152, 173, 1);
+  //   border-bottom-left-radius: 50px;
+  width: 100%;
+  margin: 0 auto;
+  //   padding: 10rem 0 10rem 0;
+  background: #ffff !important;
+
+  .img {
+    width: 40%;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: baseline;
+    width: 40%;
+    gap: 1.5rem;
+    // margin-left: 11%;
+    margin: 0 5%;
+    .more {
+      font-size: 0.875em !important;
+    }
+  }
+}

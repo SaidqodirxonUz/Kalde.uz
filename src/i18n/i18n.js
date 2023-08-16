@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
   fallbackLng: "uz",
-  lng: "uz",
+  lng: "ru",
   resources: {
     uz: {
       translation: {
@@ -13,6 +13,7 @@ i18n.use(initReactI18next).init({
         navbar_catalog_link: "Katalog",
         navbar_news_link: "Yangiliklar",
         navbar_contact_link: "Kontaktlar",
+        navbar_lang_select: "Tilni tanlang",
       },
     },
     ru: {
@@ -23,6 +24,18 @@ i18n.use(initReactI18next).init({
         navbar_catalog_link: "Каталог",
         navbar_news_link: "Новости",
         navbar_contact_link: "Контакты",
+        navbar_lang_select: "Выберите язык",
+      },
+    },
+    en: {
+      translation: {
+        navbar_main_link: "Main",
+        navbar_about_link: "About",
+        navbar_adventages_link: "Our advantages",
+        navbar_catalog_link: "Catalog",
+        navbar_news_link: "News",
+        navbar_contact_link: "Contacts",
+        navbar_lang_select: "Select language",
       },
     },
   },

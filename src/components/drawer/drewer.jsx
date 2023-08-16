@@ -25,11 +25,13 @@ export default function TemporaryDrawer() {
     bottom: false,
     right: false,
   });
+
   const { t } = useTranslation();
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+
   const pages = [
     { name: t("navbar_main_link"), url: "/" },
     { name: t("navbar_about_link"), url: "/about-us" },
@@ -39,6 +41,7 @@ export default function TemporaryDrawer() {
     { name: t("navbar_contact_link"), url: "/contact" },
   ];
   const items = [
+    { value: "en", label: "En" },
     {
       value: "ru",
       label: "Рус",
@@ -130,7 +133,7 @@ export default function TemporaryDrawer() {
                   }}
                 >
                   <option selected disabled>
-                    Язык
+                    {t("navbar_lang_select")}
                   </option>
                   {items.map((item) => (
                     <option key={item.value} value={item.value}>

@@ -17,6 +17,7 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+
   const pages = [
     { name: t("navbar_main_link"), url: "/" },
     { name: t("navbar_about_link"), url: "/about-us" },
@@ -34,6 +35,10 @@ const Navbar = () => {
     {
       value: "uz",
       label: "Uz",
+    },
+    {
+      value: "en",
+      label: "En",
     },
   ];
 
@@ -62,7 +67,9 @@ const Navbar = () => {
             gap: "2rem",
           }}
         >
-          <img src={logo} alt="Kalde" />
+          <a href="/">
+            <img src={logo} alt="Kalde" />
+          </a>
 
           <Box
             sx={{
@@ -89,7 +96,7 @@ const Navbar = () => {
             {pages.map((page) => (
               <a
                 href={page.url}
-                className="text-neutral-950 active:text-orange-500 links"
+                className="text-neutral-950 text-xl font-semibold active:text-orange-500 links"
                 key={page}
                 // onClick={handleCloseNavMenu}
                 // sx={{ my: 2, color: "#000", display: "block" }}
@@ -107,6 +114,7 @@ const Navbar = () => {
                 <BiSolidPhoneCall className="text-3xl text-orange-500" />
                 +998 (93) 908-7085
               </a>
+              {/* </Button> */}
             </Box>
 
             <Box className="select">

@@ -5,6 +5,7 @@ import {
   TbBrandFacebook,
 } from "react-icons/tb";
 import "./style.scss";
+
 const Contact = () => {
   return (
     <>
@@ -101,7 +102,7 @@ const Contact = () => {
             component="form"
             noValidate
             autoComplete="on"
-            className="flex flex-col justify-end items-end forma"
+            className="flex flex-col w-full lg:w-96 justify-center items-end forma"
           >
             <div className="input-group">
               <input
@@ -141,7 +142,7 @@ const Contact = () => {
               className="send_btn"
               style={{ backgroundColor: "#EF7F1A" }}
             >
-              ОТПРАВИТЬ
+              Отправить
             </Button>
           </Box>
         </div>

@@ -7,7 +7,9 @@ import Product_info from "./pages/product_info/product_info";
 import News from "./pages/news/news";
 import News_info from "./pages/news_info/news_info";
 import Filial from "./pages/filial/filial";
-import Contact_filial from "./pages/contact_filial/contact";
+import Contact_filial from "./pages/contact-filial/contact";
+import Advantages from "./pages/advantages/advantages";
+// import ContactUs from "./pages/contact/contact";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/news/:id" element={<News_info />} />
         <Route path="/contact" element={<Filial />} />
         <Route path="/contact/:id" element={<Contact_filial />} />
+        <Route path="/advantages" element={<Advantages />} />
       </Routes>
     </>
   );

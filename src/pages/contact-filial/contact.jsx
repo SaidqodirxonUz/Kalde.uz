@@ -13,8 +13,8 @@ const Contact_filial = () => {
     <>
       <Navbar />
       {/* <!-- Hero Area Start --> */}
-      <div className="hero-area pt-40 pb-20">
-        <section className="Contacts w-9/12 mx-auto flex flex-row justify-between md:flex-row gap-10">
+      <div className="hero-area pt-10">
+        <section className="Contacts w-9/12 mx-auto flex flex-col justify-between md:flex-row gap-10">
           <div className="f_info">
             <h5 className="filial_name">Ташкентский филиал</h5>
 
@@ -58,14 +58,14 @@ const Contact_filial = () => {
           </div>
           <div
             style={{ maxWidth: "400px" }}
-            className="w-full p-10 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
+            className="w-full contact_card p-10 bg-white rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
           >
             <h5
               className="filial_name"
               style={{
                 fontSize: "24px",
                 textAlign: "center",
-                padding: "2rem 0",
+                paddingBottom: "2rem",
               }}
             >
               Связаться с нами
