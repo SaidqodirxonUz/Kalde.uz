@@ -12,6 +12,7 @@ import paper from "../../assets/library_books_FILL0_wght400_GRAD0_opsz24 1.svg";
 import operator from "../../assets/support_agent_FILL0_wght400_GRAD0_opsz48 1.svg";
 import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg";
 import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
+import { FiArrowUpRight } from "react-icons/fi";
 // import { FiArrowUpRight } from "react-icons/fi";
 
 let cardinfo = [
@@ -33,15 +34,19 @@ const Advantages = () => {
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
-          // alignSelf: "stretch",
+          maxWidth: "1280px",
+          // margin: "0 auto",
+          padding: "1rem 0",
         }}
       >
         <Typography
           variant="h2"
           component="h3"
           style={{
+            textAlign: "center",
+            margin: "0 auto",
             fontFamily: "Okta Neue",
             fontSize: "36px",
             fontStyle: "normal",
@@ -53,12 +58,14 @@ const Advantages = () => {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
+          className="mx-auto lg:mx-0"
         >
-          Наши преимущества
+          Наши Преимущества
         </Typography>
-        {/* <a
+        <a
+          // className="btn"
           style={{
-            display: "flex",
+            // display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
@@ -70,11 +77,11 @@ const Advantages = () => {
             border: "1px solid rgba(239, 127, 26, 1)",
             borderRadius: "100px",
           }}
-          className="more"
-          href="#"
+          className="more hidden lg:flex"
+          href="/advantages"
         >
-          Все продукты <FiArrowUpRight />
-        </a> */}
+          Все Преимущества <FiArrowUpRight />
+        </a>
       </div>
       <Box className="infos">
         {cardinfo.map((info) => (

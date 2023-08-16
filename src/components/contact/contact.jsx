@@ -7,11 +7,6 @@ import {
 import "./style.scss";
 
 const Contact = () => {
-  const SendForm = document.querySelector("form");
-  SendForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-
   return (
     <>
       <div className="contact flex flex-row justify-end items-center w-full bg-neutral-100">

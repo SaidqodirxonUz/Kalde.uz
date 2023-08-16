@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
   };
+
   const pages = [
     { name: t("navbar_main_link"), url: "/" },
     { name: t("navbar_about_link"), url: "/about-us" },
@@ -67,7 +68,9 @@ const Navbar = () => {
             gap: "2rem",
           }}
         >
-          <img src={logo} alt="Kalde" />
+          <a href="/">
+            <img src={logo} alt="Kalde" />
+          </a>
 
           <Box
             sx={{
@@ -119,10 +122,9 @@ const Navbar = () => {
                   className="text-neutral-950 active:text-yellow-300"
                   href="tel:+998939087085"
                 >
-                  +998 (93) 908-7085
+                  +998 (90) 015-2533
                 </a>
               </Button>
-            
             </Box>
 
             <Box className="select">
