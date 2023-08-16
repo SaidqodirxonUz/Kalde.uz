@@ -1,3 +1,15 @@
+.filial_name {
+  font-family: Okta Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: var(--liniar, linear-gradient(90deg, #052438 0%, #186ba3 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .form_data {
   background-position: center;
   background-size: cover;
@@ -17,7 +29,7 @@
     lightgray -58.531px 0px / 126.201% 100% no-repeat;
 }
 .forma {
-  min-width: 35vw;
+  min-width: 100px;
   padding: 0;
   margin: 0;
 }
@@ -30,8 +42,8 @@
   outline: none;
 }
 
-.input-group {
-  width: 500px;
+.pizdescha {
+  // max-width: 300px;
   max-width: 100%;
   height: 70px;
   backdrop-filter: blur(2px);
@@ -51,7 +63,7 @@
   backdrop-filter: blur(2px);
 }
 
-.input-group input {
+.pizdescha input {
   position: absolute;
   border: 0;
   box-shadow: none;
@@ -64,35 +76,35 @@
   box-sizing: border-box;
   z-index: 3;
   display: block;
-  color: #fff !important;
+  color: #000 !important;
   font-size: 18px;
   font-family: "Oxygen", sans-serif;
   transition: top 0.1s ease-in-out;
 }
 
-.input-group input::placeholder {
+.pizdescha input::placeholder {
   color: rgba(0, 0, 0, 0);
   font-size: 16px;
 }
-.textarea-group textarea::placeholder {
+.pizdes textarea::placeholder {
   color: #969696;
   font-size: 16px;
 }
 
-.input-group input:focus,
-.input-group input:not(:placeholder-shown) {
+.pizdescha input:focus,
+.pizdescha input:not(:placeholder-shown) {
   color: rgba(0, 0, 0, 0);
   top: 17px;
 }
-.textarea-group textarea:active {
+.pizdes textarea:active {
   color: rgba(0, 0, 0, 0);
 }
-.textarea-group textarea:focus,
-.textarea-group textarea:not(:placeholder-shown) {
+.pizdes textarea:focus,
+.pizdes textarea:not(:placeholder-shown) {
   top: 17px;
 }
 
-.input-group label {
+.pizdescha label {
   position: absolute;
   border: 0;
   top: 0;
@@ -109,20 +121,20 @@
   cursor: text;
 }
 
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
+.pizdescha input:focus + label,
+.pizdescha input:not(:placeholder-shown) + label {
   bottom: 25px;
   font-size: 13px;
   opacity: 0.7;
 }
-.textarea-group textarea:focus + label,
-.textarea-group textarea:not(:placeholder-shown) + label {
+.pizdes textarea:focus + label,
+.pizdes textarea:not(:placeholder-shown) + label {
   top: -25px;
   font-size: 13px;
   opacity: 0.7;
 }
-.textarea-group {
-  width: 500px;
+.pizdes {
+  // width: 300px;
   max-width: 100%;
   height: 140px;
   border: 0;
@@ -135,7 +147,7 @@
   margin-bottom: 22px;
   position: relative;
   font-size: 17px;
-  color: #f3f4f5;
+  // color: #f3f4f5;
   transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out,
     box-shadow 0.1s ease-in-out;
   backdrop-filter: blur(2px);
@@ -150,7 +162,7 @@
     border-style: none solid solid none;
     border-width: medium 1px 1px medium;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
-    color: #fff;
+    // color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 1.4em;
@@ -168,7 +180,7 @@
   position: absolute;
   border: 0;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0);
+  // background-color: rgba(255, 255, 255, 0);
   top: 0;
   width: 100%;
   padding: 0 53px;
@@ -196,10 +208,10 @@
     padding: 0 1rem;
   }
 
-  .input-group {
+  .pizdescha {
     width: 100%;
   }
-  .textarea-group {
+  .pizdes {
     width: 100%;
   }
   .send_btn {

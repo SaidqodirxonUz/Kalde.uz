@@ -5,6 +5,9 @@ import Our_products from "./pages/our_products/Our_products";
 import About from "./pages/about_us/About";
 import Product_info from "./pages/product_info/product_info";
 import News from "./pages/news/news";
+import News_info from "./pages/news_info/news_info";
+import Filial from "./pages/filial/filial";
+import Contact_filial from "./pages/contact_filial/contact";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/catalog" element={<Our_products />} />
         <Route path="/product/:id" element={<Product_info />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<News_info />} />
+        <Route path="/contact" element={<Filial />} />
+        <Route path="/contact/:id" element={<Contact_filial />} />
       </Routes>
     </>
   );

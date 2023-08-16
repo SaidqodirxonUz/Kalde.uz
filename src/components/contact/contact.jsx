@@ -130,7 +130,7 @@ const Contact = () => {
                 id="comment_text"
                 cols="10"
                 className="ui-autocomplete-input"
-                // autocomplete="off"
+                style={{ color: "#fff" }} // autocomplete="off"
                 // role="textbox"
                 // aria-autocomplete="list"
                 // aria-haspopup="true"

@@ -6,7 +6,6 @@ import Toolbar from "@mui/material/Toolbar";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaGlobe } from "react-icons/fa";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import { FormControl, NativeSelect } from "@mui/material";
 import TemporaryDrawer from "../drawer/drewer";
 import { useTranslation } from "react-i18next";
@@ -101,24 +100,13 @@ const Navbar = () => {
             <p className="divider">|</p>
 
             <Box>
-              <Button
-                sx={{
-                  my: 2,
-                  color: "#000",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+              <a
+                className="text-neutral-950 active:text-yellow-300 flex flex-row"
+                href="tel:998939087085"
               >
                 <BiSolidPhoneCall className="text-3xl text-orange-500" />
-                <a
-                  className="text-neutral-950 active:text-yellow-300"
-                  href="tel:+998939087085"
-                >
-                  +998 (93) 908-7085
-                </a>
-              </Button>
-            
+                +998 (93) 908-7085
+              </a>
             </Box>
 
             <Box className="select">
