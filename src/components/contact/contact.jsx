@@ -5,7 +5,13 @@ import {
   TbBrandFacebook,
 } from "react-icons/tb";
 import "./style.scss";
+
 const Contact = () => {
+  const SendForm = document.querySelector("form");
+  SendForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
   return (
     <>
       <div className="contact flex flex-row justify-end items-center w-full bg-neutral-100">
@@ -97,53 +103,58 @@ const Contact = () => {
           >
             Связаться с нами
           </Typography>
-          <Box
-            component="form"
-            noValidate
-            autoComplete="on"
-            className="flex flex-col justify-end items-end forma"
-          >
-            <div className="input-group">
-              <input
-                className="form-control"
-                type="text"
-                placeholder="Ваше имя"
-              />
-              <label htmlFor="text-1542372332072">Ваше имя</label>
-              {/* <div className="req-mark">!</div> */}
-            </div>
-            <div className="input-group">
-              <input
-                className="form-control"
-                type="text"
-                placeholder="Ваш номер телефона"
-              />
-              <label htmlFor="text-1542372332072">Ваш номер телефона</label>
-              {/* <div className="req-mark">!</div> */}
-            </div>
-            {/* <TextField id="outlined-basic" label="Familya" variant="outlined" /> */}
-            <div className="textarea-group">
-              <textarea
-                placeholder="Введите сообщение"
-                rows="3"
-                name="comment[text]"
-                id="comment_text"
-                cols="10"
-                className="ui-autocomplete-input"
-                // autocomplete="off"
-                // role="textbox"
-                // aria-autocomplete="list"
-                // aria-haspopup="true"
-              ></textarea>
-            </div>
-            <Button
-              variant="contained"
-              className="send_btn"
-              style={{ backgroundColor: "#EF7F1A" }}
+
+          {/*  */}
+
+          <form action="" id="form">
+            <Box
+              component="form"
+              noValidate
+              autoComplete="on"
+              className="flex flex-col justify-end items-end forma"
             >
-              ОТПРАВИТЬ
-            </Button>
-          </Box>
+              <div className="input-group">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Ваше имя"
+                />
+                <label htmlFor="text-1542372332072">Ваше имя</label>
+                {/* <div className="req-mark">!</div> */}
+              </div>
+              <div className="input-group">
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="Ваш номер телефона"
+                />
+                <label htmlFor="text-1542372332072">Ваш номер телефона</label>
+                {/* <div className="req-mark">!</div> */}
+              </div>
+              {/* <TextField id="outlined-basic" label="Familya" variant="outlined" /> */}
+              <div className="textarea-group">
+                <textarea
+                  placeholder="Введите сообщение"
+                  rows="3"
+                  name="comment[text]"
+                  id="comment_text"
+                  cols="10"
+                  className="ui-autocomplete-input"
+                  // autocomplete="off"
+                  // role="textbox"
+                  // aria-autocomplete="list"
+                  // aria-haspopup="true"
+                ></textarea>
+              </div>
+              <Button
+                variant="contained"
+                className="send_btn"
+                style={{ backgroundColor: "#EF7F1A" }}
+              >
+                ОТПРАВИТЬ
+              </Button>
+            </Box>
+          </form>
         </div>
       </div>
     </>

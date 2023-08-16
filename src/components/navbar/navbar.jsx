@@ -36,6 +36,10 @@ const Navbar = () => {
       value: "uz",
       label: "Uz",
     },
+    {
+      value: "en",
+      label: "En",
+    },
   ];
 
   return (
