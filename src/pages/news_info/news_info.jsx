@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import i18n from "../../i18n/i18n";
+import { t } from "i18next";
 
 const News_info = () => {
   const { id } = useParams();
@@ -142,7 +143,7 @@ const News_info = () => {
           }}
           //   style={{ fontSize: "24px", fontWeight: "400" }}
         >
-          Другие новости
+          {t("news_1_1")}
         </Typography>
         <div className="blog">
           <div className="blog_container">
