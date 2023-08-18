@@ -7,11 +7,16 @@ import {
 import "./style.scss";
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
+
+  // const Contact = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="contact flex flex-row justify-end items-center w-full bg-neutral-100">
@@ -43,14 +48,8 @@ const Contact = () => {
               // flexShrink: 0,
             }}
           >
-            <Typography>
-              Есть ли у вас дополнительные вопросы? Хотите узнать больше о
-              компании? Хотите стать официальным дилером?
-            </Typography>
-            <Typography>
-              Вы заинтересованы в наших продуктах? Тогда свяжитесь с нами. И мы
-              всегда готовы работать с вами!
-            </Typography>
+            <Typography>{t("application_1_1")}</Typography>
+            <Typography>{t("application_1_2")}</Typography>
           </div>
           <div
             style={{
@@ -69,12 +68,12 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a
-                href="https://t.me/kalde_official"
+              <Link
+                to="https://t.me/kalde_official"
                 style={{ color: "#324291", fontSize: "24px" }}
               >
                 <TbBrandTelegram />
-              </a>
+              </Link>
             </article>
             <article
               className="social_btn btn bg-white p-2 "
@@ -82,12 +81,12 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a
-                href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA=="
+              <Link
+                to="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA=="
                 style={{ color: "#324291", fontSize: "24px" }}
               >
                 <TbBrandInstagram />
-              </a>
+              </Link>
             </article>
             <article
               className="social_btn btn bg-white p-2 "
@@ -95,12 +94,12 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a
-                href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL"
+              <Link
+                to="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL"
                 style={{ color: "#324291", fontSize: "24px" }}
               >
                 <TbBrandFacebook />
-              </a>
+              </Link>
             </article>
           </div>
         </div>
@@ -110,7 +109,7 @@ const Contact = () => {
             component="h2"
             className="font-semibold text-sm "
           >
-            Связаться с нами
+            {t("footer_1_3")}
           </Typography>
           <Box
             component="form"
@@ -127,7 +126,7 @@ const Contact = () => {
                   setName(e.target.value);
                 }}
               />
-              <label htmlFor="text-1542372332072">Ваше имя</label>
+              <label htmlFor="text-1542372332072">{t("application_1_3")}</label>
               {/* <div className="req-mark">!</div> */}
             </div>
             <div className="input-group">
@@ -139,13 +138,13 @@ const Contact = () => {
                   setPhone(e.target.value);
                 }}
               />
-              <label htmlFor="text-1542372332072">Ваш номер телефона</label>
+              <label htmlFor="text-1542372332072">{t("application_1_4")}</label>
               {/* <div className="req-mark">!</div> */}
             </div>
             {/* <TextField id="outlined-basic" label="Familya" variant="outlined" /> */}
             <div className="textarea-group">
               <textarea
-                placeholder="Введите сообщение"
+                placeholder={t("application_1_5")}
                 rows="3"
                 name="comment[text]"
                 id="comment_text"
@@ -197,7 +196,7 @@ const Contact = () => {
                   });
               }}
             >
-              Отправить
+              {t("application_1_6")}
             </Button>
           </Box>
         </div>

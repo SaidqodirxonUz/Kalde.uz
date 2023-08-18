@@ -34,6 +34,12 @@
   .about_us {
     flex-direction: column !important;
     padding: 0 !important;
+
+    .about_links {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 1rem;
+    }
     .img {
       width: 100% !important;
       display: block;

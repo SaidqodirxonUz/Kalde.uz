@@ -11,11 +11,11 @@ const Advantages = () => {
       <Navbar />
       <section className="w-10/12 mx-auto pt-40">
         <div className="flex flex-col items-center justify-center">
-          <Advantage_cards dir="row" />
+          <Advantage_cards dir="row" name="text" />
+          {/* <Advantage_cards dir="row-reverse" /> */}
+          {/* <Advantage_cards dir="row" />
           <Advantage_cards dir="row-reverse" />
-          <Advantage_cards dir="row" />
-          <Advantage_cards dir="row-reverse" />
-          <Advantage_cards dir="row" />
+          <Advantage_cards dir="row" /> */}
         </div>
       </section>
       <Footer />

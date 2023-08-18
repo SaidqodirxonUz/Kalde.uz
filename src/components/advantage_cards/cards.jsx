@@ -1,15 +1,19 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
 // import React from 'react'
 import AboutUsHeroImg from "../../assets/about_us_hero.png";
 
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+
 import { FiArrowUpRight } from "react-icons/fi";
-import * as React from "react";
-import Box from "@mui/material/Box";
+
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
 // import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { MdOutlineCancel } from "react-icons/md";
 import axios from "axios";
+import * as React from "react";
 
 const style = {
   position: "absolute",
@@ -24,13 +28,18 @@ const style = {
   p: 4,
 };
 
-const Advantage_cards = (props) => {
+const Advantage_cards = () => {
   const [open, setOpen] = React.useState(false);
   const [name, setName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  // import { useTranslation } from "react-i18next";
+
+  // const Advantage_cards = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="py-10 md:py-0">
       <div>
@@ -69,9 +78,9 @@ const Advantage_cards = (props) => {
               onSubmit={(e) => {
                 e.preventDefault();
                 let data = JSON.stringify({
-                  name: "Saidqodirxon",
-                  phone: "+998904024707",
-                  message: "Assalomu Alaykum bu yana test",
+                  name: name,
+                  phone: phone,
+                  message: message,
                 });
 
                 let config = {
@@ -179,73 +188,245 @@ const Advantage_cards = (props) => {
           </div>
         </Modal>
       </div>
-      <div
-        className="advantage hero"
-        // eslint-disable-next-line react/prop-types
-        style={{ flexDirection: props ? props.dir : "row" }}
-      >
-        <div className="texts">
-          <Typography
-            variant="h5"
-            component="h6"
-            style={{
-              fontSize: "18px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              fontFamily: "Okta Neue",
-              color: "var(--text-color-secondary-text, #2E2E2E)",
-            }}
-          >
-            Вся продукция ППР изготавливается из высококачественного сырья
-            класса «А», что обеспечивает лучшее соединение при пайке труб и
-            фитингов.
-          </Typography>
-          <Typography
-            variant="h5"
-            component="p"
-            style={{
-              color: "rgba(0, 0, 0, 0.80)",
-              fontFamily: "Okta Neue",
-              fontSize: "18px",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "140% /* 25.2px */",
-            }}
-          >
-            KALDE - основана в 1977 году, расположена в Стамбуле, Турция,
-            производит продукцию для современных систем отопления и
-            водоснабжения. Сегодня продукция KALDE известна в 50 странах мира.
-            Продукция KALDE, отвечающая мировым стандартам, известна в 40
-            крупнейших странах мира. Вся продукция имеет международные
-            сертификаты. На рынке Узбекистана продукция Kalde стала известна в
-            2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно
-            купить более чем в 20 специализированных магазинах!
-          </Typography>
 
-          {/* <div style={{ display: "flex", columnGap: "1rem" }}> */}
-          <Button
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-              //   margin: "2rem 0",
-              width: "220px",
-              height: "30px",
-              padding: "20px 24px",
-              color: "rgba(239, 127, 26, 1)",
-              border: "1px solid rgba(239, 127, 26, 1)",
-              borderRadius: "100px",
-            }}
-            className="more"
-            onClick={handleOpen}
-          >
-            Свяжитесь с нами <FiArrowUpRight />
-          </Button>
-          {/* </div> */}
+      <div className="py-10 md:py-0">
+        <div
+          className="advantage hero"
+          style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {t("advantages_1_1")}
+            </Typography>
+
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_2")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "220px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+              onClick={handleOpen}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
         </div>
-        <div className="img">
-          <img src={AboutUsHeroImg} alt="a" />
+        <div
+          className="advantage hero"
+          style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {" "}
+              {t("advantages_1_1")}
+            </Typography>
+
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_2")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "220px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+        </div>
+        <div
+          className="advantage hero"
+          style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {t("advantages_1_1")}
+            </Typography>
+
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_2")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "220px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+        </div>
+        <div
+          className="advantage hero"
+          style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {" "}
+              {t("advantages_1_1")}
+            </Typography>
+
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_2")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "220px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
         </div>
       </div>
     </div>

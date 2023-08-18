@@ -1,9 +1,11 @@
 import { Typography } from "@mui/material";
 import MissiyaImg from "../../assets/about_us_hero.png";
 import "./missiya.scss";
+import { useTranslation } from "react-i18next";
 
 // import Sidebar from "../../components/sidebar/sidebar";
 const Missiya = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="about_us hero">
@@ -24,7 +26,7 @@ const Missiya = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Миссия в Узбекистане
+            {t("about_3_1")}
           </Typography>
           <Typography
             variant="h5"
@@ -38,14 +40,7 @@ const Missiya = () => {
               lineHeight: "140% /* 25.2px */",
             }}
           >
-            KALDE - основана в 1977 году, расположена в Стамбуле, Турция,
-            производит продукцию для современных систем отопления и
-            водоснабжения. Сегодня продукция KALDE известна в 50 странах мира.
-            Продукция KALDE, отвечающая мировым стандартам, известна в 40
-            крупнейших странах мира. Вся продукция имеет международные
-            сертификаты. На рынке Узбекистана продукция Kalde стала известна в
-            2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно
-            купить более чем в 20 специализированных магазинах!
+            {t("about_3_2")}
           </Typography>
         </div>
         <div className="img">

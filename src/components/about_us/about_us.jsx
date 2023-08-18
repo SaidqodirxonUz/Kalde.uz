@@ -2,8 +2,12 @@ import { Typography } from "@mui/material";
 import AboutUsImg from "../../assets/about_us.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./about_us.scss";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 // import Sidebar from "../../components/sidebar/sidebar";
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="about_us">
@@ -27,7 +31,7 @@ const AboutUs = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            О нас
+            {t("main_2_1")}
           </Typography>
           <Typography
             variant="h5"
@@ -41,28 +45,21 @@ const AboutUs = () => {
               lineHeight: "140% /* 25.2px */",
             }}
           >
-            KALDE - основана в 1977 году, расположена в Стамбуле, Турция,
-            производит продукцию для современных систем отопления и
-            водоснабжения. Сегодня продукция KALDE известна в 50 странах мира.
-            Продукция KALDE, отвечающая мировым стандартам, известна в 40
-            крупнейших странах мира. Вся продукция имеет международные
-            сертификаты. На рынке Узбекистана продукция Kalde стала известна в
-            2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно
-            купить более чем в 20 специализированных магазинах!
+            {t("main_2_2")}
           </Typography>
 
           <div
-            className="flex flex-col md:flex-row md:gap-10 "
+            className="flex flex-col md:flex-row md:gap-10 about_links"
             // style={{ display: "flex" }}
           >
-            <a
+            <Link
               style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
                 margin: "2rem 0",
-                width: "180px",
+                // width: "180px",
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
@@ -70,18 +67,18 @@ const AboutUs = () => {
                 borderRadius: "100px",
               }}
               className="more"
-              href="/about-us"
+              to="/about-us"
             >
-              Узнать больше <FiArrowUpRight />
-            </a>
-            <a
+              {t("main_2_3")} <FiArrowUpRight />
+            </Link>
+            <Link
               style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
                 margin: "2rem 0",
-                width: "180px",
+                // width: "180px",
                 height: "30px",
                 padding: "20px 24px",
                 // color: "rgba(239, 127, 26, 1)",
@@ -89,10 +86,10 @@ const AboutUs = () => {
                 borderRadius: "100px",
               }}
               className="more bg-orange-500 text-white md:bg-white md:text-orange-500"
-              href="/contact"
+              to="/contact"
             >
-              Свяжитесь с нами <FiArrowUpRight />
-            </a>
+              {t("main_2_4")} <FiArrowUpRight />
+            </Link>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { TbCalendarEvent } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Filial = () => {
   const navigate = useNavigate();
@@ -27,6 +28,9 @@ const Filial = () => {
     getFilials();
   }, []);
   console.log(filials, "state");
+
+  // const Filial = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -50,7 +54,7 @@ const Filial = () => {
             textAlign: "center",
           }}
         >
-          Наши филиалы
+          {t("branches_1_1")}
         </Typography>
         <section className="filials flex flex-col gap-10">
           {filials.map((filial) => {
@@ -97,12 +101,13 @@ const Filial = () => {
                         className="pages text-black active:text-orange-500 flex flex-row "
                       >
                         <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
-                        {filial.adress}
+                        {t("firyal_1_1")} {filial.adress}
                       </p>
                     </ListItemText>
                     <ListItemText>
                       <p className="flex flex-row text-black ">
                         <TbCalendarEvent className="icons text-2xl text-orange-500" />
+                        {t("firyal_1_3")}
                         {filial.work_at}
                       </p>
                     </ListItemText>
@@ -113,7 +118,7 @@ const Filial = () => {
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
                         <BsTelephoneFill className="icons text-xl text-orange-500" />
-                        {filial.phone_number}
+                        {t("firyal_1_4")} {filial.phone_number}
                       </a>
                     </ListItemText>
                     <ListItemText>
@@ -123,7 +128,7 @@ const Filial = () => {
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
                         <MdEmail className="icons text-xl text-orange-500" />{" "}
-                        {filial.email}
+                        {t("firyal_1_5")} {filial.email}
                       </a>
                     </ListItemText>
                   </List>
@@ -131,6 +136,7 @@ const Filial = () => {
               </div>
             );
           })}
+          
         </section>
       </div>
       <Contact />

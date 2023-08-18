@@ -4,16 +4,8 @@ import axios from "axios";
 import "./index.scss";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-// import product from "../../assets/product_img.jpg";
+import { useTranslation } from "react-i18next";
 
-// let cardinfo = [
-//   { title: "qwertyuitre efgbhvcsfghre 34rt5yhfe egfdvevrevef", image: product },
-//   { title: "Магазину", image: product },
-//   { title: "qwerty", image: product },
-//   { title: "qwerty", image: product },
-//   { title: "qwerty", image: product },
-//   { title: "qwerty", image: product },
-// ];
 
 const Products = () => {
   const [data, setData] = React.useState([]);
@@ -36,6 +28,7 @@ const Products = () => {
   }, []);
   console.log(data, "this");
   //
+  const { t } = useTranslation();
   return (
     <div className="products_container w-full bg-stone-100 py-14 lg:py-22 lg:mb-10">
       <div
@@ -68,7 +61,7 @@ const Products = () => {
           }}
           className="mx-auto lg:mx-0"
         >
-          Наши продукты
+          {t("main_4_1")}
         </Typography>
         <a
           // className="btn"
@@ -88,7 +81,7 @@ const Products = () => {
           className="more hidden lg:flex"
           href="/catalog"
         >
-          Все продукты <FiArrowUpRight />
+          {t("main_4_2")} <FiArrowUpRight />
         </a>
       </div>
       <div
@@ -167,13 +160,14 @@ const Products = () => {
           height: "30px",
           padding: "20px 24px",
           color: "rgba(239, 127, 26, 1)",
+
           border: "1px solid rgba(239, 127, 26, 1)",
           borderRadius: "100px",
         }}
         className="more flex lg:hidden justify-center mx-auto my-10"
-        href="#"
+        href="/catalog"
       >
-        Все продукты <FiArrowUpRight />
+        {t("main_4_2")} <FiArrowUpRight />
       </a>
     </div>
   );

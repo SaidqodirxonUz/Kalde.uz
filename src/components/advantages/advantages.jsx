@@ -13,21 +13,29 @@ import operator from "../../assets/support_agent_FILL0_wght400_GRAD0_opsz48 1.sv
 import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg";
 import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
 import { FiArrowUpRight } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+useTranslation;
 // import { FiArrowUpRight } from "react-icons/fi";
 
-let cardinfo = [
-  { title: "qwer 34rt5yhfe egfdvev revef fffadsad", image: school },
-  { title: "Магазину qwerty qwerty qwerty", image: verify },
-  { title: "qwerty qwerty qwerty qwerty", image: doc },
-  { title: "qwerty qwerty qwerty qwerty", image: document },
-  { title: "qwerty qwerty qwerty qwerty", image: paper },
-  { title: "qwerty qwerty qwerty qwerty", image: operator },
-  { title: "qwerty qwerty qwerty qwerty", image: maintaince },
-  { title: "qwerty qwerty qwerty qwerty", image: rise },
-];
 // Наши преимущества
 
 const Advantages = () => {
+  const { t } = useTranslation();
+
+  // {t("main_4_1")}
+
+  let cardinfo = [
+    { title: t("main_3_2"), image: school },
+    { title: t("main_3_3"), image: verify },
+    { title: t("main_3_4"), image: doc },
+    { title: t("main_3_5"), image: document },
+    { title: t("main_3_6"), image: paper },
+    { title: t("main_3_7"), image: operator },
+    { title: t("main_3_8"), image: maintaince },
+    { title: t("main_3_9"), image: rise },
+  ];
+
   return (
     <div className="cards_container mx-auto w-11/12">
       <div
@@ -58,37 +66,40 @@ const Advantages = () => {
           }}
           className="mx-auto lg:mx-0 lg:pl-20"
         >
-          Наши Преимущества
+          {t("main_3_1")}
         </Typography>
-        <a
+        <Link
           // className="btn"
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
-            margin: "2rem 0",
-            width: "240px",
-            height: "30px",
-            padding: "20px 24px",
+            margin: "1rem 0",
+            // width: "180px",
+
+            // height: "30px",
+            padding: "0.7rem",
             color: "rgba(239, 127, 26, 1)",
             border: "1px solid rgba(239, 127, 26, 1)",
             borderRadius: "100px",
           }}
           className="more hidden lg:flex"
-          href="/advantages"
+          to="/advantages"
         >
-          Все Преимущества <FiArrowUpRight />
-        </a>
+          {t("main_2_3")}
+          <FiArrowUpRight />
+        </Link>
       </div>
       <Box className="infos pb-24">
         {cardinfo.map((info) => (
           <Card
             className="cards"
             style={{
-              maxWidth: "300px",
-              height: "180px",
-              padding: "25px",
+              maxWidth: "100%",
+              minWidth: "20%",
+              // width: "100%",
+              padding: "",
               borderRadius: "0.5em !important",
             }}
             key={crypto.randomUUID()}

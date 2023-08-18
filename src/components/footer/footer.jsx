@@ -9,15 +9,18 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 
 import footer_img from "../../assets/navbar_img.png";
 import "./footer.scss";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const pages = [
-    { name: "Главная", url: "/" },
-    { name: "O нас", url: "/about-us" },
-    { name: "Преимущества", url: "/advantages" },
-    { name: "Каталог", url: "/catalog" },
-    { name: "Новости", url: "/news" },
-    { name: "Контакт", url: "/contact" },
+    { name: t("navbar_main_link"), url: "/" },
+    { name: t("navbar_about_link"), url: "/about-us" },
+    { name: t("navbar_adventages_link"), url: "/advantages" },
+    { name: t("navbar_catalog_link"), url: "/catalog" },
+    { name: t("navbar_news_link"), url: "/news" },
+    { name: t("navbar_contact_link"), url: "/contact" },
   ];
 
   return (
@@ -25,10 +28,7 @@ const Footer = () => {
       <div className="footer">
         <Box className="footer_inc">
           <img src={footer_img} alt="logo" />
-          <p className="text-white py-4 max-w-sm w-72">
-            KALDE, для систем отопления и водоснабжения, высококачественные
-            полипропиленовые трубы и фитинги!
-          </p>
+          <p className="text-white py-4 max-w-sm w-72">{t("footer_1_1")}</p>
           <div
             style={{
               display: "flex",
@@ -47,9 +47,13 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="https://t.me/kalde_official">
+              <Link
+                to="https://t.me/kalde_official"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TbBrandTelegram />
-              </a>
+              </Link>
             </article>
             <article
               className="social_btn btn bg-orange-500 p-3 "
@@ -57,9 +61,13 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA==">
+              <Link
+                to="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA=="
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TbBrandInstagram />
-              </a>
+              </Link>
             </article>
             <article
               className="social_btn btn bg-orange-500 p-3 "
@@ -67,69 +75,72 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL">
+              <Link
+                to="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TbBrandFacebook />
-              </a>
+              </Link>
             </article>
           </div>
         </Box>
         <Box className="usefull_pages">
-          <p className="footer-sections">Полезные страницы</p>
+          <p className="footer-sections">{t("footer_1_2")}</p>
           <ul>
             {pages.map((page, index) => (
               <li style={{ color: "#fff !important" }} key={index}>
-                <a
-                  href={page.url}
+                <Link
+                  to={page.url}
                   style={{ textAlign: "center" }}
                   className="pages text-white active:text-yellow-300"
                 >
                   {page.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </Box>
         <Box className="contact_us text-white ">
-          <p className="footer-sections pb-12">Связаться с нами</p>
+          <p className="footer-sections pb-12">{t("footer_1_3")}</p>
           <ul>
             <li>
-              <a
-                href="tel:+998900152533"
+              <Link
+                to="tel:+998900152533"
                 style={{ textAlign: "center" }}
                 className=" text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
-                +99890 0152533
-              </a>
+                +998(90) 015 25 33
+              </Link>
             </li>
             <li>
-              <a
-                href="tel:+99890 0352533"
+              <Link
+                to="tel:+998900352533"
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
-                +99890 0352533
-              </a>
+                +998(90) 035 25 33
+              </Link>
             </li>
             <li>
-              <a
-                href="mailto:kaldeuz@mail.ru"
+              <Link
+                to="mailto:kaldeuz@mail.ru"
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 items"
               >
                 <MdEmail className="icons text-xl text-orange-500" />{" "}
                 kaldeuz@mail.ru
-              </a>
+              </Link>
             </li>
             <li>
               <p
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 flex flex-row items-center justify-center"
               >
-                <MdLocationOn className="icons text-5xl text-orange-500" /> г.
-                Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный
-                рынок Чукурсай)
+                <MdLocationOn className="icons text-5xl text-orange-500" />
+                {t("manzil_name")}
               </p>
             </li>
           </ul>

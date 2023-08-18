@@ -4,7 +4,9 @@ import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 // import product from "../../assets/product_img.jpg";
+
 import { TbCalendarEvent } from "react-icons/tb";
 import "./index.scss";
 import axios from "axios";
@@ -31,6 +33,8 @@ const Contact_filial = () => {
     getFilials();
   }, []);
   console.log(filial, "state");
+
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -94,7 +98,7 @@ const Contact_filial = () => {
                 paddingBottom: "2rem",
               }}
             >
-              Связаться с нами
+              {t("application_1_2")}
             </h5>
             <Box
               component="form"
@@ -130,7 +134,7 @@ const Contact_filial = () => {
 
               <div className="bg_input">
                 <textarea
-                  placeholder="Введите сообщение"
+                  placeholder={t("application_1_5")}
                   rows="3"
                   name="comment[text]"
                   id="comment_text"
@@ -178,7 +182,7 @@ const Contact_filial = () => {
                     });
                 }}
               >
-                ОТПРАВИТЬ
+                {t("application_1_6")}
               </Button>
             </Box>
           </div>

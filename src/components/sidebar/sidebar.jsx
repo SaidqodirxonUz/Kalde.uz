@@ -4,37 +4,54 @@ import logo from "../../assets/sidebar_img.png";
 import tg from "../../assets/tg.svg";
 import insta from "../../assets/insta.svg";
 import facebook from "../../assets/facebook.svg";
-import youtube from "../../assets/youtube.svg";
+// import youtube from "../../assets/youtube.svg";
 import { HiMail } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
     <div className="sidebar">
       <div className="bg-orange-400 img_side">
-        <img src={logo} alt="kalde logo" />
+        <Link to={"/"}>
+          <img src={logo} alt="kalde logo" />
+        </Link>
       </div>
       <div className="social_link">
-        <a href="#">
+        <Link
+          to={"https://t.me/kalde_official"}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img className="" src={tg}></img>
-        </a>
-        <a href="#">
+        </Link>
+        <Link
+          to={"https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA=="}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img className="" src={insta}></img>
-        </a>
-        <a href="#">
+        </Link>
+        <Link
+          to={
+            "https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL"
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
           <img className="" src={facebook}></img>
-        </a>
-        <a href="#">
+        </Link>
+        {/* <Link to="#">
           <img className="" src={youtube}></img>
-        </a>
+        </Link> */}
         <br />
       </div>
-      <a
+      <Link
         className="email flex-col justify-center items-center"
-        href="mailto:kaldeuz@mail.ru"
+        to={"mailto:kaldeuz@mail.ru"}
       >
         <p>kaldeuz@mail.ru</p>
         <HiMail className="text-3xl text-yellow-300 flex-row justify-center items-center" />
-      </a>
+      </Link>
     </div>
   );
 }

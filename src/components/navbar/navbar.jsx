@@ -10,6 +10,7 @@ import { FormControl, NativeSelect } from "@mui/material";
 import TemporaryDrawer from "../drawer/drewer";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -67,9 +68,9 @@ const Navbar = () => {
             gap: "2rem",
           }}
         >
-          <a href="/">
+          <Link to={"/"}>
             <img src={logo} alt="Kalde" />
-          </a>
+          </Link>
 
           <Box
             sx={{
@@ -81,7 +82,7 @@ const Navbar = () => {
             // style={}
           >
             <TemporaryDrawer />
-            {/* <AiOutlineMenu /> */}
+            {/* <LinkiOutlineMenu /> */}
           </Box>
 
           <Box
@@ -94,26 +95,26 @@ const Navbar = () => {
             }}
           >
             {pages.map((page) => (
-              <a
-                href={page.url}
+              <Link
+                to={page.url}
                 className="text-neutral-950 text-xl font-semibold active:text-orange-500 links"
                 key={page}
                 // onClick={handleCloseNavMenu}
                 // sx={{ my: 2, color: "#000", display: "block" }}
               >
                 {page.name}
-              </a>
+              </Link>
             ))}
             <p className="divider">|</p>
 
             <Box>
-              <a
+              <Link
                 className="text-neutral-950 active:text-yellow-300 flex flex-row"
-                href="tel:998939087085"
+                to="tel:+998900152533"
               >
                 <BiSolidPhoneCall className="text-3xl text-orange-500" />
-                +998 (93) 908-7085
-              </a>
+                +998(90) 015 25 33
+              </Link>
               {/* </Button> */}
             </Box>
 

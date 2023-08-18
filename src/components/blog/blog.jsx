@@ -15,6 +15,10 @@ import { TbCalendarEvent } from "react-icons/tb";
 import axios from "axios";
 import FormData from "form-data";
 import { useNavigate } from "react-router-dom";
+// import { FiArrowUpRight } from "react-icons/fi";
+// import { TbCalendarEvent } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 let data = new FormData();
 
@@ -61,6 +65,23 @@ const Blog = () => {
     return text;
   };
   console.log(data);
+// eslint-disable-next-line no-unused-vars
+
+
+  // eslint-disable-next-line no-unused-vars
+  const clickRight = () => {
+    let container = document.querySelector("#flex-container");
+    container.scrollTo({
+      left: container.scrollLeft + 200,
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const { t } = useTranslation();
+
+  // render(){
+  // const { t } = useTranslation();
   return (
     <div className="products_container" style={{ padding: "2rem 0 2rem 0" }}>
       <div
@@ -90,9 +111,10 @@ const Blog = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Blog yangiliklar
+
+          {t("main_6_1")}
         </Typography>
-        <a
+        <Link
           style={{
             // display: "flex",
             flexDirection: "row",
@@ -107,10 +129,10 @@ const Blog = () => {
             borderRadius: "100px",
           }}
           className="more hidden lg:flex"
-          href="/news"
+          to="/catalog"
         >
-          Barcha yangiliklar <FiArrowUpRight />
-        </a>
+          {t("main_2_3")} <FiArrowUpRight />
+        </Link>
       </div>
       <div
         style={{
@@ -183,8 +205,8 @@ const Blog = () => {
             </main>
           </div>
         </div>
-      </div>
-      <a
+
+      <Link
         style={{
           // display: "flex",
           flexDirection: "row",
@@ -199,12 +221,15 @@ const Blog = () => {
           borderRadius: "100px",
         }}
         className="more flex lg:hidden my-2rem mx-auto"
-        href="#"
+        to="#"
       >
-        Barcha yangiliklar <FiArrowUpRight />
-      </a>
+        {t("main_2_3")}
+        <FiArrowUpRight />
+      </Link>
+    </div>
     </div>
   );
 };
+
 
 export default Blog;

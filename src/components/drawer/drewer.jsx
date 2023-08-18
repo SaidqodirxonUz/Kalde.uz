@@ -15,6 +15,7 @@ import {
 } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
+import { Link } from "react-router-dom";
 
 // const Navbar = () => {
 
@@ -95,9 +96,9 @@ export default function TemporaryDrawer() {
               disablePadding
               className="px-6 active:text-orange-500 active:border-b-2 active:border-solid active:border-orange-500"
             >
-              <a href={el.url}>
+              <Link to={el.url}>
                 <ListItemText primary={el.name} />
-              </a>
+              </Link>
             </ListItem>
           ))}
           <div className="flex flex-row justify-evenly h-10 items-center">
@@ -165,9 +166,9 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="https://t.me/kalde_official">
+          <Link to="https://t.me/kalde_official">
             <TbBrandTelegram />
-          </a>
+          </Link>
         </article>
         <article
           className="social_btn btn bg-orange-500 p-3 "
@@ -175,9 +176,9 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA==">
+          <Link to="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA==">
             <TbBrandInstagram />
-          </a>
+          </Link>
         </article>
         <article
           className="social_btn btn bg-orange-500 p-3 "
@@ -185,9 +186,9 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL">
+          <Link to="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL">
             <TbBrandFacebook />
-          </a>
+          </Link>
         </article>
       </div>
     </Box>

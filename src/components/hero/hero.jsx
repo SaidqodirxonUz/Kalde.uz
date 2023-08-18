@@ -2,8 +2,12 @@ import { Typography } from "@mui/material";
 import hero from "../../assets/hero.png";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./hero.scss";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 // import Sidebar from "../../components/sidebar/sidebar";
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="hero">
@@ -24,7 +28,7 @@ const Hero = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Что такое КАЛДЕ?
+            {t("main_1_1")}
           </Typography>
           <Typography
             variant="h5"
@@ -38,8 +42,7 @@ const Hero = () => {
               lineHeight: "140% /* 25.2px */",
             }}
           >
-            KALDE, для систем отопления и водоснабжения, высококачественные
-            полипропиленовые трубы и фитинги!
+            {t("main_1_2")}
           </Typography>
           <Typography
             variant="h5"
@@ -53,11 +56,9 @@ const Hero = () => {
               lineHeight: "140% /* 25.2px */",
             }}
           >
-            KALDE – это высококачественная продукция, соответствующая всем
-            мировым стандартам и имеющая сертификаты систем международных
-            стандартов!
+            {t("main_1_3")}
           </Typography>
-          <a
+          <Link
             style={{
               display: "flex",
               flexDirection: "row",
@@ -72,10 +73,10 @@ const Hero = () => {
               borderRadius: "100px",
             }}
             className="more"
-            href="/about-us"
+            to="about-us"
           >
-            Узнать больше <FiArrowUpRight />
-          </a>
+            {t("main_1_4")} <FiArrowUpRight />
+          </Link>
         </div>
         <div className="img">
           <img src={hero} alt="shop" />
