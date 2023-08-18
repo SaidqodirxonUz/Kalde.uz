@@ -8,13 +8,16 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 // import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import { MdOutlineCancel } from "react-icons/md";
+import axios from "axios";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  maxWidth: "100%",
+  width: "400px",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -23,6 +26,9 @@ const style = {
 
 const Advantage_cards = (props) => {
   const [open, setOpen] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [message, setMessage] = React.useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   return (
@@ -35,14 +41,142 @@ const Advantage_cards = (props) => {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </Box>
+          <div
+            style={style}
+            className=" contact_card p-10 bg-white rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
+          >
+            <button
+              onClick={handleClose}
+              className="w-full flex flex-row justify-end"
+            >
+              <MdOutlineCancel className="text-xl" />
+            </button>
+            <h5
+              className="filial_name"
+              style={{
+                fontSize: "24px",
+                textAlign: "center",
+                paddingBottom: "2rem",
+              }}
+            >
+              Связаться с нами
+            </h5>
+            <Box
+              component="form"
+              noValidate
+              autoComplete="on"
+              className="flex flex-col justify-center gap-5  forma"
+              onSubmit={(e) => {
+                e.preventDefault();
+                let data = JSON.stringify({
+                  name: "Saidqodirxon",
+                  phone: "+998904024707",
+                  message: "Assalomu Alaykum bu yana test",
+                });
+
+                let config = {
+                  method: "post",
+                  maxBodyLength: Infinity,
+                  url: "https://kalde.victoriaslove.uz/send",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  data: data,
+                };
+
+                axios
+                  .request(config)
+                  .then((response) => {
+                    console.log(JSON.stringify(response.data));
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+              }}
+              // style={{ maxWidth: "80%" }}
+            >
+              <div className="bg_input" style={{ width: "100%" }}>
+                <label className="custom-field two" style={{ width: "100%" }}>
+                  <input
+                    type="url"
+                    placeholder="&nbsp;"
+                    style={{ width: "100%" }}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                  />
+                  <span className="placeholder">Ваше имя</span>
+                </label>
+              </div>
+              <div className="bg_input" style={{ width: "100%" }}>
+                <label className="custom-field two" style={{ width: "100%" }}>
+                  <input
+                    type="url"
+                    placeholder="&nbsp;"
+                    style={{ width: "100%" }}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
+                  />
+                  <span className="placeholder">Ваш номер телефона</span>
+                </label>
+              </div>
+
+              <div className="bg_input" style={{ width: "100%" }}>
+                <textarea
+                  placeholder="Введите сообщение"
+                  rows="3"
+                  name="comment[text]"
+                  id="comment_text"
+                  cols="10"
+                  className="ui-autocomplete-input p-5"
+                  style={{ color: "#000", resize: "none", width: "100%" }}
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  // autocomplete="off"
+                  // role="textbox"
+                  // aria-autocomplete="list"
+                  // aria-haspopup="true"
+                ></textarea>
+              </div>
+              <Button
+                variant="contained"
+                className="send_btn"
+                style={{ backgroundColor: "#EF7F1A", width: "100%" }}
+                onClick={async (e) => {
+                  e.preventDefault();
+                  let data = JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    message: message,
+                  });
+
+                  let config = {
+                    method: "post",
+                    maxBodyLength: Infinity,
+                    url: "https://kalde.victoriaslove.uz/send",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    data: data,
+                  };
+
+                  // axios.post("/send", data);
+                  axios
+                    .request(config)
+                    .then((response) => {
+                      console.log(JSON.stringify(response.data));
+                    })
+                    .catch((error) => {
+                      console.log(error);
+                    });
+                }}
+              >
+                ОТПРАВИТЬ
+              </Button>
+            </Box>
+          </div>
         </Modal>
       </div>
       <div

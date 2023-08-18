@@ -72,7 +72,7 @@ const Hero = () => {
               borderRadius: "100px",
             }}
             className="more"
-            href="#"
+            href="/about-us"
           >
             Узнать больше <FiArrowUpRight />
           </a>

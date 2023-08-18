@@ -47,7 +47,7 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#">
+              <a href="https://t.me/kalde_official">
                 <TbBrandTelegram />
               </a>
             </article>
@@ -57,7 +57,7 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#">
+              <a href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA==">
                 <TbBrandInstagram />
               </a>
             </article>
@@ -67,7 +67,7 @@ const Footer = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#">
+              <a href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL">
                 <TbBrandFacebook />
               </a>
             </article>
@@ -93,31 +93,34 @@ const Footer = () => {
           <p className="footer-sections pb-12">Связаться с нами</p>
           <ul>
             <li>
-              <p
+              <a
+                href="tel:+998900152533"
                 style={{ textAlign: "center" }}
                 className=" text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
-                +998 93 908 70 85
-              </p>
+                +99890 0152533
+              </a>
             </li>
             <li>
-              <p
+              <a
+                href="tel:+99890 0352533"
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
-                +998 93 908 70 85
-              </p>
+                +99890 0352533
+              </a>
             </li>
             <li>
-              <p
+              <a
+                href="mailto:kaldeuz@mail.ru"
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 items"
               >
                 <MdEmail className="icons text-xl text-orange-500" />{" "}
-                info@kalde.uz
-              </p>
+                kaldeuz@mail.ru
+              </a>
             </li>
             <li>
               <p

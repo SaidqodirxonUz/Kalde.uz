@@ -5,8 +5,13 @@ import {
   TbBrandFacebook,
 } from "react-icons/tb";
 import "./style.scss";
+import axios from "axios";
+import React from "react";
 
 const Contact = () => {
+  const [name, setName] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [message, setMessage] = React.useState("");
   return (
     <>
       <div className="contact flex flex-row justify-end items-center w-full bg-neutral-100">
@@ -64,7 +69,10 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#" style={{ color: "#324291", fontSize: "24px" }}>
+              <a
+                href="https://t.me/kalde_official"
+                style={{ color: "#324291", fontSize: "24px" }}
+              >
                 <TbBrandTelegram />
               </a>
             </article>
@@ -74,7 +82,10 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#" style={{ color: "#324291", fontSize: "24px" }}>
+              <a
+                href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA=="
+                style={{ color: "#324291", fontSize: "24px" }}
+              >
                 <TbBrandInstagram />
               </a>
             </article>
@@ -84,7 +95,10 @@ const Contact = () => {
                 borderRadius: "8px",
               }}
             >
-              <a href="#" style={{ color: "#324291", fontSize: "24px" }}>
+              <a
+                href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL"
+                style={{ color: "#324291", fontSize: "24px" }}
+              >
                 <TbBrandFacebook />
               </a>
             </article>
@@ -109,6 +123,9 @@ const Contact = () => {
                 className="form-control"
                 type="text"
                 placeholder="Ваше имя"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
               <label htmlFor="text-1542372332072">Ваше имя</label>
               {/* <div className="req-mark">!</div> */}
@@ -118,6 +135,9 @@ const Contact = () => {
                 className="form-control"
                 type="text"
                 placeholder="Ваш номер телефона"
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
               />
               <label htmlFor="text-1542372332072">Ваш номер телефона</label>
               {/* <div className="req-mark">!</div> */}
@@ -131,7 +151,11 @@ const Contact = () => {
                 id="comment_text"
                 cols="10"
                 className="ui-autocomplete-input"
-                style={{ color: "#fff" }} // autocomplete="off"
+                style={{ color: "#fff" }}
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+                // autocomplete="off"
                 // role="textbox"
                 // aria-autocomplete="list"
                 // aria-haspopup="true"
@@ -141,6 +165,37 @@ const Contact = () => {
               variant="contained"
               className="send_btn"
               style={{ backgroundColor: "#EF7F1A" }}
+              onClick={(e) => {
+                e.preventDefault();
+                let data = JSON.stringify({
+                  name: name,
+                  phone: phone,
+                  message: message,
+                });
+
+                let config = {
+                  method: "post",
+                  maxBodyLength: Infinity,
+                  url: "https://kalde.victoriaslove.uz/send",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  data: data,
+                };
+
+                axios
+                  .request(config)
+                  .then((response) => {
+                    console.log(JSON.stringify(response.data));
+                    if (response.status == 200) {
+                      alert("Muvaffiqiyatli jonatildi");
+                    }
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                    alert("Xatolik yuz berdi");
+                  });
+              }}
             >
               Отправить
             </Button>

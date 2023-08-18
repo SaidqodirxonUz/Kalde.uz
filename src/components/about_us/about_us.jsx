@@ -70,7 +70,7 @@ const AboutUs = () => {
                 borderRadius: "100px",
               }}
               className="more"
-              href="#"
+              href="/about-us"
             >
               Узнать больше <FiArrowUpRight />
             </a>
@@ -89,7 +89,7 @@ const AboutUs = () => {
                 borderRadius: "100px",
               }}
               className="more bg-orange-500 text-white md:bg-white md:text-orange-500"
-              href="#"
+              href="/contact"
             >
               Свяжитесь с нами <FiArrowUpRight />
             </a>

@@ -165,7 +165,7 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="#">
+          <a href="https://t.me/kalde_official">
             <TbBrandTelegram />
           </a>
         </article>
@@ -175,7 +175,7 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="#">
+          <a href="https://instagram.com/kalde_official?igshid=MzRlODBiNWFlZA==">
             <TbBrandInstagram />
           </a>
         </article>
@@ -185,7 +185,7 @@ export default function TemporaryDrawer() {
             borderRadius: "8px",
           }}
         >
-          <a href="#">
+          <a href="https://www.facebook.com/profile.php?id=100095458455938&mibextid=ZbWKwL">
             <TbBrandFacebook />
           </a>
         </article>

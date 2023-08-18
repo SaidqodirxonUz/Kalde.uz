@@ -1,38 +1,52 @@
 import { Box, Typography } from "@mui/material";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
-// import * as React from "react";
+import * as React from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-import tavar from "../../assets/tavar.png";
-import product from "../../assets/product_img.jpg";
+// import tavar from "../../assets/tavar.png";
+// import product from "../../assets/product_img.jpg";
 import Contact from "../../components/contact/contact";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // import ImageIcon from "@mui/icons-material/Image";
 // import WorkIcon from "@mui/icons-material/Work";
 // import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 
 const Our_products = () => {
-  let cardinfo = [
-    {
-      title: "gfdvevrevef",
-      image: product,
-    },
-    { title: "Магазину", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-    { title: "qwerty", image: product },
-  ];
+  const navigate = useNavigate();
+  const [categories, setCategories] = React.useState([]);
+  const [products, setProducts] = React.useState([]);
+  //api
+
+  async function getProducts() {
+    try {
+      let { data } = await axios.get("/products");
+      console.log(data, "prod");
+      setProducts(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async function getCategories() {
+    try {
+      let { data } = await axios.get("/categories");
+      console.log(data);
+      setCategories(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  React.useEffect(() => {
+    getProducts();
+    getCategories();
+  }, []);
+  console.log(products, "this");
+
   return (
     <>
       <Navbar />
@@ -46,47 +60,44 @@ const Our_products = () => {
             >
               <List
                 sx={{
-                  width: { xs: "110%", sm: "100%" },
-                  maxWidth: 360,
+                  width: { xs: "100%", sm: "100%" },
+                  // maxWidth: 460,
+                  display: "flex",
+                  flexDirection: { xs: "row", sm: "column" },
+                  overflow: { xs: "scroll", sm: "hidden" },
                   bgcolor: "background.paper",
                 }}
               >
-                <ListItem>
-                  <ListItemAvatar>
-                    <Avatar style={{ width: "60px", height: "60px" }}>
-                      <img src={tavar} alt="" /> {/* <ImageIcon /> */}
-                    </Avatar>
-                  </ListItemAvatar>
-                  <ListItemText
-                    className="text-black text-xl font-semibold"
-                    primary="Наим. товара 1"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <Avatar style={{ width: "60px", height: "60px" }}>
-                      <img src={tavar} alt="" /> {/* <WorkIcon /> */}
-                    </Avatar>
-                  </ListItemAvatar>
-                  <ListItemText
-                    className="text-black text-xl font-semibold"
-                    primary="Наим. товара 1"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemAvatar>
-                    <Avatar style={{ width: "60px", height: "60px" }}>
-                      <img src={tavar} alt="" /> {/* <BeachAccessIcon /> */}
-                    </Avatar>
-                  </ListItemAvatar>
-                  <ListItemText
-                    className="text-black text-xl font-semibold"
-                    primary="Наим. товара 1"
-                  />
-                </ListItem>
+                {categories.map((category) => {
+                  return (
+                    <ListItem
+                      key={category.id}
+                      style={{ width: "200%" }}
+                      onClick={async () => {
+                        let { data } = await axios.get(
+                          `/products?categoryId=${category.id}`
+                        );
+                        console.log(data.data, "mana yangi");
+                        setProducts(data.data);
+                        // console.log(products, "yangi state");
+                      }}
+                    >
+                      <ListItemAvatar>
+                        <Avatar style={{ width: "60px", height: "60px" }}>
+                          <img src={category.image_url} alt="category" />{" "}
+                          {/* <ImageIcon /> */}
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        className="text-black text-xl font-semibold"
+                        primary={category.uz_category_name}
+                      />
+                    </ListItem>
+                  );
+                })}
               </List>
             </Box>
-            <Box className="product">
+            <Box className="product py-10 md:py-0">
               <div
                 style={{
                   display: "flex",
@@ -99,7 +110,7 @@ const Our_products = () => {
                   gap: "1.5rem",
                 }}
               >
-                {cardinfo.map((info) => (
+                {products.map((info, index) => (
                   <div
                     style={{
                       maxWidth: "350px",
@@ -109,18 +120,22 @@ const Our_products = () => {
                       border: "1px solid #ccc",
                       borderRadius: "30px",
                     }}
-                    key={crypto.randomUUID()}
+                    onClick={() => {
+                      navigate(`/product/${info.id}`);
+                    }}
+                    key={index}
                   >
                     <div>
                       <article>
                         <img
+                          className="w-full md:w-80"
                           style={{
-                            width: "100%",
                             height: "230px",
-                            objectFit: "cover",
+
+                            objectFit: "contain",
                             objectPosition: "center",
                           }}
-                          src={info.image}
+                          src={info.image_url}
                           alt="p"
                         />
                         <p className="line"></p>
@@ -135,7 +150,7 @@ const Our_products = () => {
                           variant="h6"
                           component="p"
                         >
-                          {info.title}
+                          {info.uz_product_name}
                         </Typography>
                       </article>
                     </div>

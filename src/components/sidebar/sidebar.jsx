@@ -30,9 +30,9 @@ function Sidebar() {
       </div>
       <a
         className="email flex-col justify-center items-center"
-        href="mailto:info@kalde.uz"
+        href="mailto:kaldeuz@mail.ru"
       >
-        <p>info@kalde.uz</p>
+        <p>kaldeuz@mail.ru</p>
         <HiMail className="text-3xl text-yellow-300 flex-row justify-center items-center" />
       </a>
     </div>

@@ -1,24 +1,43 @@
 import { Typography } from "@mui/material";
 import { FiArrowUpRight } from "react-icons/fi";
-
+import axios from "axios";
 import "./index.scss";
-import product from "../../assets/product_img.jpg";
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
+// import product from "../../assets/product_img.jpg";
 
-let cardinfo = [
-  { title: "qwertyuitre efgbhvcsfghre 34rt5yhfe egfdvevrevef", image: product },
-  { title: "Магазину", image: product },
-  { title: "qwerty", image: product },
-  { title: "qwerty", image: product },
-  { title: "qwerty", image: product },
-  { title: "qwerty", image: product },
-];
+// let cardinfo = [
+//   { title: "qwertyuitre efgbhvcsfghre 34rt5yhfe egfdvevrevef", image: product },
+//   { title: "Магазину", image: product },
+//   { title: "qwerty", image: product },
+//   { title: "qwerty", image: product },
+//   { title: "qwerty", image: product },
+//   { title: "qwerty", image: product },
+// ];
 
 const Products = () => {
+  const [data, setData] = React.useState([]);
+  const navigate = useNavigate();
+
+  //api
+
+  async function getData() {
+    try {
+      let { data } = await axios.get("/products");
+      console.log(data);
+      setData(data.data);
+    } catch (error) {
+      // alert(error);
+      console.log(error);
+    }
+  }
+  React.useEffect(() => {
+    getData();
+  }, []);
+  console.log(data, "this");
+  //
   return (
-    <div
-      className="products_container w-full bg-stone-100 py-14 lg:py-22 lg:mb-10"
-      // style={{ padding: "10rem 0 10rem 0" }}
-    >
+    <div className="products_container w-full bg-stone-100 py-14 lg:py-22 lg:mb-10">
       <div
         style={{
           display: "flex",
@@ -67,7 +86,7 @@ const Products = () => {
             borderRadius: "100px",
           }}
           className="more hidden lg:flex"
-          href="#"
+          href="/catalog"
         >
           Все продукты <FiArrowUpRight />
         </a>
@@ -85,49 +104,56 @@ const Products = () => {
           gap: "2rem",
         }}
       >
-        {cardinfo.map((info) => (
-          <div
-            style={{
-              maxWidth: "400px",
-              height: "auto",
-              overflow: "hidden",
-              background: "#fff",
-              border: "1px solid #ccc",
-              borderRadius: "30px",
-              margin: "0 auto",
-            }}
-            key={crypto.randomUUID()}
-          >
-            <div>
-              <article>
-                <img
-                  style={{
-                    width: "400px",
-                    height: "230px",
-                    objectFit: "cover",
-                    objectPosition: "center",
-                  }}
-                  src={info.image}
-                  alt="p"
-                />
-                <p className="line"></p>
-                <Typography
-                  style={{
-                    textAlign: "center",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginBottom: "1rem",
-                  }}
-                  variant="h6"
-                  component="p"
-                >
-                  {info.title}
-                </Typography>
-              </article>
+        {data?.map((i) => {
+          return (
+            <div
+              // key={info.id}
+              onClick={() => {
+                navigate(`/product/${i.id}`);
+              }}
+              style={{
+                maxWidth: "400px",
+                height: "auto",
+                overflow: "hidden",
+                background: "#fff",
+                border: "1px solid #ccc",
+                borderRadius: "30px",
+                margin: "0 auto",
+              }}
+              key={crypto.randomUUID()}
+            >
+              <div>
+                <article>
+                  <img
+                    style={{
+                      width: "400px",
+                      height: "230px",
+                      objectFit: "cover",
+                      objectPosition: "center",
+                    }}
+                    src={i.image_url}
+                    alt="p"
+                  />
+                  <p className="line"></p>
+                  <Typography
+                    style={{
+                      textAlign: "center",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginBottom: "1rem",
+                    }}
+                    variant="h6"
+                    component="p"
+                  >
+                    {/* aaaaaaaaaaaa */}
+                    {i.uz_product_name}
+                  </Typography>
+                </article>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <a
         // className="btn"

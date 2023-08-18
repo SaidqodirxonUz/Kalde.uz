@@ -31,10 +31,8 @@ const Advantages = () => {
   return (
     <div className="cards_container mx-auto w-11/12">
       <div
+        className="flex flex-col md:flex-row justify-center md:justify-between "
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
           alignItems: "center",
           maxWidth: "1280px",
           // margin: "0 auto",
@@ -46,7 +44,7 @@ const Advantages = () => {
           component="h3"
           style={{
             textAlign: "center",
-            margin: "0 auto",
+            // margin: "0 auto",
             fontFamily: "Okta Neue",
             fontSize: "36px",
             fontStyle: "normal",
@@ -58,19 +56,19 @@ const Advantages = () => {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
-          className="mx-auto lg:mx-0"
+          className="mx-auto lg:mx-0 lg:pl-20"
         >
           Наши Преимущества
         </Typography>
         <a
           // className="btn"
           style={{
-            // display: "flex",
+            display: "flex",
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "space-between",
             margin: "2rem 0",
-            width: "180px",
+            width: "240px",
             height: "30px",
             padding: "20px 24px",
             color: "rgba(239, 127, 26, 1)",
@@ -83,7 +81,7 @@ const Advantages = () => {
           Все Преимущества <FiArrowUpRight />
         </a>
       </div>
-      <Box className="infos">
+      <Box className="infos pb-24">
         {cardinfo.map((info) => (
           <Card
             className="cards"

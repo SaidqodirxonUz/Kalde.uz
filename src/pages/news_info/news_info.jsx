@@ -10,67 +10,107 @@ import Contact from "../../components/contact/contact";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import { MdOutlineWatchLater } from "react-icons/md";
-import newsimg from "../../assets/product_img.jpg";
-import product from "../../assets/product_img.jpg";
+// import product from "../../assets/product_img.jpg";
 import { TbCalendarEvent } from "react-icons/tb";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const News_info = () => {
+  const { id } = useParams();
+
+  const [news, setNews] = useState([]);
+  const [more, setMore] = useState([]);
+  // const navigate = useNavigate();
+  // const hendleBack = function (id) {
+  //   navigate(`/news/${id}`);
+  // };
+  //api
+
+  async function getNews() {
+    try {
+      let { data } = await axios.get(`/news/${id}`);
+      console.log(data, "news");
+      setNews([data.data]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async function getMore() {
+    try {
+      let { data } = await axios.get(`/news`);
+      console.log(data, "morelll");
+      setMore(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  useEffect(() => {
+    getNews();
+    getMore();
+  }, []);
+  const DateComponent = ({ text, maxLength }) => {
+    if (text.length > maxLength) {
+      text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis
+    }
+    text = text.replaceAll("-", "/");
+
+    return text;
+  };
+  const TextComponent = ({ text, maxLength }) => {
+    if (text.length > maxLength) {
+      text = text.slice(0, maxLength) + "..."; // Truncate text and add ellipsis
+    }
+
+    return text;
+  };
+  console.log(news, "state");
+  console.log(more, "more");
   return (
     <>
       <Navbar />
       <section className="news py-36 w-8/12 mx-auto">
-        <div className="flex flex-col justify-evenly">
-          <Typography
-            variant="h4"
-            component="h5"
-            style={{
-              color: "#324291",
-              fontFamily: "Okta Neue",
-              fontSize: "24px",
-              fontStyle: "normal",
-              fontWeight: "400",
-              lineHeight: "normal",
-            }}
-          >
-            Что такое фитинг? Все, что вам нужно знать о подгонке
-          </Typography>
-          <div className="flex flex-row justify-start items-center py-6">
-            <MdOutlineWatchLater />
-            <Typography variant="p" component="p">
-              E’lon joylandi: 27-mart, 2023
-            </Typography>
-          </div>
-          <img src={newsimg} alt="news img" className="rounded-md" />
-          <Typography variant="p" component="p" className="py-8">
-            Фитинг (от англ. fitting «подгонка, установка, сборка») —
-            соединительная часть трубопровода, разветвление, поворот, переход на
-            другой диаметр, а также частый монтаж и демонтаж труб, при
-            необходимости установочный. Также фитинги служат для герметизации
-            трубопровода и других вспомогательных целей.
-          </Typography>
-          <Typography variant="p" component="p">
-            Фитинги для металлопластиковых труб имеют такое же назначение, как и
-            фитинги для металлических труб. Для соединения их с трубами
-            используется цанговое соединение. Также они могут переходить от
-            цангового к резьбовому соединению для соединения металлопластиковых
-            труб и металлических труб. Одним из самых надежных соединений
-            металлопластиковых труб является пресс-соединение (пресс-фитинговое
-            соединение). Это достигается за счет обжатия металлопластиковой
-            трубы вокруг фитинга втулкой из нержавеющей стали. Каждый
-            производитель пресс-инструментов имеет свой профиль обжима. Обжимной
-            инструмент – это либо сторонний пресс-инструмент с обжимными
-            зажимами определенного внутреннего профиля, рекомендованного
-            производителем пресс-фитинга (что правильно), либо подходящий к
-            фитингу. Наиболее популярными после пресс-фитингами являются фитинги
-            с разрезным кольцом или компрессионные фитинги, предназначенные для
-            соединения металлопластиковых труб систем отопления и водоснабжения
-            с открытыми проводами. В работе используются соединительные элементы
-            диаметром 16, 20, 26, 32 мм. Эта система является исправной и не
-            может использоваться со скрытой проводкой. Для систем с прессовой
-            посадкой требуется специальный инструмент, а для компрессионных
-            фитингов требуются разводные ключи.
-          </Typography>
-        </div>
+        {news.map((el) => {
+          return (
+            <div className="flex flex-col justify-evenly" key={el.id}>
+              <Typography
+                variant="h4"
+                component="h5"
+                style={{
+                  color: "#324291",
+                  fontFamily: "Okta Neue",
+                  fontSize: "24px",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  lineHeight: "normal",
+                }}
+              >
+                {el.title_uz}
+              </Typography>
+              <div className="flex flex-row justify-start items-center py-6">
+                <MdOutlineWatchLater />
+                <Typography variant="p" component="p">
+                  {DateComponent({ text: el.created_at, maxLength: 10 })}
+                </Typography>
+              </div>
+              <img
+                src={el.image_url}
+                alt="news img"
+                className="rounded-md h-80 object-contain"
+              />
+              {/* <Typography variant="p" component="p" className="py-8">
+                Фитинг (от англ. fitting «подгонка, установка, сборка») —
+                соединительная часть трубопровода, разветвление, поворот,
+                переход на другой диаметр, а также частый монтаж и демонтаж
+                труб, при необходимости установочный. Также фитинги служат для
+                герметизации трубопровода и других вспомогательных целей.
+              </Typography> */}
+              <Typography variant="p" component="p" className="pt-20">
+                {el.desc_uz}
+              </Typography>
+            </div>
+          );
+        })}
       </section>
       <section className="same_news">
         <Typography
@@ -100,133 +140,61 @@ const News_info = () => {
                 id="flex-container"
                 // style={{ height: "50%" }}
               >
-                <div
-                  className="card basis-96 rounded-xl"
-                  style={{
-                    flexGrow: "1",
-                    // width: "1000px",
+                {more.map((el) => {
+                  return (
+                    <div
+                      key={el.id}
+                      className="card basis-96 rounded-xl"
+                      style={{
+                        flexGrow: "1",
+                        // width: "1000px",
 
-                    height: "450px",
-                    padding: "0 1rem",
-                  }}
-                >
-                  <Card sx={{ maxWidth: 320 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={product}
-                        alt="green iguana"
-                      />
-                      <div className="flex flex-row justify-start items-center px-6">
-                        <TbCalendarEvent />
-                        <CardHeader
-                          className=""
-                          subheader={new Date().toLocaleDateString()}
-                        ></CardHeader>
-                      </div>
-                      <CardContent>
-                        <Typography
-                          gutterBottom
-                          className="card_title"
-                          variant="h6"
-                          component="p"
-                        >
-                          Название новости находится в этом разделе
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Появится краткий текст о новостях. Текст будет
-                          состоять примерно из 4 строк. И этот текст может
-                          состоять почти из 100 букв. опять не знаю
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </div>
-                <div
-                  className="card basis-96 rounded-xl"
-                  style={{
-                    flexGrow: "1",
-
-                    height: "450px",
-                    padding: "0 0.7rem",
-                  }}
-                >
-                  <Card sx={{ maxWidth: 320 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={product}
-                        alt="green iguana"
-                      />
-                      <div className="flex flex-row justify-start items-center px-6">
-                        <TbCalendarEvent />
-                        <CardHeader
-                          className=""
-                          subheader={new Date().toLocaleDateString()}
-                        ></CardHeader>
-                      </div>
-                      <CardContent>
-                        <Typography
-                          gutterBottom
-                          className="card_title"
-                          variant="h6"
-                          component="p"
-                        >
-                          Название новости находится в этом разделе
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Появится краткий текст о новостях. Текст будет
-                          состоять примерно из 4 строк. И этот текст может
-                          состоять почти из 100 букв. опять не знаю
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </div>
-                <div
-                  className="card basis-96 rounded-xl"
-                  style={{
-                    flexGrow: "1",
-
-                    height: "450px",
-                    padding: "0 0.7rem",
-                  }}
-                >
-                  <Card sx={{ maxWidth: 320 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={product}
-                        alt="green iguana"
-                      />
-                      <div className="flex flex-row justify-start items-center px-6">
-                        <TbCalendarEvent />
-                        <CardHeader
-                          className=""
-                          subheader={new Date().toLocaleDateString()}
-                        ></CardHeader>
-                      </div>
-                      <CardContent>
-                        <Typography
-                          gutterBottom
-                          className="card_title"
-                          variant="h6"
-                          component="p"
-                        >
-                          Название новости находится в этом разделе
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Появится краткий текст о новостях. Текст будет
-                          состоять примерно из 4 строк. И этот текст может
-                          состоять почти из 100 букв. опять не знаю
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </div>
+                        height: "450px",
+                        padding: "0 1rem",
+                      }}
+                    >
+                      <Card sx={{ maxWidth: 320 }}>
+                        <CardActionArea className="flex flex-col justify-between">
+                          <CardMedia
+                            component="img"
+                            height="140"
+                            image={el.image_url}
+                            alt="news"
+                            style={{ height: "200px", objectFit: "cover" }}
+                          />
+                          <div className="flex flex-row justify-start items-center px-6">
+                            <TbCalendarEvent />
+                            <CardHeader
+                              className=""
+                              subheader={new Date().toLocaleDateString()}
+                            ></CardHeader>
+                          </div>
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              className="card_title"
+                              variant="h6"
+                              component="p"
+                            >
+                              {el.title_uz}
+                            </Typography>
+                            <Typography
+                              height="70px"
+                              variant="body2"
+                              color="text.secondary"
+                            >
+                              {TextComponent({
+                                text: el.desc_uz,
+                                maxLength: 100,
+                              })}
+                              {}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Card>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
