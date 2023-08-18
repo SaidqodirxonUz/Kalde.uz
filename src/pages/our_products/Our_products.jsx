@@ -98,7 +98,7 @@ const Our_products = () => {
                           LangVal() == "uz"
                             ? category.uz_category_name
                             : LangVal() == "en"
-                            ? category.uz_category_name
+                            ? category.en_category_name
                             : category.ru_category_name
                         }
                       />
