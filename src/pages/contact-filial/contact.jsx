@@ -11,7 +11,7 @@ import { TbCalendarEvent } from "react-icons/tb";
 import "./index.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Contact_filial = () => {
   const { id } = useParams();
@@ -19,7 +19,7 @@ const Contact_filial = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [filial, setFilial] = useState([]);
-
+  const navigate = useNavigate();
   async function getFilials() {
     try {
       let { data } = await axios.get(`/dealers/${id}`);
@@ -27,6 +27,7 @@ const Contact_filial = () => {
       setFilial([data.data]);
     } catch (error) {
       console.log(error);
+      navigate("/error");
     }
   }
   useEffect(() => {

@@ -7,7 +7,7 @@ import Footer from "../../components/footer/footer";
 // import { TbCalendarEvent } from "react-icons/tb";
 
 // import product from "../../assets/product_img.jpg";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -16,10 +16,11 @@ const Product_info = () => {
   // console.log(id);
   const [product, setProduct] = useState([]);
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
   //api
 
   useEffect(() => {
-    async function currentUser() {
+    async function currentProduct() {
       try {
         let { data } = await axios.get(`/products/${id}`);
         // console.log();(data);
@@ -28,10 +29,11 @@ const Product_info = () => {
         console.log(data);
       } catch (error) {
         console.log(error);
+        navigate("/error");
         // toast(error.msg, { type: "error" });
       }
     }
-    currentUser();
+    currentProduct();
     async function getProducts() {
       try {
         let { data } = await axios.get(
@@ -326,6 +328,9 @@ const Product_info = () => {
                 {products.map((p) => {
                   return (
                     <div
+                      onClick={() => {
+                        navigate(`/product/${p.id}`);
+                      }}
                       key={p.id}
                       className="card"
                       style={{ flexGrow: "1", flexBasis: "400px" }}

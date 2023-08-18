@@ -14,11 +14,11 @@ import { MdOutlineWatchLater } from "react-icons/md";
 import { TbCalendarEvent } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const News_info = () => {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const [news, setNews] = useState([]);
   const [more, setMore] = useState([]);
   // const navigate = useNavigate();
@@ -34,6 +34,7 @@ const News_info = () => {
       setNews([data.data]);
     } catch (error) {
       console.log(error);
+      navigate("/error");
     }
   }
   async function getMore() {
@@ -48,7 +49,7 @@ const News_info = () => {
   useEffect(() => {
     getNews();
     getMore();
-  }, []);
+  }, [id]);
   const DateComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis
@@ -144,6 +145,9 @@ const News_info = () => {
                   return (
                     <div
                       key={el.id}
+                      onClick={() => {
+                        navigate(`/news/${el.id}`);
+                      }}
                       className="card basis-96 rounded-xl"
                       style={{
                         flexGrow: "1",

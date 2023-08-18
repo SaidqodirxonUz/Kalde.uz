@@ -9,6 +9,7 @@ import News_info from "./pages/news_info/news_info";
 import Filial from "./pages/filial/filial";
 import Contact_filial from "./pages/contact-filial/contact";
 import Advantages from "./pages/advantages/advantages";
+import NotFound from "./pages/404page/404";
 // import ContactUs from "./pages/contact/contact";
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route path="/contact" element={<Filial />} />
         <Route path="/contact/:id" element={<Contact_filial />} />
         <Route path="/advantages" element={<Advantages />} />
+
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </>
   );
