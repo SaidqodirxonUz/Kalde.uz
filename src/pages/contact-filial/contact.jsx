@@ -12,6 +12,8 @@ import "./index.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import i18n from "../../i18n/i18n";
 
 const Contact_filial = () => {
   const { id } = useParams();
@@ -33,6 +35,9 @@ const Contact_filial = () => {
   useEffect(() => {
     getFilials();
   }, []);
+  const LangVal = () => {
+    return i18n.language;
+  };
   console.log(filial, "state");
 
   const { t } = useTranslation();
@@ -45,7 +50,13 @@ const Contact_filial = () => {
           {filial.map((f) => {
             return (
               <div className="f_info" key={f.id}>
-                <h5 className="filial_name">{f.title_uz}</h5>
+                <h5 className="filial_name">
+                  {LangVal() == "uz"
+                    ? f.title_uz
+                    : LangVal() == "en"
+                    ? f.title_en
+                    : f.title_ru}
+                </h5>
 
                 <List>
                   <ListItemText>
@@ -54,13 +65,13 @@ const Contact_filial = () => {
                       className="pages text-black active:text-orange-500 flex flex-row "
                     >
                       <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
-                      {f.adress}
+                      {t("firyal_1_1")} {f.adress}
                     </p>
                   </ListItemText>
                   <ListItemText>
                     <p className="flex flex-row text-black ">
                       <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                      {f.work_at}
+                      {t("firyal_1_3")} {f.work_at}
                     </p>
                   </ListItemText>
                   <ListItemText>
@@ -70,7 +81,7 @@ const Contact_filial = () => {
                       className="pages flex flex-row text-black active:text-orange-500 items"
                     >
                       <BsTelephoneFill className="icons text-xl text-orange-500" />
-                      {f.phone_number}
+                      {t("firyal_1_4")} {f.phone_number}
                     </a>
                   </ListItemText>
                   <ListItemText>
@@ -80,7 +91,7 @@ const Contact_filial = () => {
                       className="pages flex flex-row text-black active:text-orange-500 items"
                     >
                       <MdEmail className="icons text-xl text-orange-500" />{" "}
-                      {f.email}
+                      {t("firyal_1_5")} {f.email}
                     </a>
                   </ListItemText>
                 </List>
@@ -117,7 +128,7 @@ const Contact_filial = () => {
                       setName(e.target.value);
                     }}
                   />
-                  <span className="placeholder">Ваше имя</span>
+                  <span className="placeholder">{t("application_1_3")}</span>
                 </label>
               </div>
               <div className="bg_input">
@@ -129,7 +140,7 @@ const Contact_filial = () => {
                       setPhone(e.target.value);
                     }}
                   />
-                  <span className="placeholder">Ваш номер телефона</span>
+                  <span className="placeholder">{t("application_1_4")}</span>
                 </label>
               </div>
 
@@ -175,11 +186,29 @@ const Contact_filial = () => {
                     .request(config)
                     .then((response) => {
                       console.log(JSON.stringify(response.data));
-                      alert("Muvaffiqiyatli jonatildi");
+                      if (response.status == 200) {
+                        toast(
+                          LangVal() == "uz"
+                            ? response.data.message
+                            : LangVal() == "en"
+                            ? response.data.message
+                            : response.data.message,
+                          { type: "success" }
+                        );
+                      }
                     })
                     .catch((error) => {
                       console.log(error);
-                      alert("Xatolik yuz berdi");
+                      if (error.request.status == 400) {
+                        toast(
+                          LangVal() == "uz"
+                            ? error.response.data[0].error_uz
+                            : LangVal() == "en"
+                            ? error.response.data[2].error_en
+                            : error.response.data[1].error_ru,
+                          { type: "error" }
+                        );
+                      }
                     });
                 }}
               >

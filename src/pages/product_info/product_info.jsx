@@ -10,9 +10,11 @@ import Footer from "../../components/footer/footer";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n/i18n";
 const Product_info = () => {
   const { id } = useParams();
+  const { t } = useTranslation();
   // console.log(id);
   const [product, setProduct] = useState([]);
   const [products, setProducts] = useState([]);
@@ -47,6 +49,9 @@ const Product_info = () => {
     }
     getProducts();
   }, [id]);
+  const LangVal = () => {
+    return i18n.language;
+  };
   console.log(product, "prod");
   console.log(products, "paxojie");
   return (
@@ -76,217 +81,253 @@ const Product_info = () => {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  {el.uz_product_name}
+                  {LangVal() == "uz"
+                    ? el.uz_product_name
+                    : LangVal() == "en"
+                    ? el.en_product_name
+                    : el.ru_product_name}
                 </Typography>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Narx
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.price}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Diametr
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.diametr}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Ichki diametr
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.ichki_diametr}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Ichki uzunlik
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.ichki_uzunlik}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Tashqi uzunlik
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.tashqi_uzunlik}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Razmer
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.razmer}
-                  </Typography>
-                </div>
-                <div className="flex flex-row justify-between w-5/6 items-start">
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    Soni
-                  </Typography>
-                  <Typography
-                    variant="p"
-                    component="p"
-                    style={{
-                      color: "rgba(0, 0, 0, 0.80)",
-                      fontFamily: "Okta Neue",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "140% ",
-                    }}
-                  >
-                    {el.soni}
-                  </Typography>
+                <div className="w-5/6 flex flex-col justify-between gap-1">
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.price ? t("product_1_9") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.price}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.barcode ? t("product_1_2") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.barcode}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.diametr ? t("product_1_3") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.diametr}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.ichki_diametr ? t("product_1_4") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.ichki_diametr}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.ichki_uzunlik ? t("product_1_5") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.ichki_uzunlik}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.tashqi_uzunlik ? t("product_1_6") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.tashqi_uzunlik}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.razmer ? t("product_1_7") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.razmer}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.soni ? t("product_1_8") : ""}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.soni}
+                    </Typography>
+                  </div>
                 </div>
               </div>
             </div>
@@ -315,7 +356,7 @@ const Product_info = () => {
           }}
           //   style={{ fontSize: "24px", fontWeight: "400" }}
         >
-          Похожие продукты
+          {t("product_2_1")}
         </Typography>
         <div className="blog">
           <div className="blog_container">
@@ -348,6 +389,7 @@ const Product_info = () => {
                             style={{
                               objectFit: "cover",
                               height: "240px",
+                              width: "100%",
                             }}
                             src={p.image_url}
                             alt="card"
@@ -366,7 +408,11 @@ const Product_info = () => {
                               variant="h6"
                               component="p"
                             >
-                              {p.uz_product_name}
+                              {LangVal() == "uz"
+                                ? p.uz_product_name
+                                : LangVal() == "en"
+                                ? p.en_product_name
+                                : p.ru_product_name}
                             </Typography>
                           </CardContent>
                         </CardActionArea>

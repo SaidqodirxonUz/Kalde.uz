@@ -4,6 +4,10 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import axios from "axios";
+// import "react-toastify/dist/ReactT"
+import "react-toastify/dist/ReactToastify.css";
+
+import { ToastContainer } from "react-toastify";
 
 axios.defaults.baseURL = "https://kalde.victoriaslove.uz";
 axios.defaults.headers.common["Content-Type"] = "application/json";
@@ -14,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      <ToastContainer theme="colored" />
     </BrowserRouter>
   </React.StrictMode>
 );

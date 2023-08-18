@@ -14,6 +14,7 @@ import Modal from "@mui/material/Modal";
 import { MdOutlineCancel } from "react-icons/md";
 import axios from "axios";
 import * as React from "react";
+import { toast } from "react-toastify";
 
 const style = {
   position: "absolute",
@@ -68,72 +69,44 @@ const Advantage_cards = () => {
                 paddingBottom: "2rem",
               }}
             >
-              Связаться с нами
+              {t("advantages_1_9")}
             </h5>
             <Box
               component="form"
               noValidate
               autoComplete="on"
               className="flex flex-col justify-center gap-5  forma"
-              onSubmit={(e) => {
-                e.preventDefault();
-                let data = JSON.stringify({
-                  name: name,
-                  phone: phone,
-                  message: message,
-                });
 
-                let config = {
-                  method: "post",
-                  maxBodyLength: Infinity,
-                  url: "https://kalde.victoriaslove.uz/send",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  data: data,
-                };
-
-                axios
-                  .request(config)
-                  .then((response) => {
-                    console.log(JSON.stringify(response.data));
-                  })
-                  .catch((error) => {
-                    console.log(error);
-                  });
-              }}
               // style={{ maxWidth: "80%" }}
             >
-              <div className="bg_input" style={{ width: "100%" }}>
-                <label className="custom-field two" style={{ width: "100%" }}>
+              <div className="bg_input">
+                <label className="custom-field two">
                   <input
                     type="url"
                     placeholder="&nbsp;"
-                    style={{ width: "100%" }}
                     onChange={(e) => {
                       setName(e.target.value);
                     }}
                   />
-                  <span className="placeholder">Ваше имя</span>
+                  <span className="placeholder">{t("application_1_3")}</span>
                 </label>
               </div>
-              <div className="bg_input" style={{ width: "100%" }}>
-                <label className="custom-field two" style={{ width: "100%" }}>
+              <div className="bg_input">
+                <label className="custom-field two">
                   <input
                     type="url"
                     placeholder="&nbsp;"
-                    style={{ width: "100%" }}
                     onChange={(e) => {
                       setPhone(e.target.value);
                     }}
                   />
-                  <span className="placeholder">Ваш номер телефона</span>
+                  <span className="placeholder">{t("application_1_4")}</span>
                 </label>
               </div>
 
-              <div className="bg_input" style={{ width: "100%" }}>
+              <div className="bg_input">
                 <textarea
-                  placeholder="Введите сообщение"
+                  placeholder={t("application_1_5")}
                   rows="3"
                   name="comment[text]"
                   id="comment_text"
@@ -143,10 +116,6 @@ const Advantage_cards = () => {
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
-                  // autocomplete="off"
-                  // role="textbox"
-                  // aria-autocomplete="list"
-                  // aria-haspopup="true"
                 ></textarea>
               </div>
               <Button
@@ -175,10 +144,20 @@ const Advantage_cards = () => {
                   axios
                     .request(config)
                     .then((response) => {
-                      console.log(JSON.stringify(response.data));
+                      console.log(JSON.stringify(response));
+                      if (response.status == 200) {
+                        alert("Muvaffaqiyatli jonatildi");
+                      }
                     })
                     .catch((error) => {
                       console.log(error);
+                      // alert("Xatolik yuz berdi");
+                      if (error.request.status == 400) {
+                        alert("Barcha maydonlarni toldiring");
+                      }
+                      if (error.request.status == 403) {
+                        alert("Raqam notogri");
+                      }
                     });
                 }}
               >

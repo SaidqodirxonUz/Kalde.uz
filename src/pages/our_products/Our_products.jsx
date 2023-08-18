@@ -12,6 +12,7 @@ import Avatar from "@mui/material/Avatar";
 import Contact from "../../components/contact/contact";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import i18n from "../../i18n/i18n";
 
 // import ImageIcon from "@mui/icons-material/Image";
 // import WorkIcon from "@mui/icons-material/Work";
@@ -45,6 +46,9 @@ const Our_products = () => {
     getProducts();
     getCategories();
   }, []);
+  const LangVal = () => {
+    return i18n.language;
+  };
   console.log(products, "this");
 
   return (
@@ -90,7 +94,13 @@ const Our_products = () => {
                       </ListItemAvatar>
                       <ListItemText
                         className="text-black text-xl font-semibold"
-                        primary={category.uz_category_name}
+                        primary={
+                          LangVal() == "uz"
+                            ? category.uz_category_name
+                            : LangVal() == "en"
+                            ? category.uz_category_name
+                            : category.ru_category_name
+                        }
                       />
                     </ListItem>
                   );
@@ -150,7 +160,11 @@ const Our_products = () => {
                           variant="h6"
                           component="p"
                         >
-                          {info.uz_product_name}
+                          {LangVal() == "uz"
+                            ? info.uz_product_name
+                            : LangVal() == "en"
+                            ? info.en_product_name
+                            : info.ru_product_name}
                         </Typography>
                       </article>
                     </div>

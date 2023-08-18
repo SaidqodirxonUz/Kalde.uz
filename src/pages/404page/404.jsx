@@ -10,6 +10,7 @@ const NotFound = () => {
       <Navbar />
       {/* <!-- 404 --> */}
       <svg
+        className="error"
         width="380px"
         height="500px"
         viewBox="0 0 837 1045"

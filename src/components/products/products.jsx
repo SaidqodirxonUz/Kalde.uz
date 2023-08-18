@@ -5,12 +5,14 @@ import "./index.scss";
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import i18n from "../../i18n/i18n";
 
 const Products = () => {
   const [data, setData] = React.useState([]);
   const navigate = useNavigate();
-
+  const LangVal = () => {
+    return i18n.language;
+  };
   //api
 
   async function getData() {
@@ -140,7 +142,11 @@ const Products = () => {
                     component="p"
                   >
                     {/* aaaaaaaaaaaa */}
-                    {i.uz_product_name}
+                    {LangVal() == "uz"
+                      ? i.uz_product_name
+                      : LangVal() == "en"
+                      ? i.en_product_name
+                      : i.ru_product_name}
                   </Typography>
                 </article>
               </div>

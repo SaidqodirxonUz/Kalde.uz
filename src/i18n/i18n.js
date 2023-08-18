@@ -99,21 +99,21 @@ i18n.use(initReactI18next).init({
         firyal_2_5: "YUBORISH",
         // Firyal tugadi
         advantages_1_1:
-          "Barcha PPR mahsulotlari yuqori sifatli A toifali xom ashyolardan ishlab chiqariladi, bu quvurlar va armaturalarni ulashda  eng yaxshi ulanishni ta'minlaydi.",
+          "Yuqori darajadagi a sinfidagi xom ashyolardan tayyorlangan barcha PPR mahsulotlari quvurlar va armaturalarni lehimlash jarayonida benuqson ulanishlarni yaratishda ustunlik qiladi. Premium materiallardan foydalanish mislsiz natijalarni kafolatlaydi, turli xil ilovalarda mahsulotlarimizning ishonchliligi va ishlashini kuchaytiradi.",
         advantages_1_2:
-          "Barcha metall buyumlar Yevropa xomashyosidan Yevropa texnologiyalaridan foydalangan holda yuqori texnologiyali uskunalarda ishlab chiqariladi.",
+          "Bizning metall buyumlarimiz eng so'nggi rusumdagi Yevropa xomashyosidan eng so'nggi rusumdagi asbob-uskunalar va zamonaviy Yevropa texnikalaridan foydalangan holda sinchkovlik bilan ishlab chiqariladi. Ushbu fidoyilik xalqaro standartlarga javob beradigan, har bir mahsulotdagi mukammallikni va innovatsiyalarni aks ettiruvchi yuqori sifatli mahsulotlar ishlab chiqarishni ta'minlaydi.",
         advantages_1_3:
-          "Mahsulotlar eksport qilinadigan qator mamlakatlarning barcha zarur gigiyenik sertifikatlari va sifat sertifikatlari mavjud. Mahsulotlar barcha mavjud xalqaro standartlarga mos keladi.",
+          "Mahsulotlarimiz turli eksport yoʻnalishlaridan gigiena va sifat sertifikatlari bilan taʼminlangan boʻlib, ularning xavfsizligi va mukammalligini tasdiqlaydi. Ular jahon standartlariga qat'iy rioya qilib, ishonchliligini mustahkamlaydi. Ushbu keng qamrovli sertifikat bizning eng yuqori xalqaro kalibrli tovarlarni yetkazib berishga sodiqligimizni ta'kidlaydi.",
         advantages_1_4:
-          "Har bir ishlab chiqarish bo'limida har bir partiyaning namunalari tekshiriladigan laboratoriya mavjud. Bundan tashqari, barcha mahsulotlar sinovdan o'tkaziladigan alohida akkreditatsiyalangan laboratoriya mavjud.",
+          "Har bir ishlab chiqarish sektorida maxsus laboratoriya har bir partiyadan namunalarni sinchkovlik bilan sinovdan o'tkazadi. Bundan tashqari, akkreditatsiyalangan mustaqil laboratoriya barcha mahsulotlarni sinchkovlik bilan tekshiradi. Ushbu ikki tomonlama sinov yondashuvi mijozlarimizga doimiy ishonchli va sertifikatlangan mahsulotlarni yetkazib berishga sodiqligimizni tasdiqlab, eng yuqori sifatni kafolatlaydi.",
         advantages_1_5:
-          "Taniqli sug'urta kompaniyalari tomonidan himoyalangan barcha mahsulotlar uchun kafolat mavjud. Metall mahsulotlar 10 yilgacha kafolatlangan. PPR mahsulotlari uchun 50 yilgacha kafolat. PPR quvurlari va armaturalari 50 yil kafolatlanadi.",
+          "Barcha mahsulotlar nufuzli sug'urta firmalari orqali ta'minlangan kafolatlar bilan quvvatlanadi. Bizning metall buyumlarimiz 10 yilgacha qoplanadi, PPR mahsulotlari esa ta'sirchan 50 yillik kafolatga ega. Xususan, PPR quvurlari va armaturalari 50 yillik keng kafolatga ega bo'lib, bu bizning chidamlilik va mijozlar ehtiyojini qondirish bo'yicha qat'iy majburiyatimizni aks ettiradi.",
         advantages_1_6:
-          "Kafolat holatlarini tekshirish uchun xizmat ko'rsatish bo'limi mavjud. Mahsulotning aybi bilan mulkka zarar etkazilgan hollarda, mulkga etkazilgan zarar 100% gacha qoplanadi.",
+          "Bizning maxsus xizmat ko'rsatish bo'limimiz kafolat so'rovlarini samarali hal qiladi. Mahsulot nosozliklari bilan bog'liq mulkiy zarar holatlarida biz 100% gacha kompensatsiyani taklif qilamiz. Bu bizning muammolarga zudlik bilan yechim topish va mijozlarimiz qoniqishini ta'minlashga sodiqligimizni ta'kidlaydi, bu bizning sifat va mas'uliyatga bo'lgan qat'iy sodiqligimizni aks ettiradi.",
         advantages_1_7:
-          "Mahsulot sifatini yaxshilash va yangi turdagi mahsulotlarni ishlab chiqish uchun muhandislik kompaniyalari va montajchilar bilan doimiy yaqin hamkorlik.",
+          "Biz mahsulotlarning mukammalligini oshirish va innovatsiyalarni rivojlantirish uchun muhandislik firmalari va montajchilar bilan izchil, hamkorlikdagi hamkorlikni davom ettiramiz. Ushbu yaqin hamkorlik mahsulotning doimiy rivojlanishiga turtki bo'lib, takliflarimiz sifat va xilma-xillik bo'yicha birinchi o'rinda turishini ta'minlaydi. Taraqqiyotga sodiqligimiz soha mutaxassislari bilan faol aloqalarimizda namoyon bo‘ladi.",
         advantages_1_8:
-          "Mijozlarning qulayligi uchun sifatli mahsulotlardan foydalanish imkonini beruvchi montajchilarni tayyorlash va bozorga yangi mahsulotlarni joriy etish bo'yicha seminarlar o'tkazish.",
+          "Biz montajchilarni o'qitish va bozorga yangi mahsulotlarni joriy etishga qaratilgan seminarlar tashkil qilamiz. Ushbu proaktiv yondashuv nafaqat montajchilarning malakasini oshiribgina qolmay, balki mijozlarning qulayligini ta'minlash uchun yuqori sifatli mahsulotlarni joriy qilishni osonlashtiradi. Bilim va innovatsiyalarni tarqatish orqali biz mijozlarning maqbul ehtiyojlarini qondirish uchun yuqori sifatli yechimlarni taqdim etish majburiyatini bajaramiz.",
         advantages_1_9: "Biz bilan bog'lanish",
         // Afzaliklar tugadi.
 
@@ -220,21 +220,21 @@ i18n.use(initReactI18next).init({
         firyal_2_5: "ОТПРАВИТЬ",
         // Firyal tugadi
         advantages_1_1:
-          "Вся продукция ППР изготавливается из высококачественного сырья класса «А», что обеспечивает лучшее соединение при пайке труб и фитингов.",
+          "Изготовленные из высококачественного сырья класса А, все изделия PPR превосходно подходят для создания безупречных соединений в процессе пайки труб и фитингов. Использование высококачественных материалов гарантирует непревзойденные результаты, повышая надежность и эксплуатационные характеристики нашей продукции в различных областях применения.",
         advantages_1_2:
-          "Вся продукция из металла изготавливается из европейского сырья на высокотехнологическом оборудовании по европейским технологиям.",
+          "Наши металлические изделия тщательно изготавливаются из высококачественного европейского сырья с использованием современного оборудования и передовых европейских технологий. Эта приверженность гарантирует производство высококачественных изделий, соответствующих международным стандартам, отражающих как совершенство, так и инновации в каждом продукте.",
         advantages_1_3:
-          "Имеются все необходимые гигиенические сертификаты, и сертификаты качества ряда стран, в которые экспортируется продукция. Продукция соответствует всем существующим международным нормам.",
+          "Наши продукты имеют необходимые сертификаты гигиены и качества из различных экспортных стран, подтверждающие их безопасность и высокое качество. Они строго придерживаются преобладающих мировых стандартов, усиливая свою надежность. Эта всесторонняя сертификация подчеркивает наше стремление поставлять товары самого высокого международного качества.",
         advantages_1_4:
-          "В каждом производственном отделе имеется лаборатория, в которой проверяется пробная продукция каждой произведенной партии. Также есть отдельная аккредитированная лаборатория, где производят испытания всей выпускаемой продукции.",
+          "В каждом производственном секторе специальная лаборатория проводит тщательное тестирование образцов из каждой партии. Кроме того, аккредитованная независимая лаборатория тщательно проверяет всю продукцию. Такой подход к двойному тестированию гарантирует высочайшее качество, подтверждая наше стремление поставлять нашим клиентам стабильно надежные и сертифицированные товары.",
         advantages_1_5:
-          "Имеется гарантия на всю продукцию, защищенная известными страховыми компаниями. Гарантия на продукцию из металла до 10 лет. Гарантия на продукцию из ППР до 50 лет. Гарантия на трубы и фитинги из ППР 50 лет.",
+          "Все наши продукты подкреплены гарантиями, обеспеченными авторитетными страховыми компаниями. На наши изделия из металла распространяется гарантия до 10 лет, а на изделия из полипропилена действует впечатляющая 50-летняя гарантия. В частности, на трубы и фитинги из полипропилена предоставляется обширная 50-летняя гарантия, отражающая нашу непоколебимую приверженность долговечности и удовлетворенности клиентов.",
         advantages_1_6:
-          "Имеется сервисная служба для расследования по гарантийным случаям. В случаях причинения порчи имущества по вине продукции, возмещение порчи имущества до 100%.",
+          "Наш специализированный сервисный отдел эффективно обрабатывает гарантийные запросы. В случаях материального ущерба, связанного с дефектами продукции, мы предлагаем комплексную компенсацию до 100%. Это подчеркивает нашу приверженность быстрому решению проблем и обеспечению удовлетворенности наших клиентов, отражая нашу непоколебимую приверженность качеству и ответственности.",
         advantages_1_7:
-          "Постоянная тесная работа с инженерными компаниями и монтажниками, для улучшения качества продукции и разработками новых видов продукции.",
+          "Мы поддерживаем постоянное сотрудничество с инженерными фирмами и установщиками для повышения качества продукции и стимулирования инноваций. Это тесное сотрудничество способствует постоянному развитию продуктов, гарантируя, что наши предложения остаются на переднем крае качества и разнообразия. Наше стремление к прогрессу отражается в нашем динамичном взаимодействии с профессионалами отрасли.",
         advantages_1_8:
-          "Проведение семинаров по обучению монтажников и внедрению новинок на рынок, что позволяет пользоваться качественной продукцией для комфорта клиентов.",
+          "Мы организуем семинары, направленные на обучение монтажников и вывод на рынок новых продуктов. Такой упреждающий подход не только повышает квалификацию установщика, но и способствует внедрению превосходных продуктов, обеспечивающих удобство для клиентов. Делясь знаниями и инновациями, мы подтверждаем наше стремление предоставлять высококачественные решения для оптимального удовлетворения потребностей клиентов.",
         advantages_1_9: "Свяжитесь с нами",
         // Afzaliklar tugadi.
 
@@ -342,21 +342,21 @@ i18n.use(initReactI18next).init({
         firyal_2_5: "SEND",
         // Firyal tugadi
         advantages_1_1:
-          "All PPR products are made from high-quality class A raw materials, which ensures the best connection when soldering pipes and fittings.",
+          "Crafted from top-tier class A raw materials, all PPR products excel in creating impeccable connections during the soldering process of pipes and fittings. The use of premium materials guarantees unparalleled results, reinforcing the reliability and performance of our products in various applications.",
         advantages_1_2:
-          "All metal products are made from European raw materials on high-tech equipment using European technologies.",
+          "Our metal goods are meticulously crafted from premium European raw materials using state-of-the-art equipment and cutting-edge European techniques. This dedication ensures the production of high-quality items that adhere to international standards, reflecting both excellence and innovation in every product.",
         advantages_1_3:
-          "There are all necessary hygienic certificates, and quality certificates of a number of countries to which products are exported. Products comply with all existing international standards.",
+          "Our products come with essential hygiene and quality certificates from various export destinations, attesting to their safety and excellence. They strictly adhere to prevailing global standards, reinforcing their reliability. This comprehensive certification underscores our commitment to delivering goods of the highest international caliber.",
         advantages_1_4:
-          "Each production department has a laboratory where samples of each batch are tested. There is also a separate accredited laboratory where all products are tested.",
+          "Within every production sector, a dedicated laboratory conducts thorough testing of samples from each batch. Additionally, an accredited independent laboratory rigorously examines all products. This dual-testing approach guarantees the utmost quality, affirming our commitment to delivering consistently reliable and certified goods to our customers.",
         advantages_1_5:
-          "There is a guarantee for all products, protected by well-known insurance companies. Metal products guaranteed up to 10 years. Warranty for PPR products up to 50 years. PPR pipes and fittings are guaranteed for 50 years",
+          "All our products are backed by warranties secured through reputable insurance firms. Our metal goods are covered for up to 10 years, while PPR products boast an impressive 50-year warranty. Specifically, PPR pipes and fittings enjoy an extensive 50-year guarantee, reflecting our unwavering commitment to durability and customer satisfaction.",
         advantages_1_6:
-          "A service department is available to investigate warranty cases. In cases of damage to property due to the fault of the product, compensation for damage to property up to 100%.",
+          "Our dedicated service department handles warranty inquiries effectively. In instances of property damage attributed to product faults, we offer comprehensive compensation of up to 100%. This underscores our commitment to addressing concerns promptly and ensuring our customers' satisfaction, reflecting our steadfast commitment to quality and accountability.",
         advantages_1_7:
-          "Constant close work with engineering companies and installers to improve product quality and develop new types of products.",
+          "We maintain a consistent, collaborative partnership with engineering firms and installers to enhance product excellence and foster innovation. This close collaboration fuels ongoing product development, ensuring our offerings remain at the forefront of quality and diversity. Our commitment to progress is reflected in our dynamic engagement with industry professionals.",
         advantages_1_8:
-          "Conducting seminars to train installers and introduce new products to the market, which allows you to use quality products for the comfort of customers.",
+          "We organize seminars aimed at training installers and introducing novel products to the market. This proactive approach not only enhances installer skills but also facilitates the introduction of superior products to ensure customer comfort. By imparting knowledge and innovation, we uphold our commitment to delivering high-quality solutions for optimal customer satisfaction.",
         advantages_1_9: "Contact us",
         // Afzaliklar tugadi.
 

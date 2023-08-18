@@ -17,7 +17,7 @@ import "./style.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import i18n from "../../i18n/i18n";
 const News = () => {
   const [news, setNews] = useState([]);
   const navigate = useNavigate();
@@ -25,7 +25,10 @@ const News = () => {
   //   navigate(`/news/${id}`);
   // };
   //api
-
+  const LangVal = () => {
+    return i18n.language;
+  };
+  // let til = LangVal();
   async function getNews() {
     try {
       let { data } = await axios.get("/news");
@@ -42,6 +45,14 @@ const News = () => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + "..."; // Truncate text and add ellipsis
     }
+
+    return text;
+  };
+  const DateComponent = ({ text, maxLength }) => {
+    if (text.length > maxLength) {
+      text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis
+    }
+    text = text.replaceAll("-", "/");
 
     return text;
   };
@@ -80,7 +91,10 @@ const News = () => {
                       <TbCalendarEvent />
                       <CardHeader
                         className=""
-                        subheader={new Date().toLocaleDateString()}
+                        subheader={DateComponent({
+                          text: news.created_at,
+                          maxLength: 10,
+                        })}
                       ></CardHeader>
                     </div>
                     <CardContent sx={{ padding: "1rem" }}>
@@ -91,10 +105,23 @@ const News = () => {
                         variant="h6"
                         component="p"
                       >
-                        {news.title_uz}
+                        {/* {LangVal() == 'uz' ? news.title_uz ? LangVal() == 'en' ? news.title_en : news.title_ru} */}
+                        {LangVal() == "uz"
+                          ? news.title_uz
+                          : LangVal() == "en"
+                          ? news.title_en
+                          : news.title_ru}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {TextComponent({ text: news.desc_uz, maxLength: 100 })}
+                        {TextComponent({
+                          text:
+                            LangVal() == "uz"
+                              ? news.desc_uz
+                              : LangVal() == "en"
+                              ? news.desc_en
+                              : news.desc_ru,
+                          maxLength: 100,
+                        })}
                       </Typography>
                     </CardContent>
                   </CardActionArea>

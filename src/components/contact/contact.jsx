@@ -9,12 +9,16 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n/i18n";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
-
+  const LangVal = () => {
+    return i18n.language;
+  };
   // const Contact = () => {
   const { t } = useTranslation();
   return (
@@ -122,6 +126,7 @@ const Contact = () => {
                 className="form-control"
                 type="text"
                 placeholder="Ваше имя"
+                required
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
@@ -134,6 +139,7 @@ const Contact = () => {
                 className="form-control"
                 type="text"
                 placeholder="Ваш номер телефона"
+                required
                 onChange={(e) => {
                   setPhone(e.target.value);
                 }}
@@ -151,6 +157,7 @@ const Contact = () => {
                 cols="10"
                 className="ui-autocomplete-input"
                 style={{ color: "#fff" }}
+                required
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
@@ -185,14 +192,41 @@ const Contact = () => {
                 axios
                   .request(config)
                   .then((response) => {
-                    console.log(JSON.stringify(response.data));
+                    console.log(JSON.stringify(response));
                     if (response.status == 200) {
-                      alert("Muvaffiqiyatli jonatildi");
+                      toast(
+                        LangVal() == "uz"
+                          ? response.data.message
+                          : LangVal() == "en"
+                          ? response.data.message
+                          : response.data.message,
+                        { type: "success" }
+                      );
                     }
                   })
                   .catch((error) => {
                     console.log(error);
-                    alert("Xatolik yuz berdi");
+                    // alert("Xatolik yuz berdi");
+                    if (error.request.status == 400) {
+                      toast(
+                        LangVal() == "uz"
+                          ? error.response.data[0].error_uz
+                          : LangVal() == "en"
+                          ? error.response.data[2].error_en
+                          : error.response.data[1].error_ru,
+                        { type: "error" }
+                      );
+                    }
+                    if (error.request.status == 403) {
+                      toast(
+                        LangVal() == "uz"
+                          ? error.response.data[0].error_uz
+                          : LangVal() == "en"
+                          ? error.response.data[2].error_en
+                          : error.response.data[1].error_ru,
+                        { type: "info" }
+                      );
+                    }
                   });
               }}
             >

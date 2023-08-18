@@ -15,6 +15,7 @@ import { TbCalendarEvent } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import i18n from "../../i18n/i18n";
 
 const News_info = () => {
   const { id } = useParams();
@@ -26,27 +27,29 @@ const News_info = () => {
   //   navigate(`/news/${id}`);
   // };
   //api
-
-  async function getNews() {
-    try {
-      let { data } = await axios.get(`/news/${id}`);
-      console.log(data, "news");
-      setNews([data.data]);
-    } catch (error) {
-      console.log(error);
-      navigate("/error");
-    }
-  }
-  async function getMore() {
-    try {
-      let { data } = await axios.get(`/news`);
-      console.log(data, "morelll");
-      setMore(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const LangVal = () => {
+    return i18n.language;
+  };
   useEffect(() => {
+    async function getNews() {
+      try {
+        let { data } = await axios.get(`/news/${id}`);
+        console.log(data, "news");
+        setNews([data.data]);
+      } catch (error) {
+        console.log(error);
+        navigate("/error");
+      }
+    }
+    async function getMore() {
+      try {
+        let { data } = await axios.get(`/news`);
+        console.log(data, "morelll");
+        setMore(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
     getNews();
     getMore();
   }, [id]);
@@ -86,7 +89,11 @@ const News_info = () => {
                   lineHeight: "normal",
                 }}
               >
-                {el.title_uz}
+                {LangVal() == "uz"
+                  ? el.title_uz
+                  : LangVal() == "en"
+                  ? el.title_en
+                  : el.title_ru}
               </Typography>
               <div className="flex flex-row justify-start items-center py-6">
                 <MdOutlineWatchLater />
@@ -107,7 +114,11 @@ const News_info = () => {
                 герметизации трубопровода и других вспомогательных целей.
               </Typography> */}
               <Typography variant="p" component="p" className="pt-20">
-                {el.desc_uz}
+                {LangVal() == "uz"
+                  ? el.desc_uz
+                  : LangVal() == "en"
+                  ? el.desc_en
+                  : el.desc_ru}
               </Typography>
             </div>
           );
@@ -180,7 +191,11 @@ const News_info = () => {
                               variant="h6"
                               component="p"
                             >
-                              {el.title_uz}
+                              {LangVal() == "uz"
+                                ? el.title_uz
+                                : LangVal() == "en"
+                                ? el.title_en
+                                : el.title_ru}
                             </Typography>
                             <Typography
                               height="70px"
@@ -188,7 +203,12 @@ const News_info = () => {
                               color="text.secondary"
                             >
                               {TextComponent({
-                                text: el.desc_uz,
+                                text:
+                                  LangVal() == "uz"
+                                    ? el.desc_uz
+                                    : LangVal() == "en"
+                                    ? el.desc_en
+                                    : el.desc_ru,
                                 maxLength: 100,
                               })}
                               {}

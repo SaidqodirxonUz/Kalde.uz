@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import i18n from "../../i18n/i18n";
 const Filial = () => {
   const navigate = useNavigate();
   const [filials, setFilial] = useState([]);
@@ -28,7 +28,9 @@ const Filial = () => {
     getFilials();
   }, []);
   console.log(filials, "state");
-
+  const LangVal = () => {
+    return i18n.language;
+  };
   // const Filial = () => {
   const { t } = useTranslation();
   return (
@@ -92,7 +94,11 @@ const Filial = () => {
                       paddingBottom: "2rem",
                     }}
                   >
-                    {filial.title_uz}
+                    {LangVal() == "uz"
+                      ? filial.title_uz
+                      : LangVal() == "en"
+                      ? filial.title_en
+                      : filial.title_ru}
                   </h5>
                   <List>
                     <ListItemText>
@@ -136,7 +142,6 @@ const Filial = () => {
               </div>
             );
           })}
-          
         </section>
       </div>
       <Contact />

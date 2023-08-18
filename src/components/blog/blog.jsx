@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 // import { TbCalendarEvent } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import i18n from "../../i18n/i18n";
 
 let data = new FormData();
 
@@ -49,6 +50,9 @@ const Blog = () => {
   React.useEffect(() => {
     getData();
   }, []);
+  const LangVal = () => {
+    return i18n.language;
+  };
   const TextComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + "..."; // Truncate text and add ellipsis
@@ -65,8 +69,7 @@ const Blog = () => {
     return text;
   };
   console.log(data);
-// eslint-disable-next-line no-unused-vars
-
+  // eslint-disable-next-line no-unused-vars
 
   // eslint-disable-next-line no-unused-vars
   const clickRight = () => {
@@ -111,7 +114,6 @@ const Blog = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-
           {t("main_6_1")}
         </Typography>
         <Link
@@ -184,7 +186,11 @@ const Blog = () => {
                             variant="h6"
                             component="p"
                           >
-                            {item.title_uz}
+                            {LangVal() == "uz"
+                              ? item.title_uz
+                              : LangVal() == "en"
+                              ? item.title_en
+                              : item.title_ru}
                           </Typography>
                           <Typography
                             variant="body2"
@@ -206,30 +212,29 @@ const Blog = () => {
           </div>
         </div>
 
-      <Link
-        style={{
-          // display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-          // margin: "2rem 0",
-          width: "200px",
-          height: "30px",
-          padding: "20px 24px",
-          color: "rgba(239, 127, 26, 1)",
-          border: "1px solid rgba(239, 127, 26, 1)",
-          borderRadius: "100px",
-        }}
-        className="more flex lg:hidden my-2rem mx-auto"
-        to="#"
-      >
-        {t("main_2_3")}
-        <FiArrowUpRight />
-      </Link>
-    </div>
+        <Link
+          style={{
+            // display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            // margin: "2rem 0",
+            width: "200px",
+            height: "30px",
+            padding: "20px 24px",
+            color: "rgba(239, 127, 26, 1)",
+            border: "1px solid rgba(239, 127, 26, 1)",
+            borderRadius: "100px",
+          }}
+          className="more flex lg:hidden my-2rem mx-auto"
+          to="#"
+        >
+          {t("main_2_3")}
+          <FiArrowUpRight />
+        </Link>
+      </div>
     </div>
   );
 };
-
 
 export default Blog;

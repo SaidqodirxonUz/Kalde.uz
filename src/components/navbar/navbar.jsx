@@ -11,9 +11,9 @@ import TemporaryDrawer from "../drawer/drewer";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
   const { t } = useTranslation();
+  console.log(i18n.language);
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);

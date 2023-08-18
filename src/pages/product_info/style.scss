@@ -20,11 +20,11 @@
   .texts {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
     width: 40%;
-    gap: 0.4rem;
+    gap: 2rem;
     margin: 0 5%;
     border-radius: 18px;
   }
