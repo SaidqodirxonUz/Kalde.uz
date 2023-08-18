@@ -5,10 +5,13 @@ import Navbar from "../../components/navbar/navbar";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 // import product from "../../assets/product_img.jpg";
+
 import { TbCalendarEvent } from "react-icons/tb";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 const Contact_filial = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -68,7 +71,7 @@ const Contact_filial = () => {
                 paddingBottom: "2rem",
               }}
             >
-              Связаться с нами
+              {t("application_1_2")}
             </h5>
             <Box
               component="form"
@@ -80,24 +83,29 @@ const Contact_filial = () => {
                 <input
                   className="form-control"
                   type="text"
-                  placeholder="Ваше имя"
+                  placeholder={t("application_1_3")}
                 />
-                <label htmlFor="text-1542372332072">Ваше имя</label>
+                <label htmlFor="text-1542372332072">
+                  {" "}
+                  {t("application_1_3")}
+                </label>
                 {/* <div className="req-mark">!</div> */}
               </div>
               <div className="pizdescha">
                 <input
                   className="form-control"
                   type="text"
-                  placeholder="Ваш номер телефона"
+                  placeholder={t("application_1_4")}
                 />
-                <label htmlFor="text-1542372332072">Ваш номер телефона</label>
+                <label htmlFor="text-1542372332072">
+                  {t("application_1_3")}
+                </label>
                 {/* <div className="req-mark">!</div> */}
               </div>
               {/* <TextField id="outlined-basic" label="Familya" variant="outlined" /> */}
               <div className="pizdes">
                 <textarea
-                  placeholder="Введите сообщение"
+                  placeholder={t("application_1_5")}
                   rows="3"
                   name="comment[text]"
                   id="comment_text"
@@ -114,7 +122,7 @@ const Contact_filial = () => {
                 className="send_btn"
                 style={{ backgroundColor: "#EF7F1A", width: "100%" }}
               >
-                ОТПРАВИТЬ
+                {t("application_1_6")}
               </Button>
             </Box>
 

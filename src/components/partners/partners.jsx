@@ -7,8 +7,10 @@ import partner4 from "../../assets/partner4.png";
 import partner5 from "../../assets/partner5.png";
 
 import "./partners.scss";
+import { useTranslation } from "react-i18next";
 
 const Partners = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Typography
@@ -28,7 +30,7 @@ const Partners = () => {
           WebkitTextFillColor: "transparent",
         }}
       >
-        Наши партнеры
+        {t("main_5_1")}
       </Typography>
 
       <div className="slider-parent">

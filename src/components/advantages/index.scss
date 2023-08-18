@@ -11,12 +11,22 @@
   padding: 10rem 0;
   @media (max-width: 1200px) {
     padding: 1rem 0;
+    // width: 20% !important;
   }
 
-  .card {
+  .cards {
     max-width: 300px;
     height: auto;
     border-radius: 0.5em !important;
+
+    @media (max-width: 1200px) {
+      padding: 1rem 0;
+      width: 20%;
+    }
+    @media (max-width: 600px) {
+      padding: 1rem 0;
+      width: 100%;
+    }
   }
 }
 .cards_container {

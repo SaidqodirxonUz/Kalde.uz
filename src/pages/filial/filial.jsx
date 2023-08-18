@@ -6,8 +6,10 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import product from "../../assets/product_img.jpg";
 import { TbCalendarEvent } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 const Filial = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Navbar />
@@ -31,7 +33,7 @@ const Filial = () => {
             textAlign: "center",
           }}
         >
-          Наши филиалы
+          {t("branches_1_1")}
         </Typography>
         <section className="filials flex flex-col gap-10">
           <div className="flex flex-col lg:flex-row w-72 sm:w-max justify-start lg:w-10/12 p-8 mx-auto gap-6 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]">
@@ -70,13 +72,13 @@ const Filial = () => {
                     className="pages text-black active:text-orange-500 flex flex-row "
                   >
                     <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
-                    г. Ташкент, Олмазор тумани, ул. Широк, 2
+                    {t("firyal_1_1")} г. Ташкент, Олмазор тумани, ул. Широк, 2
                   </p>
                 </ListItemText>
                 <ListItemText>
                   <p className="flex flex-row text-black ">
                     <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                    09:00 - 18:00, Du-Sha
+                    {t("firyal_1_3")} 09:00 - 18:00, Du-Sha
                   </p>
                 </ListItemText>
                 <ListItemText>
@@ -86,7 +88,7 @@ const Filial = () => {
                     className="pages flex flex-row text-black active:text-orange-500 items"
                   >
                     <BsTelephoneFill className="icons text-xl text-orange-500" />
-                    +998 93 908 70 85
+                    {t("firyal_1_4")} +998 93 908 70 85
                   </a>
                 </ListItemText>
                 <ListItemText>
@@ -96,7 +98,7 @@ const Filial = () => {
                     className="pages flex flex-row text-black active:text-orange-500 items"
                   >
                     <MdEmail className="icons text-xl text-orange-500" />{" "}
-                    info@kalde.uz
+                    {t("firyal_1_5")} info@kalde.uz
                   </a>
                 </ListItemText>
               </List>

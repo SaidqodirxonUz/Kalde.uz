@@ -2,8 +2,11 @@ import { Typography } from "@mui/material";
 import DostijeniyaImg from "../../assets/about_us_hero.png";
 import { useCountUp } from "use-count-up";
 import "./dostijeniya.scss";
+import { useTranslation } from "react-i18next";
 
 const Dostijeniya = () => {
+  const { t } = useTranslation();
+
   const partnersStart = 0;
   const partnersEnd = 500;
   const partnerDuration = 5;
@@ -79,7 +82,7 @@ const Dostijeniya = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Достижения компании
+          {t("about_2_1")}
         </Typography>
         <Typography
           variant="h5"
@@ -93,14 +96,7 @@ const Dostijeniya = () => {
             lineHeight: "140%",
           }}
         >
-          KALDE - основана в 1977 году, расположена в Стамбуле, Турция,
-          производит продукцию для современных систем отопления и водоснабжения.
-          Сегодня продукция KALDE известна в 50 странах мира. Продукция KALDE,
-          отвечающая мировым стандартам, известна в 40 крупнейших странах мира.
-          Вся продукция имеет международные сертификаты. На рынке Узбекистана
-          продукция Kalde стала известна в 2009 году. На сегодняшний день в
-          Узбекистане продукцию Kalde можно купить более чем в 20
-          специализированных магазинах!
+          {t("about_2_2")}
         </Typography>
         <div style={{ display: "flex" }}>
           <div
