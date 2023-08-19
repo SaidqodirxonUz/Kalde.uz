@@ -9,7 +9,7 @@ const Advantages = () => {
   return (
     <>
       <Navbar />
-      <section className="w-10/12 mx-auto pt-40">
+      <section className="w-10/12 mx-auto pt-0 lg:pt-24">
         <div className="flex flex-col items-center justify-center">
           <Advantage_cards dir="row" name="text" />
           {/* <Advantage_cards dir="row-reverse" /> */}

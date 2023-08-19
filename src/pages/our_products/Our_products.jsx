@@ -23,26 +23,26 @@ const Our_products = () => {
   const [categories, setCategories] = React.useState([]);
   const [products, setProducts] = React.useState([]);
   //api
-
-  async function getProducts() {
-    try {
-      let { data } = await axios.get("/products");
-      console.log(data, "prod");
-      setProducts(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  async function getCategories() {
-    try {
-      let { data } = await axios.get("/categories");
-      console.log(data);
-      setCategories(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
   React.useEffect(() => {
+    async function getProducts() {
+      try {
+        let { data } = await axios.get("/products");
+        console.log(data, "prod");
+        setProducts(data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    async function getCategories() {
+      try {
+        let { data } = await axios.get("/categories");
+        console.log(data);
+        setCategories(data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
     getProducts();
     getCategories();
   }, []);

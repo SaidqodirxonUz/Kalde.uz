@@ -31,29 +31,29 @@ const News_info = () => {
   const LangVal = () => {
     return i18n.language;
   };
+  async function getNews() {
+    try {
+      let { data } = await axios.get(`/news/${id}`);
+      console.log(data, "news");
+      setNews([data.data]);
+    } catch (error) {
+      console.log(error);
+      navigate("/error");
+    }
+  }
+  async function getMore() {
+    try {
+      let { data } = await axios.get(`/news`);
+      console.log(data, "morelll");
+      setMore(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    async function getNews() {
-      try {
-        let { data } = await axios.get(`/news/${id}`);
-        console.log(data, "news");
-        setNews([data.data]);
-      } catch (error) {
-        console.log(error);
-        navigate("/error");
-      }
-    }
-    async function getMore() {
-      try {
-        let { data } = await axios.get(`/news`);
-        console.log(data, "morelll");
-        setMore(data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
     getNews();
     getMore();
-  }, [id]);
+  }, []);
   const DateComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis

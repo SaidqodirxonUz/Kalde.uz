@@ -48,7 +48,7 @@ const Product_info = () => {
       }
     }
     getProducts();
-  }, [id]);
+  }, []);
   const LangVal = () => {
     return i18n.language;
   };

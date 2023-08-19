@@ -182,7 +182,7 @@ const Contact = () => {
                 let config = {
                   method: "post",
                   maxBodyLength: Infinity,
-                  url: "https://kalde.victoriaslove.uz/send",
+                  url: "/send",
                   headers: {
                     "Content-Type": "application/json",
                   },

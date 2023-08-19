@@ -21,20 +21,21 @@ const Contact_filial = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [filial, setFilial] = useState([]);
+  let location = "";
   const navigate = useNavigate();
-  async function getFilials() {
-    try {
-      let { data } = await axios.get(`/dealers/${id}`);
-      console.log(data, "data");
-      setFilial([data.data]);
-    } catch (error) {
-      console.log(error);
-      navigate("/error");
-    }
-  }
   useEffect(() => {
+    async function getFilials() {
+      try {
+        let { data } = await axios.get(`/dealers/${id}`);
+        console.log([data.data], "data");
+        setFilial([data.data]);
+      } catch (error) {
+        console.log(error);
+        navigate("/error");
+      }
+    }
     getFilials();
-  }, []);
+  }, [id]);
   const LangVal = () => {
     return i18n.language;
   };
@@ -48,6 +49,9 @@ const Contact_filial = () => {
       <div className="hero-area pt-40 md:pt-20 lg:pt-10">
         <section className="Contacts w-9/12 mx-auto flex flex-col justify-between md:flex-row gap-10">
           {filial.map((f) => {
+            {
+              location = f.location;
+            }
             return (
               <div className="f_info" key={f.id}>
                 <h5 className="filial_name">
@@ -117,11 +121,16 @@ const Contact_filial = () => {
               noValidate
               autoComplete="on"
               className="flex flex-col justify-center gap-5  forma"
-              // onSubmit={}
+              // onSubmit={() => {
+              //   setName("");
+              //   setPhone("");
+              //   setName("");
+              // }}
             >
               <div className="bg_input">
                 <label className="custom-field two">
                   <input
+                    value={name}
                     type="url"
                     placeholder="&nbsp;"
                     onChange={(e) => {
@@ -134,6 +143,7 @@ const Contact_filial = () => {
               <div className="bg_input">
                 <label className="custom-field two">
                   <input
+                    value={phone}
                     type="url"
                     placeholder="&nbsp;"
                     onChange={(e) => {
@@ -146,6 +156,7 @@ const Contact_filial = () => {
 
               <div className="bg_input">
                 <textarea
+                  value={message}
                   placeholder={t("application_1_5")}
                   rows="3"
                   name="comment[text]"
@@ -174,7 +185,7 @@ const Contact_filial = () => {
                   let config = {
                     method: "post",
                     maxBodyLength: Infinity,
-                    url: "https://kalde.victoriaslove.uz/send",
+                    url: "/send",
                     headers: {
                       "Content-Type": "application/json",
                     },
@@ -209,7 +220,20 @@ const Contact_filial = () => {
                           { type: "error" }
                         );
                       }
+                      if (error.request.status == 403) {
+                        toast(
+                          LangVal() == "uz"
+                            ? error.response.data[0].error_uz
+                            : LangVal() == "en"
+                            ? error.response.data[2].error_en
+                            : error.response.data[1].error_ru,
+                          { type: "info" }
+                        );
+                      }
                     });
+                  setName("");
+                  setPhone("");
+                  setMessage("");
                 }}
               >
                 {t("application_1_6")}
@@ -220,25 +244,26 @@ const Contact_filial = () => {
       </div>
       {/* <Contact /> */}
       <section className="location">
-        {filial.map((l) => {
-          return (
-            <div key={l.id} style={{ width: "" }}>
-              <iframe
-                width="100%"
-                height="600"
-                // frameborder="0"
-                // scrolling="no"
-                // marginheight="0"
-                // marginwidth="0"
-                src={l.location}
-              >
-                <a href="https://www.maps.ie/population/">
-                  Calculate population in area
-                </a>
-              </iframe>
-            </div>
-          );
-        })}
+        {/* {filial.map((l) => { */}
+        {/* return ( */}
+        <div style={{ width: "" }}>
+          <iframe
+            width="100%"
+            height="600"
+            // frameborder="0"
+            // scrolling="no"
+            // marginheight="0"
+            // marginwidth="0"
+            src={`${location}`}
+          >
+            {console.log(location)}
+            <a href="https://www.maps.ie/population/">
+              Calculate population in area
+            </a>
+          </iframe>
+        </div>
+        {/* );
+        })} */}
       </section>
       <Footer />
     </>

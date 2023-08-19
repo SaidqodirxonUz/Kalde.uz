@@ -133,7 +133,7 @@ const Advantage_cards = () => {
                   let config = {
                     method: "post",
                     maxBodyLength: Infinity,
-                    url: "https://kalde.victoriaslove.uz/send",
+                    url: "/send",
                     headers: {
                       "Content-Type": "application/json",
                     },
@@ -190,20 +190,6 @@ const Advantage_cards = () => {
               {t("advantages_1_1")}
             </Typography>
 
-            <Typography
-              variant="h5"
-              component="p"
-              style={{
-                color: "rgba(0, 0, 0, 0.80)",
-                fontFamily: "Okta Neue",
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "140%",
-              }}
-            >
-              {t("advantages_1_2")}
-            </Typography>
             {/* ))} */}
             <Button
               style={{
@@ -211,7 +197,7 @@ const Advantage_cards = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                width: "220px",
+                width: "240px",
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
@@ -229,8 +215,9 @@ const Advantage_cards = () => {
           </div>
         </div>
         <div
-          className="advantage hero"
+          className="advantage hero-noreverse"
           style={{
+            // flexDirection: "row-reverse",
             marginTop: "5rem",
           }}
         >
@@ -238,21 +225,6 @@ const Advantage_cards = () => {
             <img src={AboutUsHeroImg} alt="a" />
           </div>
           <div className="texts">
-            <Typography
-              variant="h5"
-              component="h6"
-              style={{
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
-              }}
-            >
-              {" "}
-              {t("advantages_1_1")}
-            </Typography>
-
             <Typography
               variant="h5"
               component="p"
@@ -275,7 +247,7 @@ const Advantage_cards = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                width: "220px",
+                width: "240px",
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
@@ -297,20 +269,6 @@ const Advantage_cards = () => {
           <div className="texts">
             <Typography
               variant="h5"
-              component="h6"
-              style={{
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
-              }}
-            >
-              {t("advantages_1_1")}
-            </Typography>
-
-            <Typography
-              variant="h5"
               component="p"
               style={{
                 color: "rgba(0, 0, 0, 0.80)",
@@ -321,7 +279,7 @@ const Advantage_cards = () => {
                 lineHeight: "140%",
               }}
             >
-              {t("advantages_1_2")}
+              {t("advantages_1_3")}
             </Typography>
             {/* ))} */}
             <Button
@@ -331,7 +289,7 @@ const Advantage_cards = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                width: "220px",
+                width: "240px",
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
@@ -348,8 +306,100 @@ const Advantage_cards = () => {
           </div>
         </div>
         <div
+          className="advantage hero-noreverse"
+          style={{
+            // flexDirection: "row-reverse",
+            marginTop: "5rem",
+          }}
+        >
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_4")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "240px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+        </div>
+        <div
           className="advantage hero"
           style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "rgba(0, 0, 0, 0.80)",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("advantages_1_5")}
+            </Typography>
+            {/* ))} */}
+            <Button
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "240px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+              onClick={handleOpen}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+        </div>
+        <div
+          className="advantage hero-noreverse"
+          style={{
+            // flexDirection: "row-reverse",
             marginTop: "5rem",
           }}
         >
@@ -368,23 +418,7 @@ const Advantage_cards = () => {
                 color: "var(--text-color-secondary-text, #2E2E2E)",
               }}
             >
-              {" "}
-              {t("advantages_1_1")}
-            </Typography>
-
-            <Typography
-              variant="h5"
-              component="p"
-              style={{
-                color: "rgba(0, 0, 0, 0.80)",
-                fontFamily: "Okta Neue",
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "140%",
-              }}
-            >
-              {t("advantages_1_2")}
+              {t("advantages_1_6")}
             </Typography>
             {/* ))} */}
             <Button
@@ -394,7 +428,99 @@ const Advantage_cards = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                width: "220px",
+                width: "240px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+        </div>
+        <div
+          className="advantage hero"
+          style={{
+            marginTop: "5rem",
+          }}
+        >
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {t("advantages_1_7")}
+            </Typography>
+
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "240px",
+                height: "30px",
+                padding: "20px 24px",
+                color: "rgba(239, 127, 26, 1)",
+                border: "1px solid rgba(239, 127, 26, 1)",
+                borderRadius: "100px",
+              }}
+            >
+              {t("advantages_1_9")}
+              <FiArrowUpRight />
+            </Button>
+          </div>
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+        </div>
+        <div
+          className="advantage hero-noreverse pb-20"
+          style={{
+            // flexDirection: "row-reverse",
+
+            marginTop: "5rem",
+          }}
+        >
+          <div className="img">
+            <img src={AboutUsHeroImg} alt="a" />
+          </div>
+          <div className="texts">
+            <Typography
+              variant="h5"
+              component="h6"
+              style={{
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                color: "var(--text-color-secondary-text, #2E2E2E)",
+              }}
+            >
+              {t("advantages_1_8")}
+            </Typography>
+
+            {/* ))} */}
+            <Button
+              onClick={handleOpen}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "240px",
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
