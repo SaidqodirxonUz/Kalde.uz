@@ -28,7 +28,6 @@ const Contact_filial = () => {
     async function getFilials() {
       try {
         let { data } = await axios.get(`/dealers/${id}`);
-        console.log([data.data], "data");
         setFilial([data.data]);
       } catch (error) {
         console.log(error);

@@ -34,7 +34,6 @@ const News_info = () => {
   async function getNews() {
     try {
       let { data } = await axios.get(`/news/${id}`);
-      console.log(data, "news");
       setNews([data.data]);
     } catch (error) {
       console.log(error);
@@ -44,7 +43,6 @@ const News_info = () => {
   async function getMore() {
     try {
       let { data } = await axios.get(`/news`);
-      console.log(data, "morelll");
       setMore(data);
     } catch (error) {
       console.log(error);

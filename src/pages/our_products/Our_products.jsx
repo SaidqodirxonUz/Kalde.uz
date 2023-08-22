@@ -7,16 +7,11 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
-// import tavar from "../../assets/tavar.png";
-// import product from "../../assets/product_img.jpg";
 import Contact from "../../components/contact/contact";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import i18n from "../../i18n/i18n";
 
-// import ImageIcon from "@mui/icons-material/Image";
-// import WorkIcon from "@mui/icons-material/Work";
-// import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 
 const Our_products = () => {
   const navigate = useNavigate();
@@ -27,7 +22,6 @@ const Our_products = () => {
     async function getProducts() {
       try {
         let { data } = await axios.get("/products");
-        console.log(data, "prod");
         setProducts(data.data);
       } catch (error) {
         console.log(error);
@@ -36,7 +30,6 @@ const Our_products = () => {
     async function getCategories() {
       try {
         let { data } = await axios.get("/categories");
-        console.log(data);
         setCategories(data.data);
       } catch (error) {
         console.log(error);
@@ -49,7 +42,6 @@ const Our_products = () => {
   const LangVal = () => {
     return i18n.language;
   };
-  console.log(products, "this");
 
   return (
     <>

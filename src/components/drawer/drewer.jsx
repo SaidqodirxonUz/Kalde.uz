@@ -108,36 +108,26 @@ export default function TemporaryDrawer() {
                 <select
                   value={i18n.language}
                   onChange={handleLanguageChange}
-                  // inputProps={{
                   name="language"
                   id="language"
-                  // }}
                   style={{
-                    // margin: "50px",
                     width: "100%",
                     fontSize: "17px",
                     padding: "10px 35px 10px 10px",
-                    // fontSize: "16px",
                     border: "none",
                     height: "54px",
-                    // -webkit-appearance: none,
-                    // -moz-appearance: none,
                     appearance: "none",
                     background: "black",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "5%",
                     backgroundPosition: "98% 50%",
-
-                    //   /* CAUTION: IE hackery ahead */
-                    //   ::-ms-expand {
-                    //       display: none; /* remove default arrow on ie10 and ie11 */
                   }}
                 >
                   <option selected disabled>
                     {t("navbar_lang_select")}
                   </option>
                   {items.map((item) => (
-                    <option key={item.value} value={item.value}>
+                    <option key={crypto.randomUUID()} value={item.value}>
                       {item.label}
                     </option>
                   ))}

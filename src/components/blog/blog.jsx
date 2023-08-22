@@ -15,8 +15,6 @@ import { TbCalendarEvent } from "react-icons/tb";
 import axios from "axios";
 import FormData from "form-data";
 import { useNavigate } from "react-router-dom";
-// import { FiArrowUpRight } from "react-icons/fi";
-// import { TbCalendarEvent } from "react-icons/tb";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import i18n from "../../i18n/i18n";
@@ -26,7 +24,7 @@ let data = new FormData();
 let config = {
   method: "get",
   maxBodyLength: Infinity,
-  url: "https://kalde.victoriaslove.uz/news",
+  url: "/news",
   headers: {
     "Content-Type": "application/json",
 
@@ -69,9 +67,7 @@ const Blog = () => {
     return text;
   };
   console.log(data);
-  // eslint-disable-next-line no-unused-vars
 
-  // eslint-disable-next-line no-unused-vars
   const clickRight = () => {
     let container = document.querySelector("#flex-container");
     container.scrollTo({
@@ -83,8 +79,6 @@ const Blog = () => {
 
   const { t } = useTranslation();
 
-  // render(){
-  // const { t } = useTranslation();
   return (
     <div className="products_container" style={{ padding: "2rem 0 2rem 0" }}>
       <div

@@ -1,6 +1,4 @@
 import Navbar from "../../components/navbar/navbar";
-// import { FiArrowUpRight } from "react-icons/fi";
-// import tavar from "../../assets/tavar.png";
 import {
   Card,
   CardActionArea,
@@ -12,30 +10,26 @@ import {
 import Contact from "../../components/contact/contact";
 import Footer from "../../components/footer/footer";
 import { TbCalendarEvent } from "react-icons/tb";
-
 import "./style.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import i18n from "../../i18n/i18n";
+import { toast } from "react-toastify";
 const News = () => {
   const [news, setNews] = useState([]);
   const navigate = useNavigate();
-  // const hendleBack = function (id) {
-  //   navigate(`/news/${id}`);
-  // };
-  //api
+
   const LangVal = () => {
     return i18n.language;
   };
-  // let til = LangVal();
   async function getNews() {
     try {
       let { data } = await axios.get("/news");
-      console.log(data, "news");
       setNews(data);
     } catch (error) {
       console.log(error);
+      toast(error.message);
     }
   }
   useEffect(() => {

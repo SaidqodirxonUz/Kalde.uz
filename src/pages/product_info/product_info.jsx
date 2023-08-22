@@ -41,7 +41,6 @@ const Product_info = () => {
         let { data } = await axios.get(
           `/products?filter{category_id:${product.category_id}}`
         );
-        console.log(data, "prod");
         setProducts(data.data);
       } catch (error) {
         console.log(error);
@@ -52,8 +51,6 @@ const Product_info = () => {
   const LangVal = () => {
     return i18n.language;
   };
-  console.log(product, "prod");
-  console.log(products, "paxojie");
   return (
     <main className="flex flex-col gap-8">
       <Navbar />
