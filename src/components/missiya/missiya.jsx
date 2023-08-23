@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import MissiyaImg from "../../assets/about_us_hero.png";
+import MissiyaImg from "../../assets/images/about_2_3.jpg";
 import "./missiya.scss";
 import { useTranslation } from "react-i18next";
 

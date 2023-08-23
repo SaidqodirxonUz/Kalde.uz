@@ -9,16 +9,16 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import i18n from "../../i18n/i18n";
+// import i18n from "../../i18n/i18n";
 import { toast } from "react-toastify";
 
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
-  const LangVal = () => {
-    return i18n.language;
-  };
+  // const LangVal = () => {
+  //   return i18n.language;
+  // };
   // const Contact = () => {
   const { t } = useTranslation();
   return (
@@ -173,6 +173,7 @@ const Contact = () => {
               style={{ backgroundColor: "#EF7F1A" }}
               onClick={(e) => {
                 e.preventDefault();
+
                 let data = JSON.stringify({
                   name: name,
                   phone: phone,
@@ -193,39 +194,19 @@ const Contact = () => {
                   .request(config)
                   .then((response) => {
                     console.log(JSON.stringify(response));
+
                     if (response.status == 200) {
-                      toast(
-                        LangVal() == "uz"
-                          ? response.data.message
-                          : LangVal() == "en"
-                          ? response.data.message
-                          : response.data.message,
-                        { type: "success" }
-                      );
+                      toast(t("sent_message_succues"), { type: "success" });
                     }
                   })
                   .catch((error) => {
                     console.log(error);
                     // alert("Xatolik yuz berdi");
                     if (error.request.status == 400) {
-                      toast(
-                        LangVal() == "uz"
-                          ? error.response.data[0].error_uz
-                          : LangVal() == "en"
-                          ? error.response.data[2].error_en
-                          : error.response.data[1].error_ru,
-                        { type: "error" }
-                      );
+                      toast(t("sent_message_fail"), { type: "error" });
                     }
                     if (error.request.status == 403) {
-                      toast(
-                        LangVal() == "uz"
-                          ? error.response.data[0].error_uz
-                          : LangVal() == "en"
-                          ? error.response.data[2].error_en
-                          : error.response.data[1].error_ru,
-                        { type: "info" }
-                      );
+                      toast(t("sent_message_error"), { type: "info" });
                     }
                   });
               }}

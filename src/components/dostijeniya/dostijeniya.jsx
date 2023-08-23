@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import DostijeniyaImg from "../../assets/about_us_hero.png";
+import DostijeniyaImg from "../../assets/images/about_1_2.jpg";
 import { useCountUp } from "use-count-up";
 import "./dostijeniya.scss";
 import { useTranslation } from "react-i18next";
@@ -117,17 +117,20 @@ const Dostijeniya = () => {
             className="more"
           >
             <span className="countSpan">
-              <h1 className="value">{partnerValue}+</h1>Сотрудники
+              <h1 className="value">{partnerValue}+</h1>
+              {t("about_2_3")}
             </span>
             <span className="countSpan">
-              <h1 className="value">{productValue}+</h1>Продукты
+              <h1 className="value">{productValue}+</h1>
+              {t("about_2_4")}
             </span>
             <span className="countSpan">
-              <h1 className="value">{factoryValue}+</h1>Заводы
+              <h1 className="value">{factoryValue}+</h1>
+              {t("about_2_5")}
             </span>
             <span className="countSpan">
               <h1 className="value">{statesValue}+</h1>
-              Государства
+              {t("about_2_6")}
             </span>
           </div>
         </div>

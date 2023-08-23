@@ -9,9 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { ToastContainer } from "react-toastify";
 
-// axios.defaults.baseURL = "https://api.kalde.uz";
+axios.defaults.baseURL = "https://api.kalde.uz";
 
-axios.defaults.baseURL = "http://localhost:5000";
+// axios.defaults.baseURL = "http://localhost:5000";
 
 axios.defaults.headers.common["Content-Type"] = "application/json";
 let token = localStorage.getItem("token");
