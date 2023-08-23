@@ -17,6 +17,12 @@ const Navbar = () => {
 
   const handleLanguageChange = (e) => {
     i18n.changeLanguage(e.target.value);
+
+    const LangVal = () => {
+      return window.localStorage.getItem("i18nextLng");
+    };
+
+    LangVal();
   };
 
   const pages = [
