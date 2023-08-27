@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { ToastContainer } from "react-toastify";
 
-axios.defaults.baseURL = "https://api.kalde.uz";
+axios.defaults.baseURL = "https://back.kalde.uz";
 
 // axios.defaults.baseURL = "http://localhost:5000";
 

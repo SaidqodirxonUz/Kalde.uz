@@ -15,7 +15,7 @@ import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-useTranslation;
+
 // import { FiArrowUpRight } from "react-icons/fi";
 
 // Наши преимущества
