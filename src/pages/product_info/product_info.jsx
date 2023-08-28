@@ -21,33 +21,33 @@ const Product_info = () => {
   const navigate = useNavigate();
   //api
 
+  async function currentProduct() {
+    try {
+      let { data } = await axios.get(`/products/${id}`);
+      // console.log();(data);
+      setProduct([data.data]);
+      // localStorage.setItem("selectedProfile", JSON.stringify(data));
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+      navigate("/error");
+      // toast(error.msg, { type: "error" });
+    }
+  }
+  async function getProducts() {
+    try {
+      let { data } = await axios.get(
+        `/products?filter{category_id:${product.category_id}}`
+      );
+      setProducts(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    async function currentProduct() {
-      try {
-        let { data } = await axios.get(`/products/${id}`);
-        // console.log();(data);
-        setProduct([data.data]);
-        // localStorage.setItem("selectedProfile", JSON.stringify(data));
-        console.log(data);
-      } catch (error) {
-        console.log(error);
-        navigate("/error");
-        // toast(error.msg, { type: "error" });
-      }
-    }
     currentProduct();
-    async function getProducts() {
-      try {
-        let { data } = await axios.get(
-          `/products?filter{category_id:${product.category_id}}`
-        );
-        setProducts(data.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
     getProducts();
-  }, []);
+  }, [id]);
   const LangVal = () => {
     return i18n.language;
   };

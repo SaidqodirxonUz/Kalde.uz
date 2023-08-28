@@ -51,7 +51,7 @@ const News_info = () => {
   useEffect(() => {
     getNews();
     getMore();
-  }, []);
+  }, [id]);
   const DateComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis

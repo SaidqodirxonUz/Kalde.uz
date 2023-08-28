@@ -1,26 +1,71 @@
+/* eslint-disable no-unused-vars */
+import React, { useRef, useEffect, useState } from "react";
 import { Box, Button, List, ListItemText } from "@mui/material";
-// import Contact from "../../components/contact/contact";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useTranslation } from "react-i18next";
-// import product from "../../assets/product_img.jpg";
-
 import { TbCalendarEvent } from "react-icons/tb";
 import "./index.scss";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import i18n from "../../i18n/i18n";
+import ReactMapGL from "react-map-gl";
+import { XMapbox } from "mapbox-gl";
+import Map from "../../components/maps/map";
+// import mapboxgl from "mapbox-gl";
+// import AppMap from "../../components/map";
+// import AppLayout from "../../layout";
 
+// mapboxgl.accessToken =
+//   "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw";
+// var map = new mapboxgl.Map({
+//   container: "map",
+//   style: "mapbox://styles/mapbox/streets-v12",
+// });
+
+// XMapbox.accessToken =
+//   "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw";
+// mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+// var map = new XMapbox.Map({
+//   container: "marker",
+//   style: "mapbox://styles/mapbox/streets-v11",
+// });
 const Contact_filial = () => {
   const { id } = useParams();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [filial, setFilial] = useState([]);
+  // const mapContainer = useRef(null);
+  const [viewport, setViewport] = useState({
+    latitude: 45.4211,
+    longitude: -75.6903,
+    width: "100vw",
+    height: "500px",
+    zoom: 10,
+  });
+  // const map = useRef(null);
+  // const [lng, setLng] = useState(-70.9);
+  // const [lat, setLat] = useState(42.35);
+  // const [zoom, setZoom] = useState(9);
+  // useEffect(() => {
+  //   if (map.current) return; // initialize map only once
+  //   map.current = new mapboxgl.Map({
+  //     container: mapContainer.current,
+  //     style: "mapbox://styles/mapbox/streets-v12",
+  //     center: [lng, lat],
+  //     zoom: zoom,
+  //   });
+  // });
+  // map.current.on("move", () => {
+  //   setLng(map.current.getCenter().lng.toFixed(4));
+  //   setLat(map.current.getCenter().lat.toFixed(4));
+  //   setZoom(map.current.getZoom().toFixed(2));
+  // });
+  // });
   // let address = "University of Oxford";
   // location = "https://goo.gl/maps/WCvH3VUCTg8sUZr98";
   const navigate = useNavigate();
@@ -243,11 +288,35 @@ const Contact_filial = () => {
         </section>
       </div>
       {/* <Contact /> */}
-      <section className="location">
-        {/* {filial.map((l) => { */}
-        {/* return ( */}
-        <div>
-          {/* <iframe
+      {/* <section className="location" id="location"> */}
+      {/* {filial.map((l) => { */}
+      {/* return ( */}
+      {/* <div ref={mapContainer} className="map-container" /> */}
+      <div id="map">
+        <Map />
+        {/* <ReactMapGL
+          mapboxAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
+          {...viewport}
+          mapStyle="mapbox://styles/mapbox/streets-v12"
+        ></ReactMapGL> */}
+        {/* <div>
+          {
+            new XMapbox.Map({
+              container: "marker",
+              style: "mapbox://styles/mapbox/streets-v11",
+            })
+          }
+        </div> */}
+        {/* <AppLayout /> */}
+        {/* style={{ width: "100%", height: "500px" }} */}
+        {/* <x-div>
+          <x-mapbox>
+            <x-marker id="marker" lnglat="Toronto, Canada" center>
+              Looking For Here?
+            </x-marker>
+          </x-mapbox>
+        </x-div> */}
+        {/* <iframe
             width="600"
             height="450"
             // style="border:0"
@@ -257,7 +326,7 @@ const Contact_filial = () => {
             src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBcIC_Sf8mYR0ZgDis-MzanDaeqS4yO0Gk
             &q=${address}`}
           ></iframe> */}
-          {/* <iframe
+        {/* <iframe
             // AIzaSyBgkbHAvREwtXtYQMYQ1pT7fXtVd0hScI
             className="gmap_iframe"
             frameBorder="0"
@@ -266,21 +335,18 @@ const Contact_filial = () => {
             src={location}
           ></iframe> */}
 
-          <iframe
+        {/* <iframe
             width="100%"
             height="600"
-            // frameBorder="0"
-            // scrolling="no"
-            // marginHeight="0"
-            // marginWidth="0"
+
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%B3.%20%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,%20%D0%9E%D0%BB%D0%BC%D0%B0%D0%B7%D0%BE%D1%80%20%D1%82%D1%83%D0%BC%D0%B0%D0%BD%D0%B8%20,%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%A7%D1%83%D0%BA%D1%83%D1%80%D1%81%D0%B0%D0%B9+(%D0%A7%D1%83%D0%BA%D1%83%D1%80%D1%81%D0%B0%D0%B9)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           >
             <a href="https://www.maps.ie/population/">
               Calculate population in area
             </a>
-          </iframe>
+          </iframe> */}
 
-          {/* <iframe
+        {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.900470353685!2d69.2339409770477!3d41.3621374840949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c58d1abc231%3A0xc2de16d428dded27!2sChuqursoy%20Market!5e0!3m2!1sen!2s!4v1692464390824!5m2!1sen!2s"
             width="600"
             height="450"
@@ -289,7 +355,7 @@ const Contact_filial = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe> */}
-          {/* {address !== "" ? (
+        {/* {address !== "" ? (
             <iframe
               width="600"
               height="450"
@@ -302,10 +368,10 @@ const Contact_filial = () => {
           ) : (
             ""
           )} */}
-        </div>
-        {/* );
+      </div>
+      {/* );
         })} */}
-      </section>
+      {/* </section> */}
       <Footer />
     </>
   );

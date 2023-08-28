@@ -1,48 +1,33 @@
-// import React from "react";
-// import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-// const containerStyle = {
-//     width: '400px',
-//     height: '400px'
-//   };
+import React from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
 
-//   const center = {
-//     lat: -3.745,
-//     lng: -38.523
-//   };
+const Map = () => {
+  //   const mapRef = useRef(null);
+  const [viewport, setViewport] = React.useState({
+    width: "100%",
+    height: "400px",
+    latitude: 37.7577,
+    longitude: -122.4376,
+    zoom: 10,
+  });
 
-// const Map = () => {
-//     const { isLoaded } = useJsApiLoader({
-//       id: 'google-map-script',
-//       googleMapsApiKey: "YOUR_API_KEY"
-//     })
+  //   const handleViewportChange = (viewport) => {
+  //     // Do something with the new viewport
+  //     console.log(viewport);
+  //   };
 
-//     // const [map, setMap] = React.useState(null)
+  return (
+    //   mapboxAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
+    <ReactMapGL
+      {...viewport}
+      onViewportChange={setViewport}
+      mapboxApiAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
+    >
+      <Marker latitude={37.7577} longitude={-122.4376}>
+        <div className="marker">Your Marker</div>
+      </Marker>
+    </ReactMapGL>
+  );
+};
 
-//     const onLoad = React.useCallback(function callback(map) {
-//       // This is just an example of getting and using the map instance!!! don't just blindly copy!
-//       const bounds = new window.google.maps.LatLngBounds(center);
-//       map.fitBounds(bounds);
-
-//       // setMap(map)
-//     }, [])
-
-//     // const onUnmount = React.useCallback(function callback(map) {
-//       // setMap(null)
-//     // }, [])
-
-//     return isLoaded ? (
-//         <GoogleMap
-//           mapContainerStyle={containerStyle}
-//           center={center}
-//           zoom={10}
-//           onLoad={onLoad}
-//           onUnmount={onUnmount}
-//         >
-//           { /* Child components, such as markers, info windows, etc. */ }
-//           <></>
-//         </GoogleMap>
-//     ) : <></>
-
-// };
-
-// export default Map;
+export default Map;
