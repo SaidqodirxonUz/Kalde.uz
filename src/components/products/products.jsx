@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
 
+import { v4 as uuidv4 } from "uuid";
+
 const Products = () => {
   const [data, setData] = React.useState([]);
   const navigate = useNavigate();
@@ -115,7 +117,7 @@ const Products = () => {
                 borderRadius: "30px",
                 margin: "0 auto",
               }}
-              key={crypto.randomUUID()}
+              key={uuidv4()}
             >
               <div>
                 <article>

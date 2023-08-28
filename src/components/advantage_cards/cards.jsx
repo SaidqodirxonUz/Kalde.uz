@@ -1,7 +1,16 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 // import React from 'react'
-import AboutUsHeroImg from "../../assets/about_us_hero.png";
+// import AboutUsHeroImg from "../../assets/about_us_hero.png";
+
+import adventages_1_1 from "../../assets/images/adventages_1_1.jpg";
+import adventages_1_2 from "../../assets/images/adventages_1_2.jpg";
+import adventages_1_3 from "../../assets/images/adventages_1_3.jpg";
+import adventages_1_4 from "../../assets/images/adventages_1_4.jpg";
+import adventages_1_5 from "../../assets/images/adventages_1_5.jpg";
+import adventages_1_6 from "../../assets/images/adventages_1_6.jpg";
+import adventages_1_8 from "../../assets/images/adventages_1_8.jpg";
+import adventages_1_7 from "../../assets/images/adventages_1_7.jpg";
 
 import { Box, Typography } from "@mui/material";
 
@@ -12,8 +21,10 @@ import { useTranslation } from "react-i18next";
 // import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { MdOutlineCancel } from "react-icons/md";
+
 import axios from "axios";
 import * as React from "react";
+import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 
 const style = {
@@ -146,17 +157,20 @@ const Advantage_cards = () => {
                     .then((response) => {
                       console.log(JSON.stringify(response));
                       if (response.status == 200) {
-                        alert("Muvaffaqiyatli jonatildi");
+                        // alert("Muvaffaqiyatli jonatildi");
+                        toast(t("sent_message_succues"), { type: "success" });
                       }
                     })
                     .catch((error) => {
                       console.log(error);
                       // alert("Xatolik yuz berdi");
                       if (error.request.status == 400) {
-                        alert("Barcha maydonlarni toldiring");
+                        // alert("Barcha maydonlarni toldiring");
+                        toast(t("sent_message_fail"), { type: "success" });
                       }
                       if (error.request.status == 403) {
-                        alert("Raqam notogri");
+                        // alert("Raqam notogri");
+                        toast(t("sent_message_error"), { type: "success" });
                       }
                     });
                 }}
@@ -211,7 +225,7 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_1} alt="a" />
           </div>
         </div>
         <div
@@ -222,7 +236,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_2} alt="a" />
           </div>
           <div className="texts">
             <Typography
@@ -302,7 +316,7 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_7} alt="a" />
           </div>
         </div>
         <div
@@ -313,7 +327,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_3} alt="a" />
           </div>
           <div className="texts">
             <Typography
@@ -393,7 +407,7 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_5} alt="a" />
           </div>
         </div>
         <div
@@ -404,7 +418,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_6} alt="a" />
           </div>
           <div className="texts">
             <Typography
@@ -483,7 +497,7 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_8} alt="a" />
           </div>
         </div>
         <div
@@ -495,7 +509,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={AboutUsHeroImg} alt="a" />
+            <img src={adventages_1_4} alt="a" />
           </div>
           <div className="texts">
             <Typography

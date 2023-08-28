@@ -16,6 +16,7 @@ import {
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 // const Navbar = () => {
 
@@ -127,7 +128,7 @@ export default function TemporaryDrawer() {
                     {t("navbar_lang_select")}
                   </option>
                   {items.map((item) => (
-                    <option key={crypto.randomUUID()} value={item.value}>
+                    <option key={uuidv4()} value={item.value}>
                       {item.label}
                     </option>
                   ))}

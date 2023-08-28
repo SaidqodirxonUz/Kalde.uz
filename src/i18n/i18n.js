@@ -124,6 +124,14 @@ i18n.use(initReactI18next).init({
         footer_1_3: "Biz bilan bog'lanish",
         manzil_name:
           "Toshkent sh., Olmazor tumi, ko'ch. Shirok, 2 (Mo'ljal - Chukursay qurilish bozori)",
+
+        about_2_3: "Xodimlar",
+        about_2_4: "Mahsulotlar",
+        about_2_5: "Zavodlar",
+        about_2_6: "Davlatlar",
+
+        sent_message_succues: "Xabaringiz muvvafaqiyatli yuborildi ",
+        sent_message_fail: "Xabaringiz yuborilmadi , qayta urinib ko'ring ",
       },
     },
     ru: {
@@ -246,6 +254,15 @@ i18n.use(initReactI18next).init({
         footer_1_3: "Свяжитесь с нами",
         manzil_name:
           "г. Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный рынок Чукурсай)",
+
+        about_2_3: "Сотрудники",
+        about_2_4: "Продукты",
+        about_2_5: "Заводы",
+        about_2_6: "Государства",
+
+        sent_message_succues: "Ваше сообщение было отправлено успешно",
+        sent_message_fail: "Произошла ошибка при отправке сообщения",
+        sent_message_error: "При отправке вашего сообщения произошла ошибка",
       },
     },
     en: {
@@ -368,6 +385,15 @@ i18n.use(initReactI18next).init({
 
         manzil_name:
           "Tashkent city, Olmazor tumi, st. Shirok, 2 (Landmark - construction market Chukursai)",
+
+        about_2_3: "Employees",
+        about_2_4: "Products",
+        about_2_5: "Factories",
+        about_2_6: "States",
+
+        sent_message_succues: "Your message has been sent successfully",
+        sent_message_fail: "Your message has not been sent",
+        sent_message_error: "There was an error sending your message",
       },
     },
   },
