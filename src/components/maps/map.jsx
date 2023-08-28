@@ -2,7 +2,6 @@ import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 const Map = () => {
-  //   const mapRef = useRef(null);
   const [viewport, setViewport] = React.useState({
     width: "100%",
     height: "400px",
@@ -11,17 +10,14 @@ const Map = () => {
     zoom: 10,
   });
 
-  //   const handleViewportChange = (viewport) => {
-  //     // Do something with the new viewport
-  //     console.log(viewport);
-  //   };
+  const mapboxAccessToken =
+    "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdWlod3kxMW43azNlcGVsZ3RueGw1diJ9.lny_o8gSKiN-MV7bkY-_bQ";
 
   return (
-    //   mapboxAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
     <ReactMapGL
       {...viewport}
       onViewportChange={setViewport}
-      mapboxApiAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
+      mapboxApiAccessToken={mapboxAccessToken}
     >
       <Marker latitude={37.7577} longitude={-122.4376}>
         <div className="marker">Your Marker</div>
