@@ -1,6 +1,16 @@
 .appbar {
   width: 90vw !important;
+  top: 0 !important;
+  left: 10px !important;
+  right: -10px !important;
   @media (max-width: 1200px) {
+    left: 5px !important;
+    right: -5px !important;
+    width: 100% !important;
+  }
+  @media (max-width: 800px) {
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
   }
 }

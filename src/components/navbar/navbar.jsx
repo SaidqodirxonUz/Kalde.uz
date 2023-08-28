@@ -53,6 +53,7 @@ const Navbar = () => {
     <AppBar
       position="fixed"
       style={{
+
         background: "rgba(255, 255, 255, 0.80)",
         backdropFilter: "blur(5px)",
         boxShadow: "none",
