@@ -6,15 +6,16 @@ import Navbar from "../../components/navbar/navbar";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { useTranslation } from "react-i18next";
-import { TbCalendarEvent } from "react-icons/tb";
+import { TbCalendarEvent, TbMapSearch } from "react-icons/tb";
 import "./index.scss";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import i18n from "../../i18n/i18n";
 import ReactMapGL from "react-map-gl";
 import mapboxgl, { XMapbox } from "mapbox-gl";
-import Map from "../../components/maps/map";
+// import Map from "../../components/maps/map";
+import { BiCurrentLocation } from "react-icons/bi";
 
 // import mapboxgl from "mapbox-gl";
 // import AppMap from "../../components/map";
@@ -144,6 +145,23 @@ const Contact_filial = () => {
                       <MdEmail className="icons text-xl text-orange-500" />{" "}
                       {t("firyal_1_5")} {f.email}
                     </a>
+                  </ListItemText>
+
+                  <ListItemText>
+                    <Link
+                      to={f.location}
+                      target="_blank"
+                      // style={{ textAlign: "center" }}
+                      className="pages flex flex-row text-black active:text-orange-500 items"
+                    >
+                      <TbMapSearch className="icons text-xl text-orange-500" />
+                      {t("firyal_1_6")}{" "}
+                      {LangVal() == "uz"
+                        ? f.title_uz
+                        : LangVal() == "en"
+                        ? f.title_en
+                        : f.title_ru}
+                    </Link>
                   </ListItemText>
                 </List>
               </div>
@@ -295,8 +313,7 @@ const Contact_filial = () => {
       {/* return ( */}
       {/* <div ref={mapContainer} className="map-container" /> */}
       <div id="map">
-        <Map />
-
+        {/* <Map /> */}
         {/* 
         <mapboxgl.Map
           accessToken={mapboxAccessToken}
@@ -308,7 +325,6 @@ const Contact_filial = () => {
           center={[viewport.longitude, viewport.latitude]}
           zoom={viewport.zoom}
         ></mapboxgl.Map> */}
-
         {/* <div>
           {
             new XMapbox.Map({
@@ -327,15 +343,15 @@ const Contact_filial = () => {
           </x-mapbox>
         </x-div> */}
         {/* <iframe
-            width="600"
-            height="450"
-            // style="border:0"
-            loading="lazy"
-            allowfullscreen
-            referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBcIC_Sf8mYR0ZgDis-MzanDaeqS4yO0Gk
+          width="600"
+          height="450"
+          // style="border:0"
+          loading="lazy"
+          allowfullscreen
+          referrerPolicy="no-referrer-when-downgrade"
+          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBcIC_Sf8mYR0ZgDis-MzanDaeqS4yO0Gk
             &q=${address}`}
-          ></iframe> */}
+        ></iframe> */}
         {/* <iframe
             // AIzaSyBgkbHAvREwtXtYQMYQ1pT7fXtVd0hScI
             className="gmap_iframe"
@@ -345,17 +361,13 @@ const Contact_filial = () => {
             src={location}
           ></iframe> */}
 
-        {/* <iframe
-            width="100%"
-            height="600"
-
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%D0%B3.%20%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,%20%D0%9E%D0%BB%D0%BC%D0%B0%D0%B7%D0%BE%D1%80%20%D1%82%D1%83%D0%BC%D0%B0%D0%BD%D0%B8%20,%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%A7%D1%83%D0%BA%D1%83%D1%80%D1%81%D0%B0%D0%B9+(%D0%A7%D1%83%D0%BA%D1%83%D1%80%D1%81%D0%B0%D0%B9)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          >
-            <a href="https://www.maps.ie/population/">
-              Calculate population in area
-            </a>
-          </iframe> */}
-
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.7979651830346!2d69.24579717661015!3d41.356744897894345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c8cfa42d491%3A0x40eea1c4b4fe62d7!2sMagazin%20Kalde!5e0!3m2!1sen!2s!4v1693209392169!5m2!1sen!2s"
+          width="100%"
+          height="600"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
         {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.900470353685!2d69.2339409770477!3d41.3621374840949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c58d1abc231%3A0xc2de16d428dded27!2sChuqursoy%20Market!5e0!3m2!1sen!2s!4v1692464390824!5m2!1sen!2s"
             width="600"

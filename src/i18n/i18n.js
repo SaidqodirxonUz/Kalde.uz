@@ -92,6 +92,7 @@ i18n.use(initReactI18next).init({
         firyal_1_3: "Ish vaqti:",
         firyal_1_4: "Telefon raqami:",
         firyal_1_5: "Email:",
+        firyal_1_6: "Joylashuv : ",
         firyal_2_1: "Biz bilan bog'lanish",
         firyal_2_2: "Sizning ismingiz",
         firyal_2_3: "Telefon raqamingiz",
@@ -221,11 +222,13 @@ i18n.use(initReactI18next).init({
         firyal_1_3: "Рабочее время:",
         firyal_1_4: "Номер телефона:",
         firyal_1_5: "Электронная почта:",
+        firyal_1_6: "Геолокация : ",
         firyal_2_1: "Связаться с нами",
         firyal_2_2: "Ваше имя",
         firyal_2_3: "Ваш номер телефона",
         firyal_2_4: "Введите сообщение",
         firyal_2_5: "ОТПРАВИТЬ",
+
         // Firyal tugadi
         advantages_1_1:
           "Изготовленные из высококачественного сырья класса А, все изделия PPR превосходно подходят для создания безупречных соединений в процессе пайки труб и фитингов. Использование высококачественных материалов гарантирует непревзойденные результаты, повышая надежность и эксплуатационные характеристики нашей продукции в различных областях применения.",
@@ -352,6 +355,7 @@ i18n.use(initReactI18next).init({
         firyal_1_3: "Work time:",
         firyal_1_4: "Phone number:",
         firyal_1_5: "Email:",
+        firyal_1_6: "Geolocation : ",
         firyal_2_1: "Connect with us",
         firyal_2_2: "Your name",
         firyal_2_3: "Your phone number",
