@@ -8,7 +8,7 @@ const Missiya = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="about_us hero">
+      <div className="about_us hero hero-noreverse">
         <div className="texts">
           <Typography
             variant="h2"

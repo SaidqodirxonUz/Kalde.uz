@@ -16,7 +16,7 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Tilni tanlang",
         main_1_1: "KALDE nima?",
         main_1_2:
-          "KALDE, isitish va suv ta'minoti tizimlari, yuqori sifatli polipropilen quvurlar va armatura uchun!",
+          "KALDE, isitish va suv ta'minoti tizimlari, yuqori sifatli polipropilen quvurlar va fitinglar !",
         main_1_3:
           "KALDE - barcha xalqaro standartlarga javob beradigan va xalqaro standart tizim sertifikatlariga ega bo'lgan yuqori sifatli mahsulot!",
         main_1_4: "Ko'proq bilish",
@@ -41,14 +41,14 @@ i18n.use(initReactI18next).init({
         //asosiy oyna tugadi
         about_1_1: "Biz haqimizda",
         about_1_2:
-          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O’z oldida, xalq uchun, yuqori «sifatli maxsulotlarni» yetkazish deb, maqsad qo’yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv taʼminoti va isitish tizimlar uchun maxsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada taʼminlab, maxsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik maxsulotlarni ishlab chiqarishi yo'lga qo’yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
+          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O’z oldida, xalq uchun, yuqori «sifatli mahsulotlarni» yetkazish deb, maqsad qo’yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv taʼminoti va isitish tizimlar uchun mahsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada taʼminlab, mahsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik mahsulotlarni ishlab chiqarishi yo'lga qo’yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
         about_1_3: "Biz bilan bog'lanish",
         about_2_1: "O'zbekistonda Kalde",
         about_2_2:
           "KALDE mahsulotlarini O‘zbekistonga birinchi yetkazib berish 2009-yil noyabr oyida amalga oshirilgan.  KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ kompaniyasi ishlab chiqaruvchi bilan gaplashish bilan bir qatorda mahsulotning yuqori sifatiga ishonch hosil qildi. (Istanbul, Turkiya), 2010-yildan boshlab O‘zbekistonda KALDE brendi ostida barcha turdagi mahsulotlarni sotuvchi do‘konlar tarmog‘i yaratila boshlandi. 2018-yilda Toshkent shahridagi, shuningdek, Buxoro, Namangan, Andijon , Jizzax va boshqa yirik qurilish bozorlarida taqdim etilgan 10 dan ortiq do‘konlar tarmog‘i mavjud.",
-        about_3_1: "Sifatli maxsulotlar",
+        about_3_1: "Sifatli mahsulotlar",
         about_3_2:
-          "Kalde ko'p jihatdan zamonaviy mahsulotlarni ishlab chiqishga investitsiyalar , yuqori samaradorlik va ishlab chiqarish quvvatlarining salohiyatiga etibor qaratadi .Kalde global bozorlarda tegishli mahsulotlarga bo'lgan o'zgaruvchan talabga tezda javob berish uchun o'z mahsulotlarini doimiy ravishda optimallashtiradi. Dunyo standartlariga to'gri keladigan, KALDE maxsulotlari, dunyodagi 40-ta yirik mamlakatlarida tanilgan. Barcha maxsulotlariga, xalqaro sertifikatlari mavjud.",
+          "Kalde ko'p jihatdan zamonaviy mahsulotlarni ishlab chiqishga investitsiyalar , yuqori samaradorlik va ishlab chiqarish quvvatlarining salohiyatiga etibor qaratadi .Kalde global bozorlarda tegishli mahsulotlarga bo'lgan o'zgaruvchan talabga tezda javob berish uchun o'z mahsulotlarini doimiy ravishda optimallashtiradi. Dunyo standartlariga to'gri keladigan, KALDE mahsulotlari, dunyodagi 40-ta yirik mamlakatlarida tanilgan. Barcha mahsulotlariga, xalqaro sertifikatlari mavjud.",
         about_4_1: "Bizning xodimlarimiz",
         about_5_1: "Bizning afzalliklarimiz",
         about_5_2: "Yuqori sifat",
@@ -81,8 +81,8 @@ i18n.use(initReactI18next).init({
         product_1_8: "Qadoqdagi soni:",
         product_1_9: "Narxi:",
         product_1_10: "Tarif:",
-        product_2_1: "Shu turdagi maxsulotlar",
-        // Maxsulot oynasi tugadi
+        product_2_1: "Shu turdagi mahsulotlar",
+        // mahsulot oynasi tugadi
         news_1_1: "Boshqa yangiliklar",
         // News tugadi
         branches_1_1: "Bizning filiallarimiz",
@@ -100,15 +100,15 @@ i18n.use(initReactI18next).init({
         firyal_2_5: "YUBORISH",
         // Firyal tugadi
         advantages_1_1:
-          "Yuqori darajadagi a sinfidagi xom ashyolardan tayyorlangan barcha PPR mahsulotlari quvurlar va armaturalarni lehimlash jarayonida benuqson ulanishlarni yaratishda ustunlik qiladi. Premium materiallardan foydalanish mislsiz natijalarni kafolatlaydi, turli xil ilovalarda mahsulotlarimizning ishonchliligi va ishlashini kuchaytiradi.",
+          "Yuqori darajadagi a sinfidagi xom ashyolardan tayyorlangan barcha PPR mahsulotlari quvurlar va fitinglarni ulash jarayonida benuqson ulanishlarni yaratishda ustunlik qiladi. Premium materiallardan foydalanish mislsiz natijalarni kafolatlaydi, turli xil ilovalarda mahsulotlarimizning ishonchliligi va ishlashini kuchaytiradi.",
         advantages_1_2:
-          "Bizning metall buyumlarimiz eng so'nggi rusumdagi Yevropa xomashyosidan eng so'nggi rusumdagi asbob-uskunalar va zamonaviy Yevropa texnikalaridan foydalangan holda sinchkovlik bilan ishlab chiqariladi. Ushbu fidoyilik xalqaro standartlarga javob beradigan, har bir mahsulotdagi mukammallikni va innovatsiyalarni aks ettiruvchi yuqori sifatli mahsulotlar ishlab chiqarishni ta'minlaydi.",
+          "Bizning metall buyumlarimiz eng so'nggi rusumdagi Yevropa xomashyosidan eng so'ngi rusumdagi asbob-uskunalar va zamonaviy Yevropa texnikalaridan foydalangan holda sinchkovlik bilan ishlab chiqariladi. Ushbu fidoyilik xalqaro standartlarga javob beradigan, har bir mahsulotdagi mukammallikni va innovatsiyalarni aks ettiruvchi yuqori sifatli mahsulotlar ishlab chiqarishni ta'minlaydi.",
         advantages_1_3:
           "Mahsulotlarimiz turli eksport yoʻnalishlaridan gigiena va sifat sertifikatlari bilan taʼminlangan boʻlib, ularning xavfsizligi va mukammalligini tasdiqlaydi. Ular jahon standartlariga qat'iy rioya qilib, ishonchliligini mustahkamlaydi. Ushbu keng qamrovli sertifikat bizning eng yuqori xalqaro kalibrli tovarlarni yetkazib berishga sodiqligimizni ta'kidlaydi.",
         advantages_1_4:
           "Har bir ishlab chiqarish sektorida maxsus laboratoriya har bir partiyadan namunalarni sinchkovlik bilan sinovdan o'tkazadi. Bundan tashqari, akkreditatsiyalangan mustaqil laboratoriya barcha mahsulotlarni sinchkovlik bilan tekshiradi. Ushbu ikki tomonlama sinov yondashuvi mijozlarimizga doimiy ishonchli va sertifikatlangan mahsulotlarni yetkazib berishga sodiqligimizni tasdiqlab, eng yuqori sifatni kafolatlaydi.",
         advantages_1_5:
-          "Barcha mahsulotlar nufuzli sug'urta firmalari orqali ta'minlangan kafolatlar bilan quvvatlanadi. Bizning metall buyumlarimiz 10 yilgacha qoplanadi, PPR mahsulotlari esa ta'sirchan 50 yillik kafolatga ega. Xususan, PPR quvurlari va armaturalari 50 yillik keng kafolatga ega bo'lib, bu bizning chidamlilik va mijozlar ehtiyojini qondirish bo'yicha qat'iy majburiyatimizni aks ettiradi.",
+          "Barcha mahsulotlar nufuzli sug'urta firmalari orqali ta'minlangan kafolatlar bilan quvvatlanadi. Bizning metall buyumlarimiz 10 yilgacha qoplanadi, PPR mahsulotlari esa ta'sirchan 50 yillik kafolatga ega. Xususan, PPR quvurlari va fitinglari 50 yillik keng kafolatga ega bo'lib, bu bizning chidamlilik va mijozlar ehtiyojini qondirish bo'yicha qat'iy majburiyatimizni aks ettiradi.",
         advantages_1_6:
           "Bizning maxsus xizmat ko'rsatish bo'limimiz kafolat so'rovlarini samarali hal qiladi. Mahsulot nosozliklari bilan bog'liq mulkiy zarar holatlarida biz 100% gacha kompensatsiyani taklif qilamiz. Bu bizning muammolarga zudlik bilan yechim topish va mijozlarimiz qoniqishini ta'minlashga sodiqligimizni ta'kidlaydi, bu bizning sifat va mas'uliyatga bo'lgan qat'iy sodiqligimizni aks ettiradi.",
         advantages_1_7:
@@ -194,7 +194,7 @@ i18n.use(initReactI18next).init({
         catalog_1_1: "Категория",
         // Katalog tugadi
         application_1_1:
-          ": Есть ли у вас дополнительные вопросы? Хотите узнать больше о компании? Хотите стать официальным дилером? : Есть ли у вас дополнительные вопросы? Хотите узнать больше о компании? Хотите стать официальным дилером?",
+          "У вас есть дополнительные вопросы? Хотите узнать больше о компании? Хотите стать официальным дилером? Заинтересованы в нашей продукции? Тогда свяжитесь с нами. И мы всегда готовы работать с вами!",
         application_1_2: "Связаться с нами",
         application_1_3: "Ваше имя",
         application_1_4: "Ваш номер телефона",
@@ -212,7 +212,7 @@ i18n.use(initReactI18next).init({
         product_1_9: "Цена :",
         product_1_10: "Информация:",
         product_2_1: "Похожие продукты",
-        // Maxsulot oynasi tugadi
+        // mahsulot oynasi tugadi
         news_1_1: "Другие новости",
         // News tugadi
         branches_1_1: "Наши филиалы",
@@ -345,7 +345,7 @@ i18n.use(initReactI18next).init({
         product_1_9: "Cost:",
         product_1_10: "Information:",
         product_2_1: "Similar products",
-        // Maxsulot oynasi tugadi
+        // mahsulot oynasi tugadi
         news_1_1: "Other news",
         // News tugadi
         branches_1_1: "Our branches",

@@ -25,6 +25,7 @@ import { MdOutlineCancel } from "react-icons/md";
 import axios from "axios";
 import * as React from "react";
 import { toast } from "react-toastify";
+import "./cards.scss";
 // import { toast } from "react-toastify";
 
 const style = {
@@ -206,6 +207,7 @@ const Advantage_cards = () => {
 
             {/* ))} */}
             <Button
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -256,6 +258,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -298,6 +301,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -347,6 +351,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -388,6 +393,7 @@ const Advantage_cards = () => {
             </Typography>
             {/* ))} */}
             <Button
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -437,6 +443,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -479,6 +486,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -529,6 +537,7 @@ const Advantage_cards = () => {
             {/* ))} */}
             <Button
               onClick={handleOpen}
+              className="modalBtn"
               style={{
                 display: "flex",
                 flexDirection: "row",
