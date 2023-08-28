@@ -206,22 +206,7 @@ const Advantage_cards = () => {
             </Typography>
 
             {/* ))} */}
-            <Button
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-              onClick={handleOpen}
-            >
+            <Button className="modalBtn" style={{}} onClick={handleOpen}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -256,22 +241,7 @@ const Advantage_cards = () => {
               {t("advantages_1_2")}
             </Typography>
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn" style={{}}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -299,22 +269,7 @@ const Advantage_cards = () => {
               {t("advantages_1_3")}
             </Typography>
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn" style={{}}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -349,22 +304,7 @@ const Advantage_cards = () => {
               {t("advantages_1_4")}
             </Typography>
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn" style={{}}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -392,22 +332,7 @@ const Advantage_cards = () => {
               {t("advantages_1_5")}
             </Typography>
             {/* ))} */}
-            <Button
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-              onClick={handleOpen}
-            >
+            <Button className="modalBtn" style={{}} onClick={handleOpen}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -441,22 +366,7 @@ const Advantage_cards = () => {
               {t("advantages_1_6")}
             </Typography>
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn">
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -484,22 +394,7 @@ const Advantage_cards = () => {
             </Typography>
 
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn" style={{}}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
@@ -535,22 +430,7 @@ const Advantage_cards = () => {
             </Typography>
 
             {/* ))} */}
-            <Button
-              onClick={handleOpen}
-              className="modalBtn"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                width: "240px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-            >
+            <Button onClick={handleOpen} className="modalBtn" style={{}}>
               {t("advantages_1_9")}
               <FiArrowUpRight />
             </Button>
