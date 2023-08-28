@@ -11,7 +11,7 @@ const Map = () => {
   });
 
   const mapboxAccessToken =
-    "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdWlod3kxMW43azNlcGVsZ3RueGw1diJ9.lny_o8gSKiN-MV7bkY-_bQ";
+    "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdWlpYzl0MTRibjNnbnpzbTd5aXE5aiJ9.6MAIS-HG-samIv5iUBbq0g";
 
   return (
     <ReactMapGL
