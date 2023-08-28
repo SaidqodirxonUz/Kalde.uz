@@ -13,8 +13,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import i18n from "../../i18n/i18n";
 import ReactMapGL from "react-map-gl";
-import { XMapbox } from "mapbox-gl";
+import mapboxgl, { XMapbox } from "mapbox-gl";
 import Map from "../../components/maps/map";
+
 // import mapboxgl from "mapbox-gl";
 // import AppMap from "../../components/map";
 // import AppLayout from "../../layout";
@@ -47,6 +48,7 @@ const Contact_filial = () => {
     height: "500px",
     zoom: 10,
   });
+
   // const map = useRef(null);
   // const [lng, setLng] = useState(-70.9);
   // const [lat, setLat] = useState(42.35);
@@ -294,11 +296,19 @@ const Contact_filial = () => {
       {/* <div ref={mapContainer} className="map-container" /> */}
       <div id="map">
         <Map />
-        {/* <ReactMapGL
-          mapboxAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
-          {...viewport}
-          mapStyle="mapbox://styles/mapbox/streets-v12"
-        ></ReactMapGL> */}
+
+        {/* 
+        <mapboxgl.Map
+          accessToken={mapboxAccessToken}
+          style="mapbox://styles/mapbox/streets-v11"
+          containerStyle={{
+            width: "100%",
+            height: "500px",
+          }}
+          center={[viewport.longitude, viewport.latitude]}
+          zoom={viewport.zoom}
+        ></mapboxgl.Map> */}
+
         {/* <div>
           {
             new XMapbox.Map({

@@ -10,12 +10,14 @@ const Map = () => {
     zoom: 10,
   });
 
+  const mapboxAccessToken =
+    "pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdWlpYzl0MTRibjNnbnpzbTd5aXE5aiJ9.6MAIS-HG-samIv5iUBbq0g";
+
   return (
-    //   mapboxAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
     <ReactMapGL
       {...viewport}
       onViewportChange={setViewport}
-      mapboxApiAccessToken="pk.eyJ1IjoibWVnYWNvZGVydXoiLCJhIjoiY2xsdThkZTE1MTR4dzNkczJwYnVjc2plNSJ9.Yc8_3DMMA7l8CiY_tJY8iw"
+      mapboxApiAccessToken={mapboxAccessToken}
     >
       <Marker latitude={37.7577} longitude={-122.4376}>
         <div className="marker">Your Marker</div>
