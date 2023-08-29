@@ -148,6 +148,7 @@ export default function TemporaryDrawer() {
           alignItems: "center",
           padding: "2rem 0",
           color: "white",
+          alignSelf: "center",
         }}
         className="s_links"
       >
@@ -162,7 +163,7 @@ export default function TemporaryDrawer() {
           </Link>
         </article>
         <article
-          className="social_btn btn bg-orange-500 p-3 "
+          className="social_btn btn bg-orange-500 p-3"
           style={{
             borderRadius: "8px",
           }}

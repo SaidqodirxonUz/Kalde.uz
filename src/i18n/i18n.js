@@ -22,7 +22,7 @@ i18n.use(initReactI18next).init({
         main_1_4: "Ko'proq bilish",
         main_2_1: "Biz haqimizda",
         main_2_2:
-          "KALDE - 1977 yilda tashkil etilgan, Turkiyaning Istanbul shahrida joylashgan bo'lib, zamonaviy isitish va suv ta'minoti tizimlari uchun mahsulotlar ishlab chiqaradi. Bugungi kunda KALDE mahsulotlari dunyoning 50 ta davlatida tanilgan. Jahon standartlariga javob beradigan KALDE mahsulotlari dunyoning 40 ta yirik davlatida tanilgan. Barcha mahsulotlar xalqaro sertifikatlarga ega. Kalde mahsulotlari O‘zbekiston bozorida 2009 yilda mashhur bo‘lgan. Bugungi kunda Kalde mahsulotlarini O‘zbekistonning 20 dan ortiq ixtisoslashtirilgan do‘konlarida xarid qilish mumkin!",
+          "KALDE - 1977 yilda tashkil etilgan, Turkiyaning Istanbul shahrida joylashgan bo'lib, zamonaviy isitish va suv ta'minoti tizimlari uchun mahsulotlar ishlab chiqaradi. Bugungi kunda KALDE mahsulotlari dunyoning 50 ta davlatida tanilgan. Kalde mahsulotlari O‘zbekiston bozorida 2009 yilda mashhur bo‘lgan. Bugungi kunda Kalde mahsulotlarini O‘zbekistonning 20 dan ortiq ixtisoslashtirilgan do‘konlarida xarid qilish mumkin!",
         main_2_3: "Ko'proq bilish",
         main_2_4: "Biz bilan bog'lanish",
         main_3_1: "Bizning afzalliklarimiz",
@@ -152,7 +152,7 @@ i18n.use(initReactI18next).init({
         main_1_4: "Узнать больше",
         main_2_1: "О нас",
         main_2_2:
-          "KALDE - основана в 1977 году, расположена в Стамбуле, Турция, производит продукцию для современных систем отопления и водоснабжения. Сегодня продукция KALDE известна в 50 странах мира. Продукция KALDE, отвечающая мировым стандартам, известна в 40 крупнейших странах мира.  Вся продукция имеет международные сертификаты.   На рынке Узбекистана продукция Kalde стала известна в 2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно купить более чем в 20 специализированных магазинах!",
+          "KALDE - основана в 1977 году, расположена в Стамбуле, Турция, производит продукцию для современных систем отопления и водоснабжения. Сегодня продукция KALDE известна в 50 странах мира.  Вся продукция имеет международные сертификаты. На рынке Узбекистана продукция Kalde стала известна в 2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно купить более чем в 20 специализированных магазинах!",
         main_2_3: "Узнать больше",
         main_2_4: "Свяжитесь с нами",
         main_3_1: "Наши преимущества",
@@ -285,7 +285,7 @@ i18n.use(initReactI18next).init({
         main_1_4: "To learn more",
         main_2_1: "About us",
         main_2_2:
-          "KALDE - founded in 1977, located in Istanbul, Turkey, manufactures products for modern heating and water supply systems. Today KALDE products are known in 50 countries around the world. KALDE products, which meet world standards, are known in 40 largest countries of the world. All products have international certificates. Kalde products became known in the Uzbek market in 2009. Today, Kalde products can be bought in more than 20 specialized stores in Uzbekistan!",
+          "KALDE - founded in 1977, located in Istanbul, Turkey, manufactures products for modern heating and water supply systems. Today KALDE products are known in 50 countries around the world. All products have international certificates. Kalde products became known in the Uzbek market in 2009. Today, Kalde products can be bought in more than 20 specialized stores in Uzbekistan!",
         main_2_3: "To learn more",
         main_2_4: "Contact us",
         main_3_1: "Our advantages",

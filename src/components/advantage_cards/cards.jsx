@@ -190,7 +190,7 @@ const Advantage_cards = () => {
             marginTop: "5rem",
           }}
         >
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="h6"
@@ -225,7 +225,7 @@ const Advantage_cards = () => {
           <div className="img">
             <img src={adventages_1_2} alt="a" />
           </div>
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="p"
@@ -253,7 +253,7 @@ const Advantage_cards = () => {
             marginTop: "5rem",
           }}
         >
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="p"
@@ -288,7 +288,7 @@ const Advantage_cards = () => {
           <div className="img">
             <img src={adventages_1_3} alt="a" />
           </div>
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="p"
@@ -316,7 +316,7 @@ const Advantage_cards = () => {
             marginTop: "5rem",
           }}
         >
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="p"
@@ -351,7 +351,7 @@ const Advantage_cards = () => {
           <div className="img">
             <img src={adventages_1_6} alt="a" />
           </div>
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="h6"
@@ -378,7 +378,7 @@ const Advantage_cards = () => {
             marginTop: "5rem",
           }}
         >
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="h6"
@@ -414,7 +414,7 @@ const Advantage_cards = () => {
           <div className="img">
             <img src={adventages_1_4} alt="a" />
           </div>
-          <div className="texts">
+          <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
               variant="h5"
               component="h6"

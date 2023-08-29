@@ -98,8 +98,8 @@ const Dostijeniya = () => {
         >
           {t("about_2_2")}
         </Typography>
-        <div style={{ display: "flex" }}>
-          <div href="#" className="more dostijeniya_more">
+        <div style={{ display: "flex" }} className="dostijeniya_more_main">
+          <div className="dostijeniya_more">
             <span className="countSpan">
               <h1 className="value">{partnerValue}+</h1>
               {t("about_2_3")}

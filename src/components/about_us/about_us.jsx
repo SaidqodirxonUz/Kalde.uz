@@ -39,7 +39,7 @@ const AboutUs = () => {
             style={{
               color: "rgba(0, 0, 0, 0.80)",
               fontFamily: "Okta Neue",
-              fontSize: "18px",
+              // fontSize: "18px",
               fontStyle: "normal",
               fontWeight: 400,
               lineHeight: "140% /* 25.2px */",
@@ -66,7 +66,7 @@ const AboutUs = () => {
                 border: "1px solid rgba(239, 127, 26, 1)",
                 borderRadius: "100px",
               }}
-              className="more"
+              className="aboutBtn"
               to="/about-us"
             >
               {t("main_2_3")} <FiArrowUpRight />
@@ -81,11 +81,11 @@ const AboutUs = () => {
                 // width: "180px",
                 height: "30px",
                 padding: "20px 24px",
-                // color: "rgba(239, 127, 26, 1)",
+                color: "rgba(239, 127, 26, 1)",
                 border: "1px solid rgba(239, 127, 26, 1)",
                 borderRadius: "100px",
               }}
-              className="more bg-orange-500 text-white md:bg-white md:text-orange-500"
+              className="aboutBtn"
               to="/contact"
             >
               {t("main_2_4")} <FiArrowUpRight />

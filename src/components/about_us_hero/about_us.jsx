@@ -49,28 +49,12 @@ const AboutUsHero = () => {
           </Typography>
 
           <div style={{ display: "flex", columnGap: "1rem" }}>
-            <Link
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                margin: "0.5rem 0",
-                // width: "180px",
-                // height: "30px",
-                padding: "1rem",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-              className="more"
-              to="/contact"
-            >
+            <Link className="aboutBtn" to="/contact">
               {t("about_1_3")} <FiArrowUpRight />
             </Link>
           </div>
         </div>
-        <div className="img">
+        <div className="img" style={{ marginTop: "2.5rem" }}>
           <img src={AboutUsHeroImg} alt={AboutUsHeroImg} />
         </div>
       </div>

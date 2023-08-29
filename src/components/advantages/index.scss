@@ -29,6 +29,13 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .more {
+    font-size: 12px !important;
+  }
+}
+
 .cards_container {
   display: flex;
   flex-direction: column;

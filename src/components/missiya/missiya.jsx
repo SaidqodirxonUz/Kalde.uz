@@ -14,7 +14,7 @@ const Missiya = () => {
             variant="h2"
             component="h3"
             style={{
-              fontSize: "48px",
+              fontSize: "36px",
               fontStyle: "normal",
               fontWeight: 400,
               fontFamily: "Okta Neue",
