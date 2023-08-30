@@ -31,7 +31,10 @@
 }
 
 .describe {
+  width: 80%;
+  height: 100% !important;
   border-radius: 18px;
+  padding: 2rem;
 }
 
 @media (max-width: 1200px) {

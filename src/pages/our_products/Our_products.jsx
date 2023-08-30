@@ -12,36 +12,44 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import i18n from "../../i18n/i18n";
 
-
 const Our_products = () => {
   const navigate = useNavigate();
   const [categories, setCategories] = React.useState([]);
   const [products, setProducts] = React.useState([]);
-  //api
-  React.useEffect(() => {
-    async function getProducts() {
-      try {
-        let { data } = await axios.get("/products");
-        setProducts(data.data);
-      } catch (error) {
-        console.log(error);
-      }
+
+  const LangVal = () => {
+    return i18n.language;
+  };
+
+  async function getProducts() {
+    try {
+      let { data } = await axios.get("/products");
+      setProducts(data.data);
+    } catch (error) {
+      console.log(error);
     }
-    async function getCategories() {
+  }
+
+  async function getCategories() {
+    try {
+      let { data } = await axios.get("/categories");
+      setCategories(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  React.useEffect(() => {
+    async function fetchData() {
       try {
-        let { data } = await axios.get("/categories");
-        setCategories(data.data);
+        await Promise.all([getCategories(), getProducts()]);
       } catch (error) {
         console.log(error);
       }
     }
 
-    getProducts();
-    getCategories();
-  }, []);
-  const LangVal = () => {
-    return i18n.language;
-  };
+    fetchData();
+  });
 
   return (
     <>
@@ -79,13 +87,26 @@ const Our_products = () => {
                       }}
                     >
                       <ListItemAvatar>
-                        <Avatar style={{ width: "60px", height: "60px" }}>
+                        <Avatar
+                          style={{
+                            width: "60px",
+                            height: "60px",
+                            marginRight: "1rem",
+                          }}
+                        >
                           <img src={category.image_url} alt="category" />{" "}
                           {/* <ImageIcon /> */}
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText
                         className="text-black text-xl font-semibold"
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          // width: "5rem",
+                          // justifyContent: "center",
+                          // color: "red",
+                        }}
                         primary={
                           LangVal() == "uz"
                             ? category.uz_category_name

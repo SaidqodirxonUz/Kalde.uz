@@ -146,6 +146,20 @@ const Footer = () => {
           </ul>
         </Box>
       </div>
+      <ul>
+        <li>
+          <p style={{ textAlign: "center" }}>
+            © Разработала команда{" "}
+            <span
+              style={{
+                color: "yellow",
+              }}
+            >
+              Supersite.uz
+            </span>
+          </p>
+        </li>
+      </ul>
     </div>
   );
 };

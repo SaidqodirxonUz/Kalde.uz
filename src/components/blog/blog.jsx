@@ -51,6 +51,8 @@ const Blog = () => {
   const LangVal = () => {
     return i18n.language;
   };
+
+  console.log(LangVal);
   const TextComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + "..."; // Truncate text and add ellipsis
@@ -125,7 +127,7 @@ const Blog = () => {
             borderRadius: "100px",
           }}
           className="more hidden lg:flex"
-          to="/catalog"
+          to="/news"
         >
           {t("main_2_3")} <FiArrowUpRight />
         </Link>

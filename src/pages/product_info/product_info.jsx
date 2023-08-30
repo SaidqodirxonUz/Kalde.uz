@@ -51,6 +51,8 @@ const Product_info = () => {
   const LangVal = () => {
     return i18n.language;
   };
+
+  console.log(LangVal);
   return (
     <main className="flex flex-col gap-8">
       <Navbar />
@@ -328,9 +330,13 @@ const Product_info = () => {
                 </div>
               </div>
             </div>
-            <div className="describe flex w-10/12 mx-auto h-auto lg:h-12 px-8 shadow-lg flex-row justify-start">
-              <Typography className="p-2" variant="p" component="p">
-                {el.uz_desc}
+            <div className="describe flex mx-auto h-auto lg:h-12  shadow-lg flex-row justify-start">
+              <Typography className="" variant="p" component="p">
+                {LangVal() == "uz"
+                  ? el.uz_desc
+                  : LangVal() == "en"
+                  ? el.en_desc
+                  : el.ru_desc}
               </Typography>
             </div>
           </>
