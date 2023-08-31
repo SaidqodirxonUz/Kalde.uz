@@ -59,11 +59,11 @@ const Product_info = () => {
       {product.map((el) => {
         return (
           <>
-            <div className="product_info ">
-              <div className="img shadow-lg">
+            <div className="product_info" style={{ marginTop: "2rem" }}>
+              <div className="img shadow-lg ">
                 <img src={el.image_url} alt="tavar" />
               </div>
-              <div className="texts shadow-lg p-8 h">
+              <div className="texts shadow-lg p-8">
                 <Typography
                   variant="h6"
                   component="h5"
@@ -160,7 +160,9 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.diametr ? t("product_1_3") : ""}
+                      {el.diametr == "null" || el.diametr == null
+                        ? ""
+                        : t("product_1_3")}
                     </Typography>
                     <Typography
                       variant="p"
@@ -174,37 +176,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.diametr}
-                    </Typography>
-                  </div>
-                  <div className="flex flex-row justify-between items-center">
-                    <Typography
-                      variant="p"
-                      component="p"
-                      style={{
-                        color: "rgba(0, 0, 0, 0.80)",
-                        fontFamily: "Okta Neue",
-                        fontSize: "18px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "140% ",
-                      }}
-                    >
-                      {el.ichki_diametr ? t("product_1_4") : ""}
-                    </Typography>
-                    <Typography
-                      variant="p"
-                      component="p"
-                      style={{
-                        color: "rgba(0, 0, 0, 0.80)",
-                        fontFamily: "Okta Neue",
-                        fontSize: "18px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "140% ",
-                      }}
-                    >
-                      {el.ichki_diametr}
+                      {el.diametr == "null" ? "" : el.diametr}
                     </Typography>
                   </div>
                   <div className="flex flex-row justify-between items-center">
@@ -220,7 +192,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.ichki_uzunlik ? t("product_1_5") : ""}
+                      {el.ichki_diametr == "null" ? "" : t("product_1_4")}
                     </Typography>
                     <Typography
                       variant="p"
@@ -231,40 +203,10 @@ const Product_info = () => {
                         fontSize: "18px",
                         fontStyle: "normal",
                         fontWeight: 400,
-                        lineHeight: "140% ",
+                        lineHeight: "100% ",
                       }}
                     >
-                      {el.ichki_uzunlik}
-                    </Typography>
-                  </div>
-                  <div className="flex flex-row justify-between items-center">
-                    <Typography
-                      variant="p"
-                      component="p"
-                      style={{
-                        color: "rgba(0, 0, 0, 0.80)",
-                        fontFamily: "Okta Neue",
-                        fontSize: "18px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "140% ",
-                      }}
-                    >
-                      {el.tashqi_uzunlik ? t("product_1_6") : ""}
-                    </Typography>
-                    <Typography
-                      variant="p"
-                      component="p"
-                      style={{
-                        color: "rgba(0, 0, 0, 0.80)",
-                        fontFamily: "Okta Neue",
-                        fontSize: "18px",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        lineHeight: "140% ",
-                      }}
-                    >
-                      {el.tashqi_uzunlik}
+                      {el.ichki_diametr == "null" ? "" : el.ichki_diametr}
                     </Typography>
                   </div>
                   <div className="flex flex-row justify-between items-center">
@@ -280,7 +222,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.razmer ? t("product_1_7") : ""}
+                      {el.ichki_uzunlik == "null" ? "" : t("product_1_5")}
                     </Typography>
                     <Typography
                       variant="p"
@@ -294,7 +236,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.razmer}
+                      {el.ichki_uzunlik == "null" ? "" : el.ichki_uzunlik}
                     </Typography>
                   </div>
                   <div className="flex flex-row justify-between items-center">
@@ -310,7 +252,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.soni ? t("product_1_8") : ""}
+                      {el.tashqi_uzunlik == "null" ? " " : t("product_1_6")}
                     </Typography>
                     <Typography
                       variant="p"
@@ -324,7 +266,70 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.soni}
+                      {el.ichki_uzunlik == "null" ? "" : el.ichki_uzunlik}
+                    </Typography>
+                  </div>
+                  <div className="flex flex-row justify-between items-center">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.razmer == "null" ? " " : t("product_1_7")}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.razmer == "null" ? "" : el.razmer}
+                    </Typography>
+                  </div>
+                  <div
+                    className="flex flex-row justify-between items-center"
+                    // style={{ marginTop: "-0.7rem" }}
+                  >
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.soni == "null" ? " " : t("product_1_8")}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      component="p"
+                      style={{
+                        color: "rgba(0, 0, 0, 0.80)",
+                        fontFamily: "Okta Neue",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "140% ",
+                      }}
+                    >
+                      {el.soni == "null" ? "" : el.soni}
                     </Typography>
                   </div>
                 </div>
