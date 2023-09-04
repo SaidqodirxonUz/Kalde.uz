@@ -27,7 +27,11 @@ const Footer = () => {
     <div className="f_container ">
       <div className="footer">
         <Box className="footer_inc">
-          <img src={footer_img} alt="logo" />
+          <img
+            src={footer_img}
+            alt="logo"
+            style={{ width: "12rem", height: "100%" }}
+          />
           <p className="text-white py-4 max-w-sm w-72">{t("footer_1_1")}</p>
           <div
             style={{

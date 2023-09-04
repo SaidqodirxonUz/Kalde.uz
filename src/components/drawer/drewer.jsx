@@ -89,7 +89,12 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div>
-        <img src={logo} alt="Kalde" className=" m-auto py-4" />
+        <img
+          src={logo}
+          alt="Kalde"
+          className=" m-auto py-4"
+          style={{ width: "10rem", height: "5rem" }}
+        />
         <List>
           {pages.map((el) => (
             <ListItem

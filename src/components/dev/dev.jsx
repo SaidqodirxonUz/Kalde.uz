@@ -1,20 +1,24 @@
 import { Link } from "react-router-dom";
+import Navbar from "../navbar/navbar";
 
 function Dev() {
   return (
     <>
+      <Navbar />
       <div
-        style={{ display: "flex", justifyContent: "space-evenly" }}
-        className="text-blue-500"
+        style={{ alignContent: "center", marginTop: "10rem" }}
+        className="text-blue-400"
       >
         <Link to={"https://t.me/SaidqodirxonRahimov"}>
-          <h1 style={{ fontSize: "3em" }}>
+          <h1 style={{ fontSize: "3em", textAlign: "center" }}>
             #𝒮𝒶𝒾𝒹𝓆𝑜𝒹𝒾𝓇𝓍𝑜𝓃 𝑅𝒶𝒽𝒾𝓂𝑜𝓋 𝒾𝒷𝓃 𝒜𝒷𝒹𝓊𝓁𝓁𝑜{" "}
           </h1>
         </Link>
 
         <Link to={"https://t.me/Megac0derUz"}>
-          <h1 style={{ fontSize: "3em" }}>Muhammadjon Abduvahobov </h1>
+          <h1 style={{ fontSize: "3em", textAlign: "center" }}>
+            Muhammadjon Abduvahobov{" "}
+          </h1>
         </Link>
       </div>
     </>

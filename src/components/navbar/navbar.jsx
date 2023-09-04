@@ -75,7 +75,11 @@ const Navbar = () => {
           }}
         >
           <Link to={"/"}>
-            <img src={logo} alt="Kalde" />
+            <img
+              src={logo}
+              alt="Kalde Logo"
+              style={{ width: "12rem", height: "100%" }}
+            />
           </Link>
 
           <Box
