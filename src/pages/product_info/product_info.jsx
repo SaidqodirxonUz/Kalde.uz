@@ -266,7 +266,7 @@ const Product_info = () => {
                         lineHeight: "140% ",
                       }}
                     >
-                      {el.ichki_uzunlik == "null" ? "" : el.ichki_uzunlik}
+                      {el.tashqi_uzunlik == "null" ? "" : el.tashqi_uzunlik}
                     </Typography>
                   </div>
                   <div className="flex flex-row justify-between items-center">
