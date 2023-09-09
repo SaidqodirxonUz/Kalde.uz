@@ -28,6 +28,7 @@
     margin: 0 5%;
     .more {
       font-size: 0.875em !important;
+      cursor: pointer;
     }
   }
 }
@@ -90,6 +91,7 @@
 
 .more {
   transition: 0.3s ease-in-out !important;
+  cursor: pointer;
 }
 
 .more:hover {
