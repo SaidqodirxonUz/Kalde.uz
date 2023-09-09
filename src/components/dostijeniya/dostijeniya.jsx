@@ -106,10 +106,9 @@ const Dostijeniya = () => {
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "space-between",
-              margin: "-0.5rem",
-              width: "46vw",
+              
               // height: "10vh",
-              padding: "2.25rem 5rem",
+             
               borderRadius: "1.125rem",
               boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.05)",
               background: "#F5F5F5",

@@ -16,6 +16,7 @@ import ReactMapGL from "react-map-gl";
 import mapboxgl, { XMapbox } from "mapbox-gl";
 // import Map from "../../components/maps/map";
 import { BiCurrentLocation } from "react-icons/bi";
+import Maps from "../../components/maps/map";
 
 // import mapboxgl from "mapbox-gl";
 // import AppMap from "../../components/map";
@@ -40,7 +41,11 @@ const Contact_filial = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [map, setMap] = useState(
+    "https://www.google.com/maps/place/Kardiologiya+Markazi/@41.320296,69.2996732,15z/data=!4m6!3m5!1s0x38aef4c58ca4d005:0xbb6846c76541260d!8m2!3d41.3243314!4d69.2999526!16s%2Fg%2F1hm2txb8q?entry=ttu"
+  );
   const [filial, setFilial] = useState([]);
+
   // const mapContainer = useRef(null);
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
@@ -77,6 +82,10 @@ const Contact_filial = () => {
       try {
         let { data } = await axios.get(`/dealers/${id}`);
         setFilial([data.data]);
+        setMap(data.data.location);
+        console.log(data.data, "data");
+        console.log(data.data.location, "l");
+        await setMap(data.data.location);
       } catch (error) {
         console.log(error);
         navigate("/error");
@@ -88,6 +97,14 @@ const Contact_filial = () => {
     return i18n.language;
   };
   console.log(filial, "state");
+  // console.log(map);
+  // setMap(
+  //   filial[0].location
+  //     ? filial[0].location
+  //     : "https://www.google.com/maps/place/Kardiologiya+Markazi/@41.320296,69.2996732,15z/data=!4m6!3m5!1s0x38aef4c58ca4d005:0xbb6846c76541260d!8m2!3d41.3243314!4d69.2999526!16s%2Fg%2F1hm2txb8q?entry=ttu"
+  // );
+  // const l =
+  //   "https://www.google.com/maps/place/Kardiologiya+Markazi/@41.320296,69.2996732,15z/data=!4m6!3m5!1s0x38aef4c58ca4d005:0xbb6846c76541260d!8m2!3d41.3243314!4d69.2999526!16s%2Fg%2F1hm2txb8q?entry=ttu";
 
   const { t } = useTranslation();
   return (
@@ -97,9 +114,11 @@ const Contact_filial = () => {
       <div className="hero-area pt-40 md:pt-20 lg:pt-10">
         <section className="Contacts w-9/12 mx-auto flex flex-col justify-between md:flex-row gap-10">
           {filial.map((f) => {
-            //? {
-            //?   location = f.location;
-            //? }
+            console.log(f.location, "q2");
+            // setMap(f.location);
+            // {
+            //   location = f.location;
+            // }
             return (
               <div className="f_info" key={f.id}>
                 <h5 className="filial_name">
@@ -308,12 +327,13 @@ const Contact_filial = () => {
         </section>
       </div>
       {/* <Contact /> */}
-      {/* <section className="location" id="location"> */}
-      {/* {filial.map((l) => { */}
-      {/* return ( */}
-      {/* <div ref={mapContainer} className="map-container" /> */}
-      <div id="map">
-        {/* <Map /> */}
+      <section className="location" id="location">
+        {/* {filial.map((l) => { */}
+        {/* return ( */}
+        {/* <div ref={mapContainer} className="map-container" /> */}
+        {/* <div id="map"> */}
+        {/* {console.log(filial[0].location)} */}
+        <Maps url={map} />
         {/* 
         <mapboxgl.Map
           accessToken={mapboxAccessToken}
@@ -360,14 +380,15 @@ const Contact_filial = () => {
             marginWidth="0"
             src={location}
           ></iframe> */}
-
+        {/* shuni oc \/*/}
+        {/* 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.7979651830346!2d69.24579717661015!3d41.356744897894345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c8cfa42d491%3A0x40eea1c4b4fe62d7!2sMagazin%20Kalde!5e0!3m2!1sen!2s!4v1693209392169!5m2!1sen!2s"
           width="100%"
           height="600"
           allowfullscreen=""
           loading="lazy"
-        ></iframe>
+        ></iframe> */}
         {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.900470353685!2d69.2339409770477!3d41.3621374840949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c58d1abc231%3A0xc2de16d428dded27!2sChuqursoy%20Market!5e0!3m2!1sen!2s!4v1692464390824!5m2!1sen!2s"
             width="600"
@@ -390,10 +411,10 @@ const Contact_filial = () => {
           ) : (
             ""
           )} */}
-      </div>
-      {/* );
+        {/* </div> */}
+        {/* );
         })} */}
-      {/* </section> */}
+      </section>
       <Footer />
     </>
   );
