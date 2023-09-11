@@ -133,6 +133,11 @@ i18n.use(initReactI18next).init({
 
         sent_message_succues: "Xabaringiz muvvafaqiyatli yuborildi ",
         sent_message_fail: "Xabaringiz yuborilmadi , qayta urinib ko'ring ",
+
+        xato: "Xatolik",
+        loading: "Yuklanmoqda ...",
+        no_product: "Mahsulotlar mavjud emas.",
+        no_category: "Kategoriyalar mavjud emas.",
       },
     },
     ru: {
@@ -266,6 +271,11 @@ i18n.use(initReactI18next).init({
         sent_message_succues: "Ваше сообщение было отправлено успешно",
         sent_message_fail: "Произошла ошибка при отправке сообщения",
         sent_message_error: "При отправке вашего сообщения произошла ошибка",
+
+        xato: "Ошибка",
+        loading: "Загрузка ... ",
+        no_product: "Товары недоступны.",
+        no_category: "Нет категорий.",
       },
     },
     en: {
@@ -398,6 +408,11 @@ i18n.use(initReactI18next).init({
         sent_message_succues: "Your message has been sent successfully",
         sent_message_fail: "Your message has not been sent",
         sent_message_error: "There was an error sending your message",
+
+        xato: "Error",
+        loading: "Loading ...",
+        no_product: "Products are not available.",
+        no_category: "There are no categories.",
       },
     },
   },
