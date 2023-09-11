@@ -102,7 +102,7 @@ const Our_products = () => {
                 </p>
               )}
               {loading && <p>{t("loading")}</p>}
-              {!loading && categories.length === 0 && <p>{t("no_categroy")}</p>}
+              {!loading && categories.length === 0 && <p>{t("no_category")}</p>}
               {!loading && categories.length > 0 && (
                 <List
                   sx={{
