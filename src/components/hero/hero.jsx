@@ -72,13 +72,13 @@ const Hero = () => {
               border: "1px solid rgba(239, 127, 26, 1)",
               borderRadius: "100px",
             }}
-            className="more"
+            className="heroMore"
             to="about-us"
           >
             {t("main_1_4")} <FiArrowUpRight />
           </Link>
         </div>
-        <div className="img">
+        <div className="img" style={{ marginTop: "2.5rem" }}>
           <img src={hero} alt="shop" />
         </div>
       </div>

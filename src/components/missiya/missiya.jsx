@@ -8,13 +8,13 @@ const Missiya = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="about_us hero">
+      <div className="about_us hero hero-noreverse">
         <div className="texts">
           <Typography
             variant="h2"
             component="h3"
             style={{
-              fontSize: "48px",
+              fontSize: "36px",
               fontStyle: "normal",
               fontWeight: 400,
               fontFamily: "Okta Neue",

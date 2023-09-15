@@ -23,6 +23,7 @@ const News_info = () => {
   const navigate = useNavigate();
   const [news, setNews] = useState([]);
   const [more, setMore] = useState([]);
+
   // const navigate = useNavigate();
   // const hendleBack = function (id) {
   //   navigate(`/news/${id}`);
@@ -31,6 +32,7 @@ const News_info = () => {
   const LangVal = () => {
     return i18n.language;
   };
+
   async function getNews() {
     try {
       let { data } = await axios.get(`/news/${id}`);
@@ -48,10 +50,21 @@ const News_info = () => {
       console.log(error);
     }
   }
+
   useEffect(() => {
-    getNews();
-    getMore();
+    async function fetchData() {
+      try {
+        await Promise.all([getNews(), getMore()]);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchData();
   }, [id]);
+
+  console.log(getNews());
+
   const DateComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + ""; // Truncate text and add ellipsis
@@ -67,8 +80,7 @@ const News_info = () => {
 
     return text;
   };
-  console.log(news, "state");
-  console.log(more, "more");
+
   return (
     <>
       <Navbar />

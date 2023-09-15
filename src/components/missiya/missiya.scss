@@ -8,14 +8,15 @@
   //   border-bottom-left-radius: 50px;
   width: 100%;
   margin: 0 auto;
-  padding: 10rem 0 10rem 0;
+  // padding: 10rem 0 10rem 0;
   background: #ffff !important;
 
   .img {
     width: 40%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    align-self: center;
   }
   .texts {
     display: flex;
@@ -28,6 +29,27 @@
     margin: 0 5%;
     .more {
       font-size: 0.875em !important;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about_us {
+    flex-direction: column !important;
+    padding: 0 !important;
+
+    .about_links {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 1rem;
+    }
+    .img {
+      width: 100% !important;
+      display: block;
+    }
+    .texts {
+      width: 90% !important;
     }
   }
 }

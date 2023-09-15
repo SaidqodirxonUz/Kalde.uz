@@ -1,0 +1,25 @@
+.modalBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  //   width: 240px;
+  //   height: 40px;
+  padding: 1rem;
+  color: rgba(239, 127, 26, 1) !important;
+  border: 1px solid rgba(239, 127, 26, 1) !important;
+  border-radius: 100px !important;
+  cursor: pointer;
+}
+
+.modalBtn:hover {
+  background: rgb(239, 127, 26) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .modalBtn {
+    font-size: 0.7em !important;
+  }
+}

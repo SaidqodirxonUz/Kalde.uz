@@ -27,7 +27,11 @@ const Footer = () => {
     <div className="f_container ">
       <div className="footer">
         <Box className="footer_inc">
-          <img src={footer_img} alt="logo" />
+          <img
+            src={footer_img}
+            alt="logo"
+            style={{ width: "12rem", height: "100%" }}
+          />
           <p className="text-white py-4 max-w-sm w-72">{t("footer_1_1")}</p>
           <div
             style={{
@@ -86,7 +90,7 @@ const Footer = () => {
           </div>
         </Box>
         <Box className="usefull_pages">
-          <p className="footer-sections">{t("footer_1_2")}</p>
+          <p className="footer-sections pb-12">{t("footer_1_2")}</p>
           <ul>
             {pages.map((page, index) => (
               <li style={{ color: "#fff !important" }} key={index}>
@@ -137,7 +141,7 @@ const Footer = () => {
             <li>
               <p
                 style={{ textAlign: "center" }}
-                className="pages text-white active:text-orange-500 flex flex-row items-center justify-center"
+                className="pages text-white active:text-orange-500 flex flex-row items-center justify-center "
               >
                 <MdLocationOn className="icons text-5xl text-orange-500" />
                 {t("manzil_name")}
@@ -146,6 +150,20 @@ const Footer = () => {
           </ul>
         </Box>
       </div>
+      <ul>
+        <li>
+          <p style={{ textAlign: "center" }}>
+            © Разработала команда{" "}
+            <span
+              style={{
+                color: "yellow",
+              }}
+            >
+              Supersite.uz
+            </span>
+          </p>
+        </li>
+      </ul>
     </div>
   );
 };

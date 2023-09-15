@@ -24,8 +24,8 @@
     width: 50%;
     // margin-left: 11%;
     margin: 0 10%;
-    .more {
-      font-size: 0.875em !important;
+    .heroMore {
+      font-size: 1em;
     }
   }
 }
@@ -43,5 +43,15 @@
     .texts {
       width: 90% !important;
     }
+    // .heroMore {
+    //   font-size: 2em;
+    // }
+  }
+}
+
+@media (max-width: 768px) {
+  .heroMore {
+    font-size: 0.7em !important;
+    cursor: pointer;
   }
 }

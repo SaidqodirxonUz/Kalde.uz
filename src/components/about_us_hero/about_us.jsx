@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
-import AboutUsHeroImg from "../../assets/images/about_1_1.jpg";
+import AboutUsHeroImg from "../../assets/aboutHero.jpg";
+
 import { FiArrowUpRight } from "react-icons/fi";
 
 import "./about_us.scss";
@@ -12,7 +13,7 @@ const AboutUsHero = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="about_us hero">
+      <div className="about_us hero ">
         <div className="texts">
           <Typography
             variant="h2"
@@ -48,28 +49,12 @@ const AboutUsHero = () => {
           </Typography>
 
           <div style={{ display: "flex", columnGap: "1rem" }}>
-            <Link
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "space-between",
-                margin: "2rem 0",
-                width: "180px",
-                height: "30px",
-                padding: "20px 24px",
-                color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
-                borderRadius: "100px",
-              }}
-              className="more"
-              to="/contact"
-            >
+            <Link className="aboutBtn" to="/contact">
               {t("about_1_3")} <FiArrowUpRight />
             </Link>
           </div>
         </div>
-        <div className="img">
+        <div className="img" style={{ marginTop: "2.5rem" }}>
           <img src={AboutUsHeroImg} alt={AboutUsHeroImg} />
         </div>
       </div>

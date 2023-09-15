@@ -53,7 +53,6 @@ const Navbar = () => {
     <AppBar
       position="fixed"
       style={{
-
         background: "rgba(255, 255, 255, 0.80)",
         backdropFilter: "blur(5px)",
         boxShadow: "none",
@@ -76,7 +75,11 @@ const Navbar = () => {
           }}
         >
           <Link to={"/"}>
-            <img src={logo} alt="Kalde" />
+            <img
+              src={logo}
+              alt="Kalde Logo"
+              style={{ width: "12rem", height: "100%" }}
+            />
           </Link>
 
           <Box
@@ -119,14 +122,20 @@ const Navbar = () => {
                 className="text-neutral-950 active:text-yellow-300 flex flex-row"
                 to="tel:+998900152533"
               >
-                <BiSolidPhoneCall className="text-3xl text-orange-500" />
+                <BiSolidPhoneCall
+                  className="text-3xl text-orange-500"
+                  style={{ marginRight: "0.5rem" }}
+                />
                 +998(90) 015 25 33
               </Link>
               {/* </Button> */}
             </Box>
 
             <Box className="select">
-              <FaGlobe className="text-3xl text-orange-500" />
+              <FaGlobe
+                className="text-3xl text-orange-500"
+                style={{ marginRight: "0.5rem" }}
+              />
 
               <FormControl>
                 <NativeSelect

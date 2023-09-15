@@ -16,7 +16,6 @@ import {
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
 import { Link } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 
 // const Navbar = () => {
 
@@ -89,11 +88,16 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <div>
-        <img src={logo} alt="Kalde" className=" m-auto py-4" />
+        <img
+          src={logo}
+          alt="Kalde"
+          className=" m-auto py-4"
+          style={{ width: "10rem", height: "5rem" }}
+        />
         <List>
-          {pages.map((el) => (
+          {pages.map((el, index) => (
             <ListItem
-              key={el.name}
+              key={index}
               disablePadding
               className="px-6 active:text-orange-500 active:border-b-2 active:border-solid active:border-orange-500"
             >
@@ -127,8 +131,8 @@ export default function TemporaryDrawer() {
                   <option selected disabled>
                     {t("navbar_lang_select")}
                   </option>
-                  {items.map((item) => (
-                    <option key={uuidv4()} value={item.value}>
+                  {items.map((item, index) => (
+                    <option key={index} value={item.value}>
                       {item.label}
                     </option>
                   ))}
@@ -148,6 +152,7 @@ export default function TemporaryDrawer() {
           alignItems: "center",
           padding: "2rem 0",
           color: "white",
+          alignSelf: "center",
         }}
         className="s_links"
       >
@@ -162,7 +167,7 @@ export default function TemporaryDrawer() {
           </Link>
         </article>
         <article
-          className="social_btn btn bg-orange-500 p-3 "
+          className="social_btn btn bg-orange-500 p-3"
           style={{
             borderRadius: "8px",
           }}
@@ -187,8 +192,8 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      {["left"].map((anchor) => (
-        <React.Fragment key={anchor}>
+      {["left"].map((anchor, index) => (
+        <React.Fragment key={index}>
           <Button onClick={toggleDrawer(anchor, true)}>
             <AiOutlineMenu className="text-black text-2xl" />
           </Button>

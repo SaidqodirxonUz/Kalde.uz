@@ -5,9 +5,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
-// import { FiArrowUpRight } from "react-icons/fi";
-// import blogImg from "../../assets/blog.png";
-
 import "./index.scss";
 import * as React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -27,7 +24,6 @@ let config = {
   url: "/news",
   headers: {
     "Content-Type": "application/json",
-
     ...data,
   },
   data: data,
@@ -51,6 +47,8 @@ const Blog = () => {
   const LangVal = () => {
     return i18n.language;
   };
+
+  console.log(LangVal);
   const TextComponent = ({ text, maxLength }) => {
     if (text.length > maxLength) {
       text = text.slice(0, maxLength) + "..."; // Truncate text and add ellipsis
@@ -125,7 +123,7 @@ const Blog = () => {
             borderRadius: "100px",
           }}
           className="more hidden lg:flex"
-          to="/catalog"
+          to="/news"
         >
           {t("main_2_3")} <FiArrowUpRight />
         </Link>

@@ -50,8 +50,8 @@ const Products = () => {
           variant="h2"
           component="h3"
           style={{
-            // textAlign: "center",
-            // margin: "0 auto",
+            textAlign: "center",
+            margin: "0 auto",
             fontFamily: "Okta Neue",
             fontSize: "36px",
             fontStyle: "normal",
@@ -63,7 +63,7 @@ const Products = () => {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
-          className="mx-auto lg:mx-0"
+          className="mx-auto lg:mx-0 "
         >
           {t("main_4_1")}
         </Typography>
