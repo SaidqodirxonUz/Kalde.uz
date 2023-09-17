@@ -17,7 +17,7 @@ function Dev() {
 
         <Link to={"https://t.me/Megac0derUz"}>
           <h1 style={{ fontSize: "3em", textAlign: "center" }}>
-            Muhammadjon Abduvahobov{" "}
+            Muhammadjon Abduvaxobov
           </h1>
         </Link>
       </div>

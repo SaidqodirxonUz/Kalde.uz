@@ -14,8 +14,11 @@ import i18n from "../../i18n/i18n";
 // eslint-disable-next-line no-unused-vars
 import { toast } from "react-toastify";
 import "./style.scss";
+import { useTranslation } from "react-i18next";
 
 const Our_products = () => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const [categories, setCategories] = React.useState([]);
   const [products, setProducts] = React.useState([]);
@@ -81,6 +84,7 @@ const Our_products = () => {
       setLang(currentLang); // Til almashtirilganda tilni yangilang
     }
   }
+
   return (
     <div
       onClick={() => {
@@ -92,11 +96,13 @@ const Our_products = () => {
         <section id="hero-area" className="py-10 px-10">
           <div className="divide flex lg:flex-row flex-col justify-between ">
             <Box className="categories">
-              {error && <p>Xatolik: {error}</p>}
-              {loading && <p>Yuklanmoqda...</p>}
-              {!loading && categories.length === 0 && (
-                <p>Kategoriyalar mavjud emas.</p>
+              {error && (
+                <p>
+                  {t("error")} ,{error}
+                </p>
               )}
+              {loading && <p>{t("loading")}</p>}
+              {!loading && categories.length === 0 && <p>{t("no_category")}</p>}
               {!loading && categories.length > 0 && (
                 <List
                   sx={{
@@ -150,11 +156,13 @@ const Our_products = () => {
               )}
             </Box>
             <Box className="product py-10 md:py-0">
-              {error && <p>Xatolik: {error}</p>}
-              {loading && <p>Yuklanmoqda...</p>}
-              {!loading && products.length === 0 && (
-                <p>Mahsulotlar mavjud emas.</p>
+              {error && (
+                <p>
+                  {t("error")} , {error}
+                </p>
               )}
+              {loading && <p>{t("loading")}</p>}
+              {!loading && products.length === 0 && <p>{t("no_product")} </p>}
               {!loading && products.length > 0 && (
                 <div
                   style={{
@@ -192,7 +200,7 @@ const Our_products = () => {
                               objectFit: "contain",
                               objectPosition: "center",
                             }}
-                            src={info.image_url}
+                            src={info.img_url}
                             alt="Mahsulot"
                           />
                           <p className="line"></p>
@@ -221,9 +229,6 @@ const Our_products = () => {
               )}
             </Box>
           </div>
-        </section>
-        <section className="contact-form">
-          {/* <div class="container"> */}
         </section>
       </div>
       <Contact />

@@ -128,7 +128,7 @@ const Products = () => {
                       objectFit: "cover",
                       objectPosition: "center",
                     }}
-                    src={i.image_url}
+                    src={i.img_url}
                     alt="p"
                   />
                   <p className="line"></p>
