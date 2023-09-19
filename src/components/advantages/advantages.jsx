@@ -1,17 +1,15 @@
+/* eslint-disable no-unused-vars */
 import { Box, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Avatar from "@mui/material/Avatar";
 import "./index.scss";
-import school from "../../assets/school_FILL0_wght400_GRAD0_opsz48 1.svg";
-import verify from "../../assets/verified_FILL0_wght400_GRAD0_opsz48 1.svg";
-import doc from "../../assets/stethoscope_FILL0_wght400_GRAD0_opsz24 1.svg";
-import document from "../../assets/tune_FILL0_wght400_GRAD0_opsz24 1.svg";
-import paper from "../../assets/library_books_FILL0_wght400_GRAD0_opsz24 1.svg";
-import operator from "../../assets/support_agent_FILL0_wght400_GRAD0_opsz48 1.svg";
-import maintaince from "../../assets/chart_data_FILL0_wght400_GRAD0_opsz24 1.svg";
-import rise from "../../assets/description_FILL0_wght400_GRAD0_opsz24 1.svg";
+import sertifikat1 from "/1.png";
+import sertifikat2 from "/2.png";
+import sertifikat3 from "/3.png";
+import sertifikat4 from "/4.png";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -28,14 +26,15 @@ const Advantages = () => {
   // {t("main_4_1")}
 
   let cardinfo = [
-    { title: t("main_3_2"), image: school },
-    { title: t("main_3_3"), image: verify },
-    { title: t("main_3_4"), image: doc },
-    { title: t("main_3_5"), image: document },
-    { title: t("main_3_6"), image: paper },
-    { title: t("main_3_7"), image: operator },
-    { title: t("main_3_8"), image: maintaince },
-    { title: t("main_3_9"), image: rise },
+    { title: t("main_3_2"), image: sertifikat1 },
+    { title: t("main_3_3"), image: sertifikat2 },
+    { title: t("main_3_4"), image: sertifikat3 },
+    { title: t("main_3_5"), image: sertifikat4 },
+
+    // { title: t("main_3_6"), image: paper },
+    // { title: t("main_3_7"), image: operator },
+    // { title: t("main_3_8"), image: maintaince },
+    // { title: t("main_3_9"), image: rise },
   ];
 
   return (
@@ -54,7 +53,7 @@ const Advantages = () => {
           component="h3"
           style={{
             textAlign: "center",
-            // margin: "0 auto",
+            margin: "0 auto",
             fontFamily: "Okta Neue",
             fontSize: "36px",
             fontStyle: "normal",
@@ -70,7 +69,7 @@ const Advantages = () => {
         >
           {t("main_3_1")}
         </Typography>
-        <Link
+        {/* <Link
           // className="btn"
           style={{
             display: "flex",
@@ -91,15 +90,15 @@ const Advantages = () => {
         >
           {t("main_2_3")}
           <FiArrowUpRight />
-        </Link>
+        </Link> */}
       </div>
       <Box className="infos pb-24">
         {cardinfo.map((info) => (
           <Card
             className="cards"
             style={{
-              maxWidth: "100%",
-              minWidth: "20%",
+              // maxWidth: "100%",
+              // minWidth: "20%",
               // width: "100%",
               padding: "",
               borderRadius: "0.5em !important",
@@ -108,12 +107,18 @@ const Advantages = () => {
           >
             <CardHeader
               avatar={
-                <Avatar aria-label="recipe">
-                  <img src={info.image} alt="study" />
-                </Avatar>
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <img
+                    src={info.image}
+                    alt="study"
+                    style={{ width: "20%", height: "100%" }}
+                  />
+                </div>
               }
             />
-            <CardContent>
+            {/* <CardContent>
               <Typography
                 style={{ color: "#000 !important" }}
                 variant="h6"
@@ -122,7 +127,7 @@ const Advantages = () => {
               >
                 {info.title}
               </Typography>
-            </CardContent>
+            </CardContent> */}
           </Card>
         ))}
       </Box>

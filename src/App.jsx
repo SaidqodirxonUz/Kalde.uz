@@ -12,6 +12,7 @@ import Advantages from "./pages/advantages/advantages";
 import NotFound from "./pages/404page/404";
 import Dev from "./components/dev/dev";
 // import ContactUs from "./pages/contact/contact";
+import "./App.css";
 
 function App() {
   return (

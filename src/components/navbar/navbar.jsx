@@ -126,7 +126,7 @@ const Navbar = () => {
                   className="text-3xl text-orange-500"
                   style={{ marginRight: "0.5rem" }}
                 />
-                +998(90) 015 25 33
+                +9989001KALDE
               </Link>
               {/* </Button> */}
             </Box>

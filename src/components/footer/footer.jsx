@@ -120,12 +120,12 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="tel:+998900352533"
+                to="tel:+998908218222"
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
-                +998(90) 035 25 33
+                +998(90) 821 82 22
               </Link>
             </li>
             <li>

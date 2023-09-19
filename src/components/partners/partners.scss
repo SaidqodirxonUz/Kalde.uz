@@ -32,7 +32,7 @@ $animationSpeed: 10s;
 .slider {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 10rem;
+  height: 15rem;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -68,7 +68,7 @@ $animationSpeed: 10s;
   }
 
   .slide {
-    height: 10rem;
+    height: 15rem;
     width: 350px;
     display: flex;
     justify-content: center;
