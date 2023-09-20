@@ -13,58 +13,61 @@ const Partners = () => {
   const { t } = useTranslation();
   return (
     <>
-      <Typography
-        variant="h2"
-        component="h3"
-        style={{
-          textAlign: "center",
-          fontSize: "48px",
-          fontStyle: "normal",
-          fontWeight: 400,
-          fontFamily: "Okta Neue",
-          lineHeight: "normal",
-          background:
-            "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
-        {t("main_5_1")}
-      </Typography>
+      <div className="bg_img">
+        <Typography
+          variant="h2"
+          component="h3"
+          style={{
+            textAlign: "center",
+            fontSize: "48px",
+            fontStyle: "normal",
+            fontWeight: 400,
+            fontFamily: "Okta Neue",
+            lineHeight: "normal",
+            background:
+              "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            // paddingTop: "5rem",
+          }}
+        >
+          {t("main_5_1")}
+        </Typography>
 
-      <div className="slider-parent">
-        <div className="slider">
-          <div className="slide-track">
-            <div className="slide">
-              <img src={partner1} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner2} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner3} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner4} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner5} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner1} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner2} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner3} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner4} height="100" width="100" alt="" />
-            </div>
-            <div className="slide">
-              <img src={partner5} height="100" width="100" alt="" />
+        <div className="slider-parent">
+          <div className="slider">
+            <div className="slide-track">
+              <div className="slide">
+                <img src={partner1} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner2} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner3} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner4} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner5} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner1} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner2} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner3} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner4} height="100" width="100" alt="" />
+              </div>
+              <div className="slide">
+                <img src={partner5} height="100" width="100" alt="" />
+              </div>
             </div>
           </div>
         </div>

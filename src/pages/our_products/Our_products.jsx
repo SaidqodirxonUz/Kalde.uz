@@ -86,154 +86,162 @@ const Our_products = () => {
   }
 
   return (
-    <div
-      onClick={() => {
-        checkLang();
-      }}
-    >
-      <Navbar />
-      <div className="our_products my-28">
-        <section id="hero-area" className="py-10 px-10">
-          <div className="divide flex lg:flex-row flex-col justify-between ">
-            <Box className="categories">
-              {error && (
-                <p>
-                  {t("error")} ,{error}
-                </p>
-              )}
-              {loading && <p>{t("loading")}</p>}
-              {!loading && categories.length === 0 && <p>{t("no_category")}</p>}
-              {!loading && categories.length > 0 && (
-                <List
-                  sx={{
-                    width: { xs: "100%", sm: "100%" },
-                    display: "flex",
-                    flexDirection: { xs: "row", sm: "column" },
-                    overflow: { xs: "scroll", sm: "hidden" },
-                    bgcolor: "background.paper",
-                  }}
-                >
-                  {categories.map((category, index) => (
-                    <ListItem
-                      key={index}
-                      style={{ width: "200%" }}
-                      onClick={async () => {
-                        let { data } = await axios.get(
-                          `/products?categoryId=${category.id}`
-                        );
-
-                        console.log(data.data, "Mana yangisi");
-                        setProducts(data.data);
+    <>
+      <div
+        onClick={() => {
+          checkLang();
+        }}
+      >
+        <div className="bg_img">
+          <Navbar />
+          <div className="our_products pt-32">
+            <section id="hero-area" className="py-10 px-10">
+              <div className="divide flex lg:flex-row flex-col justify-between ">
+                <Box className="categories">
+                  {error && (
+                    <p>
+                      {t("error")} ,{error}
+                    </p>
+                  )}
+                  {loading && <p>{t("loading")}</p>}
+                  {!loading && categories.length === 0 && (
+                    <p>{t("no_category")}</p>
+                  )}
+                  {!loading && categories.length > 0 && (
+                    <List
+                      sx={{
+                        width: { xs: "100%", sm: "100%" },
+                        display: "flex",
+                        flexDirection: { xs: "row", sm: "column" },
+                        overflow: { xs: "scroll", sm: "hidden" },
+                        bgcolor: "background.paper",
                       }}
                     >
-                      <ListItemAvatar>
-                        <Avatar
-                          style={{
-                            width: "60px",
-                            height: "60px",
-                            marginRight: "1rem",
+                      {categories.map((category, index) => (
+                        <ListItem
+                          key={index}
+                          style={{ width: "200%" }}
+                          onClick={async () => {
+                            let { data } = await axios.get(
+                              `/products?categoryId=${category.id}`
+                            );
+
+                            console.log(data.data, "Mana yangisi");
+                            setProducts(data.data);
                           }}
                         >
-                          <img src={category.image_url} alt="Kategoriya" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        className="text-black text-xl font-semibold category_text_effect"
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                        }}
-                      >
-                        {lang === "uz"
-                          ? category.uz_category_name
-                          : lang === "en"
-                          ? category.en_category_name
-                          : category.ru_category_name}
-                      </ListItemText>
-                    </ListItem>
-                  ))}
-                </List>
-              )}
-            </Box>
-            <Box className="product py-10 md:py-0">
-              {error && (
-                <p>
-                  {t("error")} , {error}
-                </p>
-              )}
-              {loading && <p>{t("loading")}</p>}
-              {!loading && products.length === 0 && <p>{t("no_product")} </p>}
-              {!loading && products.length > 0 && (
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
-                    alignItems: "center",
-                    maxWidth: "1280px",
-                    flexWrap: "wrap",
-                    margin: "0 auto",
-                    gap: "1.5rem",
-                  }}
-                >
-                  {products.map((info, index) => (
-                    <div
-                      style={{
-                        maxWidth: "350px",
-                        height: "auto",
-                        overflow: "hidden",
-                        background: "#fff",
-                        border: "1px solid #ccc",
-                        borderRadius: "30px",
-                      }}
-                      onClick={() => {
-                        navigate(`/product/${info.id}`);
-                      }}
-                      key={index}
-                    >
-                      <div>
-                        <article>
-                          <img
-                            className="w-full md:w-80"
+                          <ListItemAvatar>
+                            <Avatar
+                              style={{
+                                width: "60px",
+                                height: "60px",
+                                marginRight: "1rem",
+                              }}
+                            >
+                              <img src={category.image_url} alt="Kategoriya" />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            className="text-black text-xl font-semibold category_text_effect"
                             style={{
-                              height: "230px",
-                              objectFit: "contain",
-                              objectPosition: "center",
-                            }}
-                            src={info.img_url}
-                            alt="Mahsulot"
-                          />
-                          <p className="line"></p>
-                          <Typography
-                            style={{
-                              textAlign: "center",
                               display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                              marginBottom: "1rem",
+                              flexWrap: "wrap",
                             }}
-                            variant="h6"
-                            component="p"
                           >
                             {lang === "uz"
-                              ? info.uz_product_name
+                              ? category.uz_category_name
                               : lang === "en"
-                              ? info.en_product_name
-                              : info.ru_product_name}
-                          </Typography>
-                        </article>
-                      </div>
+                              ? category.en_category_name
+                              : category.ru_category_name}
+                          </ListItemText>
+                        </ListItem>
+                      ))}
+                    </List>
+                  )}
+                </Box>
+                <Box className="product py-10 md:py-0">
+                  {error && (
+                    <p>
+                      {t("error")} , {error}
+                    </p>
+                  )}
+                  {loading && <p>{t("loading")}</p>}
+                  {!loading && products.length === 0 && (
+                    <p>{t("no_product")} </p>
+                  )}
+                  {!loading && products.length > 0 && (
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
+                        alignItems: "center",
+                        maxWidth: "1280px",
+                        flexWrap: "wrap",
+                        margin: "0 auto",
+                        gap: "1.5rem",
+                      }}
+                    >
+                      {products.map((info, index) => (
+                        <div
+                          style={{
+                            maxWidth: "350px",
+                            height: "auto",
+                            overflow: "hidden",
+                            background: "#fff",
+                            border: "1px solid #ccc",
+                            borderRadius: "30px",
+                          }}
+                          onClick={() => {
+                            navigate(`/product/${info.id}`);
+                          }}
+                          key={index}
+                        >
+                          <div>
+                            <article>
+                              <img
+                                className="w-full md:w-80"
+                                style={{
+                                  height: "230px",
+                                  objectFit: "contain",
+                                  objectPosition: "center",
+                                }}
+                                src={info.img_url}
+                                alt="Mahsulot"
+                              />
+                              <p className="line"></p>
+                              <Typography
+                                style={{
+                                  textAlign: "center",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  marginBottom: "1rem",
+                                }}
+                                variant="h6"
+                                component="p"
+                              >
+                                {lang === "uz"
+                                  ? info.uz_product_name
+                                  : lang === "en"
+                                  ? info.en_product_name
+                                  : info.ru_product_name}
+                              </Typography>
+                            </article>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              )}
-            </Box>
+                  )}
+                </Box>
+              </div>
+            </section>
           </div>
-        </section>
+          <Contact />
+          <Footer />
+        </div>
       </div>
-      <Contact />
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,3 +1,13 @@
-main {
-  background-image: url("../public/background.png");
+.bg_img {
+  background: url(/background.png);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  backdrop-filter: invert(20%);
+  /* max-width: 110%; */
+  background-attachment: fixed;
+
+  /* height: 100%; */
 }

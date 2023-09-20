@@ -59,79 +59,81 @@ const News = () => {
   };
 
   return (
-    <main className="">
-      <Navbar />
+    <>
+      <div className="bg_img">
+        <Navbar />
 
-      <div className="news_area pt-40">
-        <div className="news_cards flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 pb-24">
-          {news.map((newsItem) => (
-            <div
-              className="news_card "
-              onClick={() => {
-                navigate(`/news/${newsItem.id}`);
-              }}
-              key={newsItem.id}
-            >
-              <Card sx={{ maxWidth: 345, width: "100%", height: "400px" }}>
-                <CardActionArea>
-                  <CardMedia
-                    style={{
-                      height: "200px",
-                      objectFit: "cover",
-                      objectPosition: "center",
-                      minWidth: "300px",
-                      maxWidth: "100%",
-                    }}
-                    component="img"
-                    height="140"
-                    image={newsItem.image_url}
-                    alt="green iguana"
-                  />
-                  <div className="flex flex-row justify-start items-center px-6">
-                    <TbCalendarEvent />
-                    <CardHeader
-                      className=""
-                      subheader={DateComponent({
-                        text: newsItem.created_at,
-                        maxLength: 10,
-                      })}
+        <div className="news_area pt-40">
+          <div className="news_cards flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-6 pb-24">
+            {news.map((newsItem) => (
+              <div
+                className="news_card "
+                onClick={() => {
+                  navigate(`/news/${newsItem.id}`);
+                }}
+                key={newsItem.id}
+              >
+                <Card sx={{ maxWidth: 345, width: "100%", height: "400px" }}>
+                  <CardActionArea>
+                    <CardMedia
+                      style={{
+                        height: "200px",
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        minWidth: "300px",
+                        maxWidth: "100%",
+                      }}
+                      component="img"
+                      height="140"
+                      image={newsItem.image_url}
+                      alt="green iguana"
                     />
-                  </div>
-                  <CardContent sx={{ padding: "1rem" }}>
-                    <Typography
-                      gutterBottom
-                      className="card_title"
-                      variant="h6"
-                      component="p"
-                    >
-                      {LangVal() === "uz"
-                        ? newsItem.title_uz
-                        : LangVal() === "en"
-                        ? newsItem.title_en
-                        : newsItem.title_ru}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {TextComponent({
-                        text:
-                          LangVal() === "uz"
-                            ? newsItem.desc_uz
-                            : LangVal() === "en"
-                            ? newsItem.desc_en
-                            : newsItem.desc_ru,
-                        maxLength: 100,
-                      })}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </div>
-          ))}
+                    <div className="flex flex-row justify-start items-center px-6">
+                      <TbCalendarEvent />
+                      <CardHeader
+                        className=""
+                        subheader={DateComponent({
+                          text: newsItem.created_at,
+                          maxLength: 10,
+                        })}
+                      />
+                    </div>
+                    <CardContent sx={{ padding: "1rem" }}>
+                      <Typography
+                        gutterBottom
+                        className="card_title"
+                        variant="h6"
+                        component="p"
+                      >
+                        {LangVal() === "uz"
+                          ? newsItem.title_uz
+                          : LangVal() === "en"
+                          ? newsItem.title_en
+                          : newsItem.title_ru}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {TextComponent({
+                          text:
+                            LangVal() === "uz"
+                              ? newsItem.desc_uz
+                              : LangVal() === "en"
+                              ? newsItem.desc_en
+                              : newsItem.desc_ru,
+                          maxLength: 100,
+                        })}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <Contact />
-      <Footer />
-    </main>
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 };
 

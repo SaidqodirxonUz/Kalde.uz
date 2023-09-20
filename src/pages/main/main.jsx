@@ -21,9 +21,10 @@ const Main = () => {
           <Advantages />
           <Products />
           <Partners />
+
+          {/* <Blog /> */}
+          <Footer />
         </div>
-        {/* <Blog /> */}
-        <Footer />
       </div>
     </div>
   );

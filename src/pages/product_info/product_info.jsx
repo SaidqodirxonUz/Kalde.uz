@@ -54,143 +54,166 @@ const Product_info = () => {
 
   console.log(LangVal);
   return (
-    <main className="flex flex-col">
-      <Navbar />
-      {product.map((el) => {
-        return (
-          <div key={el.id}>
-            <div className="product_info" style={{ marginTop: "2rem" }}>
-              <div className="img shadow-lg ">
-                <img src={el.img_url} alt="tavar" />
+    <>
+      <div className="bg_img">
+        <section className="flex flex-col">
+          <Navbar />
+          {product.map((el) => {
+            return (
+              <div key={el.id}>
+                <div className="product_info" style={{ marginTop: "2rem" }}>
+                  <div className="img shadow-lg ">
+                    <img src={el.img_url} alt="tavar" />
+                  </div>
+                  <div className="img shadow-lg ">
+                    <img src={el.img1_url} alt="tavar" />
+                  </div>
+                </div>
+                <div className="describe flex mx-auto h-auto lg:h-12 gap-7 shadow-lg flex-col justify-start">
+                  <Typography
+                    variant="h6"
+                    component="h5"
+                    style={{
+                      fontSize: "28px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      fontFamily: "Okta Neue",
+                      lineHeight: "normal",
+                      background:
+                        "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    {LangVal() == "uz"
+                      ? el.uz_product_name
+                      : LangVal() == "en"
+                      ? el.en_product_name
+                      : el.ru_product_name}
+                  </Typography>
+
+                  <Typography className="" variant="p" component="p">
+                    {LangVal() == "uz"
+                      ? el.uz_desc
+                      : LangVal() == "en"
+                      ? el.en_desc
+                      : el.ru_desc}
+                  </Typography>
+                </div>
               </div>
-              <div className="img shadow-lg ">
-                <img src={el.img1_url} alt="tavar" />
-              </div>
-            </div>
-            <div className="describe flex mx-auto h-auto lg:h-12 gap-7 shadow-lg flex-col justify-start">
-              <Typography
-                variant="h6"
-                component="h5"
+            );
+          })}
+          <section className="same flex flex-col justify-center w-5/6 mx-auto">
+            <Typography
+              style={{
+                fontSize: "36px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                lineHeight: "normal",
+                background:
+                  "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textAlign: "center",
+              }}
+              //   style={{ fontSize: "24px", fontWeight: "400" }}
+            >
+              {t("product_2_1")}
+            </Typography>
+            <div className="blog">
+              <div
+                className="blog_container"
                 style={{
-                  fontSize: "28px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontFamily: "Okta Neue",
-                  lineHeight: "normal",
-                  background:
-                    "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-                  backgroundClip: "text",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  overflowX: "hidden",
                 }}
               >
-                {LangVal() == "uz"
-                  ? el.uz_product_name
-                  : LangVal() == "en"
-                  ? el.en_product_name
-                  : el.ru_product_name}
-              </Typography>
+                {/* <div className="h-auto p-0 py-8"> */}
+                <div
+                  className="flex-container my-10"
+                  id="flex-container"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    // alignItems: "flex-end",
+                    justifyContent: "flex-start",
+                    // flexWrap: "wrap",
+                    overflowX: "scroll",
+                    // overflow: "hidden",
+                    gap: "2rem",
 
-              <Typography className="" variant="p" component="p">
-                {LangVal() == "uz"
-                  ? el.uz_desc
-                  : LangVal() == "en"
-                  ? el.en_desc
-                  : el.ru_desc}
-              </Typography>
-            </div>
-          </div>
-        );
-      })}
-      <section className="same flex flex-col justify-center w-5/6 mx-auto">
-        <Typography
-          style={{
-            fontSize: "36px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            fontFamily: "Okta Neue",
-            lineHeight: "normal",
-            background:
-              "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            textAlign: "center",
-          }}
-          //   style={{ fontSize: "24px", fontWeight: "400" }}
-        >
-          {t("product_2_1")}
-        </Typography>
-        <div className="blog">
-          <div className="blog_container">
-            <div className="h-96 p-0 py-8">
-              <div
-                className="flex-container"
-                id="flex-container"
-                // style={{ height: "50%" }}
-              >
-                {products.map((p) => {
-                  return (
-                    <div
-                      onClick={() => {
-                        navigate(`/product/${p.id}`);
-                      }}
-                      key={p.id}
-                      className="card"
-                      style={{ flexGrow: "1", flexBasis: "400px" }}
-                    >
-                      <Card
-                        sx={{
-                          width: 260,
-                          //   height: 310,
-                          //   padding: "1rem",
-                          borderRadius: "18px",
+                    scrollBehavior: "smooth",
+
+                    // flexFlow: "wrap",
+                  }}
+                  // style={{ height: "50%" }}
+                >
+                  {products.map((p) => {
+                    return (
+                      <div
+                        onClick={() => {
+                          navigate(`/product/${p.id}`);
                         }}
+                        key={p.id}
+                        className="card"
+                        style={{ flexGrow: "1", flexBasis: "400px" }}
                       >
-                        <CardActionArea>
-                          <img
-                            style={{
-                              objectFit: "cover",
-                              height: "240px",
-                              width: "100%",
-                            }}
-                            src={p.img_url}
-                            alt="card"
-                          />
-
-                          <CardContent>
-                            <p className="line"></p>
-                            <Typography
+                        <Card
+                          sx={{
+                            width: 260,
+                            //   height: 310,
+                            //   padding: "1rem",
+                            borderRadius: "18px",
+                          }}
+                        >
+                          <CardActionArea>
+                            <img
                               style={{
-                                textAlign: "center",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                // marginBottom: "1rem",
+                                objectFit: "cover",
+                                height: "240px",
+                                width: "100%",
                               }}
-                              variant="h6"
-                              component="p"
-                            >
-                              {LangVal() == "uz"
-                                ? p.uz_product_name
-                                : LangVal() == "en"
-                                ? p.en_product_name
-                                : p.ru_product_name}
-                            </Typography>
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                    </div>
-                  );
-                })}
+                              src={p.img_url}
+                              alt="card"
+                            />
+
+                            <CardContent>
+                              <p className="line"></p>
+                              <Typography
+                                style={{
+                                  textAlign: "center",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  // marginBottom: "1rem",
+                                }}
+                                variant="h6"
+                                component="p"
+                              >
+                                {LangVal() == "uz"
+                                  ? p.uz_product_name
+                                  : LangVal() == "en"
+                                  ? p.en_product_name
+                                  : p.ru_product_name}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                        </Card>
+                      </div>
+                    );
+                  })}
+                  {/* </div> */}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <Contact />
-      <Footer />
-    </main>
+          </section>
+          <Contact />
+          <Footer />
+        </section>
+      </div>
+    </>
   );
 };
 

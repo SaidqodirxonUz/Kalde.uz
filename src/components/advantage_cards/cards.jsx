@@ -65,7 +65,7 @@ const Advantage_cards = () => {
         >
           <div
             style={style}
-            className=" contact_card p-10 bg-white rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
+            className=" contact_card p-10 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
           >
             <button
               onClick={handleClose}
