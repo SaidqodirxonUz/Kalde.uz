@@ -38,7 +38,7 @@ const Advantages = () => {
   ];
 
   return (
-    <div className="cards_container mx-auto w-11/12">
+    <div className="cards_container mx-auto w-11/12 advantages">
       <div
         className="flex flex-col md:flex-row justify-center md:justify-between "
         style={{
