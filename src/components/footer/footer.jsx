@@ -24,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="f_container ">
+    <div className="f_container container-fluid">
       <div className="footer">
         <Box className="footer_inc">
           <img

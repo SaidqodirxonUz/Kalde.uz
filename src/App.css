@@ -1,0 +1,13 @@
+.bg_img {
+  background: url(/public/background.png);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  backdrop-filter: invert(20%);
+
+  background-attachment: fixed;
+
+  /* height: 100%; */
+}

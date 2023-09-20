@@ -1,19 +1,19 @@
 .slider-parent {
   align-items: center;
-  background: #e3e3e3;
+  // background: #e3e3e3;
   display: flex;
-  height: 100vh;
+  // height: 100vh;
   justify-content: center;
   margin: 2rem;
   margin-bottom: 10rem !important;
 }
 
 @mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  // background: linear-gradient(
+  //   to right,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(255, 255, 255, 0) 100%
+  // );
 }
 
 $animationSpeed: 10s;
@@ -30,7 +30,7 @@ $animationSpeed: 10s;
 
 // Styling
 .slider {
-  background: white;
+  // background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 15rem;
   margin: auto;
@@ -68,14 +68,19 @@ $animationSpeed: 10s;
   }
 
   .slide {
-    height: 15rem;
+    // height: 15rem;
     width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.625rem;
-    background: #f8f8f8;
-    margin: 1rem;
+    // background: #f8f8f8;
+    margin-left: 1rem;
     padding: 1%;
+    border-radius: 20px;
+
+    img {
+      width: 70%;
+    }
   }
 }

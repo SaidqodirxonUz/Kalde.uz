@@ -5,11 +5,13 @@
   justify-content: center;
   // flex-wrap: wrap;
   //   background-color: rgba(148, 152, 173, 1);
-  //   border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   width: 100%;
   margin: 0 auto;
   // padding: 10rem 0 10rem 0;
-  background: #ffff !important;
+
+  padding-top: 10rem !important;
+  background: transparent !important;
 
   .img {
     width: 40%;
