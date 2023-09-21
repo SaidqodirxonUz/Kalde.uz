@@ -171,6 +171,7 @@ const Our_products = () => {
                   )}
                   {!loading && products.length > 0 && (
                     <div
+                    id="scrollbar"
                       style={{
                         display: "flex",
                         flexDirection: "row",

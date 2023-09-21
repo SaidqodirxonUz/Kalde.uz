@@ -10,7 +10,7 @@ const Advantages = () => {
     <>
       <div className="bg_img">
         <Navbar />
-        <section className="w-10/12 mx-auto pt-0 lg:pt-24">
+        {/* <section className="w-10/12 mx-auto pt-0 lg:pt-24"> */}
           <div className="flex flex-col items-center justify-center">
             <Advantage_cards dir="row" name="text" />
             {/* <Advantage_cards dir="row-reverse" /> */}
@@ -18,7 +18,7 @@ const Advantages = () => {
           <Advantage_cards dir="row-reverse" />
           <Advantage_cards dir="row" /> */}
           </div>
-        </section>
+        {/* </section> */}
         <Footer />
       </div>
     </>

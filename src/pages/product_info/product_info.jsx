@@ -132,7 +132,7 @@ const Product_info = () => {
               >
                 {/* <div className="h-auto p-0 py-8"> */}
                 <div
-                  className="flex-container my-10"
+                  className="flex-container my-10 p-slider"
                   id="flex-container"
                   style={{
                     display: "flex",

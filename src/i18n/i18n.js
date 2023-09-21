@@ -16,9 +16,9 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Tilni tanlang",
         main_1_1: "KALDE nima?",
         main_1_2:
-          "KALDE, isitish va suv ta'minoti tizimlari, yuqori sifatli polipropilen quvurlar va fitinglar !",
-        main_1_3:
           "KALDE - barcha xalqaro standartlarga javob beradigan va xalqaro standart tizim sertifikatlariga ega bo'lgan yuqori sifatli mahsulot!",
+        main_1_3:
+          "KALDE, isitish va suv ta'minoti tizimlari, yuqori sifatli polipropilen quvurlar va fitinglar !",
         main_1_4: "Ko'proq bilish",
         main_2_1: "Biz haqimizda",
         main_2_2:
@@ -151,9 +151,10 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Выберите язык",
         main_1_1: "Что такое КАЛДЕ?",
         main_1_2:
-          "KALDE, для систем отопления и водоснабжения, высококачественные полипропиленовые трубы и фитинги!",
-        main_1_3:
           "KALDE – это высококачественная продукция, соответствующая всем мировым стандартам и имеющая сертификаты систем международных стандартов!",
+        main_1_3:
+          "KALDE, для систем отопления и водоснабжения, высококачественные полипропиленовые трубы и фитинги!",
+
         main_1_4: "Узнать больше",
         main_2_1: "О нас",
         main_2_2:
@@ -289,9 +290,10 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Select language",
         main_1_1: "What is KALDE?",
         main_1_2:
-          "KALDE, for heating and water supply systems, high quality polypropylene pipes and fittings!",
-        main_1_3:
           "KALDE is a high-quality product that meets all international standards and has international standard system certificates!",
+        main_1_3:
+          "KALDE, for heating and water supply systems, high quality polypropylene pipes and fittings!",
+
         main_1_4: "To learn more",
         main_2_1: "About us",
         main_2_2:

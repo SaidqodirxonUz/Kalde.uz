@@ -61,7 +61,9 @@ const Dostijeniya = () => {
   // console.log({ partnerCountUp.value });
 
   return (
-    <div className="about_us hero">
+    <>
+    <div className="bg_img">
+    <div className="about_us hero ">
       <div className="img">
         <img src={DostijeniyaImg} alt="Dostijeniya" />
       </div>
@@ -120,6 +122,8 @@ const Dostijeniya = () => {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

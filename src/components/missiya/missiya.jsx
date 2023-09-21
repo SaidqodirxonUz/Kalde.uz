@@ -8,6 +8,7 @@ const Missiya = () => {
   const { t } = useTranslation();
   return (
     <>
+    <div className="bg_img">
       <div className="about_us hero hero-noreverse">
         <div className="texts">
           <Typography
@@ -46,6 +47,7 @@ const Missiya = () => {
         <div className="img">
           <img src={MissiyaImg} alt={MissiyaImg} />
         </div>
+      </div>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import hero from "../../assets/hero.png";
+import hero from "../../assets/hero.jpg";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./hero.scss";
 import { useTranslation } from "react-i18next";
