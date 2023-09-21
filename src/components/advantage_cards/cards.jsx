@@ -65,7 +65,7 @@ const Advantage_cards = () => {
         >
           <div
             style={style}
-            className=" contact_card p-10 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
+            className="contact_card p-10 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
           >
             <button
               onClick={handleClose}
@@ -185,7 +185,7 @@ const Advantage_cards = () => {
 
       <div className="py-10 md:py-0">
         <div
-          className="advantage hero"
+          className="advantage hero noreverse"
           style={{
             marginTop: "5rem",
           }}
@@ -212,18 +212,22 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_1} alt="a" />
+            <img src={adventages_1_1} alt="a" style={{ width: "100%" }} />
           </div>
         </div>
+
+        {/*  */}
+
         <div
           className="advantage hero-noreverse"
           style={{
             // flexDirection: "row-reverse",
             marginTop: "5rem",
+            // background: "#000",
           }}
         >
           <div className="img">
-            <img src={adventages_1_2} alt="a" />
+            <img src={adventages_1_2} alt="a" style={{ width: "100%" }} />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -275,7 +279,7 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_7} alt="a" />
+            <img src={adventages_1_7} alt="a" style={{ width: "100%" }} />
           </div>
         </div>
         <div
@@ -286,7 +290,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_3} alt="a" />
+            <img src={adventages_1_3} alt="a" style={{ width: "100%" }} />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -338,9 +342,10 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_5} alt="a" />
+            <img src={adventages_1_5} alt="a" style={{ width: "100%" }} />
           </div>
         </div>
+
         <div
           className="advantage hero-noreverse"
           style={{
@@ -349,7 +354,7 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_6} alt="a" />
+            <img src={adventages_1_6} alt="a" style={{ width: "100%" }} />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -400,19 +405,21 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_8} alt="a" />
+            <img src={adventages_1_8} alt="a" style={{ width: "100%" }} />
           </div>
         </div>
+
         <div
-          className="advantage hero-noreverse pb-20"
+          className="advantage hero-noreverse"
           style={{
             // flexDirection: "row-reverse",
 
             marginTop: "5rem",
+            paddingBottom: "5rem",
           }}
         >
           <div className="img">
-            <img src={adventages_1_4} alt="a" />
+            <img src={adventages_1_4} alt="a" style={{ width: "100%" }} />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography

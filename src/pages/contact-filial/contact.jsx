@@ -16,7 +16,6 @@ import ReactMapGL from "react-map-gl";
 import mapboxgl, { XMapbox } from "mapbox-gl";
 // import Map from "../../components/maps/map";
 import { BiCurrentLocation } from "react-icons/bi";
-import Maps from "../../components/maps/map";
 
 // import mapboxgl from "mapbox-gl";
 // import AppMap from "../../components/map";
@@ -329,12 +328,22 @@ const Contact_filial = () => {
         </div>
         {/* <Contact /> */}
         <section className="location" id="location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.7981504517484!2d69.24579717605806!3d41.35674087130373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c8cfa42d491%3A0x40eea1c4b4fe62d7!2sMagazin%20Kalde!5e0!3m2!1sen!2s!4v1695301961253!5m2!1sen!2s"
+            width="100%"
+            height="500"
+            // style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+
           {/* {filial.map((l) => { */}
           {/* return ( */}
           {/* <div ref={mapContainer} className="map-container" /> */}
           {/* <div id="map"> */}
           {/* {console.log(filial[0].location)} */}
-          <Maps url={map} />
+          {/* <Maps url={map} /> */}
           {/* 
         <mapboxgl.Map
         accessToken={mapboxAccessToken}

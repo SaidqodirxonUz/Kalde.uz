@@ -154,13 +154,16 @@ const Footer = () => {
         <li>
           <p style={{ textAlign: "center" }}>
             © Разработала команда{" "}
-            <span
+            <a
+              href="https://supersite.uz"
+              target="_blank"
               style={{
                 color: "yellow",
               }}
+              rel="noreferrer"
             >
               Supersite.uz
-            </span>
+            </a>
           </p>
         </li>
       </ul>
