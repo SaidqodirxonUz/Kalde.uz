@@ -212,7 +212,11 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_1} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_1}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
         </div>
 
@@ -227,7 +231,11 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_2} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_2}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -279,7 +287,11 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_7} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_7}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
         </div>
         <div
@@ -290,7 +302,11 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_3} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_3}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -342,7 +358,11 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_5} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_5}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
         </div>
 
@@ -354,7 +374,11 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_6} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_6}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
@@ -405,7 +429,11 @@ const Advantage_cards = () => {
             </Button>
           </div>
           <div className="img">
-            <img src={adventages_1_8} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_8}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
         </div>
 
@@ -419,7 +447,11 @@ const Advantage_cards = () => {
           }}
         >
           <div className="img">
-            <img src={adventages_1_4} alt="a" style={{ width: "100%" }} />
+            <img
+              src={adventages_1_4}
+              alt="a"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </div>
           <div className="texts" style={{ marginTop: "1rem" }}>
             <Typography
