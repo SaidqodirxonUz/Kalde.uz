@@ -42,7 +42,7 @@ const AboutUs = () => {
             variant="h5"
             component="p"
             style={{
-              color: "rgba(0, 0, 0, 0.80)",
+              color: "#324291",
               fontFamily: "Okta Neue",
               // fontSize: "18px",
               fontStyle: "normal",

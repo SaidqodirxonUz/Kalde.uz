@@ -62,67 +62,67 @@ const Dostijeniya = () => {
 
   return (
     <>
-    <div className="bg_img">
-    <div className="about_us hero ">
-      <div className="img">
-        <img src={DostijeniyaImg} alt="Dostijeniya" />
-      </div>
-      <div className="texts">
-        <Typography
-          variant="h2"
-          component="h3"
-          style={{
-            fontSize: "48px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            fontFamily: "Okta Neue",
-            lineHeight: "normal",
-            background:
-              "var(--linear, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          {t("about_2_1")}
-        </Typography>
-        <Typography
-          variant="h5"
-          component="p"
-          style={{
-            color: "rgba(0, 0, 0, 0.80)",
-            fontFamily: "Okta Neue",
-            fontSize: "18px",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "140%",
-          }}
-        >
-          {t("about_2_2")}
-        </Typography>
-        <div style={{ display: "flex" }} className="dostijeniya_more_main">
-          <div className="dostijeniya_more">
-            <span className="countSpan">
-              <h1 className="value">{partnerValue}+</h1>
-              {t("about_2_3")}
-            </span>
-            <span className="countSpan">
-              <h1 className="value">{productValue}+</h1>
-              {t("about_2_4")}
-            </span>
-            <span className="countSpan">
-              <h1 className="value">{factoryValue}+</h1>
-              {t("about_2_5")}
-            </span>
-            <span className="countSpan">
-              <h1 className="value">{statesValue}+</h1>
-              {t("about_2_6")}
-            </span>
+      <div className="bg_img">
+        <div className="about_us hero ">
+          <div className="dostijeniyaImg">
+            <img src={DostijeniyaImg} alt="Dostijeniya" />
+          </div>
+          <div className="texts">
+            <Typography
+              variant="h2"
+              component="h3"
+              style={{
+                fontSize: "48px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontFamily: "Okta Neue",
+                lineHeight: "normal",
+                background:
+                  "var(--linear, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              {t("about_2_1")}
+            </Typography>
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "#324291",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140%",
+              }}
+            >
+              {t("about_2_2")}
+            </Typography>
+            <div style={{ display: "flex" }} className="dostijeniya_more_main">
+              <div className="dostijeniya_more">
+                <span className="countSpan">
+                  <h1 className="value">{partnerValue}+</h1>
+                  {t("about_2_3")}
+                </span>
+                <span className="countSpan">
+                  <h1 className="value">{productValue}+</h1>
+                  {t("about_2_4")}
+                </span>
+                <span className="countSpan">
+                  <h1 className="value">{factoryValue}+</h1>
+                  {t("about_2_5")}
+                </span>
+                <span className="countSpan">
+                  <h1 className="value">{statesValue}+</h1>
+                  {t("about_2_6")}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </>
   );
 };

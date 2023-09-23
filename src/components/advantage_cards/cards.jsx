@@ -199,7 +199,7 @@ const Advantage_cards = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
+                color: "#324291",
               }}
             >
               {t("advantages_1_1")}
@@ -242,7 +242,7 @@ const Advantage_cards = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -270,7 +270,7 @@ const Advantage_cards = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -313,7 +313,7 @@ const Advantage_cards = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -341,7 +341,7 @@ const Advantage_cards = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -389,7 +389,7 @@ const Advantage_cards = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
+                color: "#324291",
               }}
             >
               {t("advantages_1_6")}
@@ -416,7 +416,7 @@ const Advantage_cards = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
+                color: "#324291",
               }}
             >
               {t("advantages_1_7")}
@@ -462,7 +462,7 @@ const Advantage_cards = () => {
                 fontStyle: "normal",
                 fontWeight: 400,
                 fontFamily: "Okta Neue",
-                color: "var(--text-color-secondary-text, #2E2E2E)",
+                color: "#324291",
               }}
             >
               {t("advantages_1_8")}

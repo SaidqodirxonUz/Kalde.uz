@@ -138,6 +138,7 @@ i18n.use(initReactI18next).init({
         loading: "Yuklanmoqda ...",
         no_product: "Mahsulotlar mavjud emas.",
         no_category: "Kategoriyalar mavjud emas.",
+        muallif: "Mualliflik huquqi ",
       },
     },
     ru: {
@@ -277,6 +278,7 @@ i18n.use(initReactI18next).init({
         loading: "Загрузка ... ",
         no_product: "Товары недоступны.",
         no_category: "Нет категорий.",
+        muallif: "Авторские права ",
       },
     },
     en: {
@@ -415,6 +417,7 @@ i18n.use(initReactI18next).init({
         loading: "Loading ...",
         no_product: "Products are not available.",
         no_category: "There are no categories.",
+        muallif: "Copyright ",
       },
     },
   },
