@@ -55,7 +55,7 @@ const AboutUsHero = () => {
               </Link>
             </div>
           </div>
-          <div className="aboutImg" style={{ marginTop: "2.5rem" }}>
+          <div className="aboutImg">
             <img src={AboutUsHeroImg} alt={AboutUsHeroImg} />
           </div>
         </div>

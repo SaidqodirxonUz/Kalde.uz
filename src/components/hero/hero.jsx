@@ -79,7 +79,7 @@ const Hero = () => {
               {t("main_1_4")} <FiArrowUpRight />
             </Link>
           </div>
-          <div className="img" style={{ marginTop: "2.5rem" }}>
+          <div className="heroImg">
             <img src={hero} alt="shop" />
           </div>
         </div>

@@ -13,12 +13,22 @@
   // background: red !important;
 
   .dostijeniyaImg {
-    width: 40%;
+    // width: 40%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    align-content: center;
+    margin-top: -5%;
+    // margin: 0 1.3rem;
     align-self: center;
+    align-items: center;
+
+    img{
+      width: 70%;
+    }
   }
+
+
   .texts {
     display: flex;
     flex-direction: column;
@@ -110,7 +120,14 @@
       }
     }
 
+
     // padding: 2rem 5rem !important;
+  }
+
+  .dostijeniyaImg img{
+    width: 100% !important;
+    margin-top:2rem;
+    margin-bottom: 2rem;
   }
 }
 

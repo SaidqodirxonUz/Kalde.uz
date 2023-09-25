@@ -14,15 +14,22 @@
   background: transparent !important;
 
   .aboutImg {
-    width: 40%;
+    // width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    align-items: baseline;
+    margin-top: -5%;
     // margin: 0 1.3rem;
+    align-self: center;
+    align-items: center;
+
+    img{
+      width: 70%;
+    }
   }
 
+ 
   .texts {
     display: flex;
     flex-direction: column;
@@ -59,5 +66,10 @@
 @media (max-width: 768px) {
   .aboutBtn {
     font-size: 12px;
+  }
+  .aboutImg img{
+    width: 100% !important;
+    margin-top:35%;
+    margin-bottom: 2rem;
   }
 }
