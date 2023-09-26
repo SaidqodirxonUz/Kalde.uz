@@ -73,8 +73,9 @@ const Filial = () => {
                     src={filial.image_url}
                     alt="filial img"
                     style={{
-                      borderRadius: "18px",
-                      height: "265px",
+                      borderRadius: "5px",
+                      width: "100%",
+                      height: "100%",
                     }}
                     className="w-96"
                   />
@@ -107,7 +108,7 @@ const Filial = () => {
                           // style={{ textAlign: "center" }}
                           className="pages text-black active:text-orange-500 flex flex-row "
                         >
-                          <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
+                          <MdLocationOn className="icons text-7xl text-orange-500" />{" "}
                           {t("firyal_1_1")} {filial.adress}
                         </p>
                       </ListItemText>

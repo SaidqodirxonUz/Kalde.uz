@@ -124,7 +124,7 @@ i18n.use(initReactI18next).init({
         footer_1_2: "Foydali sahifalar",
         footer_1_3: "Biz bilan bog'lanish",
         manzil_name:
-          "Toshkent sh., Olmazor tumi, ko'ch. Shirok, 2 (Mo'ljal - Chukursay qurilish bozori)",
+          "Toshkent shahri, Olmazor tumani, ko'cha Shiroq, 2 (Mo'ljal - Chukursay qurilish bozori)",
 
         about_2_3: "Xodimlar",
         about_2_4: "Mahsulotlar",
@@ -263,7 +263,7 @@ i18n.use(initReactI18next).init({
         footer_1_2: "Полезные страницы",
         footer_1_3: "Свяжитесь с нами",
         manzil_name:
-          "г. Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный рынок Чукурсай)",
+          "Город Ташкент, Алмазарский район, улица Широк, 2 (Направление – строительный рынок Чукурсай)",
 
         about_2_3: "Сотрудников",
         about_2_4: "Продуктов",
@@ -402,7 +402,7 @@ i18n.use(initReactI18next).init({
         footer_1_3: "Contact Us",
 
         manzil_name:
-          "Tashkent city, Olmazor tumi, st. Shirok, 2 (Landmark - construction market Chukursai)",
+          "Tashkent city, Almazor district, street Shiroq, 2 (Destination - Chukursay building market)",
 
         about_2_3: "Employees",
         about_2_4: "Products",
