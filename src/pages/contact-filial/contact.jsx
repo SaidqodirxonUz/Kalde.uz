@@ -135,14 +135,19 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages text-black active:text-orange-500 flex flex-row "
                       >
-                        <MdLocationOn className="icons text-7xl text-orange-500" />{" "}
-                        {t("firyal_1_1")} {f.adress}
+                        <MdLocationOn className="contactIcons text-2xl text-orange-500" />{" "}
+                        <span>
+                          {t("firyal_1_1")} {f.adress}
+                        </span>
                       </p>
                     </ListItemText>
                     <ListItemText>
-                      <p className="flex flex-row text-black ">
-                        <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                        {t("firyal_1_3")} {f.work_at}
+                      <p className="pages flex flex-row text-black ">
+                        <TbCalendarEvent className="contactIcons text-2xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_3")} {f.work_at}
+                        </span>
                       </p>
                     </ListItemText>
                     <ListItemText>
@@ -151,8 +156,11 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <BsTelephoneFill className="icons text-xl text-orange-500" />
-                        {t("firyal_1_4")} {f.phone_number}
+                        <BsTelephoneFill className="contactIcons text-xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_4")} {f.phone_number}
+                        </span>
                       </a>
                     </ListItemText>
                     <ListItemText>
@@ -161,8 +169,11 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <MdEmail className="icons text-xl text-orange-500" />{" "}
-                        {t("firyal_1_5")} {f.email}
+                        <MdEmail className="contactIcons text-xl text-orange-500" />{" "}
+                        <span>
+                          {" "}
+                          {t("firyal_1_5")} {f.email}
+                        </span>
                       </a>
                     </ListItemText>
 
@@ -173,13 +184,16 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <TbMapSearch className="icons text-xl text-orange-500" />
-                        {t("firyal_1_6")}{" "}
-                        {LangVal() == "uz"
-                          ? f.title_uz
-                          : LangVal() == "en"
-                          ? f.title_en
-                          : f.title_ru}
+                        <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_6")}{" "}
+                          {LangVal() == "uz"
+                            ? f.title_uz
+                            : LangVal() == "en"
+                            ? f.title_en
+                            : f.title_ru}
+                        </span>
                       </Link>
                     </ListItemText>
                   </List>

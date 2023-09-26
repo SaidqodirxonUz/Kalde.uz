@@ -143,7 +143,7 @@ const Footer = () => {
                 style={{ textAlign: "center" }}
                 className="pages text-white active:text-orange-500 flex flex-row items-center justify-center "
               >
-                <MdLocationOn className="icons text-7xl text-orange-500" />
+                <MdLocationOn className="icons text-5xl text-orange-500" />
                 {t("manzil_name")}
               </p>
             </li>
