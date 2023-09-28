@@ -95,7 +95,7 @@ const Product_info = () => {
 
                   <Typography className="" variant="p" component="p">
                     {LangVal() == "uz"
-                      ? el.uz_desc
+                      ? el.uz_desc !== "undefined" && null && undefined
                       : LangVal() == "en"
                       ? el.en_desc
                       : el.ru_desc}
