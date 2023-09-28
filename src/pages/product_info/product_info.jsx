@@ -132,23 +132,8 @@ const Product_info = () => {
               >
                 {/* <div className="h-auto p-0 py-8"> */}
                 <div
-                  className="flex-container my-10"
+                  className="flex-container my-10 p-slider"
                   id="flex-container"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    // alignItems: "flex-end",
-                    justifyContent: "flex-start",
-                    // flexWrap: "wrap",
-                    overflowX: "scroll",
-                    // overflow: "hidden",
-                    gap: "2rem",
-
-                    scrollBehavior: "smooth",
-
-                    // flexFlow: "wrap",
-                  }}
-                  // style={{ height: "50%" }}
                 >
                   {products.map((p) => {
                     return (

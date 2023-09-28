@@ -39,6 +39,18 @@
 .same {
   margin-top: 2rem;
 }
+.p-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 2rem;
+  scroll-behavior: smooth;
+}
+.p-slider::-webkit-scrollbar {
+  display: none;
+}
 
 @media (max-width: 1200px) {
   .product_info {
