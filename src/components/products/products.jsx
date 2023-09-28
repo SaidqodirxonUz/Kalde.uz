@@ -19,7 +19,7 @@ const Products = () => {
 
   async function getData() {
     try {
-      let { data } = await axios.get("/products");
+      let { data } = await axios.get("/categories");
       console.log(data);
       setData(data.data);
     } catch (error) {
@@ -107,7 +107,7 @@ const Products = () => {
               <div
                 // key={info.id}
                 onClick={() => {
-                  navigate(`/product/${i.id}`);
+                  navigate(`/catalog`);
                 }}
                 style={{
                   maxWidth: "400px",
@@ -129,7 +129,7 @@ const Products = () => {
                         objectFit: "cover",
                         objectPosition: "center",
                       }}
-                      src={i.img_url}
+                      src={i.image_url}
                       alt="p"
                     />
                     <p className="line"></p>
@@ -146,10 +146,10 @@ const Products = () => {
                     >
                       {/* aaaaaaaaaaaa */}
                       {LangVal() == "uz"
-                        ? i.uz_product_name
+                        ? i.uz_category_name
                         : LangVal() == "en"
-                        ? i.en_product_name
-                        : i.ru_product_name}
+                        ? i.en_category_name
+                        : i.ru_category_name}
                     </Typography>
                   </article>
                 </div>

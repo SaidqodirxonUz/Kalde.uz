@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-
 i18n.use(initReactI18next).init({
   fallbackLng: "uz",
   lng: "ru",
@@ -16,13 +15,14 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Tilni tanlang",
         main_1_1: "KALDE nima?",
         main_1_2:
-          "KALDE, isitish va suv ta'minoti tizimlari, yuqori sifatli polipropilen quvurlar va fitinglar !",
+          "KALDE - barcha xalqaro standartlarga javob beradigan va ko'plab xalqaro standartlar tizimlarining sertifikatlariga ega bo'lgan yuqori sifatli mahsulot!",
         main_1_3:
-          "KALDE - barcha xalqaro standartlarga javob beradigan va xalqaro standart tizim sertifikatlariga ega bo'lgan yuqori sifatli mahsulot!",
+          "KALDE - bu sanoat va maishiy hududlarda zamonaviy isitish va suv ta'minoti tizimlarida foydalanish uchun mo'ljallangan polipropilen quvurlar va fitinglar, kranlar, metall kollektorlar va metall fitinglar.",
         main_1_4: "Ko'proq bilish",
+        main_1_5: "KALDE - ko'p yillik tajribaga ega kompaniya!",
         main_2_1: "Biz haqimizda",
         main_2_2:
-          "KALDE - 1977 yilda tashkil etilgan, Turkiyaning Istanbul shahrida joylashgan bo'lib, zamonaviy isitish va suv ta'minoti tizimlari uchun mahsulotlar ishlab chiqaradi. Bugungi kunda KALDE mahsulotlari dunyoning 50 ta davlatida tanilgan. Kalde mahsulotlari O‘zbekiston bozorida 2009 yilda mashhur bo‘lgan. Bugungi kunda Kalde mahsulotlarini O‘zbekistonning 20 dan ortiq ixtisoslashtirilgan do‘konlarida xarid qilish mumkin!",
+          "KALDE kompaniyasi 1977-yilda Istanbulda (Turkiya) tashkil topgan bo?lib, o?shanda to?rtta muhandis birlashishga va o?z orzularini ro?yobga chiqarishga, odamlar uchun global talablarga javob beradigan yuqori sifatli mahsulotlar yaratishga qaror qilgan. KALDE birinchilardan bo lib xorijdan (Yevropadan) zamonaviy texnologik uskunalar olib kirdi va suv ta minoti va isitish tizimlari uchun mahsulotlar ishlab chiqarishni boshladi. 90-yillarda ichki bozorni yetarli darajada ta minlab, o z mahsulotlarini tashqi bozorga chiqardi. Bu yillarda Turkiya birinchilardan bo lib plastmassa buyumlar ishlab chiqarishni yo lga qo ydi. 1995 yildan hozirgi kungacha Turkiyaning 500 ta eng yirik kompaniyalari qatoridan joy oldi.",
         main_2_3: "Ko'proq bilish",
         main_2_4: "Biz bilan bog'lanish",
         main_3_1: "Bizning Sertifikatlar",
@@ -41,11 +41,11 @@ i18n.use(initReactI18next).init({
         //asosiy oyna tugadi
         about_1_1: "Biz haqimizda",
         about_1_2:
-          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O’z oldida, xalq uchun, yuqori «sifatli mahsulotlarni» yetkazish deb, maqsad qo’yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv taʼminoti va isitish tizimlar uchun mahsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada taʼminlab, mahsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik mahsulotlarni ishlab chiqarishi yo'lga qo’yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
+          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O z oldida, xalq uchun, yuqori  sifatli mahsulotlarni  yetkazish deb, maqsad qo yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv ta?minoti va isitish tizimlar uchun mahsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada ta?minlab, mahsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik mahsulotlarni ishlab chiqarishi yo'lga qo yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
         about_1_3: "Biz bilan bog'lanish",
         about_2_1: "O'zbekistonda Kalde",
         about_2_2:
-          "KALDE mahsulotlarini O‘zbekistonga birinchi yetkazib berish 2009-yil noyabr oyida amalga oshirilgan.  KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ kompaniyasi ishlab chiqaruvchi bilan gaplashish bilan bir qatorda mahsulotning yuqori sifatiga ishonch hosil qildi. (Istanbul, Turkiya), 2010-yildan boshlab O‘zbekistonda KALDE brendi ostida barcha turdagi mahsulotlarni sotuvchi do‘konlar tarmog‘i yaratila boshlandi. 2018-yilda Toshkent shahridagi, shuningdek, Buxoro, Namangan, Andijon , Jizzax va boshqa yirik qurilish bozorlarida taqdim etilgan 10 dan ortiq do‘konlar tarmog‘i mavjud.",
+          "KALDE mahsulotlarini O zbekistonga birinchi yetkazib berish 2009-yil noyabr oyida amalga oshirilgan.  KALDE KL?MA PAZARLAMA VE TAAHH?T A? kompaniyasi ishlab chiqaruvchi bilan gaplashish bilan bir qatorda mahsulotning yuqori sifatiga ishonch hosil qildi. (Istanbul, Turkiya), 2010-yildan boshlab O zbekistonda KALDE brendi ostida barcha turdagi mahsulotlarni sotuvchi do konlar tarmog i yaratila boshlandi. 2018-yilda Toshkent shahridagi, shuningdek, Buxoro, Namangan, Andijon , Jizzax va boshqa yirik qurilish bozorlarida taqdim etilgan 10 dan ortiq do konlar tarmog i mavjud.",
         about_3_1: "Sifatli mahsulotlar",
         about_3_2:
           "Kalde ko'p jihatdan zamonaviy mahsulotlarni ishlab chiqishga investitsiyalar , yuqori samaradorlik va ishlab chiqarish quvvatlarining salohiyatiga etibor qaratadi .Kalde global bozorlarda tegishli mahsulotlarga bo'lgan o'zgaruvchan talabga tezda javob berish uchun o'z mahsulotlarini doimiy ravishda optimallashtiradi. Dunyo standartlariga to'gri keladigan, KALDE mahsulotlari, dunyodagi 40-ta yirik mamlakatlarida tanilgan. Barcha mahsulotlariga, xalqaro sertifikatlari mavjud.",
@@ -104,27 +104,27 @@ i18n.use(initReactI18next).init({
         advantages_1_2:
           "Bizning metall buyumlarimiz eng so'nggi rusumdagi Yevropa xomashyosidan eng so'ngi rusumdagi asbob-uskunalar va zamonaviy Yevropa texnikalaridan foydalangan holda sinchkovlik bilan ishlab chiqariladi. Ushbu fidoyilik xalqaro standartlarga javob beradigan, har bir mahsulotdagi mukammallikni va innovatsiyalarni aks ettiruvchi yuqori sifatli mahsulotlar ishlab chiqarishni ta'minlaydi.",
         advantages_1_3:
-          "Mahsulotlarimiz turli eksport yoʻnalishlaridan gigiena va sifat sertifikatlari bilan taʼminlangan boʻlib, ularning xavfsizligi va mukammalligini tasdiqlaydi. Ular jahon standartlariga qat'iy rioya qilib, ishonchliligini mustahkamlaydi. Ushbu keng qamrovli sertifikat bizning eng yuqori xalqaro kalibrli tovarlarni yetkazib berishga sodiqligimizni ta'kidlaydi.",
+          "Barcha ishlab chiqarilgan mahsulotlar xavfsizligi va yuqori sifatini tasdiqlovchi zarur xalqaro standart sertifikatlariga ega.",
         advantages_1_4:
           "Har bir ishlab chiqarish sektorida maxsus laboratoriya har bir partiyadan namunalarni sinchkovlik bilan sinovdan o'tkazadi. Bundan tashqari, akkreditatsiyalangan mustaqil laboratoriya barcha mahsulotlarni sinchkovlik bilan tekshiradi. Ushbu ikki tomonlama sinov yondashuvi mijozlarimizga doimiy ishonchli va sertifikatlangan mahsulotlarni yetkazib berishga sodiqligimizni tasdiqlab, eng yuqori sifatni kafolatlaydi.",
         advantages_1_5:
-          "Barcha mahsulotlar nufuzli sug'urta firmalari orqali ta'minlangan kafolatlar bilan quvvatlanadi. Bizning metall buyumlarimiz 10 yilgacha qoplanadi, PPR mahsulotlari esa ta'sirchan 50 yillik kafolatga ega. Xususan, PPR quvurlari va fitinglari 50 yillik keng kafolatga ega bo'lib, bu bizning chidamlilik va mijozlar ehtiyojini qondirish bo'yicha qat'iy majburiyatimizni aks ettiradi.",
+          "Barcha ishlab chiqarilgan mahsulotlar nufuzli sug'urta kompaniyalari tomonidan taqdim etilgan kafolatlar bilan ta'minlanadi. Bizning metall mahsulotlarimiz 10 yilgacha kafolatlanadi va polipropilen mahsulotlarimiz ta'sirchan 50 yil kafolat bilan ta'minlanadi. Xususan, polipropilen quvurlar va  fitinglar 50 yillik keng kafolatga ega bo lib, bu bizning chidamlilik va mijozlar ehtiyojini qondirishga sodiqligimizni aks ettiradi.",
         advantages_1_6:
           "Bizning maxsus xizmat ko'rsatish bo'limimiz kafolat so'rovlarini samarali hal qiladi. Mahsulot nosozliklari bilan bog'liq mulkiy zarar holatlarida biz 100% gacha kompensatsiyani taklif qilamiz. Bu bizning muammolarga zudlik bilan yechim topish va mijozlarimiz qoniqishini ta'minlashga sodiqligimizni ta'kidlaydi, bu bizning sifat va mas'uliyatga bo'lgan qat'iy sodiqligimizni aks ettiradi.",
         advantages_1_7:
-          "Biz mahsulotlarning mukammalligini oshirish va innovatsiyalarni rivojlantirish uchun muhandislik firmalari va montajchilar bilan izchil, hamkorlikdagi hamkorlikni davom ettiramiz. Ushbu yaqin hamkorlik mahsulotning doimiy rivojlanishiga turtki bo'lib, takliflarimiz sifat va xilma-xillik bo'yicha birinchi o'rinda turishini ta'minlaydi. Taraqqiyotga sodiqligimiz soha mutaxassislari bilan faol aloqalarimizda namoyon bo‘ladi.",
+          "Biz mahsulotlarning mukammalligini oshirish va innovatsiyalarni rivojlantirish uchun muhandislik firmalari va montajchilar bilan izchil, hamkorlikdagi hamkorlikni davom ettiramiz. Ushbu yaqin hamkorlik mahsulotning doimiy rivojlanishiga turtki bo'lib, takliflarimiz sifat va xilma-xillik bo'yicha birinchi o'rinda turishini ta'minlaydi. Taraqqiyotga sodiqligimiz soha mutaxassislari bilan faol aloqalarimizda namoyon bo ladi.",
         advantages_1_8:
-          "Biz montajchilarni o'qitish va bozorga yangi mahsulotlarni joriy etishga qaratilgan seminarlar tashkil qilamiz. Ushbu proaktiv yondashuv nafaqat montajchilarning malakasini oshiribgina qolmay, balki mijozlarning qulayligini ta'minlash uchun yuqori sifatli mahsulotlarni joriy qilishni osonlashtiradi. Bilim va innovatsiyalarni tarqatish orqali biz mijozlarning maqbul ehtiyojlarini qondirish uchun yuqori sifatli yechimlarni taqdim etish majburiyatini bajaramiz.",
+          "Biz mahsulot sifatini yaxshilash va innovatsiyalarni rag'batlantirish uchun muhandislik kompaniyalari va montajchilar bilan doimiy hamkorlikni davom ettiramiz. Ushbu yaqin hamkorlik mahsulotlarning uzluksiz rivojlanishiga yordam beradi va bizning takliflarimiz sifat va assortiment bo'yicha birinchi o'rinda turishini ta'minlaydi. Taraqqiyotga sodiqligimiz soha mutaxassislari bilan dinamik o zaro munosabatlarimizda namoyon bo ladi.",
         advantages_1_9: "Biz bilan bog'lanish",
         // Afzaliklar tugadi.
 
         // footer
         footer_1_1:
-          "KALDE, isitish va suv ta'minoti tizimi, yuqori sifatli polipropilen quvurlar va armatura uchun!",
+          "KALDE - zamonaviy isitish va suv ta'minoti tizimlari uchun yuqori sifatli mahsulotlar.",
         footer_1_2: "Foydali sahifalar",
         footer_1_3: "Biz bilan bog'lanish",
         manzil_name:
-          "Toshkent sh., Olmazor tumi, ko'ch. Shirok, 2 (Mo'ljal - Chukursay qurilish bozori)",
+          "Toshkent shahri, Olmazor tumani, ko'cha Shiroq, 2 (Mo'ljal - Chukursay qurilish bozori)",
 
         about_2_3: "Xodimlar",
         about_2_4: "Mahsulotlar",
@@ -132,12 +132,13 @@ i18n.use(initReactI18next).init({
         about_2_6: "Davlatlar",
 
         sent_message_succues: "Xabaringiz muvvafaqiyatli yuborildi ",
-        sent_message_fail: "Xabaringiz yuborilmadi , qayta urinib ko'ring ",
+        sent_message_fail: "Xabaringiz yuborilmadi, qayta urinib ko'ring ",
 
         xato: "Xatolik",
         loading: "Yuklanmoqda ...",
         no_product: "Mahsulotlar mavjud emas.",
         no_category: "Kategoriyalar mavjud emas.",
+        muallif: "Mualliflik huquqi ",
       },
     },
     ru: {
@@ -151,10 +152,13 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Выберите язык",
         main_1_1: "Что такое КАЛДЕ?",
         main_1_2:
-          "KALDE, для систем отопления и водоснабжения, высококачественные полипропиленовые трубы и фитинги!",
+          " KALDE – это высококачественная продукция, соответствующая всем мировым стандартам и имеющая сертификаты многих систем международных стандартов!",
         main_1_3:
-          "KALDE – это высококачественная продукция, соответствующая всем мировым стандартам и имеющая сертификаты систем международных стандартов!",
+          " KALDE – это полипропиленовые трубы и фитинги, краны, металлические коллектора и фитинги, предназначенные для использования в современных системах отопления и водоснабжения как в промышленной так и в бытовой сфере.",
+
         main_1_4: "Узнать больше",
+        main_1_5:
+          " KALDE – это компания, за которой стоит многолетний опыт работы!",
         main_2_1: "О нас",
         main_2_2:
           "KALDE - основана в 1977 году, расположена в Стамбуле, Турция, производит продукцию для современных систем отопления и водоснабжения. Сегодня продукция KALDE известна в 50 странах мира.  Вся продукция имеет международные сертификаты. На рынке Узбекистана продукция Kalde стала известна в 2009 году. На сегодняшний день в Узбекистане продукцию Kalde можно купить более чем в 20 специализированных магазинах!",
@@ -176,11 +180,11 @@ i18n.use(initReactI18next).init({
         //asosiy oyna tugadi
         about_1_1: "О нас",
         about_1_2:
-          "В 1977 году 4 турецких инженера основали компанию KALDE. Цель состоит в том, чтобы поставлять высококачественные продукты для людей.  Компания KALDE одной из первых завезла современное технологическое оборудование из-за рубежа (из Европы) и начала производить продукцию для систем водоснабжения и отопления. В 1990-е годы, достаточно снабдив внутренний рынок, она вывела свою продукцию на внешний рынок. В эти годы одними из первых в Турции было запущено производство пластиковых изделий. С 1995 года и по сегодняшний день входит в число 500 крупнейших компаний Турции.",
+          " Компания KALDE основана в 1977 году, в г. Стамбул (Турция), когда четыре инженера решили объединиться и воплотить мечту в реальность, создавая для народа качественную продукцию, отвечающую мировым требованиям. Компания KALDE одной из первых завезла современное технологическое оборудование из-за рубежа (из Европы) и начала производить продукцию для систем водоснабжения и отопления. В 1990-е годы, достаточно снабдив внутренний рынок, она вывела свою продукцию на внешний рынок. В эти годы одними из первых в Турции было запущено производство пластиковых изделий. С 1995 года и по сегодняшний день входит в число 500 крупнейших компаний Турции.",
         about_1_3: "Свяжитесь с нами",
         about_2_1: "Калде в Узбекистане",
         about_2_2:
-          "Первая поставка продукции KALDE в Узбекистан была осуществлена ​​в ноябре 2009 года. Компания KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ помимо переговоров с производителем убедилась в высоком качестве продукта. (Стамбул, Турция), с 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров под брендом KALDE. В 2018 году представлена ​​сеть из более чем 10 магазинов в Ташкенте, а также в Бухаре, Намангане, Андижане, Джизаке и других крупных строительных рынках.",
+          "Первая поставка продукции KALDE в Узбекистан была осуществлена в ноябре 2009 года. Компания KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ помимо переговоров с производителем убедилась в высоком качестве продукта. (Стамбул, Турция), с 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров под брендом KALDE. В 2018 году представлена сеть из более чем 10 магазинов в Ташкенте, а также в Бухаре, Намангане, Андижане, Джизаке и других крупных строительных рынках.",
         about_3_1: "Качественные продукты",
         about_3_2:
           "Kalde вкладывает значительные средства в разработку современных продуктов, высокую эффективность и потенциал производственных мощностей Kalde постоянно оптимизирует свою продукцию, чтобы быстро реагировать на меняющийся спрос на сопутствующие товары на мировых рынках. Продукция KALDE, отвечающая мировым стандартам, известна в 40 крупнейших странах мира. Вся продукция имеет международные сертификаты.",
@@ -238,35 +242,35 @@ i18n.use(initReactI18next).init({
         advantages_1_1:
           "Изготовленные из высококачественного сырья класса А, все изделия PPR превосходно подходят для создания безупречных соединений в процессе пайки труб и фитингов. Использование высококачественных материалов гарантирует непревзойденные результаты, повышая надежность и эксплуатационные характеристики нашей продукции в различных областях применения.",
         advantages_1_2:
-          "Наши металлические изделия тщательно изготавливаются из высококачественного европейского сырья с использованием современного оборудования и передовых европейских технологий. Эта приверженность гарантирует производство высококачественных изделий, соответствующих международным стандартам, отражающих как совершенство, так и инновации в каждом продукте.",
+          "Наши металлические изделия изготавливаются из высококачественного европейского сырья с использованием современного оборудования и передовых европейских технологий. Эта приверженность гарантирует производство высококачественных изделий, соответствующих международным стандартам, отражающих как совершенство, так и инновации в каждом продукте.",
         advantages_1_3:
-          "Наши продукты имеют необходимые сертификаты гигиены и качества из различных экспортных стран, подтверждающие их безопасность и высокое качество. Они строго придерживаются преобладающих мировых стандартов, усиливая свою надежность. Эта всесторонняя сертификация подчеркивает наше стремление поставлять товары самого высокого международного качества.",
+          "Вся выпускаемая продукция имеет необходимые сертификаты международного стандарта, подтверждающие их безопасность и высокое качество.",
         advantages_1_4:
           "В каждом производственном секторе специальная лаборатория проводит тщательное тестирование образцов из каждой партии. Кроме того, аккредитованная независимая лаборатория тщательно проверяет всю продукцию. Такой подход к двойному тестированию гарантирует высочайшее качество, подтверждая наше стремление поставлять нашим клиентам стабильно надежные и сертифицированные товары.",
         advantages_1_5:
-          "Все наши продукты подкреплены гарантиями, обеспеченными авторитетными страховыми компаниями. На наши изделия из металла распространяется гарантия до 10 лет, а на изделия из полипропилена действует впечатляющая 50-летняя гарантия. В частности, на трубы и фитинги из полипропилена предоставляется обширная 50-летняя гарантия, отражающая нашу непоколебимую приверженность долговечности и удовлетворенности клиентов.",
+          "Вся производимая продукция подкреплена гарантиями, обеспеченными авторитетными страховыми компаниями. На наши изделия из металла распространяется гарантия до 10 лет, а на изделия из полипропилена действует впечатляющая 50-летняя гарантия. В частности, на трубы и фитинги из полипропилена предоставляется обширная 50-летняя гарантия, отражающая нашу непоколебимую приверженность долговечности и удовлетворенности клиентов.",
         advantages_1_6:
           "Наш специализированный сервисный отдел эффективно обрабатывает гарантийные запросы. В случаях материального ущерба, связанного с дефектами продукции, мы предлагаем комплексную компенсацию до 100%. Это подчеркивает нашу приверженность быстрому решению проблем и обеспечению удовлетворенности наших клиентов, отражая нашу непоколебимую приверженность качеству и ответственности.",
         advantages_1_7:
           "Мы поддерживаем постоянное сотрудничество с инженерными фирмами и установщиками для повышения качества продукции и стимулирования инноваций. Это тесное сотрудничество способствует постоянному развитию продуктов, гарантируя, что наши предложения остаются на переднем крае качества и разнообразия. Наше стремление к прогрессу отражается в нашем динамичном взаимодействии с профессионалами отрасли.",
         advantages_1_8:
-          "Мы организуем семинары, направленные на обучение монтажников и вывод на рынок новых продуктов. Такой упреждающий подход не только повышает квалификацию установщика, но и способствует внедрению превосходных продуктов, обеспечивающих удобство для клиентов. Делясь знаниями и инновациями, мы подтверждаем наше стремление предоставлять высококачественные решения для оптимального удовлетворения потребностей клиентов.",
+          "Мы поддерживаем постоянное сотрудничество с инженерными компаниями и монтажниками, для повышения качества продукции и стимулирования инноваций. Это тесное сотрудничество способствует постоянному развитию продуктов, гарантируя, что наши предложения остаются на передовом уровне по качеству и ассортименту. Наше стремление к прогрессу отражается в нашем динамичном взаимодействии с профессионалами отрасли.",
         advantages_1_9: "Свяжитесь с нами",
         // Afzaliklar tugadi.
 
         // footer
 
         footer_1_1:
-          "KALDE, для систем отопления и водоснабжения, высококачественные полипропиленовые трубы и фитинги!",
+          "KALDE – высококачественные товары для современных систем отопления и водоснабжения.",
         footer_1_2: "Полезные страницы",
         footer_1_3: "Свяжитесь с нами",
         manzil_name:
-          "г. Ташкент, Олмазор тумани, ул. Широк, 2 (Ориентир - строительный рынок Чукурсай)",
+          "Город Ташкент, Алмазарский район, улица Широк, 2 (Направление – строительный рынок Чукурсай)",
 
-        about_2_3: "Сотрудники",
-        about_2_4: "Продукты",
-        about_2_5: "Заводы",
-        about_2_6: "Государства",
+        about_2_3: "Сотрудников",
+        about_2_4: "Продуктов",
+        about_2_5: "Заводов",
+        about_2_6: "Государств",
 
         sent_message_succues: "Ваше сообщение было отправлено успешно",
         sent_message_fail: "Произошла ошибка при отправке сообщения",
@@ -276,6 +280,7 @@ i18n.use(initReactI18next).init({
         loading: "Загрузка ... ",
         no_product: "Товары недоступны.",
         no_category: "Нет категорий.",
+        muallif: "Авторские права ",
       },
     },
     en: {
@@ -289,9 +294,10 @@ i18n.use(initReactI18next).init({
         navbar_lang_select: "Select language",
         main_1_1: "What is KALDE?",
         main_1_2:
-          "KALDE, for heating and water supply systems, high quality polypropylene pipes and fittings!",
-        main_1_3:
           "KALDE is a high-quality product that meets all international standards and has international standard system certificates!",
+        main_1_3:
+          "KALDE, for heating and water supply systems, high-quality polypropylene pipes and fittings!",
+
         main_1_4: "To learn more",
         main_2_1: "About us",
         main_2_2:
@@ -318,7 +324,7 @@ i18n.use(initReactI18next).init({
         about_1_3: "Contact us",
         about_2_1: "Kalde in Uzbekistan",
         about_2_2:
-          "The first delivery of KALDE products to Uzbekistan was made in November 2009. KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ company was convinced of the high quality of the product in addition to talking with the manufacturer. (Istanbul, Turkey), since 2010, a chain of stores selling all kinds of products under the KALDE brand has been created in Uzbekistan. In 2018, there is a network of more than 10 stores presented in Tashkent, as well as in Bukhara, Namangan, Andijan, Jizzakh and other large construction markets.",
+          "The first delivery of KALDE products to Uzbekistan was made in November 2009. KALDE KL?MA PAZARLAMA VE TAAHH?T A? company was convinced of the high quality of the product in addition to talking with the manufacturer. (Istanbul, Turkey), since 2010, a chain of stores selling all kinds of products under the KALDE brand has been created in Uzbekistan. In 2018, there is a network of more than 10 stores presented in Tashkent, as well as in Bukhara, Namangan, Andijan, Jizzakh and other large construction markets.",
         about_3_1: "Quality products",
         about_3_2:
           "Kalde invests heavily in modern product development, high efficiency and the potential of production facilities. Kalde constantly optimizes its products in order to quickly respond to the changing demand for related products in global markets. KALDE products, meeting world standards, are known in 40 major countries of the world. All products have international certificates.",
@@ -377,28 +383,28 @@ i18n.use(initReactI18next).init({
         advantages_1_2:
           "Our metal goods are meticulously crafted from premium European raw materials using state-of-the-art equipment and cutting-edge European techniques. This dedication ensures the production of high-quality items that adhere to international standards, reflecting both excellence and innovation in every product.",
         advantages_1_3:
-          "Our products come with essential hygiene and quality certificates from various export destinations, attesting to their safety and excellence. They strictly adhere to prevailing global standards, reinforcing their reliability. This comprehensive certification underscores our commitment to delivering goods of the highest international caliber.",
+          "All manufactured products have the necessary international standard certificates confirming their safety and high quality.",
         advantages_1_4:
           "Within every production sector, a dedicated laboratory conducts thorough testing of samples from each batch. Additionally, an accredited independent laboratory rigorously examines all products. This dual-testing approach guarantees the utmost quality, affirming our commitment to delivering consistently reliable and certified goods to our customers.",
         advantages_1_5:
-          "All our products are backed by warranties secured through reputable insurance firms. Our metal goods are covered for up to 10 years, while PPR products boast an impressive 50-year warranty. Specifically, PPR pipes and fittings enjoy an extensive 50-year guarantee, reflecting our unwavering commitment to durability and customer satisfaction.",
+          "All manufactured products are backed by guarantees provided by reputable insurance companies. Our metal products come with a warranty of up to 10 years, and our polypropylene products come with an impressive 50 - year warranty. In particular, polypropylene pipes and fittings come with an extensive 50-year warranty, reflecting our unwavering commitment to durability and customer satisfaction.",
         advantages_1_6:
           "Our dedicated service department handles warranty inquiries effectively. In instances of property damage attributed to product faults, we offer comprehensive compensation of up to 100%. This underscores our commitment to addressing concerns promptly and ensuring our customers' satisfaction, reflecting our steadfast commitment to quality and accountability.",
         advantages_1_7:
           "We maintain a consistent, collaborative partnership with engineering firms and installers to enhance product excellence and foster innovation. This close collaboration fuels ongoing product development, ensuring our offerings remain at the forefront of quality and diversity. Our commitment to progress is reflected in our dynamic engagement with industry professionals.",
         advantages_1_8:
-          "We organize seminars aimed at training installers and introducing novel products to the market. This proactive approach not only enhances installer skills but also facilitates the introduction of superior products to ensure customer comfort. By imparting knowledge and innovation, we uphold our commitment to delivering high-quality solutions for optimal customer satisfaction.",
+          "We maintain ongoing collaboration with engineering companies and installers to improve product quality and stimulate innovation. This close collaboration contributes to the continuous development of products, ensuring that our offerings remain at the forefront of quality and range. Our commitment to progress is reflected in our dynamic interaction with industry professionals.",
         advantages_1_9: "Contact us",
         // Afzaliklar tugadi.
 
         //footer
         footer_1_1:
-          "KALDE, for the system of heating and water supply, high-quality polypropylene pipes and fittings!",
+          "KALDE   high-quality products for modern heating and water supply systems.",
         footer_1_2: "Useful Pages",
         footer_1_3: "Contact Us",
 
         manzil_name:
-          "Tashkent city, Olmazor tumi, st. Shirok, 2 (Landmark - construction market Chukursai)",
+          "Tashkent city, Almazor district, street Shiroq, 2 (Destination - Chukursay building market)",
 
         about_2_3: "Employees",
         about_2_4: "Products",
@@ -413,11 +419,10 @@ i18n.use(initReactI18next).init({
         loading: "Loading ...",
         no_product: "Products are not available.",
         no_category: "There are no categories.",
+        muallif: "Copyright ",
       },
     },
   },
 });
 
 export default i18n;
-
-//

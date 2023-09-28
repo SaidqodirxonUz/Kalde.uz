@@ -9,10 +9,13 @@ import Missiya from "../../components/missiya/missiya";
 
 const About = () => {
   return (
+    <>
+     <Navbar />  
+      <div className="bg_img">
+     
     <div className="container-fluid">
       {/* <Sidebar className="sidebar" /> */}
-      <Navbar />
-      <div className="showcase">
+      {/* <div className="showcase"> */}
         <AboutUsHero className="hero" />
         <Dostijeniya />
         <Missiya />
@@ -21,6 +24,9 @@ const About = () => {
         <Footer />
       </div>
     </div>
+    {/* </div> */}
+    </>
+
   );
 };
 

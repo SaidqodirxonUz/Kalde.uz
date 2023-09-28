@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </Box>
         <Box className="usefull_pages">
-          <p className="footer-sections pb-12">{t("footer_1_2")}</p>
+          {/* <p className="footer-sections pb-12">{t("footer_1_2")}</p> */}
           <ul>
             {pages.map((page, index) => (
               <li style={{ color: "#fff !important" }} key={index}>
@@ -153,14 +153,17 @@ const Footer = () => {
       <ul>
         <li>
           <p style={{ textAlign: "center" }}>
-            © Разработала команда{" "}
-            <span
+            © {t("muallif")}{" "}
+            <a
+              href="https://supersite.uz"
+              target="_blank"
               style={{
                 color: "yellow",
               }}
+              rel="noreferrer"
             >
               Supersite.uz
-            </span>
+            </a>{" "}
           </p>
         </li>
       </ul>

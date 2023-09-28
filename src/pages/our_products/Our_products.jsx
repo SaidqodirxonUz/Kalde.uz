@@ -142,7 +142,7 @@ const Our_products = () => {
                             </Avatar>
                           </ListItemAvatar>
                           <ListItemText
-                            className="text-black text-xl font-semibold category_text_effect"
+                            className="text-blue-900 text-xl font-semibold category_text_effect"
                             style={{
                               display: "flex",
                               flexWrap: "wrap",
@@ -171,6 +171,7 @@ const Our_products = () => {
                   )}
                   {!loading && products.length > 0 && (
                     <div
+                      id="scrollbar"
                       style={{
                         display: "flex",
                         flexDirection: "row",

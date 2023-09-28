@@ -16,7 +16,6 @@ import ReactMapGL from "react-map-gl";
 import mapboxgl, { XMapbox } from "mapbox-gl";
 // import Map from "../../components/maps/map";
 import { BiCurrentLocation } from "react-icons/bi";
-import Maps from "../../components/maps/map";
 
 // import mapboxgl from "mapbox-gl";
 // import AppMap from "../../components/map";
@@ -136,14 +135,19 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages text-black active:text-orange-500 flex flex-row "
                       >
-                        <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
-                        {t("firyal_1_1")} {f.adress}
+                        <MdLocationOn className="contactIcons text-2xl text-orange-500" />{" "}
+                        <span>
+                          {t("firyal_1_1")} {f.adress}
+                        </span>
                       </p>
                     </ListItemText>
                     <ListItemText>
-                      <p className="flex flex-row text-black ">
-                        <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                        {t("firyal_1_3")} {f.work_at}
+                      <p className="pages flex flex-row text-black ">
+                        <TbCalendarEvent className="contactIcons text-2xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_3")} {f.work_at}
+                        </span>
                       </p>
                     </ListItemText>
                     <ListItemText>
@@ -152,8 +156,11 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <BsTelephoneFill className="icons text-xl text-orange-500" />
-                        {t("firyal_1_4")} {f.phone_number}
+                        <BsTelephoneFill className="contactIcons text-xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_4")} {f.phone_number}
+                        </span>
                       </a>
                     </ListItemText>
                     <ListItemText>
@@ -162,8 +169,11 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <MdEmail className="icons text-xl text-orange-500" />{" "}
-                        {t("firyal_1_5")} {f.email}
+                        <MdEmail className="contactIcons text-xl text-orange-500" />{" "}
+                        <span>
+                          {" "}
+                          {t("firyal_1_5")} {f.email}
+                        </span>
                       </a>
                     </ListItemText>
 
@@ -174,13 +184,16 @@ const Contact_filial = () => {
                         // style={{ textAlign: "center" }}
                         className="pages flex flex-row text-black active:text-orange-500 items"
                       >
-                        <TbMapSearch className="icons text-xl text-orange-500" />
-                        {t("firyal_1_6")}{" "}
-                        {LangVal() == "uz"
-                          ? f.title_uz
-                          : LangVal() == "en"
-                          ? f.title_en
-                          : f.title_ru}
+                        <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
+                        <span>
+                          {" "}
+                          {t("firyal_1_6")}{" "}
+                          {LangVal() == "uz"
+                            ? f.title_uz
+                            : LangVal() == "en"
+                            ? f.title_en
+                            : f.title_ru}
+                        </span>
                       </Link>
                     </ListItemText>
                   </List>
@@ -329,12 +342,22 @@ const Contact_filial = () => {
         </div>
         {/* <Contact /> */}
         <section className="location" id="location">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.7981504517484!2d69.24579717605806!3d41.35674087130373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c8cfa42d491%3A0x40eea1c4b4fe62d7!2sMagazin%20Kalde!5e0!3m2!1sen!2s!4v1695301961253!5m2!1sen!2s"
+            width="100%"
+            height="500"
+            // style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+
           {/* {filial.map((l) => { */}
           {/* return ( */}
           {/* <div ref={mapContainer} className="map-container" /> */}
           {/* <div id="map"> */}
           {/* {console.log(filial[0].location)} */}
-          <Maps url={map} />
+          {/* <Maps url={map} /> */}
           {/* 
         <mapboxgl.Map
         accessToken={mapboxAccessToken}

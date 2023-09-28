@@ -107,8 +107,9 @@ const Navbar = () => {
             {pages.map((page) => (
               <Link
                 to={page.url}
-                className="text-neutral-950 text-xl font-semibold active:text-orange-500 links"
+                className="text-blue-900 text-xl font-semibold active:text-orange-500 links"
                 key={page}
+                // style={{ color: "#324291" }}
                 // onClick={handleCloseNavMenu}
                 // sx={{ my: 2, color: "#000", display: "block" }}
               >
@@ -119,7 +120,7 @@ const Navbar = () => {
 
             <Box>
               <Link
-                className="text-neutral-950 active:text-yellow-300 flex flex-row"
+                className="text-blue-900 active:text-orange-500 flex flex-row links"
                 to="tel:+998900152533"
               >
                 <BiSolidPhoneCall

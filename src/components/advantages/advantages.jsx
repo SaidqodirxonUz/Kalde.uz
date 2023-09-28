@@ -38,13 +38,13 @@ const Advantages = () => {
   ];
 
   return (
-    <div className="bg_img">
-      <div className="cards_container mx-auto w-11/12">
+    // <div className="bg_img">
+      <div className="cards_container">
         <div
           className="flex flex-col md:flex-row justify-center md:justify-between "
           style={{
             alignItems: "center",
-            maxWidth: "1280px",
+            // maxWidth: "1280px",
             // margin: "0 auto",
             padding: "1rem 0",
           }}
@@ -133,7 +133,7 @@ const Advantages = () => {
           ))}
         </Box>
       </div>
-    </div>
+    // </div>
   );
 };
 

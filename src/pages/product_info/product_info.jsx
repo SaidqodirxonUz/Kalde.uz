@@ -94,11 +94,13 @@ const Product_info = () => {
                   </Typography>
 
                   <Typography className="" variant="p" component="p">
-                    {LangVal() == "uz"
+                    {LangVal() == "uz" && el.uz_desc
                       ? el.uz_desc
-                      : LangVal() == "en"
+                      : LangVal() == "en" && el.en_desc
                       ? el.en_desc
-                      : el.ru_desc}
+                      : el.ru_desc !== "undefined"
+                      ? el.ru_desc
+                      : ""}
                   </Typography>
                 </div>
               </div>
@@ -134,6 +136,21 @@ const Product_info = () => {
                 <div
                   className="flex-container my-10 p-slider"
                   id="flex-container"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    // alignItems: "flex-end",
+                    justifyContent: "flex-start",
+                    // flexWrap: "wrap",
+                    overflowX: "scroll",
+                    // overflow: "hidden",
+                    gap: "2rem",
+
+                    scrollBehavior: "smooth",
+
+                    // flexFlow: "wrap",
+                  }}
+                  // style={{ height: "50%" }}
                 >
                   {products.map((p) => {
                     return (

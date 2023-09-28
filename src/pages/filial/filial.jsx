@@ -11,6 +11,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
+
+import "./index.scss";
 const Filial = () => {
   const navigate = useNavigate();
   const [filials, setFilial] = useState([]);
@@ -74,7 +76,7 @@ const Filial = () => {
                     alt="filial img"
                     style={{
                       borderRadius: "18px",
-                      height: "265px",
+                      height: "100%",
                     }}
                     className="w-96"
                   />
@@ -108,14 +110,20 @@ const Filial = () => {
                           className="pages text-black active:text-orange-500 flex flex-row "
                         >
                           <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
-                          {t("firyal_1_1")} {filial.adress}
+                          <span>
+                            {" "}
+                            {t("firyal_1_1")} {filial.adress}
+                          </span>
                         </p>
                       </ListItemText>
                       <ListItemText>
                         <p className="flex flex-row text-black ">
                           <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                          {t("firyal_1_3")}
-                          {filial.work_at}
+                          <span>
+                            {" "}
+                            {t("firyal_1_3")}
+                            <span> {filial.work_at}</span>
+                          </span>
                         </p>
                       </ListItemText>
                       <ListItemText>
@@ -125,7 +133,10 @@ const Filial = () => {
                           className="pages flex flex-row text-black active:text-orange-500 items"
                         >
                           <BsTelephoneFill className="icons text-xl text-orange-500" />
-                          {t("firyal_1_4")} {filial.phone_number}
+                          <span>
+                            {" "}
+                            {t("firyal_1_4")} {filial.phone_number}
+                          </span>
                         </a>
                       </ListItemText>
                       <ListItemText>
@@ -135,7 +146,10 @@ const Filial = () => {
                           className="pages flex flex-row text-black active:text-orange-500 items"
                         >
                           <MdEmail className="icons text-xl text-orange-500" />{" "}
-                          {t("firyal_1_5")} {filial.email}
+                          <span>
+                            {" "}
+                            {t("firyal_1_5")} {filial.email}
+                          </span>
                         </a>
                       </ListItemText>
                     </List>

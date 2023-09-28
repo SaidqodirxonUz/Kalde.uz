@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import hero from "../../assets/hero.png";
+import hero from "../../assets/hero.jpg";
 import { FiArrowUpRight } from "react-icons/fi";
 import "./hero.scss";
 import { useTranslation } from "react-i18next";
@@ -35,7 +35,7 @@ const Hero = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -49,7 +49,7 @@ const Hero = () => {
               variant="h5"
               component="p"
               style={{
-                color: "rgba(0, 0, 0, 0.80)",
+                color: "#324291",
                 fontFamily: "Okta Neue",
                 fontSize: "18px",
                 fontStyle: "normal",
@@ -58,6 +58,20 @@ const Hero = () => {
               }}
             >
               {t("main_1_3")}
+            </Typography>
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "#324291",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140% /* 25.2px */",
+              }}
+            >
+              {t("main_1_5")}
             </Typography>
             <Link
               style={{
@@ -79,7 +93,7 @@ const Hero = () => {
               {t("main_1_4")} <FiArrowUpRight />
             </Link>
           </div>
-          <div className="img" style={{ marginTop: "2.5rem" }}>
+          <div className="heroImg">
             <img src={hero} alt="shop" />
           </div>
         </div>

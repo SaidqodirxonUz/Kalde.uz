@@ -1,5 +1,7 @@
 import { Typography } from "@mui/material";
-import AboutUsImg from "../../assets/about_us.png";
+import AboutUsImg from "../../assets/about_us.jpg";
+import AboutUsImg2 from "../../assets/about_us1.png";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import "./about_us.scss";
 import { useTranslation } from "react-i18next";
@@ -10,8 +12,11 @@ const AboutUs = () => {
   const { t } = useTranslation();
   return (
     <>
+      {/* <div className="bg_img"> */}
+
       <div className="about_us">
-        <div className="img">
+        <div className="img" style={{ alignSelf: "center" }}>
+          <img src={AboutUsImg2} alt="aboutUs2" />
           <img src={AboutUsImg} alt="aboutus" />
         </div>
         <div className="texts">
@@ -37,7 +42,7 @@ const AboutUs = () => {
             variant="h5"
             component="p"
             style={{
-              color: "rgba(0, 0, 0, 0.80)",
+              color: "#324291",
               fontFamily: "Okta Neue",
               // fontSize: "18px",
               fontStyle: "normal",
@@ -93,6 +98,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };

@@ -166,3 +166,19 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .contactIcons {
+    // background: #000 !important;
+    width: 20%;
+  }
+
+  .pages {
+    align-self: center;
+    align-content: center;
+    span {
+      // background: #000 !important;
+      width: 100%;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   justify-content: center;
 
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 15rem 0;
 
   // background: #000 !important;
 
@@ -14,6 +14,22 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    position: relative;
+    margin-left: 15%;
+
+    img:nth-child(1) {
+      width: 25rem;
+      border-radius: 20px;
+      top: 55% !important;
+      left: -5%;
+      position: absolute;
+    }
+
+    img:nth-child(2) {
+      width: 25rem;
+      border-radius: 20px;
+    }
   }
   .texts {
     display: flex;
@@ -42,7 +58,10 @@
     .img {
       width: 100% !important;
       display: block;
+      position: unset;
+      margin: 0;
     }
+
     .texts {
       width: 90% !important;
     }
@@ -63,6 +82,7 @@
   border-radius: 100px !important;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  text-align: center;
 }
 
 .aboutBtn:hover {
@@ -72,6 +92,11 @@
 
 @media (max-width: 768px) {
   .aboutBtn {
+    width: 100%;
     font-size: 12px;
+    text-align: center;
+  }
+  .aboutBtn:nth-child(2) {
+    width: 100%;
   }
 }

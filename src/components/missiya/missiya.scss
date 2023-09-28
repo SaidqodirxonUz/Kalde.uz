@@ -11,12 +11,20 @@
   // padding: 10rem 0 10rem 0;
   // background: #ffff !important;
 
-  .img {
-    width: 40%;
+  .missiyaImg {
+    // width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
+    margin-top: -10%;
+    // margin: 0 1.3rem;
     align-self: center;
+    align-items: center;
+
+    img{
+      width: 70%;
+    }
   }
   .texts {
     display: flex;
@@ -51,5 +59,15 @@
     .texts {
       width: 90% !important;
     }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .missiyaImg img{
+    width: 100% !important;
+    margin-top:4rem;
+    margin-bottom: 2rem;
+
   }
 }
