@@ -59,6 +59,20 @@ const Hero = () => {
             >
               {t("main_1_3")}
             </Typography>
+            <Typography
+              variant="h5"
+              component="p"
+              style={{
+                color: "#324291",
+                fontFamily: "Okta Neue",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "140% /* 25.2px */",
+              }}
+            >
+              {t("main_1_5")}
+            </Typography>
             <Link
               style={{
                 display: "flex",
