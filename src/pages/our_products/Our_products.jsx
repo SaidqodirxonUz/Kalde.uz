@@ -190,7 +190,7 @@ const Our_products = () => {
                             height: "auto",
                             overflow: "hidden",
                             background: "#fff",
-                            border: "1px solid #ccc",
+                            // border: "1px solid #ccc",
                             borderRadius: "30px",
                           }}
                           onClick={() => {
@@ -199,11 +199,22 @@ const Our_products = () => {
                           key={index}
                         >
                           <div>
-                            <article>
+                            <article
+                              style={{
+                                width: "350px",
+                                height: "340px",
+                                // overflow: "hidden",
+                                background: "#fff",
+                                transform: "scale(1.1)",
+                                // border: "1px solid #ccc",
+                                // borderRadius: "30px",
+                              }}
+                            >
                               <img
-                                className="w-full md:w-80"
+                                className="w-full"
                                 style={{
                                   height: "230px",
+                                  width: "350px",
                                   objectFit: "contain",
                                   objectPosition: "center",
                                 }}
@@ -218,6 +229,8 @@ const Our_products = () => {
                                   justifyContent: "center",
                                   alignItems: "center",
                                   marginBottom: "1rem",
+                                  paddingRight: "2rem",
+                                  paddingLeft: "2rem",
                                 }}
                                 variant="h6"
                                 component="p"
