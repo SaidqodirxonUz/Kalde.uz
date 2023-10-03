@@ -60,6 +60,10 @@
       display: block;
       position: unset;
       margin: 0;
+      // position: relative;
+      img:nth-child(1) {
+        display: none;
+      }
     }
 
     .texts {
