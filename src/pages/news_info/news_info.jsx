@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   Card,
   CardActionArea,
@@ -5,18 +6,20 @@ import {
   CardHeader,
   CardMedia,
   Typography,
+  Button,
 } from "@mui/material";
 import Contact from "../../components/contact/contact";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import { MdOutlineWatchLater } from "react-icons/md";
 // import product from "../../assets/product_img.jpg";
-import { TbCalendarEvent } from "react-icons/tb";
+import { AiFillFilePdf, AiOutlineDownload } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import i18n from "../../i18n/i18n";
 import { t } from "i18next";
+import "./style.scss";
 
 const News_info = () => {
   const { id } = useParams();
@@ -85,47 +88,46 @@ const News_info = () => {
     <>
       <div className="bg_img">
         <Navbar />
-        <section className="news py-36 w-8/12 mx-auto">
+        <section className="news py-36 w-8/12 mx-auto ">
           {news.map((el) => {
             return (
-              <div className="flex flex-col justify-evenly" key={el.id}>
-                <Typography
-                  variant="h4"
-                  component="h5"
-                  style={{
-                    color: "#324291",
-                    fontFamily: "Okta Neue",
-                    fontSize: "24px",
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    lineHeight: "normal",
-                  }}
-                >
-                  {LangVal() == "uz"
-                    ? el.title_uz
-                    : LangVal() == "en"
-                    ? el.title_en
-                    : el.title_ru}
-                </Typography>
-                <div className="flex flex-row justify-start items-center py-6">
-                  <MdOutlineWatchLater />
-                  <Typography variant="p" component="p">
-                    {DateComponent({ text: el.created_at, maxLength: 10 })}
+              <div
+                className="price-div flex flex-col justify-evenly border border-1 border-cyan-600 p-5"
+                key={el.id}
+              >
+                <div className="flex">
+                  <AiFillFilePdf
+                    style={{ fontSize: "32px", marginRight: "1rem" }}
+                  />
+                  <Typography
+                    variant="h4"
+                    component="h5"
+                    style={{
+                      color: "#324291",
+                      fontFamily: "Okta Neue",
+                      fontSize: "24px",
+                      fontStyle: "normal",
+                      fontWeight: "400",
+                      lineHeight: "normal",
+                    }}
+                  >
+                    {LangVal() == "uz"
+                      ? el.title_uz
+                      : LangVal() == "en"
+                      ? el.title_en
+                      : el.title_ru}
                   </Typography>
+                  <div className="download-btn">
+                    <Button variant="contained" color="primary">
+                      <AiOutlineDownload
+                        className="download"
+                        style={{ fontSize: "32px" }}
+                      />
+                    </Button>
+                  </div>
                 </div>
-                <img
-                  src={el.image_url}
-                  alt="news img"
-                  className="rounded-md h-80 object-contain"
-                />
-                {/* <Typography variant="p" component="p" className="py-8">
-                Фитинг (от англ. fitting «подгонка, установка, сборка») —
-                соединительная часть трубопровода, разветвление, поворот,
-                переход на другой диаметр, а также частый монтаж и демонтаж
-                труб, при необходимости установочный. Также фитинги служат для
-                герметизации трубопровода и других вспомогательных целей.
-              </Typography> */}
-                <Typography variant="p" component="p" className="pt-20">
+                {/* <div className="flex flex-row justify-start items-center py-6"></div> */}
+                <Typography variant="p" component="p" className="pt-1">
                   {LangVal() == "uz"
                     ? el.desc_uz
                     : LangVal() == "en"
@@ -136,7 +138,7 @@ const News_info = () => {
             );
           })}
         </section>
-        <section className="same_news">
+        {/* <section className="same_news">
           <Typography
             style={{
               fontSize: "36px",
@@ -235,7 +237,7 @@ const News_info = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <Contact />
         <Footer />
       </div>

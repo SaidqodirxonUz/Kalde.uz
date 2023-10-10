@@ -111,7 +111,7 @@ const Contact = () => {
           <Typography
             variant="h4"
             component="h2"
-            className="font-semibold text-sm "
+            className="font-semibold text-sm pt-20"
           >
             {t("footer_1_3")}
           </Typography>

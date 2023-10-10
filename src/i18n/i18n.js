@@ -10,7 +10,7 @@ i18n.use(initReactI18next).init({
         navbar_about_link: "Biz haqimizda",
         navbar_adventages_link: "Afzalliklarimiz",
         navbar_catalog_link: "Katalog",
-        navbar_news_link: "Yangiliklar",
+        navbar_news_link: "Narxlar",
         navbar_contact_link: "Kontaktlar",
         navbar_lang_select: "Tilni tanlang",
         main_1_1: "KALDE nima?",
@@ -34,7 +34,7 @@ i18n.use(initReactI18next).init({
         main_3_7: "Mahsulot kafolati",
         main_3_8: "Sifat nazorati",
         main_3_9: "Seminar treninglar",
-        main_4_1: "Bizning mahsulotlar",
+        main_4_1: "Bizning assortimentimiz",
         main_4_2: "Barcha mahsulotlar",
         main_5_1: "Bizning hamkorlarimiz",
         main_6_1: "Foydali yangliklar",
@@ -45,7 +45,7 @@ i18n.use(initReactI18next).init({
         about_1_3: "Biz bilan bog'lanish",
         about_2_1: "O'zbekistonda Kalde",
         about_2_2:
-          "KALDE mahsulotlarini O zbekistonga birinchi yetkazib berish 2009-yil noyabr oyida amalga oshirilgan.  KALDE KL?MA PAZARLAMA VE TAAHH?T A? kompaniyasi ishlab chiqaruvchi bilan gaplashish bilan bir qatorda mahsulotning yuqori sifatiga ishonch hosil qildi. (Istanbul, Turkiya), 2010-yildan boshlab O zbekistonda KALDE brendi ostida barcha turdagi mahsulotlarni sotuvchi do konlar tarmog i yaratila boshlandi. 2018-yilda Toshkent shahridagi, shuningdek, Buxoro, Namangan, Andijon , Jizzax va boshqa yirik qurilish bozorlarida taqdim etilgan 10 dan ortiq do konlar tarmog i mavjud.",
+          "INORA IMPEX (O‘zbekiston) kompaniyasi ishlab chiqaruvchi KALDE KLIMA PAZARLAMA VE TAAHHÜT AŞ (Turkiya) bilan olib borilgan muzokaralardan tashqari mahsulotning yuqori sifatiga ishonch hosil qildi. KALDE mahsulotlarini O‘zbekistonga birinchi yetkazib berish 2009-yilning noyabr oyida amalga oshirilgan. 2010-yildan boshlab O‘zbekistonda KALDE brendi mahsulotlarining barcha turlarini sotuvchi do‘konlar tarmog‘i yaratilgan. 2023-yilda Toshkent, Buxoro, Namangan, Andijon, Jizzax, Qo‘qon shaharlarida 20 dan ortiq do‘konlar tarmog‘i joriy etildi. Shaharlarda yirik filiallari bor: Buxoro, Namangan.",
         about_3_1: "Sifatli mahsulotlar",
         about_3_2:
           "Kalde ko'p jihatdan zamonaviy mahsulotlarni ishlab chiqishga investitsiyalar , yuqori samaradorlik va ishlab chiqarish quvvatlarining salohiyatiga etibor qaratadi .Kalde global bozorlarda tegishli mahsulotlarga bo'lgan o'zgaruvchan talabga tezda javob berish uchun o'z mahsulotlarini doimiy ravishda optimallashtiradi. Dunyo standartlariga to'gri keladigan, KALDE mahsulotlari, dunyodagi 40-ta yirik mamlakatlarida tanilgan. Barcha mahsulotlariga, xalqaro sertifikatlari mavjud.",
@@ -147,7 +147,7 @@ i18n.use(initReactI18next).init({
         navbar_about_link: "O нас",
         navbar_adventages_link: "Преимущества",
         navbar_catalog_link: "Каталог",
-        navbar_news_link: "Новости",
+        navbar_news_link: "Прайс",
         navbar_contact_link: "Контакты",
         navbar_lang_select: "Выберите язык",
         main_1_1: "Что такое КАЛДЕ?",
@@ -173,7 +173,7 @@ i18n.use(initReactI18next).init({
         main_3_7: "Гарантия на продукт",
         main_3_8: "Контроль качества",
         main_3_9: "Семинар тренинг",
-        main_4_1: "Наши продукты",
+        main_4_1: "Наш ассортимент",
         main_4_2: "Все продукты",
         main_5_1: "Наши партнеры",
         main_6_1: "Полезные новости",
@@ -184,8 +184,9 @@ i18n.use(initReactI18next).init({
         about_1_3: "Свяжитесь с нами",
         about_2_1: "Калде в Узбекистане",
         about_2_2:
-          "Первая поставка продукции KALDE в Узбекистан была осуществлена в ноябре 2009 года. Компания KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ помимо переговоров с производителем убедилась в высоком качестве продукта. (Стамбул, Турция), с 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров под брендом KALDE. В 2018 году представлена сеть из более чем 10 магазинов в Ташкенте, а также в Бухаре, Намангане, Андижане, Джизаке и других крупных строительных рынках.",
-        about_3_1: "Качественные продукты",
+          "Компания INORA IMPEX (Узбекистан) помимо переговоров с производителем KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ (Турция), и убедилась в высоком качестве продукта. Первая поставка продукции KALDE в Узбекистан была осуществлена в ноябре 2009 года.C 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров бренда KALDE. В 2023 году представлена сеть из более чем 20 магазинов в городах: Ташкент, Бухар, Наманган, Андижан, Джизак, Коканд. Имеются крупные филиалы в городах: Бухара, Наманган.",
+
+        about_3_1: "Качество продукции",
         about_3_2:
           "Kalde вкладывает значительные средства в разработку современных продуктов, высокую эффективность и потенциал производственных мощностей Kalde постоянно оптимизирует свою продукцию, чтобы быстро реагировать на меняющийся спрос на сопутствующие товары на мировых рынках. Продукция KALDE, отвечающая мировым стандартам, известна в 40 крупнейших странах мира. Вся продукция имеет международные сертификаты.",
         about_4_1: "Наши сотрудники",
@@ -254,7 +255,7 @@ i18n.use(initReactI18next).init({
         advantages_1_7:
           "Мы поддерживаем постоянное сотрудничество с инженерными фирмами и установщиками для повышения качества продукции и стимулирования инноваций. Это тесное сотрудничество способствует постоянному развитию продуктов, гарантируя, что наши предложения остаются на переднем крае качества и разнообразия. Наше стремление к прогрессу отражается в нашем динамичном взаимодействии с профессионалами отрасли.",
         advantages_1_8:
-          "Мы поддерживаем постоянное сотрудничество с инженерными компаниями и монтажниками, для повышения качества продукции и стимулирования инноваций. Это тесное сотрудничество способствует постоянному развитию продуктов, гарантируя, что наши предложения остаются на передовом уровне по качеству и ассортименту. Наше стремление к прогрессу отражается в нашем динамичном взаимодействии с профессионалами отрасли.",
+          "На сегодняшний день, компания KALDE, имеет производственные фабрики в городах Стамбул, Денизли, Аксарай (Турция), что позволяет полностью удовлетворить спрос на производимую продукцию в полном объёме. Экспорт более чем в 20 стран мира, доказывает, что наша продукция признана в соответствующей мере.",
         advantages_1_9: "Свяжитесь с нами",
         // Afzaliklar tugadi.
 
@@ -289,7 +290,7 @@ i18n.use(initReactI18next).init({
         navbar_about_link: "About",
         navbar_adventages_link: "Our advantages",
         navbar_catalog_link: "Catalog",
-        navbar_news_link: "News",
+        navbar_news_link: "Prices",
         navbar_contact_link: "Contacts",
         navbar_lang_select: "Select language",
         main_1_1: "What is KALDE?",
@@ -313,7 +314,7 @@ i18n.use(initReactI18next).init({
         main_3_7: "Product warranty",
         main_3_8: "Quality control",
         main_3_9: "Seminar training",
-        main_4_1: "Our products",
+        main_4_1: "Our range",
         main_4_2: "All products",
         main_5_1: "Our partners",
         main_6_1: "Useful news",
@@ -324,7 +325,7 @@ i18n.use(initReactI18next).init({
         about_1_3: "Contact us",
         about_2_1: "Kalde in Uzbekistan",
         about_2_2:
-          "The first delivery of KALDE products to Uzbekistan was made in November 2009. KALDE KL?MA PAZARLAMA VE TAAHH?T A? company was convinced of the high quality of the product in addition to talking with the manufacturer. (Istanbul, Turkey), since 2010, a chain of stores selling all kinds of products under the KALDE brand has been created in Uzbekistan. In 2018, there is a network of more than 10 stores presented in Tashkent, as well as in Bukhara, Namangan, Andijan, Jizzakh and other large construction markets.",
+          "The company INORA IMPEX (Uzbekistan), in addition to negotiations with the manufacturer KALDE KLIMA PAZARLAMA VE TAAHHÜT AŞ (Turkey), was convinced of the high quality of the product. The first delivery of KALDE products to Uzbekistan was made in November 2009. Since 2010, a network of stores selling all types of KALDE brand products has been created in Uzbekistan. In 2023, a network of more than 20 stores was introduced in the cities of Tashkent, Bukhar, Namangan, Andijan, Jizzakh, Kokand. There are large branches in the cities: Bukhara, Namangan.",
         about_3_1: "Quality products",
         about_3_2:
           "Kalde invests heavily in modern product development, high efficiency and the potential of production facilities. Kalde constantly optimizes its products in order to quickly respond to the changing demand for related products in global markets. KALDE products, meeting world standards, are known in 40 major countries of the world. All products have international certificates.",
