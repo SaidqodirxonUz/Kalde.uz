@@ -218,7 +218,7 @@ const Our_products = () => {
                                   objectFit: "contain",
                                   objectPosition: "center",
                                 }}
-                                src={info.img_url}
+                                src={info.image_url}
                                 alt="Mahsulot"
                               />
                               <p className="line"></p>

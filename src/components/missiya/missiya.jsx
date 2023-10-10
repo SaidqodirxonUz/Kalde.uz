@@ -10,7 +10,7 @@ const Missiya = () => {
     <>
       <div className="bg_img">
         <div className="about_us hero hero-noreverse">
-          <div className="texts">
+          <div className="texts " style={{ marginTop: "-5rem" }}>
             <Typography
               variant="h2"
               component="h3"

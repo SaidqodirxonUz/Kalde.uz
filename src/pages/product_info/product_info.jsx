@@ -63,45 +63,45 @@ const Product_info = () => {
               <div key={el.id}>
                 <div className="product_info" style={{ marginTop: "2rem" }}>
                   <div className="img shadow-lg ">
-                    <img src={el.img_url} alt="tavar" />
+                    <img src={el.image_url} alt="tavar" />
                   </div>
                   <div className="img shadow-lg ">
-                    <img src={el.img1_url} alt="tavar" />
-                  </div>
-                </div>
-                <div className="describe flex mx-auto h-auto lg:h-12 gap-7 shadow-lg flex-col justify-start">
-                  <Typography
-                    variant="h6"
-                    component="h5"
-                    style={{
-                      fontSize: "28px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      fontFamily: "Okta Neue",
-                      lineHeight: "normal",
-                      background:
-                        "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    {LangVal() == "uz"
-                      ? el.uz_product_name
-                      : LangVal() == "en"
-                      ? el.en_product_name
-                      : el.ru_product_name}
-                  </Typography>
+                    {/* <img src={el.img1_url} alt="tavar" /> */}
+                    <div className="describe flex mx-auto h-auto lg:h-12 gap-7 flex-col justify-start">
+                      <Typography
+                        variant="h6"
+                        component="h5"
+                        style={{
+                          fontSize: "28px",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          fontFamily: "Okta Neue",
+                          lineHeight: "normal",
+                          background:
+                            "var(--liniar, linear-gradient(90deg, #052438 0%, #186BA3 100%))",
+                          backgroundClip: "text",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
+                      >
+                        {LangVal() == "uz"
+                          ? el.uz_product_name
+                          : LangVal() == "en"
+                          ? el.en_product_name
+                          : el.ru_product_name}
+                      </Typography>
 
-                  <Typography className="" variant="p" component="p">
-                    {LangVal() == "uz" && el.uz_desc
-                      ? el.uz_desc
-                      : LangVal() == "en" && el.en_desc
-                      ? el.en_desc
-                      : el.ru_desc !== "undefined"
-                      ? el.ru_desc
-                      : ""}
-                  </Typography>
+                      <Typography className="" variant="p" component="p">
+                        {LangVal() == "uz" && el.uz_desc
+                          ? el.uz_desc
+                          : LangVal() == "en" && el.en_desc
+                          ? el.en_desc
+                          : el.ru_desc !== "undefined"
+                          ? el.ru_desc
+                          : ""}
+                      </Typography>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
@@ -177,7 +177,7 @@ const Product_info = () => {
                                 height: "240px",
                                 width: "100%",
                               }}
-                              src={p.img_url}
+                              src={p.image_url}
                               alt="card"
                             />
 

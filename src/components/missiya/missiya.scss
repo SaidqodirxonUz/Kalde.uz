@@ -22,7 +22,7 @@
     align-self: center;
     align-items: center;
 
-    img{
+    img {
       width: 70%;
     }
   }
@@ -33,6 +33,8 @@
     align-items: baseline;
     width: 40%;
     gap: 1.5rem;
+    // margin-top: -1rem !important;
+    // background: #000 !important;
     // margin-left: 11%;
     margin: 0 5%;
     .more {
@@ -63,11 +65,12 @@
 }
 
 @media (max-width: 768px) {
-
-  .missiyaImg img{
+  .missiyaImg img {
     width: 100% !important;
-    margin-top:4rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
-
+  }
+  .texts {
+    margin-top: 0 !important;
   }
 }
