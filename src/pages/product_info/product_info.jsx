@@ -91,7 +91,11 @@ const Product_info = () => {
                           : el.ru_product_name}
                       </Typography>
 
-                      <Typography className="" variant="p" component="p">
+                      <Typography
+                        className="description"
+                        variant="p"
+                        component="p"
+                      >
                         {LangVal() == "uz" && el.uz_desc
                           ? el.uz_desc
                           : LangVal() == "en" && el.en_desc

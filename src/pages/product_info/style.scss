@@ -40,6 +40,33 @@
   margin-top: 2rem;
 }
 
+@media (min-width: 1200px) {
+  .description {
+    overflow-y: scroll;
+    padding-right: 1rem;
+  }
+  .description::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  .description::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  .description::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .description::-webkit-scrollbar-thumb:hover {
+    background: #c4c4c4;
+  }
+}
+
 @media (max-width: 1200px) {
   .product_info {
     flex-direction: column !important;
