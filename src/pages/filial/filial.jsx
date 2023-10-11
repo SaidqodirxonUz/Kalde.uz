@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { List, ListItemText, Typography } from "@mui/material";
 import Contact from "../../components/contact/contact";
 import Footer from "../../components/footer/footer";
@@ -5,10 +6,10 @@ import Navbar from "../../components/navbar/navbar";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 // import product from "../../assets/product_img.jpg";
-import { TbCalendarEvent } from "react-icons/tb";
+import { TbCalendarEvent, TbMapSearch } from "react-icons/tb";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n/i18n";
 
@@ -66,20 +67,11 @@ const Filial = () => {
               return (
                 <div
                   key={filial.id}
-                  onClick={() => {
-                    navigate(`/contact/${filial.id}`);
-                  }}
+                  // onClick={() => {
+                  //   navigate(`/contact/${filial.id}`);
+                  // }}
                   className="flex flex-col lg:flex-row w-72 sm:w-max justify-start lg:w-10/12 p-8 mx-auto gap-6 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
                 >
-                  <img
-                    src={filial.image_url}
-                    alt="filial img"
-                    style={{
-                      borderRadius: "18px",
-                      height: "100%",
-                    }}
-                    className="w-96"
-                  />
                   <div className="f_info">
                     <h5
                       style={{
@@ -112,20 +104,16 @@ const Filial = () => {
                           <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
                           <span>
                             {" "}
-                            {t("firyal_1_1")} {filial.adress}
+                            {t("firyal_1_1")} {""}
+                            {LangVal() == "uz"
+                              ? filial.desc_uz
+                              : LangVal() == "en"
+                              ? filial.desc_en
+                              : filial.desc_ru}
                           </span>
                         </p>
                       </ListItemText>
-                      <ListItemText>
-                        <p className="flex flex-row text-black ">
-                          <TbCalendarEvent className="icons text-2xl text-orange-500" />
-                          <span>
-                            {" "}
-                            {t("firyal_1_3")}
-                            <span> {filial.work_at}</span>
-                          </span>
-                        </p>
-                      </ListItemText>
+
                       <ListItemText>
                         <a
                           href={`tel:${filial.phone_number}`}
@@ -141,16 +129,35 @@ const Filial = () => {
                       </ListItemText>
                       <ListItemText>
                         <a
-                          href={`mailto:${filial.email}`}
+                          href={`tel:${filial.addition_number}`}
                           // style={{ textAlign: "center" }}
                           className="pages flex flex-row text-black active:text-orange-500 items"
                         >
-                          <MdEmail className="icons text-xl text-orange-500" />{" "}
+                          <BsTelephoneFill className="icons text-xl text-orange-500" />
                           <span>
                             {" "}
-                            {t("firyal_1_5")} {filial.email}
+                            {t("firyal_1_7")} {filial.addition_number}
                           </span>
                         </a>
+                      </ListItemText>
+                      <ListItemText>
+                        <Link
+                          to={filial.location}
+                          target="_blank"
+                          // style={{ textAlign: "center" }}
+                          className="pages flex flex-row text-black active:text-orange-500 items"
+                        >
+                          <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
+                          <span>
+                            {" "}
+                            {t("firyal_1_6")}{" "}
+                            {LangVal() == "uz"
+                              ? filial.title_uz
+                              : LangVal() == "en"
+                              ? filial.title_en
+                              : filial.title_ru}
+                          </span>
+                        </Link>
                       </ListItemText>
                     </List>
                   </div>

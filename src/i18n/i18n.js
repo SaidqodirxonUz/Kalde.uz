@@ -93,6 +93,8 @@ i18n.use(initReactI18next).init({
         firyal_1_4: "Telefon raqami:",
         firyal_1_5: "Email:",
         firyal_1_6: "Joylashuv : ",
+        firyal_1_7: "Qo'shimcha telefon raqam : ",
+
         firyal_2_1: "Biz bilan bog'lanish",
         firyal_2_2: "Sizning ismingiz",
         firyal_2_3: "Telefon raqamingiz",
@@ -233,6 +235,8 @@ i18n.use(initReactI18next).init({
         firyal_1_4: "Номер телефона:",
         firyal_1_5: "Электронная почта:",
         firyal_1_6: "Геолокация : ",
+        firyal_1_7: "Дополнительный номер телефона : ",
+
         firyal_2_1: "Связаться с нами",
         firyal_2_2: "Ваше имя",
         firyal_2_3: "Ваш номер телефона",
@@ -373,6 +377,8 @@ i18n.use(initReactI18next).init({
         firyal_1_4: "Phone number:",
         firyal_1_5: "Email:",
         firyal_1_6: "Geolocation : ",
+        firyal_1_7: "Additional phone number : ",
+
         firyal_2_1: "Connect with us",
         firyal_2_2: "Your name",
         firyal_2_3: "Your phone number",
