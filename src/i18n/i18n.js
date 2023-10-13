@@ -22,7 +22,7 @@ i18n.use(initReactI18next).init({
         main_1_5: "KALDE - ko'p yillik tajribaga ega kompaniya!",
         main_2_1: "Biz haqimizda",
         main_2_2:
-          "KALDE kompaniyasi 1977-yilda Istanbulda (Turkiya) tashkil topgan bo?lib, o?shanda to?rtta muhandis birlashishga va o?z orzularini ro?yobga chiqarishga, odamlar uchun global talablarga javob beradigan yuqori sifatli mahsulotlar yaratishga qaror qilgan. KALDE birinchilardan bo lib xorijdan (Yevropadan) zamonaviy texnologik uskunalar olib kirdi va suv ta minoti va isitish tizimlari uchun mahsulotlar ishlab chiqarishni boshladi. 90-yillarda ichki bozorni yetarli darajada ta minlab, o z mahsulotlarini tashqi bozorga chiqardi. Bu yillarda Turkiya birinchilardan bo lib plastmassa buyumlar ishlab chiqarishni yo lga qo ydi. 1995 yildan hozirgi kungacha Turkiyaning 500 ta eng yirik kompaniyalari qatoridan joy oldi.",
+          "KALDE kompaniyasi 1977-yilda Istanbulda (Turkiya) tashkil topgan boʻlib, oʻshanda toʻrtta muhandis birlashishga va oʻz orzularini roʻyobga chiqarishga, odamlar uchun global talablarga javob beradigan yuqori sifatli mahsulotlar yaratishga qaror qilgan. KALDE birinchilardan bo lib xorijdan (Yevropadan) zamonaviy texnologik uskunalar olib kirdi va suv ta minoti va isitish tizimlari uchun mahsulotlar ishlab chiqarishni boshladi. 90-yillarda ichki bozorni yetarli darajada ta minlab, o z mahsulotlarini tashqi bozorga chiqardi. Bu yillarda Turkiya birinchilardan bo lib plastmassa buyumlar ishlab chiqarishni yo lga qo ydi. 1995 yildan hozirgi kungacha Turkiyaning 500 ta eng yirik kompaniyalari qatoridan joy oldi.",
         main_2_3: "Ko'proq bilish",
         main_2_4: "Biz bilan bog'lanish",
         main_3_1: "Sertifikatlar",
@@ -41,7 +41,7 @@ i18n.use(initReactI18next).init({
         //asosiy oyna tugadi
         about_1_1: "Biz haqimizda",
         about_1_2:
-          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O z oldida, xalq uchun, yuqori  sifatli mahsulotlarni  yetkazish deb, maqsad qo yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv ta?minoti va isitish tizimlar uchun mahsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada ta?minlab, mahsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik mahsulotlarni ishlab chiqarishi yo'lga qo yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
+          "1977 yil, Turkiyalik 4-ta muxandis, KALDE kompaniyasining tashkil etgan. O z oldida, xalq uchun, yuqori  sifatli mahsulotlarni  yetkazish deb, maqsad qo yilgan. KALDE kompaniyasi birinchilar qatorida, chet eldan (Evropadan) zamonaviy texnologiya uskunalar olib, suv taʻminoti va isitish tizimlar uchun mahsulotlar chiqarish boshlashkan. 1990 yillarda, ichki bozorni yetarli darajada taʻminlab, mahsulotlarni chetel bozoriga tanishtirgan. Shu yillarda, Turkiyada  birinchilar qatorida plastik mahsulotlarni ishlab chiqarishi yo'lga qo yilgan. 1995 yildan boshlab, va xozirgi kunda, Turkiyaning 500 yirik kompaniyalaridan biri.",
         about_1_3: "Biz bilan bog'lanish",
         about_2_1: "O'zbekistonda Kalde",
         about_2_2:
@@ -85,7 +85,7 @@ i18n.use(initReactI18next).init({
         // mahsulot oynasi tugadi
         news_1_1: "Boshqa yangiliklar",
         // News tugadi
-        branches_1_1: "Bizning filiallarimiz",
+        branches_1_1: "Rasmiy dilerlik do'konlari va filiallarining manzillari",
         //Bozning firyalar tugadi
         firyal_1_1: "Manzil:",
         firyal_1_2: "Orientatsiya:",
@@ -227,14 +227,14 @@ i18n.use(initReactI18next).init({
         // mahsulot oynasi tugadi
         news_1_1: "Другие новости",
         // News tugadi
-        branches_1_1: "Наши филиалы",
+        branches_1_1: "Адреса официальных дилерских магазинов и филиалов",
         //Bozning firyalar tugadi
         firyal_1_1: "Местоположение:",
         firyal_1_2: "Oриентация:",
         firyal_1_3: "Рабочее время:",
         firyal_1_4: "Номер телефона:",
         firyal_1_5: "Электронная почта:",
-        firyal_1_6: "Геолокация : ",
+        firyal_1_6: "Локация : ",
         firyal_1_7: "Дополнительный номер телефона : ",
 
         firyal_2_1: "Связаться с нами",
@@ -369,14 +369,14 @@ i18n.use(initReactI18next).init({
         // mahsulot oynasi tugadi
         news_1_1: "Other news",
         // News tugadi
-        branches_1_1: "Our branches",
+        branches_1_1: "Addresses of official dealer stores and branches",
         //Bozning firyalar tugadi
         firyal_1_1: "Location:",
         firyal_1_2: "Orientation:",
         firyal_1_3: "Work time:",
         firyal_1_4: "Phone number:",
         firyal_1_5: "Email:",
-        firyal_1_6: "Geolocation : ",
+        firyal_1_6: "Location : ",
         firyal_1_7: "Additional phone number : ",
 
         firyal_2_1: "Connect with us",

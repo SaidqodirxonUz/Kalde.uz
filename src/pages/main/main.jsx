@@ -11,25 +11,22 @@ import Footer from "../../components/footer/footer";
 
 const Main = () => {
   return (
-  <>
-     <Navbar />
-    <div className="bg_img">
-    <div className="container-fluid">
-      {/* <Sidebar className="sidebar" /> */}
-     
-        <Hero className="hero" />
+    <>
+      <Navbar />
+      <div className="bg_img">
+        <div className="container-fluid">
+          {/* <Sidebar className="sidebar" /> */}
 
-        
-        <AboutUs />
+          <Hero className="hero" />
+
+          <AboutUs />
           <Advantages />
           <Products />
           <Partners />
           <Footer />
-
+        </div>
       </div>
-      </div>
-  </>
-   
+    </>
   );
 };
 

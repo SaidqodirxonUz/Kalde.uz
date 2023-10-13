@@ -84,7 +84,7 @@ const Hero = () => {
                 height: "30px",
                 padding: "20px 24px",
                 color: "rgba(239, 127, 26, 1)",
-                border: "1px solid rgba(239, 127, 26, 1)",
+                border: "2px solid rgba(239, 127, 26, 1)",
                 borderRadius: "100px",
               }}
               className="heroMore"

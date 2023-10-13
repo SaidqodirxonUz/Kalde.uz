@@ -70,10 +70,11 @@ const Filial = () => {
                   // onClick={() => {
                   //   navigate(`/contact/${filial.id}`);
                   // }}
-                  className="flex flex-col lg:flex-row w-72 sm:w-max justify-start lg:w-10/12 p-8 mx-auto gap-6 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
+                  // style={{ backgroundColor: "#fff" }}
+                  className="filial-card flex flex-col lg:flex-row w-72 sm:w-max justify-start lg:w-10/12 p-8 mx-auto gap-6 rounded-3xl shadow-[5px_5px_20px_0px_rgba(0,0,0,0.05)]"
                 >
                   <div className="f_info">
-                    <h5
+                    {/* <h5
                       style={{
                         fontSize: "24px",
                         fontStyle: "normal",
@@ -94,17 +95,18 @@ const Filial = () => {
                         : LangVal() == "en"
                         ? filial.title_en
                         : filial.title_ru}
-                    </h5>
+                    </h5> */}
                     <List>
                       <ListItemText>
                         <p
                           // style={{ textAlign: "center" }}
                           className="pages text-black active:text-orange-500 flex flex-row "
+                          style={{ color: "#324291" }}
                         >
                           <MdLocationOn className="icons text-2xl text-orange-500" />{" "}
                           <span>
                             {" "}
-                            {t("firyal_1_1")} {""}
+                            {/* {t("firyal_1_1")} {""} */}
                             {LangVal() == "uz"
                               ? filial.desc_uz
                               : LangVal() == "en"
@@ -119,46 +121,60 @@ const Filial = () => {
                           href={`tel:${filial.phone_number}`}
                           // style={{ textAlign: "center" }}
                           className="pages flex flex-row text-black active:text-orange-500 items"
+                          style={{ color: "#324291" }}
                         >
                           <BsTelephoneFill className="icons text-xl text-orange-500" />
                           <span>
                             {" "}
-                            {t("firyal_1_4")} {filial.phone_number}
+                            {/* {t("firyal_1_4")} */}
+                            {filial.phone_number}
                           </span>
                         </a>
                       </ListItemText>
-                      <ListItemText>
-                        <a
-                          href={`tel:${filial.addition_number}`}
-                          // style={{ textAlign: "center" }}
-                          className="pages flex flex-row text-black active:text-orange-500 items"
-                        >
-                          <BsTelephoneFill className="icons text-xl text-orange-500" />
-                          <span>
-                            {" "}
-                            {t("firyal_1_7")} {filial.addition_number}
-                          </span>
-                        </a>
-                      </ListItemText>
-                      <ListItemText>
-                        <Link
-                          to={filial.location}
-                          target="_blank"
-                          // style={{ textAlign: "center" }}
-                          className="pages flex flex-row text-black active:text-orange-500 items"
-                        >
-                          <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
-                          <span>
-                            {" "}
-                            {t("firyal_1_6")}{" "}
-                            {LangVal() == "uz"
-                              ? filial.title_uz
-                              : LangVal() == "en"
-                              ? filial.title_en
-                              : filial.title_ru}
-                          </span>
-                        </Link>
-                      </ListItemText>
+
+                      {filial.addition_number == "NULL" ? (
+                        ""
+                      ) : (
+                        <ListItemText>
+                          <a
+                            href={`tel:${filial.addition_number}`}
+                            // style={{ textAlign: "center" }}
+                            className="pages flex flex-row text-black active:text-orange-500 items"
+                            style={{ color: "#324291" }}
+                          >
+                            <BsTelephoneFill className="icons text-xl text-orange-500" />
+                            <span>
+                              {/* {t("firyal_1_4")} */}
+                              {filial.addition_number}
+                            </span>
+                          </a>
+                        </ListItemText>
+                      )}
+
+                      {filial.location == "NULL" ? (
+                        ""
+                      ) : (
+                        <ListItemText>
+                          <Link
+                            to={filial.location}
+                            target="_blank"
+                            // style={{ textAlign: "center" }}
+                            className="pages flex flex-row active:text-orange-500 items"
+                            style={{ color: "#324291" }}
+                          >
+                            <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
+                            <span>
+                              {" "}
+                              {t("firyal_1_6")}{" "}
+                              {LangVal() == "uz"
+                                ? filial.title_uz
+                                : LangVal() == "en"
+                                ? filial.title_en
+                                : filial.title_ru}
+                            </span>
+                          </Link>
+                        </ListItemText>
+                      )}
                     </List>
                   </div>
                 </div>

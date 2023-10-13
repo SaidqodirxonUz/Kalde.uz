@@ -24,12 +24,11 @@
     align-self: center;
     align-items: center;
 
-    img{
+    img {
       width: 70%;
     }
   }
 
- 
   .texts {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,7 @@
   font-size: 16px;
   padding: 0.5rem;
   color: rgba(239, 127, 26, 1) !important;
-  border: 1px solid rgba(239, 127, 26, 1) !important;
+  border: 2px solid rgba(239, 127, 26, 1) !important;
   border-radius: 100px !important;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -67,9 +66,9 @@
   .aboutBtn {
     font-size: 12px;
   }
-  .aboutImg img{
+  .aboutImg img {
     width: 100% !important;
-    margin-top:35%;
+    margin-top: 35%;
     margin-bottom: 2rem;
   }
 }
