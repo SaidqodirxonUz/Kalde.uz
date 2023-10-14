@@ -135,6 +135,7 @@ i18n.use(initReactI18next).init({
 
         sent_message_succues: "Xabaringiz muvvafaqiyatli yuborildi ",
         sent_message_fail: "Xabaringiz yuborilmadi, qayta urinib ko'ring ",
+        sent_message_error: "Xabaringizni yuborishda xatolik yuz berdi",
 
         xato: "Xatolik",
         loading: "Yuklanmoqda ...",
@@ -304,6 +305,7 @@ i18n.use(initReactI18next).init({
           "KALDE, for heating and water supply systems, high-quality polypropylene pipes and fittings!",
 
         main_1_4: "To learn more",
+        main_1_5: "KALDE is a company with many years of experience!",
         main_2_1: "About us",
         main_2_2:
           "KALDE - founded in 1977, located in Istanbul, Turkey, manufactures products for modern heating and water supply systems. Today KALDE products are known in 50 countries around the world. All products have international certificates. Kalde products became known in the Uzbek market in 2009. Today, Kalde products can be bought in more than 20 specialized stores in Uzbekistan!",
