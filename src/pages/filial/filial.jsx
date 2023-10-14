@@ -163,7 +163,7 @@ const Filial = () => {
                             style={{ color: "#324291" }}
                           >
                             <TbMapSearch className="contactIcons contactIcons text-xl text-orange-500" />
-                            <span>
+                            <span style={{ marginLeft: "0.5rem" }}>
                               {" "}
                               {t("firyal_1_6")}{" "}
                               {LangVal() == "uz"

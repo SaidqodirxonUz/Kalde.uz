@@ -92,7 +92,7 @@ i18n.use(initReactI18next).init({
         firyal_1_3: "Ish vaqti:",
         firyal_1_4: "Telefon raqami:",
         firyal_1_5: "Email:",
-        firyal_1_6: "Joylashuv : ",
+        firyal_1_6: " Joylashuv : ",
         firyal_1_7: "Qo'shimcha telefon raqam : ",
 
         firyal_2_1: "Biz bilan bog'lanish",
@@ -234,7 +234,7 @@ i18n.use(initReactI18next).init({
         firyal_1_3: "Рабочее время:",
         firyal_1_4: "Номер телефона:",
         firyal_1_5: "Электронная почта:",
-        firyal_1_6: "Локация : ",
+        firyal_1_6: " Локация : ",
         firyal_1_7: "Дополнительный номер телефона : ",
 
         firyal_2_1: "Связаться с нами",

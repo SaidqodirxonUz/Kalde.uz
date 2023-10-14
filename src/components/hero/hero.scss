@@ -21,15 +21,12 @@
     align-self: center;
     align-items: center;
 
-    img{
+    img {
       width: 100%;
       margin-right: 10%;
       border-radius: 30px;
     }
-
   }
-
-
 
   .texts {
     display: flex;
@@ -61,6 +58,7 @@
     .img {
       width: 90% !important;
       display: block;
+
       img {
         border-radius: 20px;
       }
@@ -80,10 +78,10 @@
     cursor: pointer;
   }
 
-  .heroImg{
+  .heroImg {
     width: 100% !important;
-    margin-top:2rem;
+    margin-top: 5rem !important;
     margin-bottom: 2rem;
-    margin-left: 20%;
+    margin-left: 10%;
   }
 }
