@@ -96,8 +96,8 @@ const Our_products = () => {
           <Navbar />
           <div className="our_products pt-32">
             <section id="hero-area" className="py-10 px-10">
-              <div className="divide flex lg:flex-row flex-col justify-between ">
-                <Box className="categories">
+              <div className="divide flex lg:flex-row flex-col justify- ">
+                <Box className="categories px-16">
                   {error && (
                     <p>
                       {t("error")} ,{error}
@@ -161,13 +161,17 @@ const Our_products = () => {
                 </Box>
                 <Box className="product py-10 md:py-0">
                   {error && (
-                    <p>
+                    <p className="aboutData">
                       {t("error")} , {error}
                     </p>
                   )}
-                  {loading && <p>{t("loading")}</p>}
+
+                  {loading && <p className="aboutData">{t("loading")}</p>}
+
                   {!loading && products.length === 0 && (
-                    <p>{t("no_product")} </p>
+                    <p className="aboutData">{t("no_product")} </p>
+
+                    //
                   )}
                   {!loading && products.length > 0 && (
                     <div
@@ -198,7 +202,7 @@ const Our_products = () => {
                           }}
                           key={index}
                         >
-                          <div>
+                          <div className="oneProduct">
                             <article
                               style={{
                                 width: "350px",
@@ -223,6 +227,7 @@ const Our_products = () => {
                               />
                               <p className="line"></p>
                               <Typography
+                                className="productText"
                                 style={{
                                   textAlign: "center",
                                   display: "flex",

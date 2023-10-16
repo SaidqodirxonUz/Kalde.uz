@@ -22,7 +22,7 @@ i18n.use(initReactI18next).init({
         main_1_5: "KALDE - ko'p yillik tajribaga ega kompaniya!",
         main_2_1: "Biz haqimizda",
         main_2_2:
-          "KALDE kompaniyasi 1977-yilda Istanbulda (Turkiya) tashkil topgan boʻlib, oʻshanda toʻrtta muhandis birlashishga va oʻz orzularini roʻyobga chiqarishga, odamlar uchun global talablarga javob beradigan yuqori sifatli mahsulotlar yaratishga qaror qilgan. KALDE birinchilardan bo'lib xorijdan (Yevropadan) zamonaviy texnologik uskunalar olib kirdi va suv ta'minoti va isitish tizimlari uchun mahsulotlar ishlab chiqarishni boshladi. 90-yillarda ichki bozorni yetarli darajada ta'minlab, o'z mahsulotlarini tashqi bozorga chiqardi. Bu yillarda Turkiya birinchilardan bo'lib plastmassa buyumlar ishlab chiqarishni yo'lga qo'ydi. 1995 yildan hozirgi kungacha Turkiyaning 500 ta eng yirik kompaniyalari qatorida hisoblanadi.",
+          "KALDE - 1977 yilda tashkil etilgan, Turkiyaning Istanbul shahrida joylashgan bo'lib, zamonaviy isitish va suv ta'minoti tizimlari uchun mahsulotlar ishlab chiqaradi. Bugungi kunda KALDE mahsulotlari dunyoning 50 ta davlatida tanilgan. Barcha mahsulotlar xalqaro sertifikatlarga ega. Kalde mahsulotlari O'zbekiston bozorida 2009 yilda mashhur bo'lgan. Bugungi kunda O'zbekistonda Kalde mahsulotlarini 20 dan ortiq ixtisoslashtirilgan do'konlarda xarid qilish mumkin!",
         main_2_3: "Ko'proq bilish",
         main_2_4: "Biz bilan bog'lanish",
         main_3_1: "Sertifikatlar",
@@ -187,7 +187,7 @@ i18n.use(initReactI18next).init({
         about_1_3: "Свяжитесь с нами",
         about_2_1: "Калде в Узбекистане",
         about_2_2:
-          "Компания INORA IMPEX (Узбекистан) помимо переговоров с производителем KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ (Турция), и убедилась в высоком качестве продукта. Первая поставка продукции KALDE в Узбекистан была осуществлена в ноябре 2009 года.C 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров бренда KALDE. В 2023 году представлена сеть из более чем 20 магазинов в городах: Ташкент, Бухар, Наманган, Андижан, Джизак, Коканд. Имеются крупные филиалы в городах: Бухара, Наманган.",
+          "Компания INORA IMPEX (Узбекистан) помимо переговоров с производителем KALDE KLİMA PAZARLAMA VE TAAHHÜT AŞ (Турция), и убедилась в высоком качестве продукта. Первая поставка продукции KALDE в Узбекистан была осуществлена в ноябре 2009 года.C 2010 года в Узбекистане создана сеть магазинов по продаже всех видов товаров бренда KALDE. В 2023 году представлена сеть из более чем 20 магазинов в городах: Ташкент, Бухарa, Наманган, Андижан, Джизак, Коканд. Имеются крупные филиалы в городах: Бухара, Наманган.",
 
         about_3_1: "Качество продукции",
         about_3_2:
