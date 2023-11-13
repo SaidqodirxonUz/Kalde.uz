@@ -121,13 +121,13 @@ const Navbar = () => {
             <Box>
               <Link
                 className="text-blue-900 active:text-orange-500 flex flex-row links"
-                to="tel:+998900152533"
+                to="tel:+998900452533"
               >
                 <BiSolidPhoneCall
                   className="text-3xl text-orange-500"
                   style={{ marginRight: "0.5rem" }}
                 />
-                +9989001KALDE
+                +99890045KALDE
               </Link>
               {/* </Button> */}
             </Box>

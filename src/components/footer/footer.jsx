@@ -110,12 +110,32 @@ const Footer = () => {
           <ul>
             <li>
               <Link
-                to="tel:+998900152533"
+                to="tel:+998900452533"
+                style={{ textAlign: "center" }}
+                className=" text-white active:text-orange-500 items"
+              >
+                <BsTelephoneFill className="icons text-xl text-orange-500" />
+                +998(90) 045 25 33
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="tel:+998900452533"
                 style={{ textAlign: "center" }}
                 className=" text-white active:text-orange-500 items"
               >
                 <BsTelephoneFill className="icons text-xl text-orange-500" />
                 +998(90) 015 25 33
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="tel:+998900352533"
+                style={{ textAlign: "center" }}
+                className=" text-white active:text-orange-500 items"
+              >
+                <BsTelephoneFill className="icons text-xl text-orange-500" />
+                +998(90) 035 25 33
               </Link>
             </li>
             <li>
